@@ -1,0 +1,183 @@
+[
+  {
+    "id": "contact-care-team",
+    "title": "Contact your doctor or maternity team promptly",
+    "intro": "Some concerns need advice before the next routine appointment even when they do not feel like an emergency. If a symptom becomes severe, sudden or frightening, use urgent care instead.",
+    "audience": "maternal",
+    "tier": "care-team",
+    "signs": [
+      {
+        "title": "A symptom persists or keeps worsening",
+        "detail": "Contact care when pain, nausea, reflux, constipation, itching, swelling or another change is not settling or is disrupting eating, drinking, sleep, walking or daily life."
+      },
+      {
+        "title": "You cannot manage food or fluids normally",
+        "detail": "Ask for help when vomiting continues, fluids are difficult to keep down, urination becomes much less frequent or you feel increasingly weak."
+      },
+      {
+        "title": "You feel unwell or may have an infection",
+        "detail": "New feverishness, a concerning rash, painful urination, worsening cough or a significant infectious exposure deserves pregnancy-specific advice."
+      },
+      {
+        "title": "Your mood or anxiety is affecting daily life",
+        "detail": "Tell a health professional when fear, low mood, panic, intrusive thoughts or poor sleep make it hard to function or care for yourself."
+      },
+      {
+        "title": "You need to change a medicine or treatment",
+        "detail": "Review the exact prescription, painkiller, cold remedy, supplement, cream or treatment before starting, stopping or changing it."
+      },
+      {
+        "title": "You feel unsafe, controlled or pressured",
+        "detail": "Ask to speak with a health professional privately. If there is immediate danger, use emergency help rather than waiting for an appointment."
+      }
+    ],
+    "action": "Use the pregnancy or maternity contact route you were given and explain what changed, when it began and whether it is worsening. Escalate immediately if you feel in danger.",
+    "sourceIds": [
+      "who-antenatal",
+      "acog-morning-sickness",
+      "nhs-mental",
+      "acog-ipv",
+      "cdc-medicine"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2026-10-29",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "rapid-review"
+    }
+  },
+  {
+    "id": "maternal-warning-signs",
+    "title": "Urgent signs during pregnancy or within a year after birth",
+    "intro": "Get medical care immediately for these symptoms. The list is not exhaustive; if something feels seriously wrong, seek help.",
+    "audience": "maternal",
+    "tier": "urgent",
+    "signs": [
+      {
+        "title": "A headache that will not go away",
+        "detail": "Especially if it worsens, feels unusually severe or comes with vision changes or marked swelling."
+      },
+      {
+        "title": "Dizziness or fainting",
+        "detail": "New, repeated or severe dizziness, confusion, disorientation or loss of consciousness."
+      },
+      {
+        "title": "Changes in vision",
+        "detail": "Flashes, blind spots, blurring, double vision or loss of vision."
+      },
+      {
+        "title": "Fever",
+        "detail": "A temperature at or above the urgent threshold given by your local maternity service."
+      },
+      {
+        "title": "Trouble breathing",
+        "detail": "Difficulty catching your breath, speaking and breathing, or breathing when lying down."
+      },
+      {
+        "title": "Chest pain or a fast-beating heart",
+        "detail": "Pressure, pain, palpitations or an irregular heartbeat, especially with dizziness or breathlessness."
+      },
+      {
+        "title": "Severe nausea and vomiting",
+        "detail": "You cannot keep fluids down, are urinating very little, feel confused, faint or dehydrated."
+      },
+      {
+        "title": "Severe belly pain",
+        "detail": "Sudden, sharp, worsening or persistent abdominal pain, or pain reaching the shoulder, chest or back."
+      },
+      {
+        "title": "Baby movement stops or slows",
+        "detail": "A clear change from your baby's usual movement pattern during pregnancy."
+      },
+      {
+        "title": "Bleeding or fluid leaking during pregnancy",
+        "detail": "Bleeding heavier than spotting, a gush or trickle of fluid, or bad-smelling discharge."
+      },
+      {
+        "title": "Heavy bleeding or abnormal discharge after birth",
+        "detail": "Rapidly soaking pads, large clots, tissue, bad-smelling discharge, weakness or faintness."
+      },
+      {
+        "title": "Severe swelling, redness or pain in one limb",
+        "detail": "Especially a painful, warm or swollen calf, leg or arm on one side."
+      },
+      {
+        "title": "Extreme swelling of hands or face",
+        "detail": "Sudden or marked swelling, especially with headache or vision changes."
+      },
+      {
+        "title": "Overwhelming exhaustion",
+        "detail": "A sudden or extreme inability to function that is not relieved by rest."
+      },
+      {
+        "title": "Thoughts of harming yourself or the baby",
+        "detail": "Or severe confusion, hallucinations, agitation or loss of contact with reality."
+      }
+    ],
+    "action": "Call the emergency number for your region or go to an emergency department. Say that you are pregnant or were pregnant within the last year.",
+    "sourceIds": [
+      "cdc-warning",
+      "who-postnatal"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2026-10-29",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "rapid-review"
+    }
+  },
+  {
+    "id": "infant-warning-signs",
+    "title": "Urgent signs in a newborn or young baby",
+    "intro": "Young babies can become unwell quickly. Contact urgent medical care if you notice these signs or are seriously worried.",
+    "audience": "infant",
+    "tier": "urgent",
+    "signs": [
+      {
+        "title": "Breathing difficulty",
+        "detail": "Grunting, chest pulling in, pauses, very fast breathing, struggling to feed because of breathing or blue/grey color."
+      },
+      {
+        "title": "Hard to wake or unusually floppy",
+        "detail": "Very low activity, poor responsiveness, weak movement or a marked change in alertness."
+      },
+      {
+        "title": "Stopped feeding well",
+        "detail": "Refusing feeds, repeatedly unable to feed, choking with feeds or a clear drop from the baby's pattern."
+      },
+      {
+        "title": "Abnormal temperature",
+        "detail": "Fever or low temperature according to the urgent threshold and measurement method given by local care."
+      },
+      {
+        "title": "Seizure or unusual repetitive movements",
+        "detail": "Jerking that does not stop when held, stiffening, unusual eye movements or loss of responsiveness."
+      },
+      {
+        "title": "Jaundice that needs prompt review",
+        "detail": "Yellow color in the first day, deepening yellow, yellow palms or soles, or jaundice with sleepiness or poor feeding."
+      },
+      {
+        "title": "Signs of dehydration",
+        "detail": "Markedly fewer wet nappies, very dry mouth, a sunken soft spot, unusual sleepiness or poor feeding."
+      },
+      {
+        "title": "A serious change that worries you",
+        "detail": "A weak or unusual cry, persistent vomiting, a new rash that does not fade under pressure, or simply seeming very unwell."
+      }
+    ],
+    "action": "Use your baby's urgent care route or local emergency service now. Do not wait for a routine appointment when a young baby seems seriously unwell.",
+    "sourceIds": [
+      "who-newborn"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2026-10-29",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "rapid-review"
+    }
+  }
+]

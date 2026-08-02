@@ -1,0 +1,44 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import PrivacyControls from "@/components/react/PrivacyControls";
+---
+
+<BaseLayout
+  title="Privacy"
+  description="How Pregnancy, Clearly keeps timeline information on your device and avoids accounts, tracking and advertising profiles."
+>
+  <section class="page-hero">
+    <div class="shell">
+      <p class="eyebrow">Privacy, plainly</p><h1>Your dates stay yours.</h1><p
+        class="lede"
+      >
+        Pregnancy, Clearly works without an account. If you personalize the
+        journey, those details remain in this browser's local storage.
+      </p>
+    </div>
+  </section>
+  <section class="section" style="padding-top:0">
+    <div class="reading-shell article-stack">
+      <section class="content-section summary-card">
+        <h2>What never happens</h2><ul>
+          <li>No account or email capture.</li><li>
+            No advertising profile.
+          </li><li>No analytics or cross-site tracking by default.</li><li>
+            No upload of due dates, birth dates, bookmarks or checklist state.
+          </li>
+        </ul>
+      </section><section class="content-section">
+        <h2>What this device can save</h2><p>
+          Your audience view, estimated due date or last-period estimate, actual
+          birth date, bookmarks and milestone state can be stored locally.
+          Someone with access to this browser profile may be able to see it.
+        </p>
+      </section><section class="content-section">
+        <h2>Clear everything</h2><p>
+          This removes Pregnancy, Clearly's saved journey state from this
+          browser. It does not affect browser history or downloaded pages.
+        </p><PrivacyControls client:load />
+      </section>
+    </div>
+  </section>
+</BaseLayout>

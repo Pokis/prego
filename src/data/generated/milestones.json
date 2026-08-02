@@ -1,0 +1,434 @@
+[
+  {
+    "id": "contact-care",
+    "title": "Contact a maternity care professional",
+    "description": "Arrange prenatal care and ask how urgent concerns should be handled in your area.",
+    "anchor": "positive-test",
+    "start": 0,
+    "end": 7,
+    "category": "arrange",
+    "importance": "essential",
+    "sourceIds": [
+      "who-antenatal"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2027-07-31",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "annual"
+    }
+  },
+  {
+    "id": "review-medicines",
+    "title": "Review medicines and supplements",
+    "description": "Ask a clinician or pharmacist to review prescriptions, over-the-counter products and supplements; do not stop prescribed medicine on your own.",
+    "anchor": "positive-test",
+    "start": 0,
+    "end": 7,
+    "category": "discuss",
+    "importance": "essential",
+    "sourceIds": [
+      "cdc-medicine"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2027-07-31",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "annual"
+    }
+  },
+  {
+    "id": "early-assessment",
+    "title": "Early pregnancy assessment",
+    "description": "Confirm your history, care pathway and the early tests your doctor recommends.",
+    "anchor": "gestational-week",
+    "start": 6,
+    "end": 13,
+    "category": "appointment",
+    "importance": "essential",
+    "sourceIds": [
+      "who-antenatal",
+      "nice-antenatal"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2027-07-31",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "annual"
+    }
+  },
+  {
+    "id": "dating-ultrasound",
+    "title": "Dating and first-trimester assessment",
+    "description": "Your care team may offer ultrasound and screening within a defined pregnancy window.",
+    "anchor": "gestational-week",
+    "start": 10,
+    "end": 14,
+    "category": "appointment",
+    "importance": "recommended",
+    "sourceIds": [
+      "who-antenatal",
+      "nice-antenatal"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2027-07-31",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "annual"
+    }
+  },
+  {
+    "id": "screening-decisions",
+    "title": "Understand screening choices",
+    "description": "Ask what each screening test can and cannot tell you before deciding.",
+    "anchor": "gestational-week",
+    "start": 10,
+    "end": 20,
+    "category": "discuss",
+    "importance": "recommended",
+    "sourceIds": [
+      "who-antenatal",
+      "nice-antenatal"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2027-07-31",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "annual"
+    }
+  },
+  {
+    "id": "anatomy-scan",
+    "title": "Mid-pregnancy anatomy assessment",
+    "description": "Confirm the offered window and how results will be explained.",
+    "anchor": "gestational-week",
+    "start": 18,
+    "end": 22,
+    "category": "appointment",
+    "importance": "recommended",
+    "sourceIds": [
+      "who-antenatal",
+      "nice-antenatal"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2027-07-31",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "annual"
+    }
+  },
+  {
+    "id": "movement-pattern",
+    "title": "Learn your baby's movement pattern",
+    "description": "As movement becomes familiar, ask your care team what to do if it slows or changes.",
+    "anchor": "gestational-week",
+    "start": 20,
+    "end": 28,
+    "category": "discuss",
+    "importance": "essential",
+    "sourceIds": [
+      "cdc-warning"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2027-07-31",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "annual"
+    }
+  },
+  {
+    "id": "diabetes-screen",
+    "title": "Ask about gestational diabetes testing",
+    "description": "Timing and testing method depend on your medical history and care plan.",
+    "anchor": "gestational-week",
+    "start": 24,
+    "end": 28,
+    "category": "appointment",
+    "importance": "recommended",
+    "sourceIds": [
+      "who-antenatal",
+      "nice-antenatal"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2027-07-31",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "annual"
+    }
+  },
+  {
+    "id": "pregnancy-vaccines",
+    "title": "Review pregnancy vaccinations",
+    "description": "Confirm current and seasonal recommendations with your clinician.",
+    "anchor": "gestational-week",
+    "start": 16,
+    "end": 36,
+    "category": "discuss",
+    "importance": "essential",
+    "sourceIds": [
+      "cdc-vaccines",
+      "nhs-appointments"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2026-10-29",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "rapid-review"
+    }
+  },
+  {
+    "id": "birth-learning",
+    "title": "Choose birth and newborn learning",
+    "description": "Look for evidence-based antenatal education that includes recovery and newborn care.",
+    "anchor": "gestational-week",
+    "start": 24,
+    "end": 34,
+    "category": "prepare",
+    "importance": "recommended",
+    "sourceIds": [
+      "who-antenatal"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2027-07-31",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "annual"
+    }
+  },
+  {
+    "id": "birth-preferences",
+    "title": "Write flexible birth preferences",
+    "description": "Record what matters to you while allowing plans to change for safety or preference.",
+    "anchor": "gestational-week",
+    "start": 28,
+    "end": 36,
+    "category": "prepare",
+    "importance": "recommended",
+    "sourceIds": [
+      "who-antenatal"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2027-07-31",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "annual"
+    }
+  },
+  {
+    "id": "route-and-contacts",
+    "title": "Save the route and urgent contacts",
+    "description": "Know where to go, how to get there and whom to call day or night.",
+    "anchor": "gestational-week",
+    "start": 32,
+    "end": 37,
+    "category": "prepare",
+    "importance": "essential",
+    "sourceIds": [
+      "who-antenatal",
+      "nhs-appointments"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2027-07-31",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "annual"
+    }
+  },
+  {
+    "id": "feeding-conversation",
+    "title": "Discuss feeding support",
+    "description": "Learn how feeding support is accessed and how to get help early, whichever feeding path you use.",
+    "anchor": "gestational-week",
+    "start": 30,
+    "end": 38,
+    "category": "discuss",
+    "importance": "recommended",
+    "sourceIds": [
+      "who-feeding"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2027-07-31",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "annual"
+    }
+  },
+  {
+    "id": "term-plan",
+    "title": "Make a term and overdue plan",
+    "description": "Ask your doctor what happens if labour has not started by the planned review point.",
+    "anchor": "gestational-week",
+    "start": 37,
+    "end": 41,
+    "category": "discuss",
+    "importance": "essential",
+    "sourceIds": [
+      "who-antenatal",
+      "nice-antenatal"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2027-07-31",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "annual"
+    }
+  },
+  {
+    "id": "first-day-checks",
+    "title": "Parent and newborn first-day care",
+    "description": "Confirm recovery observations, newborn checks, feeding support and who to contact after discharge.",
+    "anchor": "birth-day",
+    "start": 0,
+    "end": 1,
+    "category": "parent-recovery",
+    "importance": "essential",
+    "sourceIds": [
+      "who-postnatal",
+      "who-newborn"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2027-07-31",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "annual"
+    }
+  },
+  {
+    "id": "day-three-contact",
+    "title": "Early postnatal contact",
+    "description": "Arrange the early parent-and-baby follow-up in your discharge plan.",
+    "anchor": "birth-day",
+    "start": 2,
+    "end": 3,
+    "category": "appointment",
+    "importance": "essential",
+    "sourceIds": [
+      "who-postnatal",
+      "nice-postnatal"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2027-07-31",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "annual"
+    }
+  },
+  {
+    "id": "week-two-contact",
+    "title": "Parent and baby check-in",
+    "description": "Discuss feeding, recovery, mood, sleep, jaundice, weight and any concerns.",
+    "anchor": "birth-day",
+    "start": 7,
+    "end": 14,
+    "category": "appointment",
+    "importance": "recommended",
+    "sourceIds": [
+      "who-postnatal",
+      "nice-postnatal"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2027-07-31",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "annual"
+    }
+  },
+  {
+    "id": "postpartum-plan",
+    "title": "Comprehensive postpartum care plan",
+    "description": "Review physical recovery, mood, feeding, sleep, relationships, contraception and ongoing health.",
+    "anchor": "birth-day",
+    "start": 21,
+    "end": 84,
+    "category": "parent-recovery",
+    "importance": "essential",
+    "sourceIds": [
+      "acog-postpartum",
+      "who-postnatal"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2027-07-31",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "annual"
+    }
+  },
+  {
+    "id": "two-month-development",
+    "title": "Two-month development conversation",
+    "description": "Notice how your baby plays, communicates and moves; share concerns rather than using milestones as a diagnosis.",
+    "anchor": "birth-day",
+    "start": 50,
+    "end": 75,
+    "category": "baby-development",
+    "importance": "recommended",
+    "sourceIds": [
+      "cdc-milestones"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2027-07-31",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "annual"
+    }
+  },
+  {
+    "id": "four-month-development",
+    "title": "Four-month development conversation",
+    "description": "Review emerging social, communication and movement skills with your baby's clinician.",
+    "anchor": "birth-day",
+    "start": 105,
+    "end": 135,
+    "category": "baby-development",
+    "importance": "recommended",
+    "sourceIds": [
+      "cdc-milestones"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2027-07-31",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "annual"
+    }
+  },
+  {
+    "id": "six-month-development",
+    "title": "Six-month development conversation",
+    "description": "Discuss development, feeding changes, safety and the next stage of preventive care.",
+    "anchor": "birth-day",
+    "start": 165,
+    "end": 195,
+    "category": "baby-development",
+    "importance": "recommended",
+    "sourceIds": [
+      "cdc-milestones"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2027-07-31",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "annual"
+    }
+  }
+]

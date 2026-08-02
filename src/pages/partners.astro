@@ -1,0 +1,131 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { withBase } from "@/lib/paths";
+import { milestoneWindowLabel, sortMilestones } from "@/lib/milestones";
+const milestones = await getCollection("milestones");
+const timeline = await getCollection("timeline");
+const partnerWeeks = new Set([
+  "week-4",
+  "week-8",
+  "week-12",
+  "week-18",
+  "week-20",
+  "week-28",
+  "week-32",
+  "week-36",
+  "week-38",
+  "week-40",
+]);
+const partnerCheckpoints = timeline
+  .filter((entry) => partnerWeeks.has(entry.data.id))
+  .sort((a, b) => a.data.ordinal - b.data.ordinal);
+const pregnancyMilestones = sortMilestones(
+  milestones
+    .filter((item) => item.data.anchor !== "birth-day")
+    .map((item) => item.data),
+).slice(0, 9);
+---
+
+<BaseLayout
+  title="For partners and support people"
+  description="Concrete support actions from the positive test through six months after birth."
+>
+  <section class="page-hero">
+    <div class="shell">
+      <p class="eyebrow">For partners and support people</p><h1>
+        Care is more than<br />being nearby.
+      </h1><p class="lede">
+        Listen, learn the warning signs, own practical work, and protect the
+        recovering family's space.
+      </p><div class="button-row">
+        <a class="button" href={withBase("/timeline/")}
+          >Follow the pregnancy timeline</a
+        ><a class="button secondary" href={withBase("/urgent-help/")}
+          >Learn urgent signs</a
+        >
+      </div>
+    </div>
+  </section>
+  <section class="section soft">
+    <div class="shell">
+      <div class="card-grid four">
+        <article class="editorial-card">
+          <span class="index">Before appointments</span><h3>
+            Make room, not decisions
+          </h3><p>
+            Help collect questions, manage logistics and ensure private
+            conversation remains possible.
+          </p>
+        </article>
+        <article class="editorial-card">
+          <span class="index">During pregnancy</span><h3>Own visible work</h3><p
+          >
+            Meals, cleaning, transport and administration should not wait to be
+            assigned.
+          </p>
+        </article>
+        <article class="editorial-card">
+          <span class="index">At birth</span><h3>Protect communication</h3><p>
+            Reinforce expressed preferences, stay flexible and alert staff to
+            concerns.
+          </p>
+        </article>
+        <article class="editorial-card">
+          <span class="index">After birth</span><h3>Notice both people</h3><p>
+            Parent recovery and baby health both need attention, rest and
+            follow-up.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="shell">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Pregnancy checkpoints</p><h2>
+            What useful support looks like, week by week
+          </h2>
+          <p>These actions are all visible—no FAQ or hidden checklist.</p>
+        </div>
+      </div><div class="guide-grid">
+        {
+          partnerCheckpoints.map((entry) => (
+            <article class="guide-card">
+              <p class="eyebrow">{entry.data.windowLabel}</p>
+              <h3>{entry.data.title}</h3>
+              <p>{entry.data.partner[0]}</p>
+              <a href={withBase(`/timeline/${entry.data.slug}/`)}>
+                Open this week →
+              </a>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+  <section class="section plum">
+    <div class="shell">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Shared checkpoints</p><h2>
+            Know what may be coming
+          </h2>
+        </div>
+      </div><div class="milestone-board">
+        {
+          pregnancyMilestones.map((item) => (
+            <article class="milestone-card">
+              <>
+                <div class="meta">{milestoneWindowLabel(item)}</div>
+                <h3>{item.title}</h3>
+                <p>{item.description}</p>
+              </>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,172 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import SiteSearch from "@/components/react/SiteSearch";
+import SwapFinder from "@/components/react/SwapFinder";
+import { withBase } from "@/lib/paths";
+
+const essentials = (await getCollection("essentials")).sort(
+  (a, b) => a.data.number - b.data.number,
+);
+const substitutions = (await getCollection("substitutions")).map(
+  (item) => item.data,
+);
+
+const statusLabel = {
+  "generally-ok": "Generally okay",
+  avoid: "Avoid",
+  "check-first": "Check first",
+};
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "MedicalWebPage",
+  name: "Pregnancy essentials: clear dos and don'ts",
+  description:
+    "Direct pregnancy guidance for food, dishes, drinks, exercise, medicines, work, travel, sex, sleep and appointments.",
+};
+---
+
+<BaseLayout
+  title="Pregnancy essentials: dos and don’ts"
+  description="Direct pregnancy dos, don’ts and check-first guidance for food, dishes, drinks, exercise, medicines, work, travel, sex and sleep."
+  schema={schema}
+>
+  <section class="page-hero essentials-hero">
+    <div class="shell">
+      <p class="eyebrow">No FAQ maze · no hidden answers</p>
+      <h1>Pregnancy dos<br />and don’ts.</h1>
+      <p class="lede">
+        The everyday things people actually wonder about—food and dishes,
+        coffee, exercise, medicine, cleaning, lifting, travel, sex and sleep—in
+        one direct guide.
+      </p>
+      <div class="doctor-banner">
+        <strong>Use this as the general baseline.</strong>
+        Your doctor or midwife should make any decision that depends on your health,
+        medicines, symptoms or pregnancy.
+      </div>
+      <a class="swap-hero-link" href="#smart-swaps">
+        <span>New · practical substitutes</span>
+        Missing coffee, Coca-Cola, sushi or soft cheese? Find the closest useful swap
+        →
+      </a>
+      <a class="before-pregnancy-link" href={withBase("/getting-pregnant/")}>
+        <span>Before pregnancy</span>
+        Trying to conceive? Open the dos, don’ts and fertility-myth guide →
+      </a>
+    </div>
+  </section>
+
+  <section class="section swap-section" id="smart-swaps">
+    <div class="shell">
+      <header class="swap-section-heading">
+        <div>
+          <p class="eyebrow">The pregnancy swap finder</p>
+          <h2>Keep the thing you love.<br />Change only what matters.</h2>
+        </div>
+        <p>
+          Search a familiar food or drink. You’ll see whether to keep it within
+          a limit, change how it is prepared, choose another version or check
+          the exact product first—plus the closest alternatives.
+        </p>
+      </header>
+      <SwapFinder client:load items={substitutions} />
+    </div>
+  </section>
+
+  <section class="section" style="padding-top: 0">
+    <div class="shell">
+      <nav
+        class="essential-jump"
+        id="essential-topics"
+        aria-label="Pregnancy essentials topics"
+      >
+        {
+          essentials.map((item) => (
+            <a href={`#${item.data.slug}`}>
+              <span>{String(item.data.number).padStart(2, "0")}</span>
+              {item.data.title}
+            </a>
+          ))
+        }
+      </nav>
+      <SiteSearch client:load compact={true} />
+    </div>
+  </section>
+
+  <div class="essentials-stack">
+    {
+      essentials.map((item, index) => (
+        <section
+          class:list={["section", { soft: index % 2 === 1 }]}
+          id={item.data.slug}
+        >
+          <div class="shell essential-section">
+            <header class="essential-heading">
+              <div class="essential-index">
+                {String(item.data.number).padStart(2, "0")}
+              </div>
+              <div>
+                <p class="eyebrow">{item.data.eyebrow}</p>
+                <h2>{item.data.title}</h2>
+                <p>{item.data.intro}</p>
+              </div>
+            </header>
+
+            <div class="essential-rule-grid">
+              <article class="rule-column do">
+                <p class="rule-label">
+                  <span aria-hidden="true">✓</span> Do
+                </p>
+                <ul>
+                  {item.data.dos.map((rule) => (
+                    <li>{rule}</li>
+                  ))}
+                </ul>
+              </article>
+              <article class="rule-column dont">
+                <p class="rule-label">
+                  <span aria-hidden="true">!</span> Don’t
+                </p>
+                <ul>
+                  {item.data.donts.map((rule) => (
+                    <li>{rule}</li>
+                  ))}
+                </ul>
+              </article>
+              <article class="rule-column ask">
+                <p class="rule-label">
+                  <span aria-hidden="true">?</span> Ask your doctor
+                </p>
+                <ul>
+                  {item.data.askDoctor.map((rule) => (
+                    <li>{rule}</li>
+                  ))}
+                </ul>
+              </article>
+            </div>
+
+            <div class="example-table-wrap">
+              <h3>Real examples</h3>
+              <div class="example-table" role="list">
+                {item.data.examples.map((example) => (
+                  <article class="example-row" role="listitem">
+                    <strong>{example.name}</strong>
+                    <span class={`example-status ${example.status}`}>
+                      {statusLabel[example.status]}
+                    </span>
+                    <p>{example.guidance}</p>
+                  </article>
+                ))}
+              </div>
+            </div>
+            <a class="back-to-top" href="#essential-topics">
+              Back to topics ↑
+            </a>
+          </div>
+        </section>
+      ))
+    }
+  </div>
+</BaseLayout>

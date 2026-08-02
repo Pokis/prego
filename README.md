@@ -1,0 +1,255 @@
+# Pregnancy, Clearly
+
+A premium static guide focused on getting pregnant and the nine months of pregnancy. It combines a couple-friendly preconception guide, a clear month-and-week timeline and an always-open essentials handbook for food, dishes, drinks, exercise, medicines, work, travel, sex, sleep and everyday life. A practical Swap Finder turns common cravings into close, usable alternatives. An after-birth continuation remains available, but it is intentionally secondary to pregnancy.
+
+> **Medical release status:** the implementation is ready for local evaluation, but the health copy is not yet clinically approved. `npm run build:release` intentionally fails until qualified reviewers approve every public health record. The public UI does not expose editorial machinery or source lists; provenance and approval remain enforced inside the repository.
+
+## Product shape
+
+The public navigation is deliberately small:
+
+- **Timeline** — positive test, nine month map, trimester overviews, weeks 3–42 and important care windows.
+- **Pregnancy essentials** — fourteen direct, fully expanded do/don’t/check-first sections, concrete examples, keyword search and an interactive substitute finder.
+- **For partners** — useful support actions at important pregnancy weeks.
+- **Urgent help** — clearly separated pregnancy, postpartum and young-baby warning signs.
+
+The separate **Getting pregnant** chapter is linked from the homepage, essentials and footer without expanding the primary navigation.
+
+The current content includes:
+
+- 40 distinct weekly pregnancy chapters with a unique title, action, caution, clarification, appointment prompt and partner action.
+- A fully expanded getting-pregnant guide with a six-step plan, couple-level dos and don’ts, nine chance-versus-health comparisons, eight myth corrections and clear points for seeking help.
+- A nine-month orientation map that also explains why medical care counts pregnancy in weeks.
+- Fourteen pregnancy-essential sections and more than 70 concrete examples, including common dishes, activities, symptoms, personal care, infections and mental health.
+- Fourteen searchable substitute cards for common drinks and foods, each with one clear verdict, the reason, two or three ranked alternatives and a label check.
+- 21 date-window milestones for appointments, tests, decisions and preparation.
+- Optional due-date or last-period personalization stored only on the device.
+- A searchable full-text index spanning preconception, weeks, essentials, practical substitutes and warning-sign guidance.
+- Retrievable bookmarks, restorable hidden milestones, completed milestones, an actual birth-date transition and one-click local-data deletion.
+- 13 after-birth checkpoints through month six as a separate continuation.
+- Static, semantic routes that remain useful without JavaScript.
+
+The project intentionally has no accounts, backend, public location packs, FAQ library, chatbot, symptom checker, tracking, ads, affiliate links, comments, remote persistence or reader-facing source directory.
+
+## Quick start
+
+Requirements:
+
+- Node.js 22 or newer.
+- npm 11 or compatible.
+
+```sh
+npm install
+npm run dev
+```
+
+Open the local URL printed by Astro. The content generator runs automatically before development and verification commands.
+
+## Commands
+
+```sh
+npm run dev            # generate content and start Astro development
+npm run check          # schema validation and Astro/TypeScript checks
+npm run test           # date, storage, content and migration tests
+npm run test:e2e       # Playwright journeys in the configured browsers
+npm run test:a11y      # focused automated accessibility checks
+npm run audit:content  # coverage, uniqueness, sources and review expiry
+npm run build          # portable static evaluation artifact
+npm run audit:static   # route, link and third-party-runtime audit of dist/
+npm run audit:base     # nested-base-path build and link audit
+npm run verify         # complete non-browser verification sequence
+npm run build:release  # clinical release gate; expected to fail for now
+npm run format         # format authored and generated files
+```
+
+## Architecture
+
+```text
+scripts/generate-content.mjs
+        │ authored health records and generation rules
+        ▼
+src/data/generated/*.json
+        │ validated by Astro Content Collections
+        ▼
+static Astro routes ───── small React islands for local-only state
+        │
+        ▼
+dist/  portable HTML, CSS, JS and assets
+```
+
+Important locations:
+
+- `src/config/site.ts` — brand, navigation and product-level disclaimer.
+- `src/config/pregnancy.ts` — canonical month/week/trimester mapping.
+- `scripts/generate-content.mjs` — authored preconception, timeline, essentials, practical substitutes, milestones, urgent copy and internal evidence links.
+- `src/content.config.ts` — public content contracts.
+- `src/pages/` — static route composition.
+- `src/components/PregnancyMonthMap.astro` — reusable nine-month orientation.
+- `src/components/TimelineEntryPage.astro` — predictable weekly chapter layout.
+- `src/components/react/` — date setup, timeline filters, bookmarks, milestones and privacy controls.
+- `src/components/react/SiteSearch.tsx` — build-time indexed, client-side search with no server or tracking.
+- `src/components/react/SwapFinder.tsx` — progressively enhanced search and category filters over fully rendered substitute cards.
+- `src/components/react/JourneySnapshot.tsx` — device-only Now/Next/Later pregnancy summary.
+- `src/lib/date.ts` — timezone-safe date-only calculations.
+- `src/lib/milestones.ts` — deterministic journey ordering and plain-language date-window labels.
+- `src/lib/storage.ts` — versioned device-state schema and migration.
+- `scripts/audit-content.mjs` — content coverage and medical release rules.
+- `tests/` — unit, cross-browser and accessibility verification.
+- `docs/` — focused implementation and authoring documentation.
+
+Generated JSON is committed for inspection but must not be hand-edited. Change the generator and run `npm run content:generate`.
+
+## Content model
+
+### Timeline chapter
+
+Every public timeline record contains:
+
+- Journey phase, stable ID, ordering and week/month label.
+- A three-point “what to know” summary.
+- Body/mind and baby-development copy.
+- A real-life clarification or example.
+- Direct “what to do” and “what not to do / ask first” lists.
+- Appointment/decision and partner actions.
+- Help tier, milestone links, internal source IDs and review metadata.
+
+Medical prose belongs in validated content records, never in presentational components.
+
+### Pregnancy essential
+
+Each essential contains:
+
+- An always-visible introduction.
+- `dos`, `donts` and `askDoctor` arrays.
+- Concrete examples labeled `generally-ok`, `avoid` or `check-first`.
+- Internal evidence IDs and review metadata.
+
+The labels are general guidance, not individualized approval. “Check first” always means checking the exact product, activity, symptom or health context with a doctor, midwife or pharmacist.
+
+### Practical substitute
+
+Each substitute record contains:
+
+- The familiar product or dish plus useful search synonyms and a browsing category.
+- One verdict: keep within a limit, prepare differently, choose another version or check the exact product.
+- A direct bottom line and a visible explanation.
+- Two or three alternatives ordered by practical fit, such as closest taste, easiest change or keeping the original in a smaller amount.
+- A specific packaging or preparation check, internal evidence IDs and review metadata.
+
+All cards are server-rendered. Search and category chips enhance the page after hydration; without JavaScript, every answer remains visible.
+
+## Authoring recipes
+
+### Update a pregnancy week
+
+1. Edit `babyByWeek`, `bodyByWeek` or the matching `weekDetails` record in `scripts/generate-content.mjs`.
+2. Keep the stable `week-{n}` ID.
+3. Make the week-specific action, clarification, caution and appointment prompt genuinely distinct.
+4. Attach primary internal `sourceIds` and current review metadata.
+5. Run `npm run content:generate`, `npm run check`, `npm run test` and `npm run audit:content`.
+6. Run the relevant Playwright journey for layout or interaction changes.
+
+### Add or update an essential
+
+1. Edit the `essentials` collection in `scripts/generate-content.mjs`.
+2. Write direct rules; do not turn the content into questions or accordions.
+3. Add concrete examples that match one of the three supported statuses.
+4. State when doctor review is needed and avoid universal medicine approval.
+5. Add internal evidence IDs, regenerate and run all content checks.
+
+### Add or update a practical substitute
+
+1. Edit the `substitutions` collection in `scripts/generate-content.mjs`.
+2. Use the item name a reader would type and add realistic synonyms.
+3. Pick one supported verdict and write the bottom line before the explanation.
+4. Add two or three alternatives with distinct benefits; do not provide three cosmetic variations of the same answer.
+5. Add one concrete label or preparation check and current source IDs.
+6. Regenerate, run the content checks and exercise search, category filtering, keyboard use and narrow-screen reflow.
+
+### Add a milestone
+
+Add a stable record to the milestone catalog with an anchor, week/day window, importance, short action and internal sources. Milestones are common planning windows; the user’s doctor can change the actual schedule.
+
+### Add an internal source
+
+Use a primary health authority or professional guideline. Record the canonical URL, publication/update date, retrieval date, supported claim and review cadence. Sources support clinical governance inside the repository and are not a separate reader journey.
+
+### Add a translation
+
+Keep stable content IDs, create a complete locale edition, set the correct page language, and validate hydrated dates, filters, urgent wording and all essential examples. Translation does not introduce location-specific care packs. Medical translation still requires qualified review.
+
+## Date and timeline rules
+
+- Pregnancy uses gestational age, counted from the first day of the last menstrual period.
+- A clinician-provided estimated due date takes precedence over a calculated estimate.
+- Month labels are orientation only; care decisions continue to use weeks.
+- Month 9 covers weeks 36–40; weeks 41–42 are shown separately as “Beyond the due date.”
+- Date-only helpers use UTC arithmetic so leap years, daylight-saving changes and local midnight do not move the displayed date.
+- Passing the due date never switches the user to postpartum.
+- Postpartum begins only after the actual birth date is entered.
+- Changing from due date to actual birth date preserves bookmarks and completed milestones.
+
+## Privacy
+
+The browser may save:
+
+- Due-date source and estimated due date.
+- Last menstrual period when used for an estimate.
+- Actual birth date.
+- Audience view, bookmarks and milestone state.
+
+The version-2 state contains no location or unit preference. Version-1 records migrate dates and lists while dropping old location fields. Data stays in one `localStorage` key, is never uploaded, and can be erased from the Privacy page.
+
+## Medical safety and release
+
+Reader-facing content is direct, but repository governance remains strict:
+
+- Never diagnose symptoms, calculate individualized risk, approve a medicine universally or tell someone to stop prescribed treatment.
+- Separate common information, amber “contact your doctor” advice and red urgent action.
+- Keep internal primary-source IDs and review dates on every claim-bearing record.
+- `npm run build` creates a local/static evaluation artifact.
+- `npm run build:release` fails for missing sources, expired reviews or any public health record without qualified clinical approval.
+
+The absence of public citation panels is not permission to weaken evidence or approval checks.
+
+## Accessibility and progressive enhancement
+
+- WCAG 2.2 AA is the target.
+- Interactive targets are at least 44×44 CSS pixels.
+- Timeline, essentials and urgent information are present in static HTML.
+- JavaScript enhances private personalization, full-text search, meaningful topic filtering, bookmarks and milestone state only.
+- The layout is tested at 320 CSS pixels, zoom/reflow, keyboard input and reduced motion.
+- Color is paired with text labels such as “Generally okay,” “Avoid” and “Check first.”
+
+## Static builds and hosting
+
+```sh
+npm run build
+npm run audit:static
+npm run audit:base
+```
+
+The output is `dist/`. `SITE_URL` controls canonical and sitemap URLs; `BASE_PATH` supports subpath hosting.
+
+```powershell
+$env:SITE_URL = "https://example.com"
+$env:BASE_PATH = "/pregnancy-guide/"
+npm run build
+```
+
+See [Static deployment](docs/deployment.md) for Cloudflare Pages, GitHub Pages, Netlify and conventional static-server examples. No deployment has been performed.
+
+## Troubleshooting
+
+- **Generated content is missing:** run `npm run content:generate`.
+- **A page shows stale copy:** restart the development server after regeneration.
+- **Dates appear one day off:** use `src/lib/date.ts`; never parse a date-only string through local midnight ad hoc.
+- **The essentials page fails schema validation:** check every example status and all required do/don’t/ask arrays.
+- **Release build fails:** approval failures are expected until real clinical review is complete; never bypass the gate.
+- **Browser tests cannot start:** install the supported Playwright browsers with `npx playwright install` and rerun the focused command.
+
+## Documentation and contribution rules
+
+Start with [Documentation index](docs/README.md). Coding agents must also read [AGENTS.md](AGENTS.md) before changing the repository.
+
+No open-source license has been granted. All rights are reserved unless the project owner adds a license later.

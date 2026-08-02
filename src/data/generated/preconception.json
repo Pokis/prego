@@ -1,0 +1,224 @@
+[
+  {
+    "id": "getting-pregnant",
+    "slug": "getting-pregnant",
+    "title": "Getting pregnant, clearly",
+    "eyebrow": "Before the positive test",
+    "dek": "A practical plan for timing sex, preparing both partners, avoiding fertility myths and knowing when it is time to ask for help.",
+    "routeNote": "The timing advice below is for pregnancy through vaginal intercourse. Folic acid, medicine review and health preparation still matter when using donor sperm or fertility treatment, but the timing plan should come from your clinic.",
+    "orientation": [
+      {
+        "label": "Helps pregnancy happen",
+        "title": "Timing and reproductive biology",
+        "detail": "Sex often enough around ovulation, regular ovulation, open fallopian tubes and sperm able to reach and fertilize an egg directly affect the chance of conception."
+      },
+      {
+        "label": "Helps a pregnancy start healthier",
+        "title": "Preparation before conception",
+        "detail": "Folic acid, medicine and vaccine review, and good control of medical conditions mainly reduce avoidable pregnancy risks. They are important even though they do not guarantee faster conception."
+      },
+      {
+        "label": "Can affect both",
+        "title": "Age, smoking and overall health",
+        "detail": "Age of the person providing the egg, tobacco, some drugs, untreated infections and certain health conditions can affect conception chances as well as pregnancy outcomes."
+      }
+    ],
+    "plan": [
+      {
+        "title": "Choose a sustainable sex schedule",
+        "detail": "A simple plan is vaginal sex every 2–3 days throughout the cycle without contraception. If you prefer to identify the fertile window, sex every 1–2 days during that window gives the highest chance without needing one perfect moment."
+      },
+      {
+        "title": "Treat ovulation dates as a window, not a deadline",
+        "detail": "The fertile window is roughly the six days ending on ovulation, and its timing can change even in regular cycles. Cervical-mucus changes or a urine ovulation test can help; an app is an estimate, not proof of ovulation."
+      },
+      {
+        "title": "Start folic acid before the test",
+        "detail": "The person who may become pregnant should usually take 400 micrograms of folic acid every day from at least one month before conception. It helps prevent neural-tube defects; it is not a fertility booster. Ask whether your history requires a different dose."
+      },
+      {
+        "title": "Review health before changing treatment",
+        "detail": "Bring prescriptions, over-the-counter medicines, supplements and herbal products to a prepregnancy appointment. Review medical conditions, mental health, vaccines and infection screening; do not stop prescribed treatment on your own."
+      },
+      {
+        "title": "Prepare both partners",
+        "detail": "Both partners can stop smoking and recreational drugs, avoid non-prescribed hormones or anabolic steroids, limit harmful alcohol use, eat normally, move regularly and ask for help when changing a habit is difficult."
+      },
+      {
+        "title": "Know your point for asking for help",
+        "detail": "Trying can normally take months. The age of the person providing the egg and any known reproductive-health concern determine whether to seek an evaluation after 12 months, after 6 months or sooner."
+      }
+    ],
+    "dos": [
+      "Record the first day of each period so you can see whether cycles are broadly regular; do not expect the record to identify ovulation perfectly.",
+      "Have sex every 2–3 days through the cycle, or every 1–2 days in the fertile window if tracking feels useful rather than stressful.",
+      "Start daily folic acid before pregnancy and check the label rather than stacking several supplements with overlapping ingredients.",
+      "Make one list of both partners’ medicines, hormones, supplements, medical conditions, previous operations and relevant family history.",
+      "Keep intimacy consensual and sustainable. A schedule that causes pain, pressure or conflict is a reason to simplify the plan or ask for help."
+    ],
+    "donts": [
+      "Do not save sperm by avoiding ejaculation for long stretches; regular sex during the fertile window does not reduce fertility in people with typical semen quality.",
+      "Do not rely on sex position, orgasm, raised legs or lying still after sex. Sperm begin moving through the reproductive tract quickly, and these rituals do not improve conception rates.",
+      "Do not buy fertility detoxes, hormone-balancing teas or high-dose antioxidant packs because testimonials promise a faster pregnancy.",
+      "Do not start non-prescribed testosterone or anabolic steroids when trying for pregnancy; they can suppress sperm production. Review prescribed hormone treatment with the prescriber before making a change.",
+      "Do not turn a negative test into blame. Fertility can involve eggs, ovulation, tubes, uterus, sperm, timing, several factors together or no identified cause."
+    ],
+    "askDoctor": [
+      "Ask before trying if either partner has a long-term condition, takes regular medicine, had cancer treatment, or knows of a genetic condition in the family.",
+      "Ask sooner for absent or very irregular periods, known endometriosis, previous pelvic infection or pelvic surgery, or repeated pregnancy loss.",
+      "Ask sooner for known testicular injury, undescended testes, erection or ejaculation difficulty, previous low sperm count, or current testosterone or anabolic-steroid use.",
+      "Ask about vaccine timing, infection screening and the right folic-acid dose for your history before pregnancy begins.",
+      "Ask for support if sex is painful, impossible, unsafe, highly distressing or not the route you will use to conceive."
+    ],
+    "factors": [
+      {
+        "name": "Timing and frequency of sex",
+        "category": "chance",
+        "chance": "Direct effect: sperm need to be present in the fertile window. Every 2–3 days through the cycle is a practical baseline.",
+        "babyHealth": "No meaningful evidence that a particular day or frequency makes a resulting baby healthier.",
+        "action": "Choose a repeatable schedule instead of chasing one exact hour."
+      },
+      {
+        "name": "Age of the person providing the egg",
+        "category": "both",
+        "chance": "A strong biological factor: egg number and quality decline with age, more noticeably through the mid-to-late 30s.",
+        "babyHealth": "Miscarriage and chromosome-condition risks also rise with egg age; age is context for earlier care, not anyone’s fault.",
+        "action": "Use age when deciding how long to try before an evaluation."
+      },
+      {
+        "name": "Ovulation, fallopian tubes and sperm",
+        "category": "chance",
+        "chance": "Direct effect: conception depends on releasing an egg, sperm function and a route for egg and sperm to meet.",
+        "babyHealth": "These factors mainly affect whether conception happens, not the everyday health preparation for pregnancy.",
+        "action": "Seek earlier advice when a known condition may affect any of these steps."
+      },
+      {
+        "name": "Folic acid",
+        "category": "health",
+        "chance": "It has not been shown to make natural conception happen faster in people without a specific deficiency.",
+        "babyHealth": "Enough folic acid before and during early pregnancy reduces the risk of serious brain and spine defects.",
+        "action": "Usually take 400 micrograms daily; ask if you need a different dose."
+      },
+      {
+        "name": "Medicines, vaccines and chronic conditions",
+        "category": "health",
+        "chance": "Some conditions and treatments can affect fertility, but many do not. The exact medicine and condition matter.",
+        "babyHealth": "Good condition control and an individual medicine and vaccine plan can reduce avoidable pregnancy risks.",
+        "action": "Review the exact plan before pregnancy; never stop prescribed treatment from a generic list."
+      },
+      {
+        "name": "Smoking, recreational drugs and heavy alcohol use",
+        "category": "both",
+        "chance": "These exposures can disrupt reproductive health, ovulation or sperm production and may lengthen time to conception.",
+        "babyHealth": "They can also harm pregnancy. The person who may become pregnant should avoid alcohol once trying because pregnancy begins before a test turns positive.",
+        "action": "Make a nonjudgmental stopping plan and ask for support when needed."
+      },
+      {
+        "name": "Food, movement and body weight",
+        "category": "both",
+        "chance": "Very low or high weight and excessive exercise can disrupt ovulation for some people, but no special fertility diet has been proven to boost natural fertility generally.",
+        "babyHealth": "Regular meals, ordinary varied food and manageable movement support general health before pregnancy.",
+        "action": "Aim for sustainable habits; ask for tailored help rather than crash dieting."
+      },
+      {
+        "name": "Testosterone, anabolic steroids and repeated testicular heat",
+        "category": "chance",
+        "chance": "Testosterone and anabolic steroids can suppress sperm production. Frequent high heat around the testes may also affect sperm production.",
+        "babyHealth": "These are mainly sperm and conception concerns; prescribed treatment still requires individual medical review.",
+        "action": "Discuss hormones, fertility goals and safer options with the prescriber."
+      },
+      {
+        "name": "Sex position and lying down afterward",
+        "category": "neither",
+        "chance": "No position or post-sex routine has been shown to improve natural fertility.",
+        "babyHealth": "They do not change the health of a future baby.",
+        "action": "Choose what is comfortable and consensual; normal fluid leakage is expected."
+      }
+    ],
+    "myths": [
+      {
+        "myth": "You must have sex on ovulation day.",
+        "truth": "The fertile window covers several days, and conception is often most likely when sperm are already present before ovulation.",
+        "takeaway": "Regular sex is more reliable than finding one perfect day."
+      },
+      {
+        "myth": "Every cycle ovulates on day 14.",
+        "truth": "Ovulation timing varies between people and between cycles, including in people whose periods seem regular.",
+        "takeaway": "Use a window; treat calendar apps as estimates."
+      },
+      {
+        "myth": "Daily sex uses up the good sperm.",
+        "truth": "Frequent sex does not lower pregnancy chances for couples with typical semen quality. Every other day is also highly effective and may feel easier.",
+        "takeaway": "Do not impose long abstinence to save sperm."
+      },
+      {
+        "myth": "Legs up, lying still or a special position helps.",
+        "truth": "Sperm move into the reproductive tract quickly. Position, orgasm and post-sex routines have not been shown to improve fertility.",
+        "takeaway": "Comfort matters more than choreography."
+      },
+      {
+        "myth": "Pineapple, seed cycling or one supplement can make pregnancy happen.",
+        "truth": "No particular food, diet pattern, antioxidant pack or herbal remedy reliably improves natural fertility for everyone.",
+        "takeaway": "Eat normally and be cautious with concentrated supplements."
+      },
+      {
+        "myth": "Folic acid is a fertility treatment.",
+        "truth": "Folic acid prepares for early development and prevents some neural-tube defects; it does not replace timing or fertility evaluation.",
+        "takeaway": "Take it for future-baby health, not as a conception booster."
+      },
+      {
+        "myth": "If it has not happened quickly, one partner must be the problem.",
+        "truth": "Many healthy couples need several cycles. When there is a fertility problem, factors may involve either partner, both partners or remain unexplained.",
+        "takeaway": "Evaluate the couple and avoid blame."
+      },
+      {
+        "myth": "Everyone should wait a full year before asking for help.",
+        "truth": "The usual point is 12 months when the egg-providing partner is under 35, 6 months from age 35, and an earlier conversation over 40 or when a known concern exists.",
+        "takeaway": "Age and medical history change the timeline."
+      }
+    ],
+    "help": [
+      {
+        "title": "Egg-providing partner under 35",
+        "guidance": "Arrange an evaluation after 12 months of regular sex without contraception if pregnancy has not happened, or sooner when a known concern exists."
+      },
+      {
+        "title": "Egg-providing partner age 35–40",
+        "guidance": "Arrange an evaluation after 6 months of trying because fertility changes more quickly with age."
+      },
+      {
+        "title": "Egg-providing partner over 40",
+        "guidance": "Talk with a fertility or maternity clinician when you begin trying rather than waiting through a fixed number of cycles."
+      },
+      {
+        "title": "At any age, ask sooner",
+        "guidance": "Seek earlier advice for absent or very irregular periods, endometriosis, pelvic disease or surgery, repeated loss, cancer treatment, a known sperm or testicular concern, sexual-function difficulty, or another reason to question fertility."
+      },
+      {
+        "title": "Expect both partners to be considered",
+        "guidance": "A useful fertility evaluation looks at ovulation and reproductive anatomy as well as semen and sexual function. Testing only one partner can miss important information."
+      }
+    ],
+    "partnerActions": [
+      "Agree on a schedule together and protect the right to say no; conception sex should never become an obligation.",
+      "Share the health preparation: medicine lists, appointments, smoking or alcohol changes, sleep, food and emotional support are not one person’s job.",
+      "If you produce sperm, mention testosterone, anabolic steroids, testicular history, ejaculation difficulty and relevant medicines rather than waiting for your partner to be tested first.",
+      "Use neutral language after a negative test. Try 'this cycle did not work' instead of assigning success or failure to either body."
+    ],
+    "sourceIds": [
+      "asrm-natural-fertility",
+      "acog-infertility",
+      "acog-prepregnancy",
+      "cdc-planning-pregnancy",
+      "cdc-infertility",
+      "who-preconception"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-08-02",
+      "nextReviewAt": "2027-08-02",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "annual"
+    }
+  }
+]

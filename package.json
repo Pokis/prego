@@ -1,0 +1,51 @@
+{
+  "name": "pregnancy-clearly",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "A practical, pregnancy-first guide to all nine months, week by week, with an after-birth continuation.",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "scripts": {
+    "content:generate": "node scripts/generate-content.mjs",
+    "assets:optimize": "node scripts/optimize-assets.mjs",
+    "dev": "npm run content:generate && astro dev",
+    "dev:foreground": "npm run content:generate && node scripts/dev-server.mjs",
+    "check": "npm run content:generate && astro check",
+    "test": "npm run content:generate && vitest run",
+    "test:watch": "vitest",
+    "test:e2e": "npm run content:generate && playwright test",
+    "test:a11y": "npm run content:generate && playwright test tests/e2e/accessibility.spec.ts",
+    "audit:content": "npm run content:generate && node scripts/audit-content.mjs",
+    "audit:static": "node scripts/audit-static.mjs",
+    "audit:base": "node scripts/audit-base.mjs",
+    "build": "npm run content:generate && astro build",
+    "build:release": "npm run audit:content -- --release && astro build",
+    "preview": "astro preview",
+    "verify": "npm run check && npm run test && npm run audit:content && npm run build && npm run audit:static && npm run audit:base",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "dependencies": {
+    "@astrojs/react": "^6.0.2",
+    "@astrojs/sitemap": "^3.7.3",
+    "@fontsource-variable/dm-sans": "^5.3.0",
+    "@fontsource-variable/fraunces": "^5.3.0",
+    "astro": "^7.1.6",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.10",
+    "@axe-core/playwright": "^4.12.1",
+    "@playwright/test": "^1.62.1",
+    "@vitest/coverage-v8": "^4.1.10",
+    "prettier": "^3.9.6",
+    "prettier-plugin-astro": "^0.14.1",
+    "sharp": "^0.35.3",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.10"
+  }
+}

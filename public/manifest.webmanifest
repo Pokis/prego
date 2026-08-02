@@ -1,0 +1,9 @@
+{
+  "name": "Pregnancy, Clearly",
+  "short_name": "Clearly",
+  "description": "A clear week-by-week pregnancy guide with direct dos and don'ts.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#fbf6ed",
+  "theme_color": "#5f2847"
+}

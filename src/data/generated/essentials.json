@@ -1,0 +1,901 @@
+[
+  {
+    "id": "food-dishes",
+    "slug": "food-dishes",
+    "number": 1,
+    "title": "Food and everyday dishes",
+    "eyebrow": "Eat safely, not perfectly",
+    "intro": "Most ordinary meals can stay on the menu when ingredients are pasteurized, washed, stored safely and cooked thoroughly. The main goal is reducing infection and mercury risk—not building an impossible diet.",
+    "dos": [
+      "Build meals from foods you tolerate: a carbohydrate, a protein food, and fruit or vegetables is a useful simple pattern.",
+      "Wash produce, separate raw food from ready-to-eat food, cook thoroughly and refrigerate leftovers promptly.",
+      "Choose pasteurized milk and dairy, fully cooked eggs, and meat or seafood that is hot all the way through.",
+      "Include cooked lower-mercury fish if you eat fish, and vary the type rather than relying on one species every day."
+    ],
+    "donts": [
+      "Do not eat raw or undercooked meat, poultry, eggs, shellfish or fish during pregnancy.",
+      "Do not use unpasteurized milk or foods made from it unless they are cooked until steaming hot.",
+      "Avoid refrigerated pâté, raw sprouts and chilled ready-to-eat foods that have been stored too long or handled poorly.",
+      "Avoid large high-mercury predatory fish and fish from water with an active contamination warning."
+    ],
+    "askDoctor": [
+      "Ask for dietary support if vomiting, food aversions or reflux make regular eating difficult.",
+      "Ask about a tailored plan for diabetes, anaemia, food allergy, coeliac disease, vegan diets or an eating disorder.",
+      "Ask before using liver or high-dose vitamin-A products, medicinal herbs, detox drinks or concentrated powders."
+    ],
+    "examples": [
+      {
+        "name": "Well-cooked chicken, beef, pork or lamb",
+        "status": "generally-ok",
+        "guidance": "Cook through with no raw centre; keep raw juices away from salads and cooked foods."
+      },
+      {
+        "name": "Cooked fish and seafood",
+        "status": "generally-ok",
+        "guidance": "Choose lower-mercury varieties and cook thoroughly. Vary species across the week."
+      },
+      {
+        "name": "Sushi",
+        "status": "check-first",
+        "guidance": "Choose cooked or vegetarian fillings. Avoid raw fish and raw shellfish during pregnancy."
+      },
+      {
+        "name": "Eggs and egg dishes",
+        "status": "generally-ok",
+        "guidance": "The universal cautious choice is fully cooked whites and yolks; avoid raw batter, mousse or sauce made with raw egg."
+      },
+      {
+        "name": "Milk, yogurt and ordinary cheese",
+        "status": "generally-ok",
+        "guidance": "Check the label says pasteurized and keep the food refrigerated and within its use-by date."
+      },
+      {
+        "name": "Soft or mould-ripened cheese",
+        "status": "check-first",
+        "guidance": "The simplest cautious choice is to avoid it cold; cooking until steaming hot reduces infection risk."
+      },
+      {
+        "name": "Deli meat, cured meat and hot dogs",
+        "status": "check-first",
+        "guidance": "Heat until steaming hot rather than eating refrigerated slices cold."
+      },
+      {
+        "name": "Salads and raw vegetables",
+        "status": "generally-ok",
+        "guidance": "Wash ingredients well. Eat freshly prepared salads promptly and keep chilled salads cold."
+      },
+      {
+        "name": "Leftovers and takeaway meals",
+        "status": "generally-ok",
+        "guidance": "Refrigerate promptly, use within a short safe period, and reheat once until steaming throughout."
+      },
+      {
+        "name": "Liver and liver products",
+        "status": "avoid",
+        "guidance": "Avoid because they can contain very high vitamin A. Ask before taking any supplement containing retinol."
+      },
+      {
+        "name": "Raw sprouts",
+        "status": "avoid",
+        "guidance": "Cooking thoroughly is the safer option because washing alone may not remove bacteria inside the sprout."
+      },
+      {
+        "name": "Tiramisu, mousse and homemade mayonnaise",
+        "status": "check-first",
+        "guidance": "Check for raw egg and alcohol. Choose versions made with pasteurized egg and no alcohol."
+      }
+    ],
+    "sourceIds": [
+      "cdc-food",
+      "nhs-food",
+      "who-antenatal"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2027-07-31",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "annual"
+    }
+  },
+  {
+    "id": "drinks-caffeine",
+    "slug": "drinks-caffeine",
+    "number": 2,
+    "title": "Drinks, caffeine and alcohol",
+    "eyebrow": "What belongs in the cup",
+    "intro": "Water and ordinary pasteurized drinks are the easy baseline. Count caffeine across the whole day, avoid alcohol, and check unfamiliar herbal or concentrated products.",
+    "dos": [
+      "Drink regularly and use urine colour, thirst and dizziness as practical clues that you may need more fluid.",
+      "Keep total caffeine below 200 mg a day unless your doctor recommends a lower limit.",
+      "Count coffee, tea, cola, energy products, chocolate and caffeine-containing medicines together.",
+      "Choose pasteurized milk and juice, and wash reusable bottles daily."
+    ],
+    "donts": [
+      "Do not drink alcohol during pregnancy; no amount or stage has been proven safe.",
+      "Avoid energy drinks because caffeine can be high and other stimulant ingredients may be unclear.",
+      "Do not assume decaffeinated means zero caffeine or that a large café drink equals one standard serving.",
+      "Do not use detox teas, weight-loss drinks or concentrated herbal shots."
+    ],
+    "askDoctor": [
+      "Ask for help if stopping alcohol or another substance is difficult; honest support is safer than hiding use.",
+      "Ask before using electrolyte powders, sports supplements, herbal tea blends or products with many active ingredients.",
+      "Ask for assessment if vomiting means drinks will not stay down or urination becomes very infrequent or dark."
+    ],
+    "examples": [
+      {
+        "name": "Water and sparkling water",
+        "status": "generally-ok",
+        "guidance": "Use plain or lightly flavoured versions without stimulant additives."
+      },
+      {
+        "name": "Coffee and tea",
+        "status": "generally-ok",
+        "guidance": "Keep the whole-day caffeine total below 200 mg; strength and serving size vary widely."
+      },
+      {
+        "name": "Alcohol-free drinks",
+        "status": "check-first",
+        "guidance": "Check the label because some products contain a small amount of alcohol despite the branding."
+      },
+      {
+        "name": "Energy drinks and energy shots",
+        "status": "avoid",
+        "guidance": "Avoid high caffeine and poorly defined stimulant blends."
+      },
+      {
+        "name": "Herbal tea",
+        "status": "check-first",
+        "guidance": "Check every ingredient; ordinary food-level ginger or peppermint is different from a concentrated medicinal blend."
+      },
+      {
+        "name": "Pasteurized juice and smoothies",
+        "status": "generally-ok",
+        "guidance": "Choose pasteurized products, wash produce, refrigerate promptly and remember they can be high in sugar."
+      }
+    ],
+    "sourceIds": [
+      "who-antenatal",
+      "nhs-food",
+      "cdc-alcohol",
+      "acog-caffeine"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2027-07-31",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "annual"
+    }
+  },
+  {
+    "id": "exercise-movement",
+    "slug": "exercise-movement",
+    "number": 3,
+    "title": "Exercise and movement",
+    "eyebrow": "Stay active with sensible changes",
+    "intro": "For most uncomplicated pregnancies, regular moderate movement is helpful. The right plan feels stable, allows conversation and changes when symptoms or medical conditions require it.",
+    "dos": [
+      "If your doctor has not limited activity, work toward about 150 minutes of moderate movement each week, split into manageable sessions.",
+      "Warm up, drink water, avoid overheating and reduce intensity when you cannot speak in sentences.",
+      "Use walking, swimming, a stationary cycle, prenatal exercise or adapted strength work as steady options.",
+      "Train balance and strength with controlled movement, lighter loads and normal breathing rather than straining."
+    ],
+    "donts": [
+      "Avoid contact sports, scuba diving, activities with a high fall risk and exercise in extreme heat.",
+      "Do not hold your breath through heavy lifts or chase personal records during pregnancy.",
+      "Do not exercise through bleeding, fluid leakage, chest pain, faintness, severe breathlessness, painful regular contractions or reduced movement later in pregnancy.",
+      "Do not copy another person's pregnancy workout when your experience, fitness or medical history is different."
+    ],
+    "askDoctor": [
+      "Ask before starting a new vigorous program or continuing a sport with collision, altitude or fall risk.",
+      "Ask for an individualized plan with bleeding, placenta or cervical problems, preterm-labour risk, severe anaemia, heart or lung disease, or multiple pregnancy.",
+      "Ask for pelvic-health or physiotherapy help when pelvic, back or joint pain changes walking, sleep or daily activity."
+    ],
+    "examples": [
+      {
+        "name": "Walking and hiking",
+        "status": "generally-ok",
+        "guidance": "Choose stable surfaces, supportive footwear, a manageable pace and a route with water and help available."
+      },
+      {
+        "name": "Swimming and water exercise",
+        "status": "generally-ok",
+        "guidance": "Use a clean, safely maintained pool; avoid overheating and slippery entries."
+      },
+      {
+        "name": "Strength training",
+        "status": "generally-ok",
+        "guidance": "Use controlled technique, comfortable loads and breathing; adapt positions as the bump and balance change."
+      },
+      {
+        "name": "Running",
+        "status": "check-first",
+        "guidance": "Experienced runners may often continue with changes, but symptoms, balance and complications matter."
+      },
+      {
+        "name": "Hot yoga, hot Pilates and extreme-heat workouts",
+        "status": "avoid",
+        "guidance": "Avoid deliberate overheating and dehydration."
+      },
+      {
+        "name": "Scuba diving",
+        "status": "avoid",
+        "guidance": "Do not scuba dive during pregnancy."
+      }
+    ],
+    "sourceIds": [
+      "acog-exercise",
+      "who-antenatal"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2027-07-31",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "annual"
+    }
+  },
+  {
+    "id": "medicines-supplements",
+    "slug": "medicines-supplements",
+    "number": 4,
+    "title": "Medicines and supplements",
+    "eyebrow": "Check the exact product",
+    "intro": "Pregnancy medicine decisions depend on the exact product, dose, timing, reason and your health. Untreated illness can also be harmful, so never make a sudden change from a generic list.",
+    "dos": [
+      "Keep one current list of prescriptions, occasional medicines, creams, inhalers, vitamins, herbs and supplements.",
+      "Take prescribed medicine as directed until the prescriber tells you exactly how to continue, change or stop it.",
+      "Use the prenatal supplement recommended by your doctor and check labels for duplicate ingredients.",
+      "Ask a doctor or pharmacist who can see the exact product and understand why you need it."
+    ],
+    "donts": [
+      "Do not stop medicine for epilepsy, mental health, blood pressure, asthma, diabetes or another long-term condition on your own.",
+      "Do not assume over-the-counter, herbal, topical or natural products are automatically safe.",
+      "Do not take high-dose vitamins or several prenatal products together unless prescribed.",
+      "Avoid supplements containing retinol or high-dose vitamin A unless a specialist specifically prescribed them."
+    ],
+    "askDoctor": [
+      "Ask what the medicine treats, what happens without it, what pregnancy evidence exists and whether dose or monitoring changes.",
+      "Ask before painkillers, cold remedies, allergy products, sleep aids, acne treatment or herbal remedies.",
+      "Get urgent help for trouble breathing, facial swelling, collapse or a severe reaction after any medicine."
+    ],
+    "examples": [
+      {
+        "name": "A regular prescription",
+        "status": "check-first",
+        "guidance": "Continue as prescribed until prompt review; do not stop suddenly because the leaflet mentions pregnancy."
+      },
+      {
+        "name": "Painkiller or cold medicine",
+        "status": "check-first",
+        "guidance": "Ask about the exact active ingredients, dose and pregnancy week before taking it."
+      },
+      {
+        "name": "Prenatal vitamin",
+        "status": "generally-ok",
+        "guidance": "Use one appropriate product recommended for pregnancy and avoid stacking duplicates."
+      },
+      {
+        "name": "Herbal or 'natural' remedy",
+        "status": "check-first",
+        "guidance": "Ingredients, concentration and contamination can be unclear; show the exact label to a pharmacist or doctor."
+      },
+      {
+        "name": "High-dose vitamin A or retinol supplement",
+        "status": "avoid",
+        "guidance": "Avoid unless a specialist has prescribed it for a specific reason."
+      }
+    ],
+    "sourceIds": [
+      "cdc-medicine",
+      "who-antenatal"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2026-10-29",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "rapid-review"
+    }
+  },
+  {
+    "id": "everyday-home",
+    "slug": "everyday-home",
+    "number": 5,
+    "title": "Home, heat, pets and daily tasks",
+    "eyebrow": "Ordinary life with a few safeguards",
+    "intro": "Pregnancy does not require a sterile home or stopping normal life. Prevent overheating, reduce infection and chemical exposure, and change tasks that are painful or unstable.",
+    "dos": [
+      "Use gloves for soil, gardening and animal waste; wash hands well afterward.",
+      "Ventilate when painting or cleaning, follow labels and choose the least irritating product that works.",
+      "Use warm baths and showers, drink water and step out if you feel hot, dizzy or unwell.",
+      "Wear the car seat belt with the lap belt low under the bump and the shoulder belt across the chest."
+    ],
+    "donts": [
+      "Do not clean cat litter if someone else can do it; if unavoidable, wear gloves, clean it daily and wash hands carefully.",
+      "Do not mix cleaning chemicals, use products in an unventilated room or ignore dizziness and breathing irritation.",
+      "Avoid hot tubs and saunas; leave any bath or shower if you feel overheated or dizzy.",
+      "Do not climb unstable ladders or carry loads that block your view or strain the pelvis and back."
+    ],
+    "askDoctor": [
+      "Ask about occupational or home exposure to solvents, pesticides, lead, radiation, anaesthetic gases or infectious materials.",
+      "Ask for help with persistent pelvic or back pain rather than repeatedly pushing through the task.",
+      "Ask before using strong acne, skin-lightening or medicated cosmetic products."
+    ],
+    "examples": [
+      {
+        "name": "Normal household cleaning",
+        "status": "generally-ok",
+        "guidance": "Ventilate, wear gloves, follow the label and never mix products."
+      },
+      {
+        "name": "Gardening",
+        "status": "generally-ok",
+        "guidance": "Wear gloves, cover cuts, wash produce and hands, and avoid heavy awkward lifting."
+      },
+      {
+        "name": "Cat litter",
+        "status": "check-first",
+        "guidance": "Let someone else handle it when possible; otherwise use gloves, clean daily and wash hands."
+      },
+      {
+        "name": "Warm bath or shower",
+        "status": "generally-ok",
+        "guidance": "Keep it comfortable rather than very hot and leave if dizzy or overheated."
+      },
+      {
+        "name": "Hot tub or sauna",
+        "status": "avoid",
+        "guidance": "Avoid overheating, especially early in pregnancy."
+      }
+    ],
+    "sourceIds": [
+      "who-antenatal",
+      "acog-heat",
+      "cdc-toxoplasmosis",
+      "nhtsa-seat-belts"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2027-07-31",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "annual"
+    }
+  },
+  {
+    "id": "work-lifting",
+    "slug": "work-lifting",
+    "number": 6,
+    "title": "Work, lifting and long days",
+    "eyebrow": "Adjust the task, not your worth",
+    "intro": "Many people keep working or studying through pregnancy. The practical questions are exposure, strain, heat, standing, shifts, travel, food and toilet access—not whether pregnancy makes you fragile.",
+    "dos": [
+      "List repeated lifting, long standing, heat, chemicals, infection exposure, night shifts and missed breaks.",
+      "Ask early for specific adjustments such as a stool, task rotation, lighter loads, more short breaks or protected appointment time.",
+      "Keep water, tolerated food and toilet access realistic during the workday.",
+      "Lift close to the body with stable footing and normal breathing; split loads when possible."
+    ],
+    "donts": [
+      "Do not hide a hazardous exposure from the clinician assessing work safety.",
+      "Do not wait until pain or exhaustion makes the job impossible before changing the setup.",
+      "Do not repeatedly lift from the floor, twist with a load or carry something that blocks your view.",
+      "Do not accept faintness, contractions, bleeding or fluid leakage as an ordinary work inconvenience."
+    ],
+    "askDoctor": [
+      "Ask for an individual lifting or activity limit if you have pain, bleeding, cervical or placenta concerns, preterm-labour risk or another complication.",
+      "Ask about infection precautions if you work with young children, animals, patients, waste or laboratory materials.",
+      "Ask for documentation if your employer or school requires medical details for reasonable adjustments."
+    ],
+    "examples": [
+      {
+        "name": "Desk work",
+        "status": "generally-ok",
+        "guidance": "Change position often, support the back and take short movement breaks."
+      },
+      {
+        "name": "Long standing",
+        "status": "check-first",
+        "guidance": "Add sitting breaks, supportive footwear, task rotation and symptom review."
+      },
+      {
+        "name": "Heavy or repeated lifting",
+        "status": "check-first",
+        "guidance": "Get an individual assessment based on the load, frequency, technique, pregnancy stage and any symptoms."
+      },
+      {
+        "name": "Chemical, radiation or infection exposure",
+        "status": "check-first",
+        "guidance": "Use occupational-health and pregnancy-care review rather than relying on smell, visibility or a colleague's experience."
+      }
+    ],
+    "sourceIds": [
+      "who-antenatal"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2027-07-31",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "annual"
+    }
+  },
+  {
+    "id": "travel",
+    "slug": "travel",
+    "number": 7,
+    "title": "Travel and getting around",
+    "eyebrow": "Plan for care, comfort and circulation",
+    "intro": "Travel can be reasonable in an uncomplicated pregnancy, but timing, destination, journey length, infection risk, carrier rules and access to care all matter.",
+    "dos": [
+      "Carry essential pregnancy information, medicines, emergency contacts and travel insurance details.",
+      "On long journeys, move regularly, drink water and avoid tight clothing around the waist and legs.",
+      "Use the seat belt correctly on every trip and keep airbags active unless a qualified technician gives different instructions.",
+      "Know where pregnancy assessment is available at the destination before leaving."
+    ],
+    "donts": [
+      "Do not book non-refundable travel before checking medical advice, carrier limits and insurance cover.",
+      "Do not travel to an area with a pregnancy-specific infection warning without specialist advice.",
+      "Do not sit still for a very long journey when safe movement breaks are possible.",
+      "Do not travel when bleeding, regular painful contractions, fluid leakage, reduced movement or another urgent symptom needs assessment."
+    ],
+    "askDoctor": [
+      "Ask before long-haul travel, high altitude, remote destinations or travel later in the third trimester.",
+      "Ask about clot risk if you have a previous clot, thrombophilia, marked obesity, surgery, reduced mobility or another risk factor.",
+      "Ask whether your pregnancy records, medicines or a fit-to-fly letter are needed."
+    ],
+    "examples": [
+      {
+        "name": "Short car or train trip",
+        "status": "generally-ok",
+        "guidance": "Wear the seat belt correctly, stop when needed and keep care contacts available."
+      },
+      {
+        "name": "Long flight",
+        "status": "check-first",
+        "guidance": "Review pregnancy stage, clot risk, airline rules, insurance and destination care before booking."
+      },
+      {
+        "name": "Remote or high-altitude trip",
+        "status": "check-first",
+        "guidance": "Access to urgent care and altitude symptoms make individualized advice important."
+      },
+      {
+        "name": "Travel with warning symptoms",
+        "status": "avoid",
+        "guidance": "Seek assessment first rather than travelling away from care."
+      }
+    ],
+    "sourceIds": [
+      "who-antenatal",
+      "cdc-warning"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2027-07-31",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "annual"
+    }
+  },
+  {
+    "id": "sex-relationships",
+    "slug": "sex-relationships",
+    "number": 8,
+    "title": "Sex, intimacy and relationships",
+    "eyebrow": "Comfort and consent come first",
+    "intro": "Sex is often fine in an uncomplicated pregnancy. Desire and comfort can change from week to week, and consent still needs to be active every time.",
+    "dos": [
+      "Choose positions that avoid pressure, pain and breathlessness as the body changes.",
+      "Use condoms when protection from sexually transmitted infection is needed.",
+      "Talk plainly about comfort, desire, fear and alternatives to penetrative sex.",
+      "Stop and check symptoms rather than continuing through pain or distress."
+    ],
+    "donts": [
+      "Do not continue without consent or treat pregnancy as an obligation to have or avoid sex.",
+      "Do not ignore persistent pain, heavy bleeding, fluid leakage or regular contractions after sex.",
+      "Do not follow restrictions given to someone else; complications and advice differ.",
+      "Do not use an unsafe relationship as a reason to delay confidential medical or support contact."
+    ],
+    "askDoctor": [
+      "Ask before sex if you have unexplained bleeding, placenta or cervical concerns, ruptured membranes, preterm-labour risk or a specific restriction.",
+      "Ask about infection testing when there is a new partner, exposure concern or symptoms.",
+      "Ask privately for help with pressure, control, forced sex, monitoring, threats or violence."
+    ],
+    "examples": [
+      {
+        "name": "Sex in an uncomplicated pregnancy",
+        "status": "generally-ok",
+        "guidance": "Continue if wanted and comfortable, with position changes as needed."
+      },
+      {
+        "name": "Brief mild cramping after orgasm",
+        "status": "check-first",
+        "guidance": "It can occur, but contact care if pain persists, becomes regular or comes with bleeding or fluid loss."
+      },
+      {
+        "name": "Sex with an active complication or restriction",
+        "status": "check-first",
+        "guidance": "Follow the individual plan from the clinician managing the pregnancy."
+      }
+    ],
+    "sourceIds": [
+      "who-antenatal",
+      "cdc-warning"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2027-07-31",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "annual"
+    }
+  },
+  {
+    "id": "sleep-comfort",
+    "slug": "sleep-comfort",
+    "number": 9,
+    "title": "Sleep, rest and body comfort",
+    "eyebrow": "Aim for workable, not perfect",
+    "intro": "Sleep often changes with nausea, urination, reflux, movement, pain and anxiety. Small physical adjustments and daytime pacing are more realistic than chasing a perfect eight hours.",
+    "dos": [
+      "Use pillows between the knees, under the bump or behind the back to reduce strain.",
+      "From the third trimester, settle to sleep on your side; if you wake on your back, roll to a side without panic.",
+      "Use smaller evening meals and upper-body support when reflux is a problem.",
+      "Break preparation and housework into shorter tasks and accept practical help."
+    ],
+    "donts": [
+      "Do not take a sleep medicine, antihistamine or herbal sedative without checking the exact product.",
+      "Do not stay flat on your back when it makes you dizzy, breathless or unwell.",
+      "Do not dismiss severe snoring with pauses, waking unable to breathe or extreme daytime sleepiness.",
+      "Do not use alcohol or cannabis as a sleep aid."
+    ],
+    "askDoctor": [
+      "Ask about persistent insomnia, restless legs, severe reflux, pelvic pain or anxiety that is preventing sleep.",
+      "Ask before using medicine or a supplement for sleep.",
+      "Seek urgent care for sudden breathlessness, chest pain, fainting or a severe new headache rather than attributing it to tiredness."
+    ],
+    "examples": [
+      {
+        "name": "Side sleeping",
+        "status": "generally-ok",
+        "guidance": "Either side is acceptable; use pillows to support hips, abdomen and back."
+      },
+      {
+        "name": "Waking on the back",
+        "status": "generally-ok",
+        "guidance": "Roll onto a side and return to sleep; there is no need to panic."
+      },
+      {
+        "name": "Over-the-counter sleep aid",
+        "status": "check-first",
+        "guidance": "Ask about the exact active ingredient, dose and pregnancy week."
+      }
+    ],
+    "sourceIds": [
+      "nhs-weeks",
+      "cdc-medicine"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2027-07-31",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "annual"
+    }
+  },
+  {
+    "id": "appointments-warning-signs",
+    "slug": "appointments-warning-signs",
+    "number": 10,
+    "title": "Appointments and when to call",
+    "eyebrow": "Know the next step before you need it",
+    "intro": "Routine care checks trends and creates time for questions. It does not replace contacting care sooner for symptoms that are severe, sudden, worsening or simply feel seriously wrong.",
+    "dos": [
+      "Keep one note with medicines, symptoms, top questions, result dates and the next appointment.",
+      "Save the routine pregnancy-care number, urgent maternity number and emergency number in the phone.",
+      "At each visit, ask what happens next and what should make you contact care sooner.",
+      "Later in pregnancy, learn the baby's usual movement pattern and call promptly for a clear reduction or change."
+    ],
+    "donts": [
+      "Do not wait for the next routine visit with heavy bleeding, severe pain, fainting, chest pain, trouble breathing, seizures or another emergency sign.",
+      "Do not use a home Doppler, app, watch or one normal reading to dismiss concerning symptoms.",
+      "Do not wait until morning for a clear reduction in an established movement pattern.",
+      "Do not assume every pregnancy follows the same appointment count or test schedule."
+    ],
+    "askDoctor": [
+      "Ask what screening is offered, what it can and cannot show, and what each possible result could lead to.",
+      "Ask who contacts you with results, by when, and what to do if you hear nothing.",
+      "Ask for written individual instructions when a health condition, multiple pregnancy or complication changes routine care."
+    ],
+    "examples": [
+      {
+        "name": "A routine question",
+        "status": "generally-ok",
+        "guidance": "Add it to the visit list unless symptoms are changing or worrying you now."
+      },
+      {
+        "name": "A new symptom that is persistent or worsening",
+        "status": "check-first",
+        "guidance": "Contact the doctor or maternity team instead of waiting for the next visit."
+      },
+      {
+        "name": "Severe, sudden or emergency symptoms",
+        "status": "avoid",
+        "guidance": "Do not wait—use urgent or emergency medical care now."
+      }
+    ],
+    "sourceIds": [
+      "who-antenatal",
+      "cdc-warning"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2027-07-31",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "annual"
+    }
+  },
+  {
+    "id": "common-symptoms",
+    "slug": "common-symptoms",
+    "number": 11,
+    "title": "Common symptoms and practical self-care",
+    "eyebrow": "Ease the day without ignoring change",
+    "intro": "Nausea, constipation, reflux, tiredness and back or pelvic discomfort are common reasons pregnancy feels difficult. Small adjustments may help, while persistent or worsening symptoms deserve care rather than endurance.",
+    "dos": [
+      "Use small, regular meals and drinks when a full meal is difficult, and keep a simple note of what stays down.",
+      "Add fibre-containing foods, fluids and comfortable movement gradually when constipation is the problem.",
+      "Change position often, use supportive footwear and pillows, and split physical tasks when the back or pelvis hurts.",
+      "Record when a symptom began, what makes it better or worse, and how it affects eating, sleep, walking or work."
+    ],
+    "donts": [
+      "Do not take a painkiller, antacid, laxative, anti-nausea product or herbal remedy without checking the exact product.",
+      "Do not keep pushing through pain that changes how you walk, sleep or complete ordinary tasks.",
+      "Do not treat severe, sudden or rapidly worsening symptoms as an ordinary pregnancy discomfort.",
+      "Do not use another person's symptoms or treatment as proof that yours needs the same response."
+    ],
+    "askDoctor": [
+      "Ask promptly when vomiting prevents normal drinking, urination becomes much less frequent or weakness is increasing.",
+      "Ask for treatment options when nausea, reflux, constipation, headache, back pain or pelvic pain is persistent or limiting daily life.",
+      "Use urgent care for severe pain, fainting, trouble breathing, heavy bleeding, fluid leakage, seizures or another emergency warning sign."
+    ],
+    "examples": [
+      {
+        "name": "Mild nausea with food and fluids staying down",
+        "status": "generally-ok",
+        "guidance": "Try smaller, more frequent food and drinks, avoid strong triggers and mention it if self-care is not enough."
+      },
+      {
+        "name": "Constipation or heartburn",
+        "status": "generally-ok",
+        "guidance": "Start with gradual food, fluid, movement and meal-position changes; check before using a medicine."
+      },
+      {
+        "name": "Back or pelvic pain that changes walking or sleep",
+        "status": "check-first",
+        "guidance": "Ask for assessment and tailored physical support instead of repeatedly pushing through it."
+      },
+      {
+        "name": "Vomiting with very little urination or increasing weakness",
+        "status": "check-first",
+        "guidance": "Contact pregnancy care promptly because dehydration and treatment needs cannot be assessed from a generic page."
+      },
+      {
+        "name": "A severe, sudden or rapidly worsening symptom",
+        "status": "avoid",
+        "guidance": "Do not wait on self-care—use the urgent route provided by your maternity service or local emergency care."
+      }
+    ],
+    "sourceIds": [
+      "acog-morning-sickness",
+      "acog-back-pain",
+      "acog-digestive",
+      "cdc-warning",
+      "cdc-medicine"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2027-07-31",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "annual"
+    }
+  },
+  {
+    "id": "dental-skin-personal-care",
+    "slug": "dental-skin-personal-care",
+    "number": 12,
+    "title": "Dental, skincare and personal care",
+    "eyebrow": "Keep normal care; check active ingredients",
+    "intro": "Pregnancy does not mean neglecting teeth, skin or ordinary grooming. Tell the professional you are pregnant, check medicated products by ingredient and get painful or infected problems assessed instead of delaying care automatically.",
+    "dos": [
+      "Continue brushing, flossing and routine dental care, and tell the dentist that you are pregnant.",
+      "Use simple cleansers, moisturizers and sun protection when skin becomes sensitive or pigmentation changes.",
+      "Read the active-ingredient list on acne, anti-ageing, skin-lightening and medicated beauty products.",
+      "Use gloves, ventilation and the product instructions for dyes, solvents, adhesives or strong salon products."
+    ],
+    "donts": [
+      "Do not delay significant dental pain, swelling, injury or signs of infection just because you are pregnant.",
+      "Avoid oral isotretinoin and products labelled as retinoids during pregnancy unless the specialist managing your pregnancy gives explicit instructions.",
+      "Do not assume a topical, natural, salon or cosmetic product is harmless because it is not swallowed.",
+      "Do not book an elective injection, peel, laser or other procedure without telling the practitioner about the pregnancy and checking first."
+    ],
+    "askDoctor": [
+      "Ask the dentist and pregnancy clinician when imaging, anaesthetic, antibiotics or pain relief are proposed for dental treatment.",
+      "Ask a pharmacist, dermatologist or doctor about the exact acne, eczema, psoriasis or skin-lightening product you use.",
+      "Ask about a new widespread rash, blistering, severe itching or a skin change that comes with feeling unwell."
+    ],
+    "examples": [
+      {
+        "name": "Dental check-up and cleaning",
+        "status": "generally-ok",
+        "guidance": "Tell the dental team about the pregnancy and keep routine preventive care rather than postponing it automatically."
+      },
+      {
+        "name": "Dental pain, swelling or suspected infection",
+        "status": "check-first",
+        "guidance": "Arrange prompt dental assessment and make sure the dentist knows your pregnancy week and medicines."
+      },
+      {
+        "name": "Simple cleanser, moisturizer and sunscreen",
+        "status": "generally-ok",
+        "guidance": "Choose products you tolerate and check medicated or high-strength active ingredients separately."
+      },
+      {
+        "name": "Retinoid or isotretinoin acne treatment",
+        "status": "avoid",
+        "guidance": "Do not use it during pregnancy without direct specialist instructions; contact the prescriber promptly if it is already part of your routine."
+      },
+      {
+        "name": "Hair dye, salon treatment or cosmetic procedure",
+        "status": "check-first",
+        "guidance": "Check the product and procedure, use good ventilation and ask before treatments with strong chemicals, medicines or limited pregnancy evidence."
+      }
+    ],
+    "sourceIds": [
+      "acog-dental",
+      "acog-skin",
+      "cdc-medicine"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2027-07-31",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "annual"
+    }
+  },
+  {
+    "id": "infections-vaccinations",
+    "slug": "infections-vaccinations",
+    "number": 13,
+    "title": "Infections, exposure and vaccinations",
+    "eyebrow": "Ask early; recommendations change",
+    "intro": "Pregnancy can change the importance of some infections and vaccines. The useful baseline is good hygiene, a current vaccine record and prompt pregnancy-specific advice after a significant exposure or illness.",
+    "dos": [
+      "Bring your vaccine record to pregnancy care and ask which current or seasonal vaccines are recommended where you live.",
+      "Wash hands after contact with body fluids, animal waste, soil, raw food and shared items used by someone who is ill.",
+      "Follow workplace infection controls carefully in health care, childcare, laboratories, veterinary work and similar settings.",
+      "Contact pregnancy care after a significant exposure to a contagious illness or when a new feverish or rash illness develops."
+    ],
+    "donts": [
+      "Do not assume every vaccine is either required or forbidden in pregnancy; the exact vaccine, timing and exposure matter.",
+      "Do not receive a travel or catch-up vaccine without telling the vaccinating clinician that you are pregnant.",
+      "Do not rely on a mask, supplement or home remedy alone after an exposure that needs professional advice.",
+      "Do not ignore an infection-control concern at work because colleagues have handled the same task while pregnant."
+    ],
+    "askDoctor": [
+      "Ask which vaccines are recommended during this pregnancy and when they should be given under current local guidance.",
+      "Ask promptly after exposure to chickenpox, measles, rubella or another infection your care team has highlighted.",
+      "Ask for an individual work plan when repeated infectious exposure is part of your job or training."
+    ],
+    "examples": [
+      {
+        "name": "A routine or seasonal vaccine appointment",
+        "status": "check-first",
+        "guidance": "Confirm the exact vaccine and timing with a clinician using current pregnancy guidance for your location."
+      },
+      {
+        "name": "Ordinary contact with someone who has a cold",
+        "status": "generally-ok",
+        "guidance": "Use hand hygiene, ventilation and sensible distance; ask for advice if you become significantly unwell."
+      },
+      {
+        "name": "Exposure to chickenpox, measles or rubella",
+        "status": "check-first",
+        "guidance": "Contact pregnancy care promptly and explain the illness, timing, closeness of contact and what you know about immunity."
+      },
+      {
+        "name": "Travel vaccine or live vaccine",
+        "status": "check-first",
+        "guidance": "Pregnancy recommendations differ by vaccine and exposure; do not make the decision from a generic list."
+      },
+      {
+        "name": "Ignoring a significant exposure until the next routine visit",
+        "status": "avoid",
+        "guidance": "Do not wait when pregnancy care has advised prompt contact after that infection or exposure."
+      }
+    ],
+    "sourceIds": [
+      "cdc-vaccines",
+      "cdc-infections",
+      "who-antenatal"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2026-10-29",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "rapid-review"
+    }
+  },
+  {
+    "id": "mental-health-safety",
+    "slug": "mental-health-safety",
+    "number": 14,
+    "title": "Mental health, relationships and safety",
+    "eyebrow": "Your mind and safety are pregnancy health",
+    "intro": "Worry, mood and relationships can change during pregnancy. You do not have to wait for a crisis to mention anxiety, low mood, intrusive thoughts, pressure, control or feeling unsafe.",
+    "dos": [
+      "Tell a pregnancy-care professional about current or past anxiety, depression, bipolar disorder, trauma, eating disorders or other mental-health care.",
+      "Choose one person and one professional contact you can reach when thoughts or circumstances become difficult.",
+      "Ask to speak with a clinician alone when privacy would make it easier to talk honestly.",
+      "Make a simple safety plan for transport, medicines, documents, money and emergency contact if home does not feel safe."
+    ],
+    "donts": [
+      "Do not stop prescribed mental-health medicine suddenly because of pregnancy; arrange prompt review with the prescriber.",
+      "Do not dismiss persistent anxiety, low mood, panic or intrusive thoughts as a personal failure or something pregnancy requires you to tolerate.",
+      "Do not accept monitoring, threats, forced sex, reproductive pressure or control of money, transport, food or medical care as support.",
+      "Do not wait alone with thoughts of harming yourself or the baby, severe confusion, hallucinations or immediate danger."
+    ],
+    "askDoctor": [
+      "Ask for help when mood, fear, panic, sleep or intrusive thoughts are interfering with daily life, relationships or self-care.",
+      "Ask how existing therapy, prescriptions and crisis plans should continue through pregnancy and after birth.",
+      "Ask privately for local confidential support when someone controls, threatens, coerces or hurts you."
+    ],
+    "examples": [
+      {
+        "name": "Occasional worry that settles and does not disrupt daily life",
+        "status": "generally-ok",
+        "guidance": "Use support, rest and simple coping strategies, and mention changes at care visits without waiting for them to become severe."
+      },
+      {
+        "name": "Persistent anxiety, low mood, panic or intrusive thoughts",
+        "status": "check-first",
+        "guidance": "Contact a health professional; effective support can include practical help, therapy, medicine review or a combination."
+      },
+      {
+        "name": "A prescribed mental-health medicine",
+        "status": "check-first",
+        "guidance": "Continue as prescribed until prompt review with the clinician who understands the treatment and pregnancy."
+      },
+      {
+        "name": "Control, threats, forced sex or physical harm",
+        "status": "check-first",
+        "guidance": "Seek confidential professional support; use emergency help immediately when you are in danger."
+      },
+      {
+        "name": "Waiting with thoughts of harm or loss of contact with reality",
+        "status": "avoid",
+        "guidance": "Do not wait—use local emergency or crisis help and tell them that you are pregnant or recently pregnant."
+      }
+    ],
+    "sourceIds": [
+      "acog-mental-health",
+      "nhs-mental",
+      "acog-ipv",
+      "cdc-warning",
+      "cdc-medicine"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2027-07-31",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "annual"
+    }
+  }
+]

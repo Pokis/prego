@@ -1,0 +1,28 @@
+---
+import { getCollection } from "astro:content";
+import TimelineEntryPage from "@/components/TimelineEntryPage.astro";
+
+export async function getStaticPaths() {
+  const entries = (await getCollection("timeline")).filter(
+    (entry) => entry.data.kind === "postpartum",
+  );
+  return entries.map((entry) => ({
+    params: { slug: entry.data.slug },
+    props: { entry },
+  }));
+}
+const { entry } = Astro.props;
+const allMilestones = await getCollection("milestones");
+const helpRecords = await getCollection("urgent");
+const milestones = allMilestones.filter((item) =>
+  entry.data.milestoneIds.includes(item.id),
+);
+const careTeamHelp = helpRecords.find(
+  (item) => item.id === "contact-care-team",
+)!;
+const urgentHelp = helpRecords.find(
+  (item) => item.id === "maternal-warning-signs",
+)!;
+---
+
+<TimelineEntryPage {entry} {milestones} {careTeamHelp} {urgentHelp} />

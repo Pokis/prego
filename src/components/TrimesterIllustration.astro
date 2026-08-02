@@ -1,0 +1,58 @@
+---
+interface Props {
+  trimester: 1 | 2 | 3;
+}
+
+const { trimester } = Astro.props;
+const labels = {
+  1: "Abstract line illustration for the first trimester",
+  2: "Abstract line illustration for the second trimester",
+  3: "Abstract line illustration for the third trimester",
+};
+---
+
+<svg
+  class={`trimester-illustration trimester-${trimester}`}
+  viewBox="0 0 180 96"
+  role="img"
+  aria-label={labels[trimester]}
+>
+  <path
+    class="trimester-orbit"
+    d="M15 55C34 8 128 3 163 47c24 30-15 48-64 42C55 84 6 77 15 55Z"></path>
+  {
+    trimester === 1 && (
+      <>
+        <circle class="trimester-shape fill" cx="86" cy="49" r="17" />
+        <path
+          class="trimester-shape"
+          d="M76 50c8-14 23-9 22 3-1 10-15 18-25 8"
+        />
+      </>
+    )
+  }
+  {
+    trimester === 2 && (
+      <>
+        <circle class="trimester-shape fill" cx="86" cy="49" r="25" />
+        <path
+          class="trimester-shape"
+          d="M69 58c5-24 37-30 42-5 3 15-13 27-28 23"
+        />
+        <circle class="trimester-dot" cx="106" cy="28" r="4" />
+      </>
+    )
+  }
+  {
+    trimester === 3 && (
+      <>
+        <circle class="trimester-shape fill" cx="86" cy="49" r="32" />
+        <path
+          class="trimester-shape"
+          d="M62 61c3-34 47-43 59-13 8 20-11 39-32 39"
+        />
+        <path class="trimester-shape" d="M78 29c12 7 21 19 23 34" />
+      </>
+    )
+  }
+</svg>

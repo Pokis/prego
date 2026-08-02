@@ -1,0 +1,108 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+const urgent = await getCollection("urgent");
+const careTeam = urgent.find((item) => item.id === "contact-care-team")!;
+const maternal = urgent.find((item) => item.id === "maternal-warning-signs")!;
+const infant = urgent.find((item) => item.id === "infant-warning-signs")!;
+---
+
+<BaseLayout
+  title="Urgent help"
+  description="Urgent warning signs during pregnancy, after birth, and in a newborn or young baby."
+>
+  <section class="emergency-hero">
+    <div class="shell">
+      <p class="eyebrow">Do not wait for a routine appointment</p><h1>
+        Urgent help
+      </h1><p class="lede">
+        This page cannot assess symptoms. If you think you or your baby may be
+        in immediate danger, call your local emergency number now.
+      </p><div class="button-row">
+        <a class="button contact" href="#care-team">Contact care promptly</a>
+        <a class="button danger" href="#maternal"
+          >Pregnant or recently pregnant</a
+        ><a class="button secondary" href="#infant">Newborn or young baby</a>
+      </div>
+    </div>
+  </section>
+  <section class="section care-team-section" id="care-team">
+    <div class="shell">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Prompt advice, not a routine wait</p>
+          <h2>{careTeam.data.title}</h2>
+          <p>{careTeam.data.intro}</p>
+        </div>
+      </div>
+      <div class="care-team-grid">
+        {
+          careTeam.data.signs.map((sign) => (
+            <article class="care-card">
+              <h3>{sign.title}</h3>
+              <p>{sign.detail}</p>
+            </article>
+          ))
+        }
+      </div>
+      <div class="content-section help-card care-team-card">
+        <h3>What to do</h3>
+        <p><strong>{careTeam.data.action}</strong></p>
+      </div>
+    </div>
+  </section>
+  <section class="section" id="maternal">
+    <div class="shell">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Parent warning signs</p><h2>
+            {maternal.data.title}
+          </h2><p>{maternal.data.intro}</p>
+        </div>
+      </div><div class="emergency-grid">
+        {
+          maternal.data.signs.map((sign) => (
+            <article class="warning-card">
+              <>
+                <h3>{sign.title}</h3>
+                <p>{sign.detail}</p>
+              </>
+            </article>
+          ))
+        }
+      </div><div
+        class="content-section help-card urgent"
+        style="margin-top:1rem"
+      >
+        <h3>What to do</h3><p><strong>{maternal.data.action}</strong></p>
+      </div>
+    </div>
+  </section>
+  <section class="section soft" id="infant">
+    <div class="shell">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Baby warning signs</p><h2>
+            {infant.data.title}
+          </h2><p>{infant.data.intro}</p>
+        </div>
+      </div><div class="emergency-grid">
+        {
+          infant.data.signs.map((sign) => (
+            <article class="warning-card">
+              <>
+                <h3>{sign.title}</h3>
+                <p>{sign.detail}</p>
+              </>
+            </article>
+          ))
+        }
+      </div><div
+        class="content-section help-card urgent"
+        style="margin-top:1rem"
+      >
+        <h3>What to do</h3><p><strong>{infant.data.action}</strong></p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

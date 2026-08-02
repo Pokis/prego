@@ -1,0 +1,20 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { withBase } from "@/lib/paths";
+---
+
+<BaseLayout title="Page not found" noindex={true}>
+  <section class="page-hero">
+    <div class="shell">
+      <p class="eyebrow">404</p><h1>This page wandered off.</h1><p class="lede">
+        The full journey is still here. Start at the timeline, open pregnancy
+        essentials, or use urgent help if that is what you need.
+      </p><div class="button-row">
+        <a class="button" href={withBase("/timeline/")}>Open the timeline</a><a
+          class="button secondary"
+          href={withBase("/essentials/")}>Pregnancy essentials</a
+        >
+      </div>
+    </div>
+  </section>
+</BaseLayout>

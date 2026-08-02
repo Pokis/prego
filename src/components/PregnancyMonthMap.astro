@@ -1,0 +1,86 @@
+---
+import { beyondDuePeriod, pregnancyMonths } from "@/config/pregnancy";
+import { withBase } from "@/lib/paths";
+
+interface Props {
+  compact?: boolean;
+  currentWeek?: number | null;
+  headingLevel?: "h2" | "h3";
+}
+
+const {
+  compact = false,
+  currentWeek = null,
+  headingLevel = "h2",
+} = Astro.props;
+const Heading = headingLevel;
+const periods = pregnancyMonths.map((period) => ({
+  ...period,
+  current:
+    currentWeek !== null &&
+    currentWeek >= period.startWeek &&
+    currentWeek <= period.endWeek,
+}));
+const beyondDueIsCurrent =
+  currentWeek !== null &&
+  currentWeek >= beyondDuePeriod.startWeek &&
+  currentWeek <= beyondDuePeriod.endWeek;
+---
+
+<nav
+  class:list={["month-map", { compact }]}
+  aria-label="Pregnancy journey from a positive test through the due date"
+>
+  <div class="month-map-intro">
+    <div>
+      <p class="eyebrow">The nine-month map</p>
+      <Heading>Find the month. Follow the weeks.</Heading>
+    </div>
+    <p>
+      Pregnancy care counts in weeks because months do not divide evenly. The
+      month labels below are a simple orientation, not new medical dates.
+    </p>
+  </div>
+  <ol>
+    <li class="journey-start">
+      <a href={withBase("/timeline/positive-test/")}>
+        <span class="month-number">Start here</span>
+        <strong>Positive test</strong>
+        <span>First 24 hours and first week</span>
+        {
+          !compact && (
+            <small>
+              Arrange care, review medicines and learn the urgent route.
+            </small>
+          )
+        }
+      </a>
+    </li>
+    {
+      periods.map((period) => (
+        <li class:list={{ current: period.current }}>
+          <a
+            href={withBase(`/timeline/week-${period.startWeek}/`)}
+            aria-current={period.current ? "step" : undefined}
+          >
+            <span class="month-number">Month {period.month}</span>
+            <strong>{period.title}</strong>
+            <span>{period.weeks}</span>
+            {!compact && <small>{period.focus}</small>}
+          </a>
+        </li>
+      ))
+    }
+    <li class:list={["journey-beyond", { current: beyondDueIsCurrent }]}>
+      <a
+        href={withBase("/timeline/week-41/")}
+        aria-current={beyondDueIsCurrent ? "step" : undefined}
+      >
+        <span class="month-number">After the estimated due date</span>
+        <strong>{beyondDuePeriod.title}</strong>
+        <span>{beyondDuePeriod.weeks}</span>
+        {!compact && <small>{beyondDuePeriod.focus}</small>}
+      </a>
+    </li>
+  </ol>
+</nav>

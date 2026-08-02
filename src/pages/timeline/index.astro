@@ -1,0 +1,113 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import JourneySetup from "@/components/react/JourneySetup";
+import TimelineExplorer from "@/components/react/TimelineExplorer";
+import MilestoneTracker from "@/components/react/MilestoneTracker";
+import JourneySnapshot from "@/components/react/JourneySnapshot";
+import PregnancyMonthMap from "@/components/PregnancyMonthMap.astro";
+import TrimesterIllustration from "@/components/TrimesterIllustration.astro";
+import { withBase } from "@/lib/paths";
+
+const timeline = (await getCollection("timeline")).sort(
+  (a, b) => a.data.ordinal - b.data.ordinal,
+);
+const milestones = await getCollection("milestones");
+const pregnancyWeeks = timeline.filter((item) => item.data.kind === "week");
+const trimesterOverviews = timeline.filter(
+  (item) => item.data.kind === "overview",
+);
+const postpartum = timeline.filter((item) => item.data.phase === "postpartum");
+const pregnancyMilestones = milestones.filter(
+  (item) => item.data.anchor !== "birth-day",
+);
+---
+
+<BaseLayout
+  title="Pregnancy week by week: the nine-month timeline"
+  description="Follow all 40 pregnancy weeks by month and trimester, with concrete actions, cautions, appointments and explanations for first-time parents."
+>
+  <section class="page-hero timeline-page-hero">
+    <div class="shell">
+      <p class="eyebrow">Nine months · 40 weekly chapters</p><h1>
+        Your pregnancy,<br />week by week.
+      </h1><p class="lede">
+        Find the month and week you are in. See what may be happening, what to
+        do now, what to avoid or ask about, and which care decisions may be
+        coming next.
+      </p>
+    </div>
+  </section>
+  <div class="shell timeline-intro-stack">
+    <JourneySetup client:load />
+    <JourneySnapshot
+      client:load
+      milestones={pregnancyMilestones.map((item) => item.data)}
+    />
+    <PregnancyMonthMap />
+  </div>
+  <section class="section">
+    <div class="shell">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Open any week</p><h2>
+            Follow the pregnancy from week 3 to week 42
+          </h2><p>
+            Each chapter has a different focus and the same easy order: what to
+            know, what to do, what to avoid, appointments, support and help.
+          </p>
+        </div>
+      </div>
+      <div class="trimester-shortcuts" aria-label="Trimester overviews">
+        {
+          trimesterOverviews.map((entry, index) => (
+            <a href={withBase(`/timeline/${entry.data.slug}/`)}>
+              <TrimesterIllustration trimester={(index + 1) as 1 | 2 | 3} />
+              <span>{entry.data.windowLabel}</span>
+              <strong>{entry.data.title}</strong>
+              <small>{entry.data.dek}</small>
+            </a>
+          ))
+        }
+      </div>
+      <TimelineExplorer
+        client:load
+        entries={pregnancyWeeks.map((entry) => entry.data)}
+      />
+    </div>
+  </section>
+
+  <section class="section soft milestone-section">
+    <div class="shell">
+      <MilestoneTracker
+        client:load
+        milestones={pregnancyMilestones.map((item) => item.data)}
+      />
+    </div>
+  </section>
+
+  <section class="section after-birth-section" id="after-birth">
+    <div class="shell">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Continue later</p>
+          <h2>After birth, when you need it</h2>
+          <p>
+            Pregnancy is the main journey here. Parent recovery and baby basics
+            continue separately from birth day through month six.
+          </p>
+        </div>
+      </div>
+      <div class="postpartum-links">
+        {
+          postpartum.map((entry) => (
+            <a href={withBase(`/timeline/postpartum/${entry.data.slug}/`)}>
+              <span>{entry.data.windowLabel}</span>
+              <strong>{entry.data.title}</strong>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</BaseLayout>

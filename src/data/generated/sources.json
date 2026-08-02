@@ -1,0 +1,392 @@
+[
+  {
+    "id": "who-antenatal",
+    "authority": "World Health Organization",
+    "title": "WHO recommendations on antenatal care for a positive pregnancy experience",
+    "url": "https://www.who.int/publications/i/item/9789241549912",
+    "publishedOrUpdated": "2016-11-07",
+    "retrievedAt": "2026-08-01",
+    "cadence": "stable",
+    "note": "Global person-centred antenatal care foundation."
+  },
+  {
+    "id": "who-postnatal",
+    "authority": "World Health Organization",
+    "title": "WHO recommendations on maternal and newborn care for a positive postnatal experience",
+    "url": "https://www.who.int/publications/i/item/9789240045989",
+    "publishedOrUpdated": "2022-03-30",
+    "retrievedAt": "2026-08-01",
+    "cadence": "stable",
+    "note": "Global routine postnatal care foundation."
+  },
+  {
+    "id": "who-newborn",
+    "authority": "World Health Organization",
+    "title": "Newborn health",
+    "url": "https://www.who.int/europe/news-room/fact-sheets/item/newborn-health",
+    "publishedOrUpdated": "2026-07-31",
+    "retrievedAt": "2026-08-01",
+    "cadence": "annual",
+    "note": "Essential newborn care and postnatal contacts."
+  },
+  {
+    "id": "who-feeding",
+    "authority": "World Health Organization",
+    "title": "Infant and young child feeding",
+    "url": "https://www.who.int/news-room/fact-sheets/detail/infant-and-young-child-feeding",
+    "publishedOrUpdated": "2023-12-20",
+    "retrievedAt": "2026-08-01",
+    "cadence": "annual",
+    "note": "Feeding support and public-health recommendations."
+  },
+  {
+    "id": "cdc-warning",
+    "authority": "US Centers for Disease Control and Prevention",
+    "title": "Urgent Maternal Warning Signs",
+    "url": "https://www.cdc.gov/hearher/maternal-warning-signs/index.html",
+    "publishedOrUpdated": "2026-02-20",
+    "retrievedAt": "2026-08-01",
+    "cadence": "rapid-review",
+    "note": "Urgent maternal warning-sign framework."
+  },
+  {
+    "id": "cdc-medicine",
+    "authority": "US Centers for Disease Control and Prevention",
+    "title": "Medicine and Pregnancy: An Overview",
+    "url": "https://www.cdc.gov/medicine-and-pregnancy/about/index.html",
+    "publishedOrUpdated": "2025-09-22",
+    "retrievedAt": "2026-08-01",
+    "cadence": "rapid-review",
+    "note": "Do not start or stop medicines based on a generic online list."
+  },
+  {
+    "id": "cdc-food",
+    "authority": "US Centers for Disease Control and Prevention",
+    "title": "Safer Food Choices for Pregnant Women",
+    "url": "https://www.cdc.gov/food-safety/foods/pregnant-women.html",
+    "publishedOrUpdated": "2025-01-31",
+    "retrievedAt": "2026-08-01",
+    "cadence": "annual",
+    "note": "Foodborne-illness risk reduction."
+  },
+  {
+    "id": "cdc-alcohol",
+    "authority": "US Centers for Disease Control and Prevention",
+    "title": "About Alcohol Use During Pregnancy",
+    "url": "https://www.cdc.gov/alcohol-pregnancy/about/index.html",
+    "publishedOrUpdated": "2026-04-02",
+    "retrievedAt": "2026-08-01",
+    "cadence": "rapid-review",
+    "note": "No known safe amount, time or type of alcohol during pregnancy."
+  },
+  {
+    "id": "acog-caffeine",
+    "authority": "American College of Obstetricians and Gynecologists",
+    "title": "Moderate Caffeine Consumption During Pregnancy",
+    "url": "https://www.acog.org/clinical/clinical-guidance/committee-opinion/articles/2010/08/moderate-caffeine-consumption-during-pregnancy",
+    "publishedOrUpdated": "2020-10-01",
+    "retrievedAt": "2026-08-01",
+    "cadence": "annual",
+    "note": "Moderate caffeine guidance and the less-than-200-mg threshold."
+  },
+  {
+    "id": "coca-cola-caffeine",
+    "authority": "The Coca-Cola Company",
+    "title": "What is caffeine?",
+    "url": "https://www.coca-cola.com/gb/en/about-us/faq/what-is-caffeine",
+    "publishedOrUpdated": "2026-08-02",
+    "retrievedAt": "2026-08-02",
+    "cadence": "rapid-review",
+    "note": "Manufacturer example for caffeine in a 330 ml Coca-Cola serving and identification of caffeine-free variants; product labels remain the source for the exact drink and market."
+  },
+  {
+    "id": "cdc-vaccines",
+    "authority": "US Centers for Disease Control and Prevention",
+    "title": "Pregnancy and Vaccines",
+    "url": "https://www.cdc.gov/vaccine-safety/about/pregnancy.html",
+    "publishedOrUpdated": "2025-01-31",
+    "retrievedAt": "2026-08-01",
+    "cadence": "rapid-review",
+    "note": "US vaccination guidance; confirm current recommendations."
+  },
+  {
+    "id": "cdc-milestones",
+    "authority": "US Centers for Disease Control and Prevention",
+    "title": "CDC's Developmental Milestones",
+    "url": "https://www.cdc.gov/act-early/milestones/index.html",
+    "publishedOrUpdated": "2026-02-16",
+    "retrievedAt": "2026-08-01",
+    "cadence": "annual",
+    "note": "Developmental milestones at 2, 4 and 6 months."
+  },
+  {
+    "id": "acog-exercise",
+    "authority": "American College of Obstetricians and Gynecologists",
+    "title": "Exercise During Pregnancy",
+    "url": "https://www.acog.org/womens-health/faqs/exercise-during-pregnancy",
+    "publishedOrUpdated": "2026-07-31",
+    "retrievedAt": "2026-08-01",
+    "cadence": "annual",
+    "note": "Activity benefits, precautions and warning signs."
+  },
+  {
+    "id": "acog-heat",
+    "authority": "American College of Obstetricians and Gynecologists",
+    "title": "Can I use a sauna or hot tub early in pregnancy?",
+    "url": "https://www.acog.org/womens-health/experts-and-stories/ask-acog/can-i-use-a-sauna-or-hot-tub-early-in-pregnancy",
+    "publishedOrUpdated": "2021-09-01",
+    "retrievedAt": "2026-08-01",
+    "cadence": "annual",
+    "note": "Avoiding sauna and hot-tub overheating, especially early in pregnancy."
+  },
+  {
+    "id": "cdc-toxoplasmosis",
+    "authority": "US Centers for Disease Control and Prevention",
+    "title": "About Toxoplasmosis",
+    "url": "https://www.cdc.gov/toxoplasmosis/about/",
+    "publishedOrUpdated": "2025-03-11",
+    "retrievedAt": "2026-08-01",
+    "cadence": "annual",
+    "note": "Gloves for soil, daily cat-litter changes and careful handwashing."
+  },
+  {
+    "id": "nhtsa-seat-belts",
+    "authority": "US National Highway Traffic Safety Administration",
+    "title": "Seat Belt Safety for Adults",
+    "url": "https://www.nhtsa.gov/vehicle-safety/seat-belts",
+    "publishedOrUpdated": "2026-07-31",
+    "retrievedAt": "2026-08-01",
+    "cadence": "annual",
+    "note": "Seat-belt positioning and air-bag use during pregnancy."
+  },
+  {
+    "id": "acog-postpartum",
+    "authority": "American College of Obstetricians and Gynecologists",
+    "title": "Optimizing Postpartum Care",
+    "url": "https://www.acog.org/clinical/clinical-guidance/committee-opinion/articles/2018/05/optimizing-postpartum-care",
+    "publishedOrUpdated": "2018-05-01",
+    "retrievedAt": "2026-08-01",
+    "cadence": "stable",
+    "note": "Postpartum care as an ongoing process."
+  },
+  {
+    "id": "acog-changes",
+    "authority": "American College of Obstetricians and Gynecologists",
+    "title": "Changes During Pregnancy",
+    "url": "https://www.acog.org/womens-health/infographics/changes-during-pregnancy",
+    "publishedOrUpdated": "2026-07-31",
+    "retrievedAt": "2026-08-01",
+    "cadence": "annual",
+    "note": "High-level fetal and maternal changes."
+  },
+  {
+    "id": "nhs-weeks",
+    "authority": "National Health Service",
+    "title": "Week-by-week guide to pregnancy",
+    "url": "https://www.nhs.uk/best-start-in-life/pregnancy/week-by-week-guide-to-pregnancy/",
+    "publishedOrUpdated": "2026-07-31",
+    "retrievedAt": "2026-08-01",
+    "cadence": "annual",
+    "note": "UK week-by-week pregnancy guidance."
+  },
+  {
+    "id": "nhs-appointments",
+    "authority": "National Health Service",
+    "title": "Your antenatal care and appointments",
+    "url": "https://www.nhs.uk/pregnancy/your-pregnancy-care/your-antenatal-care-and-appointments/",
+    "publishedOrUpdated": "2026-04-01",
+    "retrievedAt": "2026-08-01",
+    "cadence": "rapid-review",
+    "note": "UK appointment pathway and first-pregnancy variations."
+  },
+  {
+    "id": "nhs-mental",
+    "authority": "National Health Service",
+    "title": "Mental health in pregnancy",
+    "url": "https://www.nhs.uk/pregnancy/mental-health-in-pregnancy-and-after-the-birth/mental-health/",
+    "publishedOrUpdated": "2026-03-11",
+    "retrievedAt": "2026-08-01",
+    "cadence": "annual",
+    "note": "Perinatal mental-health information and escalation."
+  },
+  {
+    "id": "nhs-food",
+    "authority": "National Health Service",
+    "title": "Foods to avoid in pregnancy",
+    "url": "https://www.nhs.uk/pregnancy/keeping-well/foods-to-avoid/",
+    "publishedOrUpdated": "2026-07-31",
+    "retrievedAt": "2026-08-01",
+    "cadence": "rapid-review",
+    "note": "UK food-safety guidance."
+  },
+  {
+    "id": "nice-antenatal",
+    "authority": "National Institute for Health and Care Excellence",
+    "title": "Antenatal care",
+    "url": "https://www.nice.org.uk/guidance/ng201",
+    "publishedOrUpdated": "2021-08-19",
+    "retrievedAt": "2026-08-01",
+    "cadence": "annual",
+    "note": "Evidence-based routine antenatal care."
+  },
+  {
+    "id": "nice-postnatal",
+    "authority": "National Institute for Health and Care Excellence",
+    "title": "Postnatal care",
+    "url": "https://www.nice.org.uk/guidance/ng194",
+    "publishedOrUpdated": "2021-04-20",
+    "retrievedAt": "2026-08-01",
+    "cadence": "annual",
+    "note": "Evidence-based postnatal care."
+  },
+  {
+    "id": "aap-safe-sleep",
+    "authority": "American Academy of Pediatrics",
+    "title": "Safe Sleep",
+    "url": "https://www.aap.org/en/patient-care/safe-sleep/",
+    "publishedOrUpdated": "2026-07-31",
+    "retrievedAt": "2026-08-01",
+    "cadence": "annual",
+    "note": "Infant sleep safety recommendations."
+  },
+  {
+    "id": "acog-morning-sickness",
+    "authority": "American College of Obstetricians and Gynecologists",
+    "title": "Morning Sickness: Nausea and Vomiting of Pregnancy",
+    "url": "https://www.acog.org/womens-health/faqs/morning-sickness-nausea-and-vomiting-of-pregnancy",
+    "publishedOrUpdated": "2024-11-01",
+    "retrievedAt": "2026-08-01",
+    "cadence": "annual",
+    "note": "Common nausea patterns, practical support and escalation when fluids will not stay down."
+  },
+  {
+    "id": "acog-back-pain",
+    "authority": "American College of Obstetricians and Gynecologists",
+    "title": "Back Pain During Pregnancy",
+    "url": "https://www.acog.org/womens-health/faqs/back-pain-during-pregnancy",
+    "publishedOrUpdated": "2026-07-31",
+    "retrievedAt": "2026-08-01",
+    "cadence": "annual",
+    "note": "Everyday back-care measures and reasons to contact care."
+  },
+  {
+    "id": "acog-digestive",
+    "authority": "American College of Obstetricians and Gynecologists",
+    "title": "Problems of the Digestive System",
+    "url": "https://www.acog.org/womens-health/faqs/problems-of-the-digestive-system",
+    "publishedOrUpdated": "2026-07-31",
+    "retrievedAt": "2026-08-01",
+    "cadence": "annual",
+    "note": "Constipation and reflux foundations relevant during pregnancy."
+  },
+  {
+    "id": "acog-dental",
+    "authority": "American College of Obstetricians and Gynecologists",
+    "title": "Oral Health Care During Pregnancy and Through the Lifespan",
+    "url": "https://www.acog.org/clinical/clinical-guidance/committee-opinion/articles/2013/08/oral-health-care-during-pregnancy-and-through-the-lifespan",
+    "publishedOrUpdated": "2013-08-01",
+    "retrievedAt": "2026-08-01",
+    "cadence": "stable",
+    "note": "Routine and necessary dental care during pregnancy."
+  },
+  {
+    "id": "acog-skin",
+    "authority": "American College of Obstetricians and Gynecologists",
+    "title": "Skin Conditions During Pregnancy",
+    "url": "https://www.acog.org/womens-health/faqs/skin-conditions-during-pregnancy",
+    "publishedOrUpdated": "2025-11-01",
+    "retrievedAt": "2026-08-01",
+    "cadence": "annual",
+    "note": "Common skin changes and product ingredients that require pregnancy review."
+  },
+  {
+    "id": "cdc-infections",
+    "authority": "US Centers for Disease Control and Prevention",
+    "title": "About Infectious Agents and Reproductive Health",
+    "url": "https://www.cdc.gov/niosh/reproductive-health/prevention/infectious.html",
+    "publishedOrUpdated": "2024-05-10",
+    "retrievedAt": "2026-08-01",
+    "cadence": "rapid-review",
+    "note": "Infection exposure, hygiene, work and vaccination discussion during pregnancy."
+  },
+  {
+    "id": "acog-mental-health",
+    "authority": "American College of Obstetricians and Gynecologists",
+    "title": "Mental Health and Pregnancy",
+    "url": "https://www.acog.org/womens-health/videos/mental-health-and-pregnancy",
+    "publishedOrUpdated": "2025-09-01",
+    "retrievedAt": "2026-08-01",
+    "cadence": "annual",
+    "note": "Recognition and treatment support for mental-health changes during pregnancy."
+  },
+  {
+    "id": "acog-ipv",
+    "authority": "American College of Obstetricians and Gynecologists",
+    "title": "Intimate Partner Violence",
+    "url": "https://www.acog.org/womens-health/faqs/intimate-partner-violence",
+    "publishedOrUpdated": "2026-07-31",
+    "retrievedAt": "2026-08-01",
+    "cadence": "annual",
+    "note": "Private, nonjudgmental support for control, coercion, threats and violence."
+  },
+  {
+    "id": "asrm-natural-fertility",
+    "authority": "American Society for Reproductive Medicine",
+    "title": "Optimizing natural fertility: a committee opinion",
+    "url": "https://www.asrm.org/practice-guidance/practice-committee-documents/optimizing-natural-fertility-a-committee-opinion-2021/",
+    "publishedOrUpdated": "2022-01-01",
+    "retrievedAt": "2026-08-02",
+    "cadence": "annual",
+    "note": "Fertile-window timing, intercourse frequency, fertility-awareness methods and common conception myths."
+  },
+  {
+    "id": "acog-infertility",
+    "authority": "American College of Obstetricians and Gynecologists",
+    "title": "Evaluating Infertility",
+    "url": "https://www.acog.org/womens-health/faqs/evaluating-infertility",
+    "publishedOrUpdated": "2026-08-02",
+    "retrievedAt": "2026-08-02",
+    "cadence": "annual",
+    "note": "Age, ovulation, sperm factors and when to seek a fertility evaluation."
+  },
+  {
+    "id": "acog-prepregnancy",
+    "authority": "American College of Obstetricians and Gynecologists",
+    "title": "Prepregnancy Counseling",
+    "url": "https://www.acog.org/clinical/clinical-guidance/committee-opinion/articles/2019/01/prepregnancy-counseling",
+    "publishedOrUpdated": "2019-01-01",
+    "retrievedAt": "2026-08-02",
+    "cadence": "annual",
+    "note": "Prepregnancy medicine, condition, vaccine, infection, nutrition and substance-use review."
+  },
+  {
+    "id": "cdc-planning-pregnancy",
+    "authority": "US Centers for Disease Control and Prevention",
+    "title": "Planning for Pregnancy",
+    "url": "https://www.cdc.gov/pregnancy/about/index.html",
+    "publishedOrUpdated": "2025-05-08",
+    "retrievedAt": "2026-08-02",
+    "cadence": "annual",
+    "note": "Folic acid, health history, medicines, vaccines, substances and environmental preparation before pregnancy."
+  },
+  {
+    "id": "cdc-infertility",
+    "authority": "US Centers for Disease Control and Prevention",
+    "title": "Infertility: Frequently Asked Questions",
+    "url": "https://www.cdc.gov/reproductive-health/infertility-faq/index.html",
+    "publishedOrUpdated": "2026-08-02",
+    "retrievedAt": "2026-08-02",
+    "cadence": "annual",
+    "note": "Female and male fertility factors, including testosterone, anabolic steroids and earlier evaluation prompts."
+  },
+  {
+    "id": "who-preconception",
+    "authority": "World Health Organization",
+    "title": "Preconception care to reduce maternal and childhood mortality and morbidity",
+    "url": "https://www.who.int/publications/i/item/9789241505000",
+    "publishedOrUpdated": "2013-01-01",
+    "retrievedAt": "2026-08-02",
+    "cadence": "stable",
+    "note": "Global preconception health and pregnancy-outcome foundation for women, men and couples."
+  }
+]

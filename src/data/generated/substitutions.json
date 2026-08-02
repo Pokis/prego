@@ -1,0 +1,625 @@
+[
+  {
+    "id": "cola",
+    "item": "Coca-Cola and other cola",
+    "group": "drinks",
+    "status": "keep-with-limit",
+    "searchTerms": [
+      "coke",
+      "coca cola",
+      "pepsi",
+      "soda",
+      "soft drink",
+      "fizzy drink"
+    ],
+    "shortAnswer": "You usually do not need to give up cola completely. A manufacturer example lists 34 mg of caffeine in a 330 ml Coca-Cola; count the exact drink toward the usual pregnancy limit of less than 200 mg a day.",
+    "why": "Caffeine from cola, coffee, tea, chocolate and medicines adds together. Brand, recipe and serving size can change the amount, so the package in your hand matters more than a remembered number.",
+    "alternatives": [
+      {
+        "label": "Closest taste",
+        "title": "Caffeine-free cola",
+        "note": "Keeps the familiar cola taste without using part of the daily caffeine allowance."
+      },
+      {
+        "label": "Keep the original",
+        "title": "A smaller serving",
+        "note": "Choose a size you can count easily and include it with every other caffeine source that day."
+      },
+      {
+        "label": "Fresh option",
+        "title": "Sparkling water with citrus",
+        "note": "Cold, fizzy and easy to vary with lemon, lime, orange or mint."
+      }
+    ],
+    "labelCheck": "“Zero sugar” does not mean caffeine-free. Look specifically for “caffeine-free” and check the serving size.",
+    "sourceIds": [
+      "acog-caffeine",
+      "coca-cola-caffeine"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2026-10-29",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "rapid-review"
+    }
+  },
+  {
+    "id": "coffee",
+    "item": "Coffee and iced coffee",
+    "group": "coffee-tea",
+    "status": "keep-with-limit",
+    "searchTerms": [
+      "latte",
+      "espresso",
+      "cappuccino",
+      "cold brew",
+      "iced latte"
+    ],
+    "shortAnswer": "Coffee can stay if all caffeine for the day remains below 200 mg. Café size, bean, brew method and extra espresso shots can make two similar-looking drinks very different.",
+    "why": "The limit applies to the whole day, not to coffee alone. Tea, cola, chocolate, energy drinks and some medicines can also contribute.",
+    "alternatives": [
+      {
+        "label": "Closest ritual",
+        "title": "Decaf coffee",
+        "note": "Keeps the cup, aroma and café routine with much less caffeine, though decaf is not always completely caffeine-free."
+      },
+      {
+        "label": "Gentle step down",
+        "title": "Half-caf",
+        "note": "Mix regular and decaf or ask the café for one regular shot and one decaf shot."
+      },
+      {
+        "label": "Keep the original",
+        "title": "A smaller, single-shot drink",
+        "note": "Ask how many shots it contains and leave room in the daily total for tea, cola or chocolate."
+      }
+    ],
+    "labelCheck": "Do not estimate from cup colour or drink name. Check the volume and number of espresso shots; bottled coffee should list caffeine on its label when available.",
+    "sourceIds": [
+      "acog-caffeine"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2027-07-31",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "annual"
+    }
+  },
+  {
+    "id": "energy-drinks",
+    "item": "Energy drinks and energy shots",
+    "group": "drinks",
+    "status": "choose-alternative",
+    "searchTerms": [
+      "red bull",
+      "monster",
+      "energy shot",
+      "pre workout",
+      "stimulant drink"
+    ],
+    "shortAnswer": "Choose a different drink during pregnancy unless your doctor has reviewed the exact product. Energy drinks can make caffeine easy to underestimate and may add other stimulant ingredients.",
+    "why": "A generic caffeine total cannot assess every stimulant blend, herbal extract or concentrated ingredient. “Natural energy” is not a pregnancy-safety statement.",
+    "alternatives": [
+      {
+        "label": "Cold and fizzy",
+        "title": "Caffeine-free sparkling drink",
+        "note": "Choose one without an energy, stimulant or herbal blend and check the full ingredient list."
+      },
+      {
+        "label": "With food",
+        "title": "Water plus a regular snack",
+        "note": "A drink and a snack containing carbohydrate and protein may help when the real need is hydration or food."
+      },
+      {
+        "label": "When exhaustion persists",
+        "title": "Ask about the fatigue",
+        "note": "Severe or ongoing tiredness deserves care rather than repeatedly masking it with stimulants."
+      }
+    ],
+    "labelCheck": "Check caffeine per container, not only per serving, and look for guarana, stimulant blends, concentrated extracts and pre-workout wording.",
+    "sourceIds": [
+      "acog-caffeine",
+      "cdc-medicine"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2026-10-29",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "rapid-review"
+    }
+  },
+  {
+    "id": "alcohol",
+    "item": "Wine, beer and cocktails",
+    "group": "drinks",
+    "status": "choose-alternative",
+    "searchTerms": [
+      "champagne",
+      "prosecco",
+      "spirits",
+      "mocktail",
+      "non alcoholic wine"
+    ],
+    "shortAnswer": "Choose an alcohol-free drink during pregnancy. There is no known safe amount, safe time or safe type of alcohol in pregnancy.",
+    "why": "Changing the type of alcohol does not remove the pregnancy risk. The useful swap is the same occasion and flavour style without alcohol.",
+    "alternatives": [
+      {
+        "label": "Closest occasion",
+        "title": "A clearly labelled 0.0% drink",
+        "note": "Use the label rather than the front-of-pack style; “low alcohol” and “alcohol-free” definitions can differ."
+      },
+      {
+        "label": "Restaurant order",
+        "title": "A made-to-order no-alcohol mocktail",
+        "note": "Ask for no bitters or alcoholic flavourings and choose pasteurized juices."
+      },
+      {
+        "label": "Simple at home",
+        "title": "Sparkling water and pasteurized juice",
+        "note": "Serve cold in the same glass with citrus or herbs for the ritual without alcohol."
+      }
+    ],
+    "labelCheck": "Look for 0.0% when you want the clearest substitute. Check kombucha and fermented drinks too; the name alone does not tell you the alcohol content.",
+    "sourceIds": [
+      "cdc-alcohol"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2026-10-29",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "rapid-review"
+    }
+  },
+  {
+    "id": "sushi",
+    "item": "Sushi and poke bowls",
+    "group": "meals",
+    "status": "prepare-differently",
+    "searchTerms": [
+      "raw fish",
+      "sashimi",
+      "salmon roll",
+      "poke",
+      "japanese takeaway"
+    ],
+    "shortAnswer": "Keep the meal, change the filling: choose cooked seafood, cooked protein or vegetarian sushi instead of raw fish or raw shellfish.",
+    "why": "The practical pregnancy issue is the raw ingredient and food handling, not the rice, seaweed or shape of the dish.",
+    "alternatives": [
+      {
+        "label": "Closest order",
+        "title": "Cooked salmon, shrimp or crab-style roll",
+        "note": "Confirm the seafood is fully cooked and the roll is made with clean utensils."
+      },
+      {
+        "label": "No seafood",
+        "title": "Avocado, cucumber or cooked-vegetable roll",
+        "note": "Ask for fresh preparation and clean separation from raw fish if cross-contact worries you."
+      },
+      {
+        "label": "Same bowl format",
+        "title": "Poke bowl with fully cooked protein",
+        "note": "Use fresh washed vegetables and a cooked topping rather than raw fish or raw egg."
+      }
+    ],
+    "labelCheck": "“Smoked,” “seared” and “marinated” do not always mean cooked through. Ask how the filling was prepared.",
+    "sourceIds": [
+      "cdc-food",
+      "nhs-food"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2027-07-31",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "annual"
+    }
+  },
+  {
+    "id": "deli-meat",
+    "item": "Deli meat, cured meat and hot dogs",
+    "group": "meals",
+    "status": "prepare-differently",
+    "searchTerms": [
+      "ham",
+      "salami",
+      "prosciutto",
+      "pepperoni",
+      "sandwich",
+      "frankfurter"
+    ],
+    "shortAnswer": "The easy general swap is heat: have deli meat or a hot dog steaming hot instead of cold from the refrigerator.",
+    "why": "Heating changes a cold ready-to-eat product into a lower-risk option while keeping the sandwich, pizza or hot-dog meal familiar.",
+    "alternatives": [
+      {
+        "label": "Keep the filling",
+        "title": "A hot toasted sandwich",
+        "note": "Heat the meat until steaming throughout, then assemble and eat promptly."
+      },
+      {
+        "label": "Freshly cooked",
+        "title": "Chicken, turkey, beef or pork",
+        "note": "Use meat cooked through and served hot rather than chilled pre-sliced meat."
+      },
+      {
+        "label": "Meat-free",
+        "title": "A hot bean or cooked-vegetable filling",
+        "note": "Choose a freshly prepared filling and keep cold ingredients properly chilled."
+      }
+    ],
+    "labelCheck": "Microwaving briefly is not enough if the centre stays cool. The practical check is steaming hot throughout.",
+    "sourceIds": [
+      "cdc-food",
+      "nhs-food"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2027-07-31",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "annual"
+    }
+  },
+  {
+    "id": "soft-cheese",
+    "item": "Soft and mould-ripened cheese",
+    "group": "dairy",
+    "status": "prepare-differently",
+    "searchTerms": [
+      "brie",
+      "camembert",
+      "blue cheese",
+      "goat cheese",
+      "feta",
+      "queso fresco"
+    ],
+    "shortAnswer": "For the simplest general choice, use pasteurized hard or semi-hard cheese. If choosing a soft or mould-ripened cheese, check the exact product and use pregnancy guidance from your care team; cooking until steaming hot can make some dishes a better option.",
+    "why": "Cheese advice depends on milk treatment, moisture, rind, storage and whether the food is thoroughly cooked. “Soft” alone is not a complete safety label.",
+    "alternatives": [
+      {
+        "label": "Simplest cold swap",
+        "title": "Pasteurized cheddar, gouda or another firm cheese",
+        "note": "Check that it is pasteurized and keep it refrigerated within its use-by date."
+      },
+      {
+        "label": "For a hot dish",
+        "title": "Cheese cooked until steaming",
+        "note": "Use it in a dish that becomes steaming hot throughout, not only warmed at the edges."
+      },
+      {
+        "label": "For creamy texture",
+        "title": "Pasteurized cream cheese or cottage cheese",
+        "note": "Check the label, refrigeration and use-by date before eating it cold."
+      }
+    ],
+    "labelCheck": "Check “pasteurized,” the cheese type, storage instructions and use-by date. Pasteurization does not replace safe refrigeration and handling.",
+    "sourceIds": [
+      "cdc-food",
+      "nhs-food"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2026-10-29",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "rapid-review"
+    }
+  },
+  {
+    "id": "runny-eggs",
+    "item": "Runny eggs and raw-egg sauces",
+    "group": "meals",
+    "status": "prepare-differently",
+    "searchTerms": [
+      "poached egg",
+      "soft boiled",
+      "hollandaise",
+      "mayonnaise",
+      "raw batter"
+    ],
+    "shortAnswer": "The universal cautious swap is a fully cooked egg or a product made with pasteurized egg instead of a runny or raw egg.",
+    "why": "Cooking the white and yolk through, or using pasteurized egg, lowers foodborne-infection risk without removing eggs from the menu.",
+    "alternatives": [
+      {
+        "label": "Same breakfast",
+        "title": "Egg cooked until white and yolk are firm",
+        "note": "Fry, boil, poach or scramble it until no raw or runny part remains."
+      },
+      {
+        "label": "For sauces",
+        "title": "Commercial pasteurized-egg mayonnaise",
+        "note": "Check the ingredients and refrigeration instructions; do not assume a homemade sauce uses pasteurized egg."
+      },
+      {
+        "label": "For baking",
+        "title": "A fully baked version",
+        "note": "Do not taste raw batter; bake until the centre is properly cooked."
+      }
+    ],
+    "labelCheck": "Country-specific egg schemes can differ. If the package does not clearly support a local exception, use the fully cooked or pasteurized option.",
+    "sourceIds": [
+      "cdc-food",
+      "nhs-food"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2026-10-29",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "rapid-review"
+    }
+  },
+  {
+    "id": "raw-egg-desserts",
+    "item": "Tiramisu, mousse and homemade desserts",
+    "group": "treats",
+    "status": "prepare-differently",
+    "searchTerms": [
+      "chocolate mousse",
+      "homemade ice cream",
+      "raw egg dessert",
+      "rum cake",
+      "alcohol dessert"
+    ],
+    "shortAnswer": "Choose a version made without alcohol and with pasteurized egg—or a dessert that is fully baked instead.",
+    "why": "Two separate details can matter in the same dessert: raw egg and alcohol. Removing only one does not answer the other.",
+    "alternatives": [
+      {
+        "label": "Closest version",
+        "title": "Pasteurized-egg, alcohol-free tiramisu or mousse",
+        "note": "Ask about both ingredients; “homemade” does not reveal whether the egg is pasteurized."
+      },
+      {
+        "label": "Easy restaurant order",
+        "title": "A fully baked cake or pudding",
+        "note": "Check that it has no alcoholic soak, sauce or uncooked egg topping."
+      },
+      {
+        "label": "Cold option",
+        "title": "Pasteurized yogurt with fruit",
+        "note": "Keeps a creamy, chilled dessert format with an ingredient list that is easier to verify."
+      }
+    ],
+    "labelCheck": "Ask separately: “Does it contain alcohol?” and “Are the eggs pasteurized or fully cooked?” Coffee-flavoured desserts may also add caffeine.",
+    "sourceIds": [
+      "cdc-food",
+      "nhs-food",
+      "cdc-alcohol",
+      "acog-caffeine"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2026-10-29",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "rapid-review"
+    }
+  },
+  {
+    "id": "high-mercury-fish",
+    "item": "Large predatory fish",
+    "group": "protein-produce",
+    "status": "choose-alternative",
+    "searchTerms": [
+      "shark",
+      "swordfish",
+      "marlin",
+      "king mackerel",
+      "tuna",
+      "mercury",
+      "fish"
+    ],
+    "shortAnswer": "Choose cooked lower-mercury fish instead of large predatory fish. Exact species names and local contamination advisories vary, so check local guidance for the fish you buy or catch.",
+    "why": "The goal is not to avoid all fish. It is to keep the nutritional benefits while reducing mercury exposure and foodborne-infection risk.",
+    "alternatives": [
+      {
+        "label": "Oily-fish option",
+        "title": "Cooked salmon or sardines",
+        "note": "Choose a lower-mercury variety, cook thoroughly and vary the fish you eat."
+      },
+      {
+        "label": "Mild option",
+        "title": "Cooked shrimp or a lower-mercury white fish",
+        "note": "Confirm the species when possible and cook until fully done."
+      },
+      {
+        "label": "Caught locally",
+        "title": "Check the water-specific advisory",
+        "note": "A local warning can override a general list because contamination differs by waterway."
+      }
+    ],
+    "labelCheck": "Fish names can vary by market. Check the exact species, serving advice and any local catch warning—not only “tuna” or “white fish.”",
+    "sourceIds": [
+      "cdc-food",
+      "nhs-food"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2026-10-29",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "rapid-review"
+    }
+  },
+  {
+    "id": "herbal-tea",
+    "item": "Herbal tea and wellness drinks",
+    "group": "coffee-tea",
+    "status": "check-first",
+    "searchTerms": [
+      "ginger tea",
+      "peppermint tea",
+      "detox tea",
+      "sleep tea",
+      "herbs",
+      "adaptogen"
+    ],
+    "shortAnswer": "Check the exact ingredient list before making an herbal or wellness blend a daily pregnancy drink. “Herbal,” “detox” and “natural” do not establish pregnancy safety.",
+    "why": "Blends may combine several herbs, concentrated extracts or supplement-like doses. A familiar food ingredient is different from a medicinal-dose product.",
+    "alternatives": [
+      {
+        "label": "Warm and simple",
+        "title": "Hot water with lemon",
+        "note": "Uses a familiar food ingredient without a multi-herb or concentrated wellness blend."
+      },
+      {
+        "label": "Tea ritual",
+        "title": "Decaf black tea",
+        "note": "It usually contains much less caffeine than regular tea, but still count any caffeine shown on the pack."
+      },
+      {
+        "label": "Keep the blend",
+        "title": "Photograph the label for review",
+        "note": "Ask a doctor or pharmacist about the exact ingredients, dose and how often you drink it."
+      }
+    ],
+    "labelCheck": "Read every ingredient and the serving directions. Avoid treating a tea as harmless because it is caffeine-free or sold as food.",
+    "sourceIds": [
+      "cdc-medicine",
+      "acog-caffeine"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2026-10-29",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "rapid-review"
+    }
+  },
+  {
+    "id": "raw-sprouts",
+    "item": "Raw sprouts",
+    "group": "protein-produce",
+    "status": "prepare-differently",
+    "searchTerms": [
+      "bean sprouts",
+      "alfalfa",
+      "mung bean",
+      "sprouted seeds",
+      "salad sprouts"
+    ],
+    "shortAnswer": "Choose sprouts cooked thoroughly rather than raw. Washing alone may not remove bacteria growing inside the sprout.",
+    "why": "This is one of the cases where rinsing is not the full fix. Heat is the useful change.",
+    "alternatives": [
+      {
+        "label": "Keep the ingredient",
+        "title": "Sprouts cooked until steaming",
+        "note": "Add them early enough in a stir-fry, soup or noodle dish to cook thoroughly."
+      },
+      {
+        "label": "Keep the crunch",
+        "title": "Freshly washed cabbage, carrot or cucumber",
+        "note": "Prepare with clean hands and utensils and eat the salad promptly."
+      },
+      {
+        "label": "Takeaway check",
+        "title": "Ask for no raw garnish",
+        "note": "Bean sprouts may be added after cooking, so ask for them fully cooked or left out."
+      }
+    ],
+    "labelCheck": "“Washed” and “ready to eat” do not mean raw sprouts are cooked. Check whether they were heated all the way through.",
+    "sourceIds": [
+      "cdc-food"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2027-07-31",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "annual"
+    }
+  },
+  {
+    "id": "unpasteurized",
+    "item": "Unpasteurized milk and juice",
+    "group": "dairy",
+    "status": "choose-alternative",
+    "searchTerms": [
+      "raw milk",
+      "farm milk",
+      "fresh juice",
+      "cold pressed juice",
+      "cider",
+      "unpasteurised"
+    ],
+    "shortAnswer": "Choose the pasteurized version during pregnancy. “Fresh,” “raw,” “farm” or “cold-pressed” does not mean safer.",
+    "why": "Pasteurization reduces harmful germs without changing the basic type of drink, making this one of the easiest like-for-like swaps.",
+    "alternatives": [
+      {
+        "label": "Closest match",
+        "title": "Pasteurized milk or juice",
+        "note": "Choose the same flavour or milk type with pasteurization clearly stated on the label."
+      },
+      {
+        "label": "At a juice bar",
+        "title": "A sealed pasteurized drink",
+        "note": "If staff cannot confirm treatment and clean handling, choose a labelled packaged option."
+      },
+      {
+        "label": "At home",
+        "title": "Whole washed fruit plus water",
+        "note": "This avoids uncertainty about an unlabelled fresh-pressed drink."
+      }
+    ],
+    "labelCheck": "Find the word “pasteurized” on the container or ask the producer directly. Refrigeration alone does not pasteurize a drink.",
+    "sourceIds": [
+      "cdc-food",
+      "nhs-food"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2027-07-31",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "annual"
+    }
+  },
+  {
+    "id": "liver-pate",
+    "item": "Liver and pâté",
+    "group": "protein-produce",
+    "status": "choose-alternative",
+    "searchTerms": [
+      "liver pate",
+      "liver sausage",
+      "foie gras",
+      "retinol",
+      "vitamin a"
+    ],
+    "shortAnswer": "Choose a different protein or spread during pregnancy. Liver and liver products can contain very high vitamin A, and refrigerated pâté also raises food-safety concerns.",
+    "why": "This is not a food that becomes a simple everyday choice just by heating it. A different filling avoids both the vitamin-A issue and uncertainty around chilled pâté.",
+    "alternatives": [
+      {
+        "label": "For a main meal",
+        "title": "Freshly cooked meat, fish, egg or beans",
+        "note": "Choose a protein that is cooked thoroughly and fits the rest of your diet."
+      },
+      {
+        "label": "For a spread",
+        "title": "Hummus or bean spread",
+        "note": "Use a fresh refrigerated product within its date and keep it cold."
+      },
+      {
+        "label": "For iron concerns",
+        "title": "Ask for a tailored iron plan",
+        "note": "Do not use liver or a high-dose supplement to self-treat suspected anaemia."
+      }
+    ],
+    "labelCheck": "Check multivitamins and supplements for retinol or high-dose vitamin A too; ask before using them in pregnancy.",
+    "sourceIds": [
+      "nhs-food",
+      "cdc-food",
+      "cdc-medicine"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2026-10-29",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "rapid-review"
+    }
+  }
+]

@@ -1,0 +1,366 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { withBase } from "@/lib/paths";
+
+const guide = (await getCollection("preconception"))[0];
+
+if (!guide) {
+  throw new Error("Missing preconception guide content");
+}
+
+const categoryLabel = {
+  chance: "Pregnancy chance",
+  health: "Future-baby health",
+  both: "Affects both",
+  neither: "Myth—not a factor",
+};
+
+const sectionNavigation = [
+  {
+    href: "#simple-plan",
+    number: "01",
+    label: "Tips that help",
+    detail: "The six-step plan",
+  },
+  {
+    href: "#dos-donts",
+    number: "02",
+    label: "Do and don’t",
+    detail: "A practical baseline",
+  },
+  {
+    href: "#what-affects-what",
+    number: "03",
+    label: "What affects chances",
+    detail: "Chance versus health",
+  },
+  {
+    href: "#myths",
+    number: "04",
+    label: "Myths and truth",
+    detail: "What biology requires",
+  },
+  {
+    href: "#when-to-get-help",
+    number: "05",
+    label: "When to get help",
+    detail: "Common hurdles",
+  },
+  {
+    href: "#for-couples",
+    number: "06",
+    label: "For couples",
+    detail: "Share the preparation",
+  },
+];
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "MedicalWebPage",
+  name: guide.data.title,
+  description: guide.data.dek,
+  audience: { "@type": "PeopleAudience", suggestedMinAge: 16 },
+  lastReviewed: guide.data.review.reviewedAt,
+  medicalAudience: ["Patient", "Caregiver"],
+};
+---
+
+<BaseLayout
+  title="Getting pregnant: dos, don’ts and fertility myths"
+  description={guide.data.dek}
+  schema={schema}
+>
+  <section class="page-hero preconception-hero">
+    <div class="shell preconception-hero-grid">
+      <div>
+        <p class="eyebrow">{guide.data.eyebrow}</p>
+        <h1>Getting pregnant,<br /><em>made clearer.</em></h1>
+        <p class="lede">{guide.data.dek}</p>
+        <div class="hero-actions">
+          <a class="button" href="#simple-plan">Start with the six-step plan</a>
+          <a class="button secondary" href="#myths">Check the myths</a>
+        </div>
+      </div>
+      <aside class="preconception-promise" aria-label="What this guide covers">
+        <span class="promise-orbit one" aria-hidden="true"></span>
+        <span class="promise-orbit two" aria-hidden="true"></span>
+        <p class="eyebrow">One question at a time</p>
+        <h2>What actually changes the odds?</h2>
+        <p>
+          Separate timing from health preparation. Share the work. Skip rituals
+          that add pressure without improving fertility.
+        </p>
+        <ul>
+          <li>What to do now</li>
+          <li>What not to rely on</li>
+          <li>When to ask for help</li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <section class="preconception-nav-section" aria-labelledby="guide-nav-title">
+    <div class="shell">
+      <h2 class="visually-hidden" id="guide-nav-title">
+        Navigate the getting pregnant guide
+      </h2>
+      <nav
+        class="preconception-section-nav"
+        aria-label="Getting pregnant guide sections"
+      >
+        {
+          sectionNavigation.map((item) => (
+            <a href={item.href}>
+              <span>{item.number}</span>
+              <strong>{item.label}</strong>
+              <small>{item.detail}</small>
+            </a>
+          ))
+        }
+      </nav>
+    </div>
+  </section>
+
+  <section class="section preconception-orientation-section">
+    <div class="shell">
+      <div class="section-heading narrow-heading">
+        <div>
+          <p class="eyebrow">The most useful distinction</p>
+          <h2>Conception chance is not the same as baby health.</h2>
+          <p>
+            Some actions help egg and sperm meet. Others prepare the earliest
+            weeks of development. A smaller group affects both.
+          </p>
+        </div>
+      </div>
+      <div class="conception-compass" role="list">
+        {
+          guide.data.orientation.map((item, index) => (
+            <article
+              class={`compass-card compass-${index + 1}`}
+              role="listitem"
+            >
+              <span>{String(index + 1).padStart(2, "0")}</span>
+              <p class="eyebrow">{item.label}</p>
+              <h3>{item.title}</h3>
+              <p>{item.detail}</p>
+            </article>
+          ))
+        }
+      </div>
+      <p class="route-note">{guide.data.routeNote}</p>
+    </div>
+  </section>
+
+  <section class="section soft" id="simple-plan">
+    <div class="shell">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Start here</p>
+          <h2>A six-step plan without a perfect-cycle obsession.</h2>
+          <p>
+            These steps cover the part you can act on. None can guarantee a
+            pregnancy in one cycle.
+          </p>
+        </div>
+      </div>
+      <ol class="preconception-plan">
+        {
+          guide.data.plan.map((item, index) => (
+            <li>
+              <span aria-hidden="true">
+                {String(index + 1).padStart(2, "0")}
+              </span>
+              <div>
+                <h3>{item.title}</h3>
+                <p>{item.detail}</p>
+              </div>
+            </li>
+          ))
+        }
+      </ol>
+    </div>
+  </section>
+
+  <section class="section" id="dos-donts">
+    <div class="shell">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Keep this practical</p>
+          <h2>Do, don’t, and ask before trying.</h2>
+          <p>
+            Use these as a general baseline. Exact medicines, conditions and
+            fertility concerns need individual advice.
+          </p>
+        </div>
+      </div>
+      <div class="essential-rule-grid preconception-rules">
+        <article class="rule-column do">
+          <p class="rule-label"><span aria-hidden="true">✓</span> Do</p>
+          <ul>
+            {guide.data.dos.map((rule) => <li>{rule}</li>)}
+          </ul>
+        </article>
+        <article class="rule-column dont">
+          <p class="rule-label"><span aria-hidden="true">!</span> Don’t</p>
+          <ul>
+            {guide.data.donts.map((rule) => <li>{rule}</li>)}
+          </ul>
+        </article>
+        <article class="rule-column ask">
+          <p class="rule-label">
+            <span aria-hidden="true">?</span> Ask your doctor
+          </p>
+          <ul>
+            {guide.data.askDoctor.map((rule) => <li>{rule}</li>)}
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section factor-section" id="what-affects-what">
+    <div class="shell">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Compare without guessing</p>
+          <h2>What changes pregnancy chances—and what changes health.</h2>
+          <p>
+            “Healthy” and “fertile” are not synonyms. Use the label on each card
+            to see what the factor actually changes.
+          </p>
+        </div>
+      </div>
+      <div class="factor-legend" aria-label="Factor categories">
+        {
+          Object.entries(categoryLabel).map(([key, label]) => (
+            <span class={`factor-badge ${key}`}>{label}</span>
+          ))
+        }
+      </div>
+      <div class="factor-list" role="list">
+        {
+          guide.data.factors.map((factor) => (
+            <article class="factor-card" role="listitem">
+              <header>
+                <span class={`factor-badge ${factor.category}`}>
+                  {categoryLabel[factor.category]}
+                </span>
+                <h3>{factor.name}</h3>
+              </header>
+              <div class="factor-comparison">
+                <div>
+                  <p class="factor-label">Chance of pregnancy</p>
+                  <p>{factor.chance}</p>
+                </div>
+                <div>
+                  <p class="factor-label">Health of a future baby</p>
+                  <p>{factor.babyHealth}</p>
+                </div>
+              </div>
+              <p class="factor-action">
+                <strong>What to do:</strong> {factor.action}
+              </p>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="section soft" id="myths">
+    <div class="shell">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Myth versus truth</p>
+          <h2>Remove pressure that biology does not require.</h2>
+          <p>
+            These are direct corrections, not hidden questions. Each card ends
+            with the useful action to keep.
+          </p>
+        </div>
+      </div>
+      <div class="myth-grid" role="list">
+        {
+          guide.data.myths.map((item) => (
+            <article class="myth-card" role="listitem">
+              <p class="myth-label">Myth</p>
+              <h3>{item.myth}</h3>
+              <div class="truth-block">
+                <p class="truth-label">Truth</p>
+                <p>{item.truth}</p>
+              </div>
+              <p class="myth-takeaway">
+                <strong>Keep this:</strong> {item.takeaway}
+              </p>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="section help-timing-section" id="when-to-get-help">
+    <div class="shell help-timing-grid">
+      <div class="help-timing-intro">
+        <p class="eyebrow">When trying needs medical help</p>
+        <h2>Do not use one waiting rule for every couple.</h2>
+        <p>
+          The usual timeline is based mainly on the age of the person providing
+          the egg. Medical history can make an earlier conversation sensible.
+        </p>
+        <p class="doctor-banner">
+          A fertility evaluation should consider both partners from the start.
+          Asking for help is information-gathering—not proof that pregnancy is
+          impossible.
+        </p>
+      </div>
+      <ol class="help-timing-list">
+        {
+          guide.data.help.map((item, index) => (
+            <li>
+              <span>{String(index + 1).padStart(2, "0")}</span>
+              <div>
+                <h3>{item.title}</h3>
+                <p>{item.guidance}</p>
+              </div>
+            </li>
+          ))
+        }
+      </ol>
+    </div>
+  </section>
+
+  <section class="section plum" id="for-couples">
+    <div class="shell partner-preconception">
+      <div>
+        <p class="eyebrow">A couple-level plan</p>
+        <h2>Share the preparation. Remove the blame.</h2>
+        <p class="lede">
+          Fertility is not one partner’s assignment. Sperm health, timing,
+          medicine review and emotional safety belong in the same conversation.
+        </p>
+      </div>
+      <ul>
+        {guide.data.partnerActions.map((action) => <li>{action}</li>)}
+      </ul>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="shell continuation-panel">
+      <div>
+        <p class="eyebrow">When the test is positive</p>
+        <h2>Move into the pregnancy timeline.</h2>
+        <p>
+          Start with medicine safety, arranging care and the symptoms that need
+          prompt help. Your preparation and the pregnancy guide connect here.
+        </p>
+      </div>
+      <a class="button" href={withBase("/timeline/positive-test/")}
+        >Open positive-test first steps</a
+      >
+    </div>
+  </section>
+</BaseLayout>

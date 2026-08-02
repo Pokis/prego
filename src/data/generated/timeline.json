@@ -1,0 +1,3838 @@
+[
+  {
+    "id": "positive-test",
+    "slug": "positive-test",
+    "kind": "positive-test",
+    "phase": "pregnancy",
+    "ordinal": 0,
+    "windowLabel": "Right now",
+    "title": "A positive test: start here",
+    "dek": "You do not need to solve the whole pregnancy today. Begin with care, medicine safety and one small next step.",
+    "summary": [
+      "Pause and notice how you feel; excitement, fear, uncertainty and mixed emotions can all coexist.",
+      "Arrange prenatal care and save the urgent contact route for your area.",
+      "Do not start or stop medicine because of a generic online list."
+    ],
+    "bodyMind": [
+      "A home test detects a pregnancy hormone, but it cannot confirm pregnancy location, exact dating or how the pregnancy is progressing.",
+      "Mild symptoms or no symptoms can both occur early. Severe one-sided pain, fainting, shoulder-tip pain or heavy bleeding need urgent assessment."
+    ],
+    "baby": [
+      "Pregnancy is dated from the first day of the last menstrual period, so the numbered week may begin before conception actually occurred."
+    ],
+    "clarifications": [
+      "Concrete example: if your last period began five weeks ago and the test is positive today, care will usually call this about five weeks pregnant even though conception happened later.",
+      "If the pregnancy is wanted but the news feels frightening, that reaction does not make you a bad parent. Start with one care contact, not a nine-month plan."
+    ],
+    "doNow": [
+      "Contact the maternity-care route for your area. Ask who provides pregnancy care, when the first appointment is, and which number handles urgent concerns.",
+      "List prescriptions, painkillers, allergy remedies, vitamins, herbal products and anything used occasionally; review the list with a clinician or pharmacist.",
+      "Save the urgent-care route and choose one trusted person for support if that feels safe."
+    ],
+    "avoidAsk": [
+      "Avoid alcohol, smoking and recreational drugs; ask for nonjudgmental support if stopping is difficult.",
+      "Ask before changing prescribed medicine.",
+      "Use the pregnancy essentials and ask your doctor before an uncertain food, supplement or activity."
+    ],
+    "appointments": [
+      "The timing of a first routine visit depends on symptoms, medical history and the care plan you are given."
+    ],
+    "partner": [
+      "Listen before problem-solving, protect privacy and help make the first contact if invited."
+    ],
+    "topics": [
+      "positive-test",
+      "appointments",
+      "medicines",
+      "mental-health"
+    ],
+    "audiences": [
+      "pregnant",
+      "partner",
+      "browsing"
+    ],
+    "helpTier": "care-team",
+    "sourceIds": [
+      "who-antenatal",
+      "cdc-medicine",
+      "cdc-warning"
+    ],
+    "milestoneIds": [
+      "contact-care",
+      "review-medicines"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2027-07-31",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "annual"
+    }
+  },
+  {
+    "id": "trimester-1",
+    "slug": "trimester-1",
+    "kind": "overview",
+    "phase": "pregnancy",
+    "ordinal": 1,
+    "windowLabel": "Trimester 1",
+    "title": "First trimester: weeks 1–13",
+    "dek": "The first three months are about confirming care, protecting early development, managing symptoms and understanding your first tests.",
+    "summary": [
+      "Common examples include fatigue, nausea, breast tenderness, food aversions, frequent urination, constipation and rapidly changing emotions. Some people have very few symptoms.",
+      "From implantation through the early fetal stage, the foundations of organs, limbs, brain and spinal cord form. Week labels are approximate because dating can change after assessment.",
+      "Arrange prenatal care and learn the urgent contact route."
+    ],
+    "bodyMind": [
+      "Common examples include fatigue, nausea, breast tenderness, food aversions, frequent urination, constipation and rapidly changing emotions. Some people have very few symptoms.",
+      "Symptoms that interrupt drinking, severe or one-sided pain, fainting, heavy bleeding or a feeling that something is seriously wrong should not wait for a routine visit."
+    ],
+    "baby": [
+      "From implantation through the early fetal stage, the foundations of organs, limbs, brain and spinal cord form. Week labels are approximate because dating can change after assessment."
+    ],
+    "clarifications": [
+      "What 'three months' means here: weeks 1–4 are month 1, weeks 5–8 month 2, and weeks 9–13 month 3. Care teams still use weeks for decisions."
+    ],
+    "doNow": [
+      "Arrange prenatal care and learn the urgent contact route.",
+      "Review medicines and supplements with a clinician or pharmacist.",
+      "Choose food-safety and substance-free habits without chasing perfection."
+    ],
+    "avoidAsk": [
+      "Avoid alcohol, smoking and recreational drugs; check medicines, supplements and higher-risk foods instead of relying on a social-media safe/unsafe list.",
+      "Ask when a recommendation depends on your history, symptoms or pregnancy."
+    ],
+    "appointments": [
+      "Typical early care may include booking history, blood and urine tests, dating assessment and optional screening. The exact order and timing depend on location and history."
+    ],
+    "partner": [
+      "Take on calls, food experiments and household work; treat exhaustion and nausea as real even before pregnancy is visible."
+    ],
+    "topics": [
+      "appointments",
+      "symptoms",
+      "development"
+    ],
+    "audiences": [
+      "pregnant",
+      "partner",
+      "browsing"
+    ],
+    "helpTier": "common",
+    "sourceIds": [
+      "who-antenatal",
+      "acog-changes",
+      "nhs-weeks"
+    ],
+    "milestoneIds": [],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2027-07-31",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "annual"
+    }
+  },
+  {
+    "id": "trimester-2",
+    "slug": "trimester-2",
+    "kind": "overview",
+    "phase": "pregnancy",
+    "ordinal": 2,
+    "windowLabel": "Trimester 2",
+    "title": "Second trimester: weeks 14–27",
+    "dek": "The middle months bring a growing bump, possible first movements, the anatomy assessment and a shift toward noticing patterns.",
+    "summary": [
+      "Energy may improve, but reflux, headaches, pelvic or back pain, sleep changes and breathlessness with exertion can appear. Common does not mean you must cope without help.",
+      "Growth, movement, hearing, brain connections and lung structures develop throughout these weeks. The mid-pregnancy scan assesses anatomy at one point in that continuous process.",
+      "Keep appointments and write down questions before each visit."
+    ],
+    "bodyMind": [
+      "Energy may improve, but reflux, headaches, pelvic or back pain, sleep changes and breathlessness with exertion can appear. Common does not mean you must cope without help.",
+      "Movement may first feel like flutters or taps. Timing varies, especially in a first pregnancy and with placenta position."
+    ],
+    "baby": [
+      "Growth, movement, hearing, brain connections and lung structures develop throughout these weeks. The mid-pregnancy scan assesses anatomy at one point in that continuous process."
+    ],
+    "clarifications": [
+      "What 'months 4–6' means here: weeks 14–17 are month 4, weeks 18–22 month 5, and weeks 23–27 month 6."
+    ],
+    "doNow": [
+      "Keep appointments and write down questions before each visit.",
+      "Stay active in ways that feel stable and are appropriate for your pregnancy.",
+      "Learn what movement changes should prompt a call later in pregnancy."
+    ],
+    "avoidAsk": [
+      "Do not use an app, home Doppler or another pregnancy's movement pattern to overrule a concern; ask your service when and how to report a change.",
+      "Ask when a recommendation depends on your history, symptoms or pregnancy."
+    ],
+    "appointments": [
+      "Common windows include the anatomy scan around weeks 18–22 and gestational-diabetes discussion or testing around weeks 24–28; your doctor confirms the actual dates."
+    ],
+    "partner": [
+      "Learn the urgent route, attend key conversations if invited, and make physical and workplace adjustments practical rather than theoretical."
+    ],
+    "topics": [
+      "appointments",
+      "symptoms",
+      "development"
+    ],
+    "audiences": [
+      "pregnant",
+      "partner",
+      "browsing"
+    ],
+    "helpTier": "common",
+    "sourceIds": [
+      "who-antenatal",
+      "acog-changes",
+      "nhs-weeks"
+    ],
+    "milestoneIds": [],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2027-07-31",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "annual"
+    }
+  },
+  {
+    "id": "trimester-3",
+    "slug": "trimester-3",
+    "kind": "overview",
+    "phase": "pregnancy",
+    "ordinal": 3,
+    "windowLabel": "Trimester 3",
+    "title": "Third trimester: weeks 28–42",
+    "dek": "The final months focus on movement, more frequent checks, birth choices, warning signs and a simple plan for getting care day or night.",
+    "summary": [
+      "Sleep disruption, reflux, pressure, breathlessness, swelling, back pain and irregular tightenings can increase. Sudden or severe changes need a different response from gradual discomfort.",
+      "Brain, lungs and nervous system continue maturing while the baby gains fat and often moves toward a birth position. Position and timing vary.",
+      "Save urgent maternity contacts and plan transport for any time of day."
+    ],
+    "bodyMind": [
+      "Sleep disruption, reflux, pressure, breathlessness, swelling, back pain and irregular tightenings can increase. Sudden or severe changes need a different response from gradual discomfort.",
+      "The baby's movement style may change as space tightens, but a clear reduction or change from the usual pattern still needs prompt maternity contact."
+    ],
+    "baby": [
+      "Brain, lungs and nervous system continue maturing while the baby gains fat and often moves toward a birth position. Position and timing vary."
+    ],
+    "clarifications": [
+      "What 'months 7–9' means here: weeks 28–31 are month 7, weeks 32–35 month 8, and weeks 36–42 month 9."
+    ],
+    "doNow": [
+      "Save urgent maternity contacts and plan transport for any time of day.",
+      "Discuss birth preferences, feeding support and early recovery.",
+      "Notice your baby's usual movement pattern and act promptly on a clear change."
+    ],
+    "avoidAsk": [
+      "Do not wait for perfect contraction timing when there is reduced movement, bleeding, concerning fluid loss, severe headache, vision change or severe constant pain.",
+      "Ask when a recommendation depends on your history, symptoms or pregnancy."
+    ],
+    "appointments": [
+      "Visits may become more frequent and cover blood pressure, growth, movement, position, vaccines, birth plans and options if pregnancy continues past the due date."
+    ],
+    "partner": [
+      "Own transport, contacts, chargers, documents and dependant care; be reachable and support informed choices if plans change."
+    ],
+    "topics": [
+      "appointments",
+      "symptoms",
+      "development"
+    ],
+    "audiences": [
+      "pregnant",
+      "partner",
+      "browsing"
+    ],
+    "helpTier": "common",
+    "sourceIds": [
+      "who-antenatal",
+      "acog-changes",
+      "nhs-weeks"
+    ],
+    "milestoneIds": [],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2027-07-31",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "annual"
+    }
+  },
+  {
+    "id": "week-3",
+    "slug": "week-3",
+    "kind": "week",
+    "phase": "pregnancy",
+    "ordinal": 10,
+    "windowLabel": "Month 1 · Week 3",
+    "title": "Week 3: Implantation may be beginning",
+    "dek": "You may feel no different. If you are trying to conceive, continue pregnancy-safe habits without assuming a result.",
+    "summary": [
+      "If pregnancy is possible, use pregnancy-safe habits now: skip alcohol, check medicines and take the prenatal supplement recommended by your doctor.",
+      "There is usually no routine appointment this early. Seek care sooner for severe pain, fainting or heavy bleeding.",
+      "Do not rely on a very early negative test as a final answer; repeat it after the missed period or follow the test instructions."
+    ],
+    "bodyMind": [
+      "You may feel no different. If you are trying to conceive, continue pregnancy-safe habits without assuming a result."
+    ],
+    "baby": [
+      "Fertilization and implantation may occur around this stage, although pregnancy dating starts before conception."
+    ],
+    "variationNote": "Symptoms, fetal development and the timing of what you notice can vary. A change that worries you still deserves attention even when it does not match a typical description.",
+    "clarifications": [
+      "Example: week 3 is counted from the last period, so fertilization may only just have happened. It is normal not to feel pregnant."
+    ],
+    "doNow": [
+      "If pregnancy is possible, use pregnancy-safe habits now: skip alcohol, check medicines and take the prenatal supplement recommended by your doctor.",
+      "Review medicines and supplements with a clinician or pharmacist.",
+      "Choose food-safety and substance-free habits without chasing perfection."
+    ],
+    "avoidAsk": [
+      "Do not rely on a very early negative test as a final answer; repeat it after the missed period or follow the test instructions."
+    ],
+    "appointments": [
+      "There is usually no routine appointment this early. Seek care sooner for severe pain, fainting or heavy bleeding."
+    ],
+    "partner": [
+      "Share the mental load: buy a test or pregnancy supplement if asked, and keep plans low-pressure while the answer is uncertain."
+    ],
+    "topics": [
+      "early-pregnancy",
+      "appointments-scans"
+    ],
+    "audiences": [
+      "pregnant",
+      "partner",
+      "browsing"
+    ],
+    "helpTier": "common",
+    "sourceIds": [
+      "who-antenatal",
+      "acog-changes",
+      "nhs-weeks"
+    ],
+    "milestoneIds": [],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2027-07-31",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "annual"
+    }
+  },
+  {
+    "id": "week-4",
+    "slug": "week-4",
+    "kind": "week",
+    "phase": "pregnancy",
+    "ordinal": 11,
+    "windowLabel": "Month 1 · Week 4",
+    "title": "Week 4: A missed period and the first test",
+    "dek": "A missed period or positive test may be the first clue; mild cramps or spotting can occur, but pain or heavier bleeding needs advice.",
+    "summary": [
+      "After a positive test, contact the maternity-care route for your area and save its urgent phone number.",
+      "Ask when your first visit is usually booked and what information to prepare, such as the first day of your last period and current medicines.",
+      "A home test confirms pregnancy hormone, not where the pregnancy is or whether it is developing normally."
+    ],
+    "bodyMind": [
+      "A missed period or positive test may be the first clue; mild cramps or spotting can occur, but pain or heavier bleeding needs advice."
+    ],
+    "baby": [
+      "A tiny group of rapidly dividing cells is establishing the structures that will support pregnancy."
+    ],
+    "variationNote": "Symptoms, fetal development and the timing of what you notice can vary. A change that worries you still deserves attention even when it does not match a typical description.",
+    "clarifications": [
+      "Mild period-like cramping can happen. Pain that is severe, one-sided, worsening, or paired with dizziness or shoulder-tip pain needs urgent assessment."
+    ],
+    "doNow": [
+      "After a positive test, contact the maternity-care route for your area and save its urgent phone number.",
+      "Review medicines and supplements with a clinician or pharmacist.",
+      "Choose food-safety and substance-free habits without chasing perfection."
+    ],
+    "avoidAsk": [
+      "A home test confirms pregnancy hormone, not where the pregnancy is or whether it is developing normally."
+    ],
+    "appointments": [
+      "Ask when your first visit is usually booked and what information to prepare, such as the first day of your last period and current medicines."
+    ],
+    "partner": [
+      "Listen to the reaction before planning. Excitement, fear and uncertainty can appear together."
+    ],
+    "topics": [
+      "early-pregnancy",
+      "appointments-scans"
+    ],
+    "audiences": [
+      "pregnant",
+      "partner",
+      "browsing"
+    ],
+    "helpTier": "common",
+    "sourceIds": [
+      "who-antenatal",
+      "acog-changes",
+      "nhs-weeks"
+    ],
+    "milestoneIds": [],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2027-07-31",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "annual"
+    }
+  },
+  {
+    "id": "week-5",
+    "slug": "week-5",
+    "kind": "week",
+    "phase": "pregnancy",
+    "ordinal": 12,
+    "windowLabel": "Month 2 · Week 5",
+    "title": "Week 5: Early foundations are forming",
+    "dek": "Fatigue, breast tenderness, frequent urination or nausea may begin—or you may have few symptoms.",
+    "summary": [
+      "Make one list of prescriptions, painkillers, allergy remedies, vitamins, herbal products and recreational substances to review with a clinician or pharmacist.",
+      "Tell the booking service about previous ectopic pregnancy, miscarriage, fertility treatment, long-term conditions or concerning symptoms because these may change early care.",
+      "Do not stop a prescribed medicine suddenly because its leaflet mentions pregnancy; ask the prescriber how benefits and risks apply to you."
+    ],
+    "bodyMind": [
+      "Fatigue, breast tenderness, frequent urination or nausea may begin—or you may have few symptoms."
+    ],
+    "baby": [
+      "Early foundations for the brain, spinal cord and other organs are forming."
+    ],
+    "variationNote": "Symptoms, fetal development and the timing of what you notice can vary. A change that worries you still deserves attention even when it does not match a typical description.",
+    "clarifications": [
+      "Breast tenderness, tiredness, frequent urination and mild cramps are common examples; having none of them can also be normal."
+    ],
+    "doNow": [
+      "Make one list of prescriptions, painkillers, allergy remedies, vitamins, herbal products and recreational substances to review with a clinician or pharmacist.",
+      "Review medicines and supplements with a clinician or pharmacist.",
+      "Choose food-safety and substance-free habits without chasing perfection."
+    ],
+    "avoidAsk": [
+      "Do not stop a prescribed medicine suddenly because its leaflet mentions pregnancy; ask the prescriber how benefits and risks apply to you."
+    ],
+    "appointments": [
+      "Tell the booking service about previous ectopic pregnancy, miscarriage, fertility treatment, long-term conditions or concerning symptoms because these may change early care."
+    ],
+    "partner": [
+      "Photograph or write down medicine labels and help make the first call if the pregnant person wants you involved."
+    ],
+    "topics": [
+      "early-pregnancy",
+      "nausea-food",
+      "appointments-scans"
+    ],
+    "audiences": [
+      "pregnant",
+      "partner",
+      "browsing"
+    ],
+    "helpTier": "common",
+    "sourceIds": [
+      "who-antenatal",
+      "acog-changes",
+      "nhs-weeks"
+    ],
+    "milestoneIds": [],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2027-07-31",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "annual"
+    }
+  },
+  {
+    "id": "week-6",
+    "slug": "week-6",
+    "kind": "week",
+    "phase": "pregnancy",
+    "ordinal": 13,
+    "windowLabel": "Month 2 · Week 6",
+    "title": "Week 6: Nausea and fast early development",
+    "dek": "Nausea, smell sensitivity and tiredness are common. Not having these symptoms does not by itself mean something is wrong.",
+    "summary": [
+      "Try small, frequent food and drink opportunities; note whether you can keep fluids down and how often you are urinating.",
+      "An ultrasound this early may not give a clear answer if dates are uncertain. A repeat scan or blood tests may be suggested rather than an immediate conclusion.",
+      "Do not wait for a routine visit if you cannot keep fluids down, feel faint, have very dark urine or are becoming weaker."
+    ],
+    "bodyMind": [
+      "Nausea, smell sensitivity and tiredness are common. Not having these symptoms does not by itself mean something is wrong."
+    ],
+    "baby": [
+      "The embryo is developing quickly; early cardiac activity may be visible on some scans, depending on dating."
+    ],
+    "variationNote": "Symptoms, fetal development and the timing of what you notice can vary. A change that worries you still deserves attention even when it does not match a typical description.",
+    "clarifications": [
+      "Morning sickness can happen at any time of day. The useful question is not the time—it is whether eating, drinking and daily life remain possible."
+    ],
+    "doNow": [
+      "Try small, frequent food and drink opportunities; note whether you can keep fluids down and how often you are urinating.",
+      "Review medicines and supplements with a clinician or pharmacist.",
+      "Choose food-safety and substance-free habits without chasing perfection."
+    ],
+    "avoidAsk": [
+      "Do not wait for a routine visit if you cannot keep fluids down, feel faint, have very dark urine or are becoming weaker."
+    ],
+    "appointments": [
+      "An ultrasound this early may not give a clear answer if dates are uncertain. A repeat scan or blood tests may be suggested rather than an immediate conclusion."
+    ],
+    "partner": [
+      "Keep plain foods and tolerated drinks within reach, reduce strong cooking smells, and do not police what food is manageable today."
+    ],
+    "topics": [
+      "early-pregnancy",
+      "nausea-food",
+      "appointments-scans"
+    ],
+    "audiences": [
+      "pregnant",
+      "partner",
+      "browsing"
+    ],
+    "helpTier": "common",
+    "sourceIds": [
+      "who-antenatal",
+      "acog-changes",
+      "nhs-weeks"
+    ],
+    "milestoneIds": [
+      "early-assessment"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2027-07-31",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "annual"
+    }
+  },
+  {
+    "id": "week-7",
+    "slug": "week-7",
+    "kind": "week",
+    "phase": "pregnancy",
+    "ordinal": 14,
+    "windowLabel": "Month 2 · Week 7",
+    "title": "Week 7: Food aversions, fatigue and changing moods",
+    "dek": "Hormone changes can affect appetite, mood, digestion and energy from one day to the next.",
+    "summary": [
+      "Build a realistic food-safety routine: wash produce, keep raw and ready-to-eat foods separate, and cook animal foods thoroughly.",
+      "If you have not arranged care, do it now. Ask whether your first contact is with a midwife, obstetric clinician or primary-care professional.",
+      "Avoid unpasteurized dairy and raw or undercooked meat, eggs, fish and shellfish."
+    ],
+    "bodyMind": [
+      "Hormone changes can affect appetite, mood, digestion and energy from one day to the next."
+    ],
+    "baby": [
+      "The brain, face and limb buds continue developing at a remarkable pace."
+    ],
+    "variationNote": "Symptoms, fetal development and the timing of what you notice can vary. A change that worries you still deserves attention even when it does not match a typical description.",
+    "clarifications": [
+      "Example: a balanced week may be more realistic than a perfect plate at every meal when nausea and aversions are strong."
+    ],
+    "doNow": [
+      "Build a realistic food-safety routine: wash produce, keep raw and ready-to-eat foods separate, and cook animal foods thoroughly.",
+      "Review medicines and supplements with a clinician or pharmacist.",
+      "Choose food-safety and substance-free habits without chasing perfection."
+    ],
+    "avoidAsk": [
+      "Avoid unpasteurized dairy and raw or undercooked meat, eggs, fish and shellfish."
+    ],
+    "appointments": [
+      "If you have not arranged care, do it now. Ask whether your first contact is with a midwife, obstetric clinician or primary-care professional."
+    ],
+    "partner": [
+      "Take over shopping or cooking if smells trigger nausea, and ask what is tolerable instead of guessing."
+    ],
+    "topics": [
+      "early-pregnancy",
+      "nausea-food",
+      "appointments-scans"
+    ],
+    "audiences": [
+      "pregnant",
+      "partner",
+      "browsing"
+    ],
+    "helpTier": "common",
+    "sourceIds": [
+      "who-antenatal",
+      "acog-changes",
+      "nhs-weeks"
+    ],
+    "milestoneIds": [
+      "early-assessment"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2027-07-31",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "annual"
+    }
+  },
+  {
+    "id": "week-8",
+    "slug": "week-8",
+    "kind": "week",
+    "phase": "pregnancy",
+    "ordinal": 15,
+    "windowLabel": "Month 2 · Week 8",
+    "title": "Week 8: Your first booking steps",
+    "dek": "Bloating and fatigue may be more noticeable even though there may be little visible bump.",
+    "summary": [
+      "Prepare a one-page history: last period, previous pregnancies, health conditions, operations, allergies, medicines and family health information you know.",
+      "Ask what will happen at the booking visit, whether blood or urine samples are expected, and how you will receive results.",
+      "Do not treat an online appointment schedule as fixed; your doctor may change the order or timing for your pregnancy."
+    ],
+    "bodyMind": [
+      "Bloating and fatigue may be more noticeable even though there may be little visible bump."
+    ],
+    "baby": [
+      "Major body systems are taking shape, though they remain very immature."
+    ],
+    "variationNote": "Symptoms, fetal development and the timing of what you notice can vary. A change that worries you still deserves attention even when it does not match a typical description.",
+    "clarifications": [
+      "A booking visit is often longer than a normal appointment because it establishes your history, measurements, tests, contacts and next steps."
+    ],
+    "doNow": [
+      "Prepare a one-page history: last period, previous pregnancies, health conditions, operations, allergies, medicines and family health information you know.",
+      "Review medicines and supplements with a clinician or pharmacist.",
+      "Choose food-safety and substance-free habits without chasing perfection."
+    ],
+    "avoidAsk": [
+      "Do not treat an online appointment schedule as fixed; your doctor may change the order or timing for your pregnancy."
+    ],
+    "appointments": [
+      "Ask what will happen at the booking visit, whether blood or urine samples are expected, and how you will receive results."
+    ],
+    "partner": [
+      "Help gather history and practical questions, but let the pregnant person choose what is shared and whether you attend."
+    ],
+    "topics": [
+      "early-pregnancy",
+      "nausea-food",
+      "appointments-scans"
+    ],
+    "audiences": [
+      "pregnant",
+      "partner",
+      "browsing"
+    ],
+    "helpTier": "common",
+    "sourceIds": [
+      "who-antenatal",
+      "acog-changes",
+      "nhs-weeks"
+    ],
+    "milestoneIds": [
+      "early-assessment"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2027-07-31",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "annual"
+    }
+  },
+  {
+    "id": "week-9",
+    "slug": "week-9",
+    "kind": "week",
+    "phase": "pregnancy",
+    "ordinal": 16,
+    "windowLabel": "Month 3 · Week 9",
+    "title": "Week 9: When sickness needs more help",
+    "dek": "Nausea can be intense around this time; ask for help if fluids or food will not stay down.",
+    "summary": [
+      "Track drinking, urination and vomiting for one day if nausea is intense; this gives a clinician more useful information than saying it feels bad.",
+      "Contact care before the scheduled visit if vomiting limits fluids, work or basic activity, or if weight loss or dehydration worries you.",
+      "Do not dismiss severe vomiting as something everyone must endure; pregnancy-safe treatments may be available through your care team."
+    ],
+    "bodyMind": [
+      "Nausea can be intense around this time; ask for help if fluids or food will not stay down."
+    ],
+    "baby": [
+      "The embryo is beginning to look more recognisably human, with developing fingers and toes."
+    ],
+    "variationNote": "Symptoms, fetal development and the timing of what you notice can vary. A change that worries you still deserves attention even when it does not match a typical description.",
+    "clarifications": [
+      "Example: struggling with meals but keeping regular sips down is different from vomiting every drink and barely urinating."
+    ],
+    "doNow": [
+      "Track drinking, urination and vomiting for one day if nausea is intense; this gives a clinician more useful information than saying it feels bad.",
+      "Review medicines and supplements with a clinician or pharmacist.",
+      "Choose food-safety and substance-free habits without chasing perfection."
+    ],
+    "avoidAsk": [
+      "Do not dismiss severe vomiting as something everyone must endure; pregnancy-safe treatments may be available through your care team."
+    ],
+    "appointments": [
+      "Contact care before the scheduled visit if vomiting limits fluids, work or basic activity, or if weight loss or dehydration worries you."
+    ],
+    "partner": [
+      "Handle phone calls, transport and food experiments; avoid comments about what the pregnant person 'should' be able to eat."
+    ],
+    "topics": [
+      "early-pregnancy",
+      "nausea-food",
+      "appointments-scans"
+    ],
+    "audiences": [
+      "pregnant",
+      "partner",
+      "browsing"
+    ],
+    "helpTier": "common",
+    "sourceIds": [
+      "who-antenatal",
+      "acog-changes",
+      "nhs-weeks"
+    ],
+    "milestoneIds": [
+      "early-assessment"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2027-07-31",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "annual"
+    }
+  },
+  {
+    "id": "week-10",
+    "slug": "week-10",
+    "kind": "week",
+    "phase": "pregnancy",
+    "ordinal": 17,
+    "windowLabel": "Month 3 · Week 10",
+    "title": "Week 10: The fetal stage begins",
+    "dek": "Your blood volume and hormone levels are changing, which can influence headaches, dizziness and energy.",
+    "summary": [
+      "Write down your questions about dating and screening before the next visit: what is offered, when, what it can show and what happens after a result.",
+      "Dating scans and first-trimester screening sit in defined windows, so confirm your dates with the doctor rather than waiting for a generic week online.",
+      "Do not consent to a test only because it appears routine—ask what decision the result could help you make."
+    ],
+    "bodyMind": [
+      "Your blood volume and hormone levels are changing, which can influence headaches, dizziness and energy."
+    ],
+    "baby": [
+      "The fetal stage begins around this period as organs continue their early development."
+    ],
+    "variationNote": "Symptoms, fetal development and the timing of what you notice can vary. A change that worries you still deserves attention even when it does not match a typical description.",
+    "clarifications": [
+      "Screening estimates chance; it is not the same as diagnosis. A higher-chance result usually opens a conversation about further options."
+    ],
+    "doNow": [
+      "Write down your questions about dating and screening before the next visit: what is offered, when, what it can show and what happens after a result.",
+      "Review medicines and supplements with a clinician or pharmacist.",
+      "Choose food-safety and substance-free habits without chasing perfection."
+    ],
+    "avoidAsk": [
+      "Do not consent to a test only because it appears routine—ask what decision the result could help you make."
+    ],
+    "appointments": [
+      "Dating scans and first-trimester screening sit in defined windows, so confirm your dates with the doctor rather than waiting for a generic week online."
+    ],
+    "partner": [
+      "Make a shared question list and learn the difference between screening and diagnostic testing without pushing a preferred choice."
+    ],
+    "topics": [
+      "early-pregnancy",
+      "nausea-food",
+      "appointments-scans",
+      "screening"
+    ],
+    "audiences": [
+      "pregnant",
+      "partner",
+      "browsing"
+    ],
+    "helpTier": "common",
+    "sourceIds": [
+      "who-antenatal",
+      "acog-changes",
+      "nhs-weeks"
+    ],
+    "milestoneIds": [
+      "early-assessment",
+      "dating-ultrasound",
+      "screening-decisions"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2027-07-31",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "annual"
+    }
+  },
+  {
+    "id": "week-11",
+    "slug": "week-11",
+    "kind": "week",
+    "phase": "pregnancy",
+    "ordinal": 18,
+    "windowLabel": "Month 3 · Week 11",
+    "title": "Week 11: Screening choices may be approaching",
+    "dek": "Constipation, reflux or food aversions may join earlier symptoms.",
+    "summary": [
+      "For every offered test, ask four things: what it looks for, how accurate it is, possible next steps and whether it is optional.",
+      "Check whether you need a full bladder, whether a support person can attend, and how unexpected findings are communicated.",
+      "Do not compare one scan measurement with an app illustration; clinicians interpret measurements together and in context."
+    ],
+    "bodyMind": [
+      "Constipation, reflux or food aversions may join earlier symptoms."
+    ],
+    "baby": [
+      "Bones, facial structures and tiny movements are developing, although movement is not usually felt yet."
+    ],
+    "variationNote": "Symptoms, fetal development and the timing of what you notice can vary. A change that worries you still deserves attention even when it does not match a typical description.",
+    "clarifications": [
+      "An ultrasound due date may replace a last-period estimate when the measurements and clinical context support that change."
+    ],
+    "doNow": [
+      "For every offered test, ask four things: what it looks for, how accurate it is, possible next steps and whether it is optional.",
+      "Review medicines and supplements with a clinician or pharmacist.",
+      "Choose food-safety and substance-free habits without chasing perfection."
+    ],
+    "avoidAsk": [
+      "Do not compare one scan measurement with an app illustration; clinicians interpret measurements together and in context."
+    ],
+    "appointments": [
+      "Check whether you need a full bladder, whether a support person can attend, and how unexpected findings are communicated."
+    ],
+    "partner": [
+      "Take notes during the appointment if invited, then repeat back the plan so neither of you has to remember everything under stress."
+    ],
+    "topics": [
+      "early-pregnancy",
+      "nausea-food",
+      "appointments-scans",
+      "screening"
+    ],
+    "audiences": [
+      "pregnant",
+      "partner",
+      "browsing"
+    ],
+    "helpTier": "common",
+    "sourceIds": [
+      "who-antenatal",
+      "acog-changes",
+      "nhs-weeks"
+    ],
+    "milestoneIds": [
+      "early-assessment",
+      "dating-ultrasound",
+      "screening-decisions"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2027-07-31",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "annual"
+    }
+  },
+  {
+    "id": "week-12",
+    "slug": "week-12",
+    "kind": "week",
+    "phase": "pregnancy",
+    "ordinal": 19,
+    "windowLabel": "Month 3 · Week 12",
+    "title": "Week 12: Reaching the end of the earliest stretch",
+    "dek": "Some people begin to feel better soon; others do not, and both patterns can be normal.",
+    "summary": [
+      "Review the basics you can actually sustain: prenatal supplement, medicine plan, no alcohol or smoking, safer food handling and a care contact.",
+      "If you have results pending, confirm who will contact you, by when, and what number to use if you hear nothing.",
+      "Do not use symptom strength, a home Doppler or repeated home tests to reassure yourself about a medical concern."
+    ],
+    "bodyMind": [
+      "Some people begin to feel better soon; others do not, and both patterns can be normal."
+    ],
+    "baby": [
+      "Many major structures are present and continue to mature throughout the rest of pregnancy."
+    ],
+    "variationNote": "Symptoms, fetal development and the timing of what you notice can vary. A change that worries you still deserves attention even when it does not match a typical description.",
+    "clarifications": [
+      "Symptoms may ease, stay strong or fluctuate. A single better or worse day does not by itself explain how the pregnancy is progressing."
+    ],
+    "doNow": [
+      "Review the basics you can actually sustain: prenatal supplement, medicine plan, no alcohol or smoking, safer food handling and a care contact.",
+      "Review medicines and supplements with a clinician or pharmacist.",
+      "Choose food-safety and substance-free habits without chasing perfection."
+    ],
+    "avoidAsk": [
+      "Do not use symptom strength, a home Doppler or repeated home tests to reassure yourself about a medical concern."
+    ],
+    "appointments": [
+      "If you have results pending, confirm who will contact you, by when, and what number to use if you hear nothing."
+    ],
+    "partner": [
+      "Mark result dates and the next appointment on a shared calendar, with permission, so follow-up does not rest on one person."
+    ],
+    "topics": [
+      "early-pregnancy",
+      "nausea-food",
+      "appointments-scans",
+      "screening"
+    ],
+    "audiences": [
+      "pregnant",
+      "partner",
+      "browsing"
+    ],
+    "helpTier": "common",
+    "sourceIds": [
+      "who-antenatal",
+      "acog-changes",
+      "nhs-weeks"
+    ],
+    "milestoneIds": [
+      "early-assessment",
+      "dating-ultrasound",
+      "screening-decisions"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2027-07-31",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "annual"
+    }
+  },
+  {
+    "id": "week-13",
+    "slug": "week-13",
+    "kind": "week",
+    "phase": "pregnancy",
+    "ordinal": 20,
+    "windowLabel": "Month 3 · Week 13",
+    "title": "Week 13: The first trimester is closing",
+    "dek": "The uterus is rising and clothes may feel different, while emotions may still be unpredictable.",
+    "summary": [
+      "Bring persistent symptoms into the next visit—constipation, reflux, headaches, anxiety and pelvic pain all count even when they seem 'minor.'",
+      "Ask what the second-trimester plan includes and when your mid-pregnancy anatomy assessment will be arranged.",
+      "Do not start herbal remedies for lingering symptoms without a pregnancy-specific medicine check."
+    ],
+    "bodyMind": [
+      "The uterus is rising and clothes may feel different, while emotions may still be unpredictable."
+    ],
+    "baby": [
+      "Growth becomes the main story as the first trimester draws to a close."
+    ],
+    "variationNote": "Symptoms, fetal development and the timing of what you notice can vary. A change that worries you still deserves attention even when it does not match a typical description.",
+    "clarifications": [
+      "The trimester boundary is a useful label, not a switch: nausea and fatigue do not have to disappear at week 13."
+    ],
+    "doNow": [
+      "Bring persistent symptoms into the next visit—constipation, reflux, headaches, anxiety and pelvic pain all count even when they seem 'minor.'",
+      "Review medicines and supplements with a clinician or pharmacist.",
+      "Choose food-safety and substance-free habits without chasing perfection."
+    ],
+    "avoidAsk": [
+      "Do not start herbal remedies for lingering symptoms without a pregnancy-specific medicine check."
+    ],
+    "appointments": [
+      "Ask what the second-trimester plan includes and when your mid-pregnancy anatomy assessment will be arranged."
+    ],
+    "partner": [
+      "Ask which symptom is taking the most energy and remove one practical burden from the coming week."
+    ],
+    "topics": [
+      "early-pregnancy",
+      "nausea-food",
+      "appointments-scans",
+      "screening"
+    ],
+    "audiences": [
+      "pregnant",
+      "partner",
+      "browsing"
+    ],
+    "helpTier": "common",
+    "sourceIds": [
+      "who-antenatal",
+      "acog-changes",
+      "nhs-weeks"
+    ],
+    "milestoneIds": [
+      "early-assessment",
+      "dating-ultrasound",
+      "screening-decisions"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2027-07-31",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "annual"
+    }
+  },
+  {
+    "id": "week-14",
+    "slug": "week-14",
+    "kind": "week",
+    "phase": "pregnancy",
+    "ordinal": 21,
+    "windowLabel": "Month 4 · Week 14",
+    "title": "Week 14: The second trimester begins",
+    "dek": "Energy may improve, though headaches, nasal stuffiness or round-ligament discomfort can appear.",
+    "summary": [
+      "If energy allows, settle into regular moderate movement you can maintain—such as walking, swimming or pregnancy-appropriate strength work.",
+      "Confirm the next appointment and anatomy-scan window; there may be several weeks without a routine visit in an uncomplicated pregnancy.",
+      "Stop activity and seek advice for bleeding, fluid leakage, chest pain, faintness, painful regular contractions or other symptoms your team flags."
+    ],
+    "bodyMind": [
+      "Energy may improve, though headaches, nasal stuffiness or round-ligament discomfort can appear."
+    ],
+    "baby": [
+      "The fetus is growing steadily, and the placenta is carrying more of the pregnancy-support work."
+    ],
+    "variationNote": "Symptoms, fetal development and the timing of what you notice can vary. A change that worries you still deserves attention even when it does not match a typical description.",
+    "clarifications": [
+      "Moderate usually means you can still speak in sentences. Your clinician may give different advice for complications or prior conditions."
+    ],
+    "doNow": [
+      "If energy allows, settle into regular moderate movement you can maintain—such as walking, swimming or pregnancy-appropriate strength work.",
+      "Stay active in ways that feel stable and are appropriate for your pregnancy.",
+      "Learn what movement changes should prompt a call later in pregnancy."
+    ],
+    "avoidAsk": [
+      "Stop activity and seek advice for bleeding, fluid leakage, chest pain, faintness, painful regular contractions or other symptoms your team flags."
+    ],
+    "appointments": [
+      "Confirm the next appointment and anatomy-scan window; there may be several weeks without a routine visit in an uncomplicated pregnancy."
+    ],
+    "partner": [
+      "Join a walk or make movement easier, without turning exercise into supervision or a performance target."
+    ],
+    "topics": [
+      "nausea-food",
+      "appointments-scans",
+      "screening",
+      "exercise-comfort"
+    ],
+    "audiences": [
+      "pregnant",
+      "partner",
+      "browsing"
+    ],
+    "helpTier": "common",
+    "sourceIds": [
+      "who-antenatal",
+      "acog-changes",
+      "nhs-weeks"
+    ],
+    "milestoneIds": [
+      "dating-ultrasound",
+      "screening-decisions"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2027-07-31",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "annual"
+    }
+  },
+  {
+    "id": "week-15",
+    "slug": "week-15",
+    "kind": "week",
+    "phase": "pregnancy",
+    "ordinal": 22,
+    "windowLabel": "Month 4 · Week 15",
+    "title": "Week 15: Movement is becoming more coordinated",
+    "dek": "A changing centre of gravity and looser joints make comfortable, steady movement important.",
+    "summary": [
+      "Adjust one repeated strain: raise a screen, add back support, split lifting loads or change how long you stand at work.",
+      "Use the next visit to ask what aches are expected, what self-care is reasonable and what would need assessment.",
+      "Avoid breath-holding and unstable positions when lifting; ask for a workplace or physiotherapy assessment if pain is building."
+    ],
+    "bodyMind": [
+      "A changing centre of gravity and looser joints make comfortable, steady movement important."
+    ],
+    "baby": [
+      "Bones and muscles continue developing; movements are becoming more coordinated."
+    ],
+    "variationNote": "Symptoms, fetal development and the timing of what you notice can vary. A change that worries you still deserves attention even when it does not match a typical description.",
+    "clarifications": [
+      "Pregnancy hormones and a changing centre of gravity can make familiar tasks feel different before the bump looks large."
+    ],
+    "doNow": [
+      "Adjust one repeated strain: raise a screen, add back support, split lifting loads or change how long you stand at work.",
+      "Stay active in ways that feel stable and are appropriate for your pregnancy.",
+      "Learn what movement changes should prompt a call later in pregnancy."
+    ],
+    "avoidAsk": [
+      "Avoid breath-holding and unstable positions when lifting; ask for a workplace or physiotherapy assessment if pain is building."
+    ],
+    "appointments": [
+      "Use the next visit to ask what aches are expected, what self-care is reasonable and what would need assessment."
+    ],
+    "partner": [
+      "Take the awkward loads—heavy shopping, low laundry baskets or repeated carrying—before pain forces the conversation."
+    ],
+    "topics": [
+      "exercise-comfort"
+    ],
+    "audiences": [
+      "pregnant",
+      "partner",
+      "browsing"
+    ],
+    "helpTier": "common",
+    "sourceIds": [
+      "who-antenatal",
+      "acog-changes",
+      "nhs-weeks"
+    ],
+    "milestoneIds": [
+      "screening-decisions"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2027-07-31",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "annual"
+    }
+  },
+  {
+    "id": "week-16",
+    "slug": "week-16",
+    "kind": "week",
+    "phase": "pregnancy",
+    "ordinal": 23,
+    "windowLabel": "Month 4 · Week 16",
+    "title": "Week 16: A growing uterus and changing balance",
+    "dek": "You may notice stretching sensations as the uterus grows; sudden severe or persistent pain needs assessment.",
+    "summary": [
+      "Learn the difference between a brief stretching twinge and pain that is severe, persistent, rhythmic or paired with bleeding or fever.",
+      "Vaccination recommendations can depend on season and location; ask what is currently recommended rather than relying on an old list.",
+      "Do not self-diagnose abdominal pain from its location alone—call when pain is strong, worsening or comes with other warning signs."
+    ],
+    "bodyMind": [
+      "You may notice stretching sensations as the uterus grows; sudden severe or persistent pain needs assessment."
+    ],
+    "baby": [
+      "Facial expressions and limb movements are developing, even if you cannot feel them yet."
+    ],
+    "variationNote": "Symptoms, fetal development and the timing of what you notice can vary. A change that worries you still deserves attention even when it does not match a typical description.",
+    "clarifications": [
+      "Round-ligament discomfort is often brief and linked to movement; that label should not be used to explain away new severe pain."
+    ],
+    "doNow": [
+      "Learn the difference between a brief stretching twinge and pain that is severe, persistent, rhythmic or paired with bleeding or fever.",
+      "Stay active in ways that feel stable and are appropriate for your pregnancy.",
+      "Learn what movement changes should prompt a call later in pregnancy."
+    ],
+    "avoidAsk": [
+      "Do not self-diagnose abdominal pain from its location alone—call when pain is strong, worsening or comes with other warning signs."
+    ],
+    "appointments": [
+      "Vaccination recommendations can depend on season and location; ask what is currently recommended rather than relying on an old list."
+    ],
+    "partner": [
+      "Slow down sudden changes of direction, offer a hand on stairs if wanted, and take pain reports seriously."
+    ],
+    "topics": [
+      "exercise-comfort",
+      "work-travel"
+    ],
+    "audiences": [
+      "pregnant",
+      "partner",
+      "browsing"
+    ],
+    "helpTier": "common",
+    "sourceIds": [
+      "who-antenatal",
+      "acog-changes",
+      "nhs-weeks"
+    ],
+    "milestoneIds": [
+      "screening-decisions",
+      "pregnancy-vaccines"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2027-07-31",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "annual"
+    }
+  },
+  {
+    "id": "week-17",
+    "slug": "week-17",
+    "kind": "week",
+    "phase": "pregnancy",
+    "ordinal": 24,
+    "windowLabel": "Month 4 · Week 17",
+    "title": "Week 17: Hips, back and pelvic support",
+    "dek": "Back, hip or pelvic discomfort may start; pacing, posture and tailored movement can help.",
+    "summary": [
+      "Notice the trigger for pelvic or back pain—turning in bed, stairs, standing, lifting—and ask early about tailored physiotherapy or movement advice.",
+      "Ask how to access pelvic-health support in your system and whether a referral is needed.",
+      "Do not push through sharp pelvic pain in the hope that more exercise will automatically fix it."
+    ],
+    "bodyMind": [
+      "Back, hip or pelvic discomfort may start; pacing, posture and tailored movement can help."
+    ],
+    "baby": [
+      "The skeleton continues to harden and body proportions gradually change."
+    ],
+    "variationNote": "Symptoms, fetal development and the timing of what you notice can vary. A change that worries you still deserves attention even when it does not match a typical description.",
+    "clarifications": [
+      "Pain deserves help even when it is common. Early adjustments can be easier than waiting until walking or sleep is badly affected."
+    ],
+    "doNow": [
+      "Notice the trigger for pelvic or back pain—turning in bed, stairs, standing, lifting—and ask early about tailored physiotherapy or movement advice.",
+      "Stay active in ways that feel stable and are appropriate for your pregnancy.",
+      "Learn what movement changes should prompt a call later in pregnancy."
+    ],
+    "avoidAsk": [
+      "Do not push through sharp pelvic pain in the hope that more exercise will automatically fix it."
+    ],
+    "appointments": [
+      "Ask how to access pelvic-health support in your system and whether a referral is needed."
+    ],
+    "partner": [
+      "Keep frequently used items between knee and shoulder height and share tasks that require twisting or repeated stairs."
+    ],
+    "topics": [
+      "exercise-comfort",
+      "work-travel"
+    ],
+    "audiences": [
+      "pregnant",
+      "partner",
+      "browsing"
+    ],
+    "helpTier": "common",
+    "sourceIds": [
+      "who-antenatal",
+      "acog-changes",
+      "nhs-weeks"
+    ],
+    "milestoneIds": [
+      "screening-decisions",
+      "pregnancy-vaccines"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2027-07-31",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "annual"
+    }
+  },
+  {
+    "id": "week-18",
+    "slug": "week-18",
+    "kind": "week",
+    "phase": "pregnancy",
+    "ordinal": 25,
+    "windowLabel": "Month 5 · Week 18",
+    "title": "Week 18: You may begin to feel movement",
+    "dek": "Some first-time parents begin feeling movement now, while others will not for several more weeks.",
+    "summary": [
+      "Notice possible first movements without setting a quota; they may feel like taps, flutters, bubbles or a small muscle twitch.",
+      "The anatomy assessment is commonly offered around weeks 18–22; confirm your appointment window and the purpose of the scan.",
+      "Do not use someone else's movement timeline as a deadline. Ask your care team when they expect you to call if you have felt none."
+    ],
+    "bodyMind": [
+      "Some first-time parents begin feeling movement now, while others will not for several more weeks."
+    ],
+    "baby": [
+      "Hearing structures and movement patterns are developing."
+    ],
+    "variationNote": "Symptoms, fetal development and the timing of what you notice can vary. A change that worries you still deserves attention even when it does not match a typical description.",
+    "clarifications": [
+      "First-time parents often recognize movement later than people who have been pregnant before. Placenta position and dating can change what is felt."
+    ],
+    "doNow": [
+      "Notice possible first movements without setting a quota; they may feel like taps, flutters, bubbles or a small muscle twitch.",
+      "Stay active in ways that feel stable and are appropriate for your pregnancy.",
+      "Learn what movement changes should prompt a call later in pregnancy."
+    ],
+    "avoidAsk": [
+      "Do not use someone else's movement timeline as a deadline. Ask your care team when they expect you to call if you have felt none."
+    ],
+    "appointments": [
+      "The anatomy assessment is commonly offered around weeks 18–22; confirm your appointment window and the purpose of the scan."
+    ],
+    "partner": [
+      "Keep expectations gentle—movement may be felt internally for weeks before it can be felt from the outside."
+    ],
+    "topics": [
+      "appointments-scans",
+      "screening",
+      "movement",
+      "exercise-comfort",
+      "work-travel"
+    ],
+    "audiences": [
+      "pregnant",
+      "partner",
+      "browsing"
+    ],
+    "helpTier": "common",
+    "sourceIds": [
+      "who-antenatal",
+      "acog-changes",
+      "nhs-weeks"
+    ],
+    "milestoneIds": [
+      "screening-decisions",
+      "anatomy-scan",
+      "pregnancy-vaccines"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2027-07-31",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "annual"
+    }
+  },
+  {
+    "id": "week-19",
+    "slug": "week-19",
+    "kind": "week",
+    "phase": "pregnancy",
+    "ordinal": 26,
+    "windowLabel": "Month 5 · Week 19",
+    "title": "Week 19: Preparing for the anatomy scan",
+    "dek": "Skin, sleep and appetite can change as the bump becomes more noticeable.",
+    "summary": [
+      "Write down what you want explained at the anatomy scan, including what is being checked, when results are given and whether a repeat view might be needed.",
+      "Check practical instructions: arrival time, bladder guidance, visitor rules, photos and how long the appointment may take.",
+      "Do not treat the anatomy scan as only a sex-reveal appointment; its primary purpose is a structured health assessment."
+    ],
+    "bodyMind": [
+      "Skin, sleep and appetite can change as the bump becomes more noticeable."
+    ],
+    "baby": [
+      "Protective skin coatings and fine hair begin helping protect delicate skin."
+    ],
+    "variationNote": "Symptoms, fetal development and the timing of what you notice can vary. A change that worries you still deserves attention even when it does not match a typical description.",
+    "clarifications": [
+      "A repeat scan can simply mean the baby's position did not allow all views; it does not automatically mean a problem was found."
+    ],
+    "doNow": [
+      "Write down what you want explained at the anatomy scan, including what is being checked, when results are given and whether a repeat view might be needed.",
+      "Stay active in ways that feel stable and are appropriate for your pregnancy.",
+      "Learn what movement changes should prompt a call later in pregnancy."
+    ],
+    "avoidAsk": [
+      "Do not treat the anatomy scan as only a sex-reveal appointment; its primary purpose is a structured health assessment."
+    ],
+    "appointments": [
+      "Check practical instructions: arrival time, bladder guidance, visitor rules, photos and how long the appointment may take."
+    ],
+    "partner": [
+      "Attend if invited, take notes, and leave space for the clinician to complete the medical examination before asking for extras."
+    ],
+    "topics": [
+      "appointments-scans",
+      "screening",
+      "movement",
+      "exercise-comfort",
+      "work-travel"
+    ],
+    "audiences": [
+      "pregnant",
+      "partner",
+      "browsing"
+    ],
+    "helpTier": "common",
+    "sourceIds": [
+      "who-antenatal",
+      "acog-changes",
+      "nhs-weeks"
+    ],
+    "milestoneIds": [
+      "screening-decisions",
+      "anatomy-scan",
+      "pregnancy-vaccines"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2027-07-31",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "annual"
+    }
+  },
+  {
+    "id": "week-20",
+    "slug": "week-20",
+    "kind": "week",
+    "phase": "pregnancy",
+    "ordinal": 27,
+    "windowLabel": "Month 5 · Week 20",
+    "title": "Week 20: The halfway point",
+    "dek": "You may feel stronger movement and need practical adjustments for sleep, work or exercise.",
+    "summary": [
+      "Review the next eight weeks: scan follow-up, work adjustments, movement guidance, diabetes testing and any recommended vaccines.",
+      "Ask for plain-language results: what was seen, what was not seen, whether follow-up is needed and who arranges it.",
+      "Do not assume a reassuring scan rules out every later complication; continue routine care and act on new warning signs."
+    ],
+    "bodyMind": [
+      "You may feel stronger movement and need practical adjustments for sleep, work or exercise."
+    ],
+    "baby": [
+      "This midpoint often coincides with detailed assessment of anatomy in many care systems."
+    ],
+    "variationNote": "Symptoms, fetal development and the timing of what you notice can vary. A change that worries you still deserves attention even when it does not match a typical description.",
+    "clarifications": [
+      "Halfway is approximate. A 40-week due date is an estimate, and birth can occur before or after it."
+    ],
+    "doNow": [
+      "Review the next eight weeks: scan follow-up, work adjustments, movement guidance, diabetes testing and any recommended vaccines.",
+      "Stay active in ways that feel stable and are appropriate for your pregnancy.",
+      "Learn what movement changes should prompt a call later in pregnancy."
+    ],
+    "avoidAsk": [
+      "Do not assume a reassuring scan rules out every later complication; continue routine care and act on new warning signs."
+    ],
+    "appointments": [
+      "Ask for plain-language results: what was seen, what was not seen, whether follow-up is needed and who arranges it."
+    ],
+    "partner": [
+      "After the scan, compare what each of you heard and write down any unresolved question before details blur."
+    ],
+    "topics": [
+      "appointments-scans",
+      "screening",
+      "movement",
+      "exercise-comfort",
+      "work-travel"
+    ],
+    "audiences": [
+      "pregnant",
+      "partner",
+      "browsing"
+    ],
+    "helpTier": "common",
+    "sourceIds": [
+      "who-antenatal",
+      "acog-changes",
+      "nhs-weeks"
+    ],
+    "milestoneIds": [
+      "screening-decisions",
+      "anatomy-scan",
+      "movement-pattern",
+      "pregnancy-vaccines"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2027-07-31",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "annual"
+    }
+  },
+  {
+    "id": "week-21",
+    "slug": "week-21",
+    "kind": "week",
+    "phase": "pregnancy",
+    "ordinal": 28,
+    "windowLabel": "Month 5 · Week 21",
+    "title": "Week 21: Movement may feel more distinct",
+    "dek": "Breathlessness with exertion, reflux and back discomfort can increase gradually.",
+    "summary": [
+      "Begin noticing when and how movement tends to appear, without forcing a formal counting routine unless your care team recommends one.",
+      "Ask your maternity service for its exact reduced-movement contact instructions and save the number now.",
+      "Do not wait until the next day for advice if an established movement pattern becomes clearly slower or different."
+    ],
+    "bodyMind": [
+      "Breathlessness with exertion, reflux and back discomfort can increase gradually."
+    ],
+    "baby": [
+      "Movements may feel more distinct as muscles and the nervous system mature."
+    ],
+    "variationNote": "Symptoms, fetal development and the timing of what you notice can vary. A change that worries you still deserves attention even when it does not match a typical description.",
+    "clarifications": [
+      "Movement can be easier to notice when you pause. The important later signal is a change from this baby's own usual pattern, not comparison with an app."
+    ],
+    "doNow": [
+      "Begin noticing when and how movement tends to appear, without forcing a formal counting routine unless your care team recommends one.",
+      "Stay active in ways that feel stable and are appropriate for your pregnancy.",
+      "Learn what movement changes should prompt a call later in pregnancy."
+    ],
+    "avoidAsk": [
+      "Do not wait until the next day for advice if an established movement pattern becomes clearly slower or different."
+    ],
+    "appointments": [
+      "Ask your maternity service for its exact reduced-movement contact instructions and save the number now."
+    ],
+    "partner": [
+      "Learn the reduced-movement route too; never tell someone to wait because you can feel one movement from the outside."
+    ],
+    "topics": [
+      "appointments-scans",
+      "screening",
+      "movement",
+      "exercise-comfort",
+      "work-travel"
+    ],
+    "audiences": [
+      "pregnant",
+      "partner",
+      "browsing"
+    ],
+    "helpTier": "common",
+    "sourceIds": [
+      "who-antenatal",
+      "acog-changes",
+      "nhs-weeks"
+    ],
+    "milestoneIds": [
+      "anatomy-scan",
+      "movement-pattern",
+      "pregnancy-vaccines"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2027-07-31",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "annual"
+    }
+  },
+  {
+    "id": "week-22",
+    "slug": "week-22",
+    "kind": "week",
+    "phase": "pregnancy",
+    "ordinal": 29,
+    "windowLabel": "Month 5 · Week 22",
+    "title": "Week 22: Sleep, stretching and steady growth",
+    "dek": "Stretching skin, leg cramps or swelling may appear; sudden or marked symptoms require advice.",
+    "summary": [
+      "Test small comfort changes: a pillow between the knees, support behind the back, shorter standing periods or a footrest at work.",
+      "Raise sleep, reflux, cramps or swelling at the next visit and ask which changes should prompt an earlier call.",
+      "Do not massage a painful, hot or noticeably swollen calf while waiting to see if it passes."
+    ],
+    "bodyMind": [
+      "Stretching skin, leg cramps or swelling may appear; sudden or marked symptoms require advice."
+    ],
+    "baby": [
+      "The lungs are developing their branching structures but are not ready to work independently."
+    ],
+    "variationNote": "Symptoms, fetal development and the timing of what you notice can vary. A change that worries you still deserves attention even when it does not match a typical description.",
+    "clarifications": [
+      "Leg cramps, skin stretching and interrupted sleep are common examples; sudden one-sided leg swelling or pain is different and needs urgent advice."
+    ],
+    "doNow": [
+      "Test small comfort changes: a pillow between the knees, support behind the back, shorter standing periods or a footrest at work.",
+      "Stay active in ways that feel stable and are appropriate for your pregnancy.",
+      "Learn what movement changes should prompt a call later in pregnancy."
+    ],
+    "avoidAsk": [
+      "Do not massage a painful, hot or noticeably swollen calf while waiting to see if it passes."
+    ],
+    "appointments": [
+      "Raise sleep, reflux, cramps or swelling at the next visit and ask which changes should prompt an earlier call."
+    ],
+    "partner": [
+      "Make room in the bed, help arrange pillows and share nighttime tasks that do not require the pregnant person."
+    ],
+    "topics": [
+      "appointments-scans",
+      "screening",
+      "movement",
+      "exercise-comfort",
+      "work-travel"
+    ],
+    "audiences": [
+      "pregnant",
+      "partner",
+      "browsing"
+    ],
+    "helpTier": "common",
+    "sourceIds": [
+      "who-antenatal",
+      "acog-changes",
+      "nhs-weeks"
+    ],
+    "milestoneIds": [
+      "anatomy-scan",
+      "movement-pattern",
+      "pregnancy-vaccines"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2027-07-31",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "annual"
+    }
+  },
+  {
+    "id": "week-23",
+    "slug": "week-23",
+    "kind": "week",
+    "phase": "pregnancy",
+    "ordinal": 30,
+    "windowLabel": "Month 6 · Week 23",
+    "title": "Week 23: Hearing and movement are strengthening",
+    "dek": "Sleep positions and supportive pillows may become more relevant as the abdomen grows.",
+    "summary": [
+      "Save three contacts in the phone: routine maternity care, urgent maternity assessment and emergency services.",
+      "Ask where you should go outside office hours and whether the route changes before or after a particular gestational week.",
+      "Do not use a consumer Doppler, smartwatch or home blood-pressure reading to overrule symptoms that need professional assessment."
+    ],
+    "bodyMind": [
+      "Sleep positions and supportive pillows may become more relevant as the abdomen grows."
+    ],
+    "baby": [
+      "Rapid brain, hearing and movement development continues."
+    ],
+    "variationNote": "Symptoms, fetal development and the timing of what you notice can vary. A change that worries you still deserves attention even when it does not match a typical description.",
+    "clarifications": [
+      "A contact plan is useful before the third trimester because urgent symptoms do not arrive according to an appointment schedule."
+    ],
+    "doNow": [
+      "Save three contacts in the phone: routine maternity care, urgent maternity assessment and emergency services.",
+      "Stay active in ways that feel stable and are appropriate for your pregnancy.",
+      "Learn what movement changes should prompt a call later in pregnancy."
+    ],
+    "avoidAsk": [
+      "Do not use a consumer Doppler, smartwatch or home blood-pressure reading to overrule symptoms that need professional assessment."
+    ],
+    "appointments": [
+      "Ask where you should go outside office hours and whether the route changes before or after a particular gestational week."
+    ],
+    "partner": [
+      "Store the same numbers and know the route, parking or transport plan without relying on the pregnant person to direct you under stress."
+    ],
+    "topics": [
+      "appointments-scans",
+      "movement",
+      "exercise-comfort",
+      "work-travel"
+    ],
+    "audiences": [
+      "pregnant",
+      "partner",
+      "browsing"
+    ],
+    "helpTier": "common",
+    "sourceIds": [
+      "who-antenatal",
+      "acog-changes",
+      "nhs-weeks"
+    ],
+    "milestoneIds": [
+      "movement-pattern",
+      "pregnancy-vaccines"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2027-07-31",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "annual"
+    }
+  },
+  {
+    "id": "week-24",
+    "slug": "week-24",
+    "kind": "week",
+    "phase": "pregnancy",
+    "ordinal": 31,
+    "windowLabel": "Month 6 · Week 24",
+    "title": "Week 24: Movement patterns and common screening",
+    "dek": "Your care team may ask about movement, blood pressure, symptoms and diabetes screening around this period.",
+    "summary": [
+      "Ask whether gestational-diabetes testing is offered to everyone or based on risk, how it is done and when results arrive.",
+      "Weeks 24–28 are a common diabetes-testing window, but your doctor may use a different plan based on your history.",
+      "Do not change to a restrictive diet before testing unless a clinician who knows your pregnancy recommends it."
+    ],
+    "bodyMind": [
+      "Your care team may ask about movement, blood pressure, symptoms and diabetes screening around this period."
+    ],
+    "baby": [
+      "The pregnancy is entering a period when specialist neonatal care can sometimes support extremely early babies, though outcomes vary greatly."
+    ],
+    "variationNote": "Symptoms, fetal development and the timing of what you notice can vary. A change that worries you still deserves attention even when it does not match a typical description.",
+    "clarifications": [
+      "Gestational diabetes often has no obvious symptoms. Testing approaches and timing differ by health system and individual history."
+    ],
+    "doNow": [
+      "Ask whether gestational-diabetes testing is offered to everyone or based on risk, how it is done and when results arrive.",
+      "Stay active in ways that feel stable and are appropriate for your pregnancy.",
+      "Learn what movement changes should prompt a call later in pregnancy."
+    ],
+    "avoidAsk": [
+      "Do not change to a restrictive diet before testing unless a clinician who knows your pregnancy recommends it."
+    ],
+    "appointments": [
+      "Weeks 24–28 are a common diabetes-testing window, but your doctor may use a different plan based on your history."
+    ],
+    "partner": [
+      "Help protect appointment time and plan food, transport or childcare around a test that may take longer than a normal blood draw."
+    ],
+    "topics": [
+      "appointments-scans",
+      "screening",
+      "movement",
+      "exercise-comfort",
+      "work-travel"
+    ],
+    "audiences": [
+      "pregnant",
+      "partner",
+      "browsing"
+    ],
+    "helpTier": "common",
+    "sourceIds": [
+      "who-antenatal",
+      "acog-changes",
+      "nhs-weeks"
+    ],
+    "milestoneIds": [
+      "movement-pattern",
+      "diabetes-screen",
+      "pregnancy-vaccines",
+      "birth-learning"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2027-07-31",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "annual"
+    }
+  },
+  {
+    "id": "week-25",
+    "slug": "week-25",
+    "kind": "week",
+    "phase": "pregnancy",
+    "ordinal": 32,
+    "windowLabel": "Month 6 · Week 25",
+    "title": "Week 25: Pressure, rest and practical adjustments",
+    "dek": "Pelvic pressure and tiredness may increase; plan rest without assuming you must stop normal activity.",
+    "summary": [
+      "Break demanding tasks into shorter blocks and note whether pelvic pressure settles with rest or is becoming rhythmic, painful or persistent.",
+      "Ask your care team what preterm-labour symptoms should trigger a call and where assessment happens in your area.",
+      "Do not assume contractions are harmless tightenings if they are regular, painful, getting closer or happen with fluid loss."
+    ],
+    "bodyMind": [
+      "Pelvic pressure and tiredness may increase; plan rest without assuming you must stop normal activity."
+    ],
+    "baby": [
+      "Reflexes and movement patterns are becoming more noticeable."
+    ],
+    "variationNote": "Symptoms, fetal development and the timing of what you notice can vary. A change that worries you still deserves attention even when it does not match a typical description.",
+    "clarifications": [
+      "Pressure can increase as pregnancy grows; pressure with regular cramps, backache, bleeding or fluid leakage needs prompt assessment."
+    ],
+    "doNow": [
+      "Break demanding tasks into shorter blocks and note whether pelvic pressure settles with rest or is becoming rhythmic, painful or persistent.",
+      "Stay active in ways that feel stable and are appropriate for your pregnancy.",
+      "Learn what movement changes should prompt a call later in pregnancy."
+    ],
+    "avoidAsk": [
+      "Do not assume contractions are harmless tightenings if they are regular, painful, getting closer or happen with fluid loss."
+    ],
+    "appointments": [
+      "Ask your care team what preterm-labour symptoms should trigger a call and where assessment happens in your area."
+    ],
+    "partner": [
+      "Take over one energy-heavy routine and know the preterm-assessment route, especially before travel."
+    ],
+    "topics": [
+      "appointments-scans",
+      "screening",
+      "movement",
+      "exercise-comfort",
+      "work-travel"
+    ],
+    "audiences": [
+      "pregnant",
+      "partner",
+      "browsing"
+    ],
+    "helpTier": "common",
+    "sourceIds": [
+      "who-antenatal",
+      "acog-changes",
+      "nhs-weeks"
+    ],
+    "milestoneIds": [
+      "movement-pattern",
+      "diabetes-screen",
+      "pregnancy-vaccines",
+      "birth-learning"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2027-07-31",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "annual"
+    }
+  },
+  {
+    "id": "week-26",
+    "slug": "week-26",
+    "kind": "week",
+    "phase": "pregnancy",
+    "ordinal": 33,
+    "windowLabel": "Month 6 · Week 26",
+    "title": "Week 26: Tightenings: what is common and what is not",
+    "dek": "Braxton Hicks tightenings can occur, but regular painful contractions or fluid loss need prompt assessment.",
+    "summary": [
+      "If tightenings occur, pause, hydrate and note timing, pain, fluid loss, bleeding and movement so you can describe the pattern clearly.",
+      "Complete any diabetes testing or follow-up your team scheduled and ask what the result changes, if anything.",
+      "Do not spend hours trying home remedies when symptoms are rhythmic, worsening or accompanied by pressure, bleeding or leaking fluid."
+    ],
+    "bodyMind": [
+      "Braxton Hicks tightenings can occur, but regular painful contractions or fluid loss need prompt assessment."
+    ],
+    "baby": [
+      "The eyes and nervous system continue maturing; sleep and waking patterns may emerge."
+    ],
+    "variationNote": "Symptoms, fetal development and the timing of what you notice can vary. A change that worries you still deserves attention even when it does not match a typical description.",
+    "clarifications": [
+      "Irregular tightenings that settle can occur. Regular, painful or intensifying contractions—especially this early—need maternity advice."
+    ],
+    "doNow": [
+      "If tightenings occur, pause, hydrate and note timing, pain, fluid loss, bleeding and movement so you can describe the pattern clearly.",
+      "Stay active in ways that feel stable and are appropriate for your pregnancy.",
+      "Learn what movement changes should prompt a call later in pregnancy."
+    ],
+    "avoidAsk": [
+      "Do not spend hours trying home remedies when symptoms are rhythmic, worsening or accompanied by pressure, bleeding or leaking fluid."
+    ],
+    "appointments": [
+      "Complete any diabetes testing or follow-up your team scheduled and ask what the result changes, if anything."
+    ],
+    "partner": [
+      "Time symptoms and call the service while the pregnant person rests; do not make them prove that the sensation is serious."
+    ],
+    "topics": [
+      "appointments-scans",
+      "screening",
+      "movement",
+      "exercise-comfort",
+      "work-travel",
+      "labour-signs"
+    ],
+    "audiences": [
+      "pregnant",
+      "partner",
+      "browsing"
+    ],
+    "helpTier": "common",
+    "sourceIds": [
+      "who-antenatal",
+      "acog-changes",
+      "nhs-weeks"
+    ],
+    "milestoneIds": [
+      "movement-pattern",
+      "diabetes-screen",
+      "pregnancy-vaccines",
+      "birth-learning"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2027-07-31",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "annual"
+    }
+  },
+  {
+    "id": "week-27",
+    "slug": "week-27",
+    "kind": "week",
+    "phase": "pregnancy",
+    "ordinal": 34,
+    "windowLabel": "Month 6 · Week 27",
+    "title": "Week 27: The second trimester closes",
+    "dek": "The second trimester may end with stronger movement and more physical effort in everyday tasks.",
+    "summary": [
+      "Make a third-trimester question list: visit frequency, blood results, vaccines, movement, birth setting, classes and work or leave paperwork.",
+      "Confirm what changes after week 28 and whether any blood tests, injections or vaccines are due.",
+      "Do not ignore breathlessness at rest, chest pain, fainting or a racing heart that feels severe or new."
+    ],
+    "bodyMind": [
+      "The second trimester may end with stronger movement and more physical effort in everyday tasks."
+    ],
+    "baby": [
+      "The second trimester is ending, with ongoing brain and lung development."
+    ],
+    "variationNote": "Symptoms, fetal development and the timing of what you notice can vary. A change that worries you still deserves attention even when it does not match a typical description.",
+    "clarifications": [
+      "There is no requirement to feel energetic just because the second trimester is often described as easier."
+    ],
+    "doNow": [
+      "Make a third-trimester question list: visit frequency, blood results, vaccines, movement, birth setting, classes and work or leave paperwork.",
+      "Stay active in ways that feel stable and are appropriate for your pregnancy.",
+      "Learn what movement changes should prompt a call later in pregnancy."
+    ],
+    "avoidAsk": [
+      "Do not ignore breathlessness at rest, chest pain, fainting or a racing heart that feels severe or new."
+    ],
+    "appointments": [
+      "Confirm what changes after week 28 and whether any blood tests, injections or vaccines are due."
+    ],
+    "partner": [
+      "Turn the question list into shared tasks with names and dates instead of leaving every preparation item to one person."
+    ],
+    "topics": [
+      "appointments-scans",
+      "screening",
+      "movement",
+      "exercise-comfort",
+      "work-travel",
+      "labour-signs"
+    ],
+    "audiences": [
+      "pregnant",
+      "partner",
+      "browsing"
+    ],
+    "helpTier": "common",
+    "sourceIds": [
+      "who-antenatal",
+      "acog-changes",
+      "nhs-weeks"
+    ],
+    "milestoneIds": [
+      "movement-pattern",
+      "diabetes-screen",
+      "pregnancy-vaccines",
+      "birth-learning"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2027-07-31",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "annual"
+    }
+  },
+  {
+    "id": "week-28",
+    "slug": "week-28",
+    "kind": "week",
+    "phase": "pregnancy",
+    "ordinal": 35,
+    "windowLabel": "Month 7 · Week 28",
+    "title": "Week 28: Third trimester: checks may become more frequent",
+    "dek": "Third-trimester visits often become more frequent, depending on individual need and the plan your doctor gives you.",
+    "summary": [
+      "Learn your baby's usual movement pattern and the exact instruction your maternity team gives you for a noticeable reduction or change.",
+      "Third-trimester visits often review blood pressure, growth, movement, symptoms and earlier test results; the frequency is individualized.",
+      "Do not wait for a home drink, snack or Doppler check to 'prove' reduced movement before calling your maternity service."
+    ],
+    "bodyMind": [
+      "Third-trimester visits often become more frequent, depending on individual need and the plan your doctor gives you."
+    ],
+    "baby": [
+      "The third trimester begins; growth, brain development and fat storage accelerate."
+    ],
+    "variationNote": "Symptoms, fetal development and the timing of what you notice can vary. A change that worries you still deserves attention even when it does not match a typical description.",
+    "clarifications": [
+      "There is no universal number that describes every baby's normal movement. A clear change from the usual pattern matters."
+    ],
+    "doNow": [
+      "Learn your baby's usual movement pattern and the exact instruction your maternity team gives you for a noticeable reduction or change.",
+      "Discuss birth preferences, feeding support and early recovery.",
+      "Notice your baby's usual movement pattern and act promptly on a clear change."
+    ],
+    "avoidAsk": [
+      "Do not wait for a home drink, snack or Doppler check to 'prove' reduced movement before calling your maternity service."
+    ],
+    "appointments": [
+      "Third-trimester visits often review blood pressure, growth, movement, symptoms and earlier test results; the frequency is individualized."
+    ],
+    "partner": [
+      "Know the movement concern route and support an immediate call instead of suggesting the pregnant person wait and see."
+    ],
+    "topics": [
+      "appointments-scans",
+      "screening",
+      "movement",
+      "exercise-comfort",
+      "work-travel",
+      "birth-preparation",
+      "labour-signs"
+    ],
+    "audiences": [
+      "pregnant",
+      "partner",
+      "browsing"
+    ],
+    "helpTier": "common",
+    "sourceIds": [
+      "who-antenatal",
+      "acog-changes",
+      "nhs-weeks"
+    ],
+    "milestoneIds": [
+      "movement-pattern",
+      "diabetes-screen",
+      "pregnancy-vaccines",
+      "birth-learning"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2027-07-31",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "annual"
+    }
+  },
+  {
+    "id": "week-29",
+    "slug": "week-29",
+    "kind": "week",
+    "phase": "pregnancy",
+    "ordinal": 36,
+    "windowLabel": "Month 7 · Week 29",
+    "title": "Week 29: Sleep, reflux and breathing room",
+    "dek": "Sleep disruption, reflux, shortness of breath and back discomfort may become more noticeable.",
+    "summary": [
+      "Choose one sleep or reflux adjustment to test for several nights, such as earlier smaller meals or upper-body support.",
+      "Bring symptoms that interrupt eating or sleep to the next visit; ask what treatments are available rather than assuming you must tolerate them.",
+      "Do not take new indigestion or sleep products without checking pregnancy suitability and interactions."
+    ],
+    "bodyMind": [
+      "Sleep disruption, reflux, shortness of breath and back discomfort may become more noticeable."
+    ],
+    "baby": [
+      "Muscles and lungs continue maturing while the brain builds new connections."
+    ],
+    "variationNote": "Symptoms, fetal development and the timing of what you notice can vary. A change that worries you still deserves attention even when it does not match a typical description.",
+    "clarifications": [
+      "Breathlessness with stairs can increase gradually; sudden breathlessness, chest pain, blue lips or difficulty speaking is not routine discomfort."
+    ],
+    "doNow": [
+      "Choose one sleep or reflux adjustment to test for several nights, such as earlier smaller meals or upper-body support.",
+      "Discuss birth preferences, feeding support and early recovery.",
+      "Notice your baby's usual movement pattern and act promptly on a clear change."
+    ],
+    "avoidAsk": [
+      "Do not take new indigestion or sleep products without checking pregnancy suitability and interactions."
+    ],
+    "appointments": [
+      "Bring symptoms that interrupt eating or sleep to the next visit; ask what treatments are available rather than assuming you must tolerate them."
+    ],
+    "partner": [
+      "Protect a rest window, handle late chores and avoid minimizing exhaustion because the birth is still weeks away."
+    ],
+    "topics": [
+      "movement",
+      "exercise-comfort",
+      "work-travel",
+      "birth-preparation",
+      "labour-signs"
+    ],
+    "audiences": [
+      "pregnant",
+      "partner",
+      "browsing"
+    ],
+    "helpTier": "common",
+    "sourceIds": [
+      "who-antenatal",
+      "acog-changes",
+      "nhs-weeks"
+    ],
+    "milestoneIds": [
+      "pregnancy-vaccines",
+      "birth-learning",
+      "birth-preferences"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2027-07-31",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "annual"
+    }
+  },
+  {
+    "id": "week-30",
+    "slug": "week-30",
+    "kind": "week",
+    "phase": "pregnancy",
+    "ordinal": 37,
+    "windowLabel": "Month 7 · Week 30",
+    "title": "Week 30: Swelling: what is common and what needs a call",
+    "dek": "Your body is carrying more blood and weight; gradual swelling can occur, while sudden face or hand swelling needs urgent advice.",
+    "summary": [
+      "Notice whether swelling is gradual and in both feet or sudden, marked, one-sided, or affecting the face and hands.",
+      "Know where blood pressure and urine can be checked urgently outside routine appointment hours.",
+      "Do not use someone else's normal blood pressure or swelling pattern to judge your own symptoms."
+    ],
+    "bodyMind": [
+      "Your body is carrying more blood and weight; gradual swelling can occur, while sudden face or hand swelling needs urgent advice."
+    ],
+    "baby": [
+      "The fetus is adding body fat and practising breathing movements."
+    ],
+    "variationNote": "Symptoms, fetal development and the timing of what you notice can vary. A change that worries you still deserves attention even when it does not match a typical description.",
+    "clarifications": [
+      "Gradual ankle swelling can be common. Sudden swelling with a severe headache, vision changes or upper abdominal pain needs urgent assessment."
+    ],
+    "doNow": [
+      "Notice whether swelling is gradual and in both feet or sudden, marked, one-sided, or affecting the face and hands.",
+      "Discuss birth preferences, feeding support and early recovery.",
+      "Notice your baby's usual movement pattern and act promptly on a clear change."
+    ],
+    "avoidAsk": [
+      "Do not use someone else's normal blood pressure or swelling pattern to judge your own symptoms."
+    ],
+    "appointments": [
+      "Know where blood pressure and urine can be checked urgently outside routine appointment hours."
+    ],
+    "partner": [
+      "Notice sudden visible change without creating panic; help call the maternity service and arrange transport when warning signs appear."
+    ],
+    "topics": [
+      "movement",
+      "exercise-comfort",
+      "work-travel",
+      "birth-preparation",
+      "labour-signs"
+    ],
+    "audiences": [
+      "pregnant",
+      "partner",
+      "browsing"
+    ],
+    "helpTier": "common",
+    "sourceIds": [
+      "who-antenatal",
+      "acog-changes",
+      "nhs-weeks"
+    ],
+    "milestoneIds": [
+      "pregnancy-vaccines",
+      "birth-learning",
+      "birth-preferences",
+      "feeding-conversation"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2027-07-31",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "annual"
+    }
+  },
+  {
+    "id": "week-31",
+    "slug": "week-31",
+    "kind": "week",
+    "phase": "pregnancy",
+    "ordinal": 38,
+    "windowLabel": "Month 7 · Week 31",
+    "title": "Week 31: Learn your baby's usual movement pattern",
+    "dek": "Movement patterns should be becoming familiar. A clear slowdown or change should be checked promptly.",
+    "summary": [
+      "Identify the baby's familiar active periods and treat a clear reduction or unusual change as a same-day maternity contact.",
+      "Ask what assessment for reduced movement may involve so uncertainty about the visit does not delay a call.",
+      "Do not go to sleep hoping reduced movement will be normal by morning; call the route your team gave you."
+    ],
+    "bodyMind": [
+      "Movement patterns should be becoming familiar. A clear slowdown or change should be checked promptly."
+    ],
+    "baby": [
+      "The senses and nervous system continue refining; movements may feel strong and patterned."
+    ],
+    "variationNote": "Symptoms, fetal development and the timing of what you notice can vary. A change that worries you still deserves attention even when it does not match a typical description.",
+    "clarifications": [
+      "Space becomes tighter, so movements can feel different, but healthy babies should not simply stop moving because the due date is nearer."
+    ],
+    "doNow": [
+      "Identify the baby's familiar active periods and treat a clear reduction or unusual change as a same-day maternity contact.",
+      "Discuss birth preferences, feeding support and early recovery.",
+      "Notice your baby's usual movement pattern and act promptly on a clear change."
+    ],
+    "avoidAsk": [
+      "Do not go to sleep hoping reduced movement will be normal by morning; call the route your team gave you."
+    ],
+    "appointments": [
+      "Ask what assessment for reduced movement may involve so uncertainty about the visit does not delay a call."
+    ],
+    "partner": [
+      "Keep the phone charged, know the route and take the concern seriously the first time it is mentioned."
+    ],
+    "topics": [
+      "movement",
+      "exercise-comfort",
+      "work-travel",
+      "birth-preparation",
+      "labour-signs"
+    ],
+    "audiences": [
+      "pregnant",
+      "partner",
+      "browsing"
+    ],
+    "helpTier": "common",
+    "sourceIds": [
+      "who-antenatal",
+      "acog-changes",
+      "nhs-weeks"
+    ],
+    "milestoneIds": [
+      "pregnancy-vaccines",
+      "birth-learning",
+      "birth-preferences",
+      "feeding-conversation"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2027-07-31",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "annual"
+    }
+  },
+  {
+    "id": "week-32",
+    "slug": "week-32",
+    "kind": "week",
+    "phase": "pregnancy",
+    "ordinal": 39,
+    "windowLabel": "Month 8 · Week 32",
+    "title": "Week 32: Fatigue returns; prepare in small steps",
+    "dek": "Fatigue may return. Break preparation into small tasks and accept practical help.",
+    "summary": [
+      "Complete the two preparations that prevent last-minute stress: save the travel route and put essential documents and contacts together.",
+      "Confirm where you plan to give birth, when to call before travelling and what documents or supplies the facility asks you to bring.",
+      "Do not spend beyond your means on long newborn shopping lists; safe care needs far less equipment than marketing suggests."
+    ],
+    "bodyMind": [
+      "Fatigue may return. Break preparation into small tasks and accept practical help."
+    ],
+    "baby": [
+      "Bones are formed but still relatively soft, and the lungs continue maturing."
+    ],
+    "variationNote": "Symptoms, fetal development and the timing of what you notice can vary. A change that worries you still deserves attention even when it does not match a typical description.",
+    "clarifications": [
+      "A useful birth bag is small and practical: identification, medicines, comfortable clothes, basic toiletries, chargers and the baby basics your birth place requests."
+    ],
+    "doNow": [
+      "Complete the two preparations that prevent last-minute stress: save the travel route and put essential documents and contacts together.",
+      "Discuss birth preferences, feeding support and early recovery.",
+      "Notice your baby's usual movement pattern and act promptly on a clear change."
+    ],
+    "avoidAsk": [
+      "Do not spend beyond your means on long newborn shopping lists; safe care needs far less equipment than marketing suggests."
+    ],
+    "appointments": [
+      "Confirm where you plan to give birth, when to call before travelling and what documents or supplies the facility asks you to bring."
+    ],
+    "partner": [
+      "Own the route, fuel or fare, backup transport, phone chargers and care arrangements for children, pets or dependants."
+    ],
+    "topics": [
+      "appointments-scans",
+      "movement",
+      "exercise-comfort",
+      "work-travel",
+      "birth-preparation",
+      "labour-signs"
+    ],
+    "audiences": [
+      "pregnant",
+      "partner",
+      "browsing"
+    ],
+    "helpTier": "common",
+    "sourceIds": [
+      "who-antenatal",
+      "acog-changes",
+      "nhs-weeks"
+    ],
+    "milestoneIds": [
+      "pregnancy-vaccines",
+      "birth-learning",
+      "birth-preferences",
+      "route-and-contacts"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2027-07-31",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "annual"
+    }
+  },
+  {
+    "id": "week-33",
+    "slug": "week-33",
+    "kind": "week",
+    "phase": "pregnancy",
+    "ordinal": 40,
+    "windowLabel": "Month 8 · Week 33",
+    "title": "Week 33: Pressure, urination and irregular tightenings",
+    "dek": "Pelvic pressure, frequent urination and irregular tightenings are common but should still be discussed if concerning.",
+    "summary": [
+      "Separate common pressure from symptoms to report: burning urination, fever, constant pain, rhythmic cramps, bleeding or fluid leakage.",
+      "Use the next check to discuss baby position, growth, blood pressure, movement and any new urinary or pelvic symptoms.",
+      "Do not reduce fluids drastically to avoid bathroom trips unless your clinician has given a specific fluid plan."
+    ],
+    "bodyMind": [
+      "Pelvic pressure, frequent urination and irregular tightenings are common but should still be discussed if concerning."
+    ],
+    "baby": [
+      "Growth and fat storage help prepare for temperature regulation after birth."
+    ],
+    "variationNote": "Symptoms, fetal development and the timing of what you notice can vary. A change that worries you still deserves attention even when it does not match a typical description.",
+    "clarifications": [
+      "Needing to urinate often is common; pain, fever or feeling unwell can point to infection and should be checked."
+    ],
+    "doNow": [
+      "Separate common pressure from symptoms to report: burning urination, fever, constant pain, rhythmic cramps, bleeding or fluid leakage.",
+      "Discuss birth preferences, feeding support and early recovery.",
+      "Notice your baby's usual movement pattern and act promptly on a clear change."
+    ],
+    "avoidAsk": [
+      "Do not reduce fluids drastically to avoid bathroom trips unless your clinician has given a specific fluid plan."
+    ],
+    "appointments": [
+      "Use the next check to discuss baby position, growth, blood pressure, movement and any new urinary or pelvic symptoms."
+    ],
+    "partner": [
+      "Plan more bathroom and stretch stops for travel, and take over errands that have become physically awkward."
+    ],
+    "topics": [
+      "movement",
+      "exercise-comfort",
+      "work-travel",
+      "birth-preparation",
+      "labour-signs"
+    ],
+    "audiences": [
+      "pregnant",
+      "partner",
+      "browsing"
+    ],
+    "helpTier": "common",
+    "sourceIds": [
+      "who-antenatal",
+      "acog-changes",
+      "nhs-weeks"
+    ],
+    "milestoneIds": [
+      "pregnancy-vaccines",
+      "birth-learning",
+      "birth-preferences",
+      "route-and-contacts"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2027-07-31",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "annual"
+    }
+  },
+  {
+    "id": "week-34",
+    "slug": "week-34",
+    "kind": "week",
+    "phase": "pregnancy",
+    "ordinal": 41,
+    "windowLabel": "Month 8 · Week 34",
+    "title": "Week 34: Practise the route to your birth place",
+    "dek": "You may need more rest and more deliberate pacing without becoming completely inactive.",
+    "summary": [
+      "Do a real or virtual route check at the time of day you may travel, including the correct entrance outside normal hours.",
+      "Ask what symptoms mean 'call first,' 'come in now' or 'call emergency services' in your maternity plan.",
+      "Do not make the pregnant person the only holder of addresses, phone numbers, documents or childcare instructions."
+    ],
+    "bodyMind": [
+      "You may need more rest and more deliberate pacing without becoming completely inactive."
+    ],
+    "baby": [
+      "The lungs and nervous system continue their final weeks of preparation."
+    ],
+    "variationNote": "Symptoms, fetal development and the timing of what you notice can vary. A change that worries you still deserves attention even when it does not match a typical description.",
+    "clarifications": [
+      "A plan can be simple: primary route, backup transport, who calls ahead, where to enter, who looks after dependants and where essentials are kept."
+    ],
+    "doNow": [
+      "Do a real or virtual route check at the time of day you may travel, including the correct entrance outside normal hours.",
+      "Discuss birth preferences, feeding support and early recovery.",
+      "Notice your baby's usual movement pattern and act promptly on a clear change."
+    ],
+    "avoidAsk": [
+      "Do not make the pregnant person the only holder of addresses, phone numbers, documents or childcare instructions."
+    ],
+    "appointments": [
+      "Ask what symptoms mean 'call first,' 'come in now' or 'call emergency services' in your maternity plan."
+    ],
+    "partner": [
+      "Run the logistics rehearsal, share the notes and fix one weak point while there is still time."
+    ],
+    "topics": [
+      "movement",
+      "exercise-comfort",
+      "work-travel",
+      "birth-preparation",
+      "labour-signs"
+    ],
+    "audiences": [
+      "pregnant",
+      "partner",
+      "browsing"
+    ],
+    "helpTier": "common",
+    "sourceIds": [
+      "who-antenatal",
+      "acog-changes",
+      "nhs-weeks"
+    ],
+    "milestoneIds": [
+      "pregnancy-vaccines",
+      "birth-learning",
+      "birth-preferences",
+      "route-and-contacts"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2027-07-31",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "annual"
+    }
+  },
+  {
+    "id": "week-35",
+    "slug": "week-35",
+    "kind": "week",
+    "phase": "pregnancy",
+    "ordinal": 42,
+    "windowLabel": "Month 8 · Week 35",
+    "title": "Week 35: Less space does not mean less movement",
+    "dek": "Sleep can be fragmented; focus on rest opportunities rather than a perfect night's sleep.",
+    "summary": [
+      "Keep responding to the baby's usual movement pattern; the type of movement may change, but a clear reduction still needs prompt contact.",
+      "Ask whether group B streptococcus testing, position checks or other late-pregnancy steps apply to your care plan.",
+      "Do not accept 'the baby has run out of room' as a reason to ignore reduced movement."
+    ],
+    "bodyMind": [
+      "Sleep can be fragmented; focus on rest opportunities rather than a perfect night's sleep."
+    ],
+    "baby": [
+      "Space is tighter, so movement may feel different, but a clear reduction still needs prompt advice."
+    ],
+    "variationNote": "Symptoms, fetal development and the timing of what you notice can vary. A change that worries you still deserves attention even when it does not match a typical description.",
+    "clarifications": [
+      "Rolls, stretches and pressure may replace dramatic kicks. The change in style is different from a clear drop in usual activity."
+    ],
+    "doNow": [
+      "Keep responding to the baby's usual movement pattern; the type of movement may change, but a clear reduction still needs prompt contact.",
+      "Discuss birth preferences, feeding support and early recovery.",
+      "Notice your baby's usual movement pattern and act promptly on a clear change."
+    ],
+    "avoidAsk": [
+      "Do not accept 'the baby has run out of room' as a reason to ignore reduced movement."
+    ],
+    "appointments": [
+      "Ask whether group B streptococcus testing, position checks or other late-pregnancy steps apply to your care plan."
+    ],
+    "partner": [
+      "Keep late-pregnancy plans flexible and make it easy to leave an event or call care without debate."
+    ],
+    "topics": [
+      "movement",
+      "exercise-comfort",
+      "birth-preparation",
+      "labour-signs"
+    ],
+    "audiences": [
+      "pregnant",
+      "partner",
+      "browsing"
+    ],
+    "helpTier": "common",
+    "sourceIds": [
+      "who-antenatal",
+      "acog-changes",
+      "nhs-weeks"
+    ],
+    "milestoneIds": [
+      "pregnancy-vaccines",
+      "birth-preferences",
+      "route-and-contacts",
+      "feeding-conversation"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2027-07-31",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "annual"
+    }
+  },
+  {
+    "id": "week-36",
+    "slug": "week-36",
+    "kind": "week",
+    "phase": "pregnancy",
+    "ordinal": 43,
+    "windowLabel": "Month 9 · Week 36",
+    "title": "Week 36: Position, preferences and final checks",
+    "dek": "Appointments may include discussion of position, birth setting, labour signs and any late-pregnancy tests your doctor recommends.",
+    "summary": [
+      "Turn birth wishes into a one-page preference note covering communication, pain relief, support, mobility, newborn contact and what matters if plans change.",
+      "Late visits may cover baby position, birth setting, labour signs, tests and options if pregnancy continues past the due date.",
+      "Do not let a template pressure you into choices you do not understand; ask what each option means in your actual birth setting."
+    ],
+    "bodyMind": [
+      "Appointments may include discussion of position, birth setting, labour signs and any late-pregnancy tests your doctor recommends."
+    ],
+    "baby": [
+      "Many babies move toward a head-down position, although position and timing vary."
+    ],
+    "variationNote": "Symptoms, fetal development and the timing of what you notice can vary. A change that worries you still deserves attention even when it does not match a typical description.",
+    "clarifications": [
+      "Birth preferences guide a conversation; they are not a pass/fail script. Consent and explanation still matter when the plan changes."
+    ],
+    "doNow": [
+      "Turn birth wishes into a one-page preference note covering communication, pain relief, support, mobility, newborn contact and what matters if plans change.",
+      "Discuss birth preferences, feeding support and early recovery.",
+      "Notice your baby's usual movement pattern and act promptly on a clear change."
+    ],
+    "avoidAsk": [
+      "Do not let a template pressure you into choices you do not understand; ask what each option means in your actual birth setting."
+    ],
+    "appointments": [
+      "Late visits may cover baby position, birth setting, labour signs, tests and options if pregnancy continues past the due date."
+    ],
+    "partner": [
+      "Read the preference note, understand the priorities and practise asking for explanation without speaking over the pregnant person."
+    ],
+    "topics": [
+      "appointments-scans",
+      "movement",
+      "birth-preparation",
+      "labour-signs"
+    ],
+    "audiences": [
+      "pregnant",
+      "partner",
+      "browsing"
+    ],
+    "helpTier": "common",
+    "sourceIds": [
+      "who-antenatal",
+      "acog-changes",
+      "nhs-weeks"
+    ],
+    "milestoneIds": [
+      "pregnancy-vaccines",
+      "birth-preferences",
+      "route-and-contacts",
+      "feeding-conversation"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2027-07-31",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "annual"
+    }
+  },
+  {
+    "id": "week-37",
+    "slug": "week-37",
+    "kind": "week",
+    "phase": "pregnancy",
+    "ordinal": 44,
+    "windowLabel": "Month 9 · Week 37",
+    "title": "Week 37: Early term and signs of labour",
+    "dek": "Early signs of labour can be ambiguous. Use the contact rules provided by your maternity service.",
+    "summary": [
+      "Learn the four observations your service may ask about: contraction pattern, fluid loss, bleeding and baby movement.",
+      "Confirm when your service wants a phone call for contractions and what to do if waters break without contractions.",
+      "Do not drive yourself if contractions, pain, dizziness or urgency make driving unsafe."
+    ],
+    "bodyMind": [
+      "Early signs of labour can be ambiguous. Use the contact rules provided by your maternity service."
+    ],
+    "baby": [
+      "This is early term in many clinical definitions; important brain and lung development continues."
+    ],
+    "variationNote": "Symptoms, fetal development and the timing of what you notice can vary. A change that worries you still deserves attention even when it does not match a typical description.",
+    "clarifications": [
+      "A mucus plug or irregular tightenings may not mean active labour. Fresh bleeding, reduced movement or concerning fluid loss still need prompt contact."
+    ],
+    "doNow": [
+      "Learn the four observations your service may ask about: contraction pattern, fluid loss, bleeding and baby movement.",
+      "Discuss birth preferences, feeding support and early recovery.",
+      "Notice your baby's usual movement pattern and act promptly on a clear change."
+    ],
+    "avoidAsk": [
+      "Do not drive yourself if contractions, pain, dizziness or urgency make driving unsafe."
+    ],
+    "appointments": [
+      "Confirm when your service wants a phone call for contractions and what to do if waters break without contractions."
+    ],
+    "partner": [
+      "Keep the phone audible, avoid alcohol or being unreachable, and know which observations to record calmly."
+    ],
+    "topics": [
+      "appointments-scans",
+      "movement",
+      "birth-preparation",
+      "labour-signs"
+    ],
+    "audiences": [
+      "pregnant",
+      "partner",
+      "browsing"
+    ],
+    "helpTier": "common",
+    "sourceIds": [
+      "who-antenatal",
+      "acog-changes",
+      "nhs-weeks"
+    ],
+    "milestoneIds": [
+      "route-and-contacts",
+      "feeding-conversation",
+      "term-plan"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2027-07-31",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "annual"
+    }
+  },
+  {
+    "id": "week-38",
+    "slug": "week-38",
+    "kind": "week",
+    "phase": "pregnancy",
+    "ordinal": 45,
+    "windowLabel": "Month 9 · Week 38",
+    "title": "Week 38: Contractions, discharge and when to call",
+    "dek": "Pressure, discharge and irregular contractions may change; leaking fluid, bleeding or reduced movement need prompt contact.",
+    "summary": [
+      "If labour may be starting, time several contractions and note whether they strengthen, lengthen and continue despite rest or a change of activity.",
+      "Keep all scheduled checks even when you feel ready to give birth; due-date proximity does not replace blood-pressure, growth or movement review.",
+      "Do not wait for perfectly regular contractions if there is reduced movement, fresh bleeding, severe constant pain or concerning fluid colour."
+    ],
+    "bodyMind": [
+      "Pressure, discharge and irregular contractions may change; leaking fluid, bleeding or reduced movement need prompt contact."
+    ],
+    "baby": [
+      "The baby continues gaining weight and practising the reflexes needed after birth."
+    ],
+    "variationNote": "Symptoms, fetal development and the timing of what you notice can vary. A change that worries you still deserves attention even when it does not match a typical description.",
+    "clarifications": [
+      "Early labour can start and stop. The maternity service can use your pattern, pregnancy history and other symptoms to advise the next step."
+    ],
+    "doNow": [
+      "If labour may be starting, time several contractions and note whether they strengthen, lengthen and continue despite rest or a change of activity.",
+      "Discuss birth preferences, feeding support and early recovery.",
+      "Notice your baby's usual movement pattern and act promptly on a clear change."
+    ],
+    "avoidAsk": [
+      "Do not wait for perfectly regular contractions if there is reduced movement, fresh bleeding, severe constant pain or concerning fluid colour."
+    ],
+    "appointments": [
+      "Keep all scheduled checks even when you feel ready to give birth; due-date proximity does not replace blood-pressure, growth or movement review."
+    ],
+    "partner": [
+      "Offer food, drinks, quiet and reassurance in early labour while staying ready to call or travel when advised."
+    ],
+    "topics": [
+      "appointments-scans",
+      "movement",
+      "birth-preparation",
+      "labour-signs"
+    ],
+    "audiences": [
+      "pregnant",
+      "partner",
+      "browsing"
+    ],
+    "helpTier": "common",
+    "sourceIds": [
+      "who-antenatal",
+      "acog-changes",
+      "nhs-weeks"
+    ],
+    "milestoneIds": [
+      "feeding-conversation",
+      "term-plan"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2027-07-31",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "annual"
+    }
+  },
+  {
+    "id": "week-39",
+    "slug": "week-39",
+    "kind": "week",
+    "phase": "pregnancy",
+    "ordinal": 46,
+    "windowLabel": "Month 9 · Week 39",
+    "title": "Week 39: Full term and ready-to-go logistics",
+    "dek": "Waiting can feel emotionally intense. Keep routines gentle and your urgent contacts close.",
+    "summary": [
+      "Do a final five-minute check: contacts, transport, identification, regular medicines and a safe way to bring the baby home.",
+      "Ask when monitoring or a discussion about induction is planned if labour has not started.",
+      "Do not use unproven labour-induction methods or supplements; ask what evidence, risks and timing apply to any suggested method."
+    ],
+    "bodyMind": [
+      "Waiting can feel emotionally intense. Keep routines gentle and your urgent contacts close."
+    ],
+    "baby": [
+      "The baby is full term in common clinical definitions and continues preparing for birth."
+    ],
+    "variationNote": "Symptoms, fetal development and the timing of what you notice can vary. A change that worries you still deserves attention even when it does not match a typical description.",
+    "clarifications": [
+      "Being full term means birth could happen soon; it does not mean labour must start this week."
+    ],
+    "doNow": [
+      "Do a final five-minute check: contacts, transport, identification, regular medicines and a safe way to bring the baby home.",
+      "Discuss birth preferences, feeding support and early recovery.",
+      "Notice your baby's usual movement pattern and act promptly on a clear change."
+    ],
+    "avoidAsk": [
+      "Do not use unproven labour-induction methods or supplements; ask what evidence, risks and timing apply to any suggested method."
+    ],
+    "appointments": [
+      "Ask when monitoring or a discussion about induction is planned if labour has not started."
+    ],
+    "partner": [
+      "Finish practical tasks without repeatedly asking for instructions, and protect the pregnant person's need for calm or company."
+    ],
+    "topics": [
+      "appointments-scans",
+      "movement",
+      "birth-preparation",
+      "labour-signs",
+      "due-date"
+    ],
+    "audiences": [
+      "pregnant",
+      "partner",
+      "browsing"
+    ],
+    "helpTier": "common",
+    "sourceIds": [
+      "who-antenatal",
+      "acog-changes",
+      "nhs-weeks"
+    ],
+    "milestoneIds": [
+      "term-plan"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2027-07-31",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "annual"
+    }
+  },
+  {
+    "id": "week-40",
+    "slug": "week-40",
+    "kind": "week",
+    "phase": "pregnancy",
+    "ordinal": 47,
+    "windowLabel": "Month 9 · Week 40",
+    "title": "Week 40: Due date, not deadline",
+    "dek": "Reaching the estimated due date is common and does not automatically mean something is wrong.",
+    "summary": [
+      "Keep monitoring movement, attend appointments and ask for the exact plan for the next seven days rather than waiting without a framework.",
+      "Request a clear explanation of monitoring, membrane sweep if offered, induction options, benefits, trade-offs and what happens if you wait.",
+      "Do not skip checks because everything has felt normal so far, and do not ignore new headache, bleeding, fluid loss, pain or movement change."
+    ],
+    "bodyMind": [
+      "Reaching the estimated due date is common and does not automatically mean something is wrong."
+    ],
+    "baby": [
+      "The estimated due date is a reference point, not an appointment the baby has promised to keep."
+    ],
+    "variationNote": "Symptoms, fetal development and the timing of what you notice can vary. A change that worries you still deserves attention even when it does not match a typical description.",
+    "clarifications": [
+      "Only a minority of babies arrive on the estimated date. It is a planning point, not proof that pregnancy is overdue or unsafe today."
+    ],
+    "doNow": [
+      "Keep monitoring movement, attend appointments and ask for the exact plan for the next seven days rather than waiting without a framework.",
+      "Discuss birth preferences, feeding support and early recovery.",
+      "Notice your baby's usual movement pattern and act promptly on a clear change."
+    ],
+    "avoidAsk": [
+      "Do not skip checks because everything has felt normal so far, and do not ignore new headache, bleeding, fluid loss, pain or movement change."
+    ],
+    "appointments": [
+      "Request a clear explanation of monitoring, membrane sweep if offered, induction options, benefits, trade-offs and what happens if you wait."
+    ],
+    "partner": [
+      "Buffer repetitive messages from others and keep the schedule, transport and phone coverage dependable."
+    ],
+    "topics": [
+      "appointments-scans",
+      "movement",
+      "birth-preparation",
+      "labour-signs",
+      "due-date"
+    ],
+    "audiences": [
+      "pregnant",
+      "partner",
+      "browsing"
+    ],
+    "helpTier": "common",
+    "sourceIds": [
+      "who-antenatal",
+      "acog-changes",
+      "nhs-weeks"
+    ],
+    "milestoneIds": [
+      "term-plan"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2027-07-31",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "annual"
+    }
+  },
+  {
+    "id": "week-41",
+    "slug": "week-41",
+    "kind": "week",
+    "phase": "pregnancy",
+    "ordinal": 48,
+    "windowLabel": "Beyond the due date · Week 41",
+    "title": "Week 41: Monitoring and options after the due date",
+    "dek": "Expect a specific conversation about monitoring and options if pregnancy continues.",
+    "summary": [
+      "Write the agreed plan in plain language: next check, what is monitored, options offered, decision date and symptoms that override the plan.",
+      "Expect an individual conversation about ongoing monitoring and birth timing; the plan depends on your medical history and current pregnancy.",
+      "Do not let the phrase 'post-dates' replace informed consent—ask about the benefits and trade-offs of induction and continued waiting for you."
+    ],
+    "bodyMind": [
+      "Expect a specific conversation about monitoring and options if pregnancy continues."
+    ],
+    "baby": [
+      "Many healthy pregnancies continue beyond the estimated due date with closer review and an individual plan."
+    ],
+    "variationNote": "Symptoms, fetal development and the timing of what you notice can vary. A change that worries you still deserves attention even when it does not match a typical description.",
+    "clarifications": [
+      "More monitoring can provide useful snapshots, but it cannot predict every problem; movement changes and warning signs still require action."
+    ],
+    "doNow": [
+      "Write the agreed plan in plain language: next check, what is monitored, options offered, decision date and symptoms that override the plan.",
+      "Discuss birth preferences, feeding support and early recovery.",
+      "Notice your baby's usual movement pattern and act promptly on a clear change."
+    ],
+    "avoidAsk": [
+      "Do not let the phrase 'post-dates' replace informed consent—ask about the benefits and trade-offs of induction and continued waiting for you."
+    ],
+    "appointments": [
+      "Expect an individual conversation about ongoing monitoring and birth timing; the plan depends on your medical history and current pregnancy."
+    ],
+    "partner": [
+      "Take notes, check that questions were answered and support the pregnant person's decision-making without turning it into a family vote."
+    ],
+    "topics": [
+      "appointments-scans",
+      "movement",
+      "birth-preparation",
+      "labour-signs",
+      "due-date"
+    ],
+    "audiences": [
+      "pregnant",
+      "partner",
+      "browsing"
+    ],
+    "helpTier": "care-team",
+    "sourceIds": [
+      "who-antenatal",
+      "acog-changes",
+      "nhs-weeks"
+    ],
+    "milestoneIds": [
+      "term-plan"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2027-07-31",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "annual"
+    }
+  },
+  {
+    "id": "week-42",
+    "slug": "week-42",
+    "kind": "week",
+    "phase": "pregnancy",
+    "ordinal": 49,
+    "windowLabel": "Beyond the due date · Week 42",
+    "title": "Week 42: Follow your individual birth plan",
+    "dek": "You should be following an individualized plan with your maternity team rather than relying on general web guidance.",
+    "summary": [
+      "Stay in direct contact with the maternity team and follow the individualized monitoring and birth plan you agreed together.",
+      "Confirm the next action before leaving every contact: when, where, who calls whom and what should make you return sooner.",
+      "Do not substitute online reassurance for a scheduled assessment, or delay contact for reduced movement or any urgent warning sign."
+    ],
+    "bodyMind": [
+      "You should be following an individualized plan with your maternity team rather than relying on general web guidance."
+    ],
+    "baby": [
+      "Care teams usually recommend a clear monitoring and birth plan when pregnancy extends this far."
+    ],
+    "variationNote": "Symptoms, fetal development and the timing of what you notice can vary. A change that worries you still deserves attention even when it does not match a typical description.",
+    "clarifications": [
+      "At this point a generic week page cannot safely choose timing or method of birth; current clinical information and your preferences must guide the plan."
+    ],
+    "doNow": [
+      "Stay in direct contact with the maternity team and follow the individualized monitoring and birth plan you agreed together.",
+      "Discuss birth preferences, feeding support and early recovery.",
+      "Notice your baby's usual movement pattern and act promptly on a clear change."
+    ],
+    "avoidAsk": [
+      "Do not substitute online reassurance for a scheduled assessment, or delay contact for reduced movement or any urgent warning sign."
+    ],
+    "appointments": [
+      "Confirm the next action before leaving every contact: when, where, who calls whom and what should make you return sooner."
+    ],
+    "partner": [
+      "Keep transport and communication ready, protect rest and help the pregnant person stay connected to the agreed care plan."
+    ],
+    "topics": [
+      "appointments-scans",
+      "movement",
+      "birth-preparation",
+      "labour-signs",
+      "due-date"
+    ],
+    "audiences": [
+      "pregnant",
+      "partner",
+      "browsing"
+    ],
+    "helpTier": "care-team",
+    "sourceIds": [
+      "who-antenatal",
+      "acog-changes",
+      "nhs-weeks"
+    ],
+    "milestoneIds": [],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2027-07-31",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "annual"
+    }
+  },
+  {
+    "id": "postpartum-birth-day",
+    "slug": "birth-day",
+    "kind": "postpartum",
+    "phase": "postpartum",
+    "ordinal": 100,
+    "windowLabel": "Birth day",
+    "title": "The first hours",
+    "dek": "Care for the recovering parent and newborn begins as an ongoing conversation, not a perfect performance.",
+    "summary": [
+      "Care for the recovering parent and newborn begins as an ongoing conversation, not a perfect performance.",
+      "Both parent and baby deserve care; neither person's warning signs should be minimized.",
+      "Ask for practical help before exhaustion becomes a crisis."
+    ],
+    "bodyMind": [
+      "Bleeding, pain, incision or perineal healing, pelvic symptoms, sleep and mood all deserve space in follow-up care.",
+      "Recovery varies with birth, health, support and feeding; it is not a race back to a previous version of yourself."
+    ],
+    "baby": [
+      "Feeding, alertness, breathing, temperature, color and movement are useful observations to share with your baby's clinician.",
+      "Milestones describe skills most children show by an age; they are not a pass/fail test or diagnosis."
+    ],
+    "doNow": [
+      "Keep parent and baby care contacts easy to find.",
+      "Accept or request specific practical support.",
+      "Bring feeding, sleep, pain and mood questions to follow-up care."
+    ],
+    "avoidAsk": [
+      "Do not ignore heavy bleeding, trouble breathing, chest pain, seizures, severe headache, thoughts of harm or a baby who is hard to wake or struggling to breathe.",
+      "Ask before resuming activities if recovery, complications or surgery affect what is appropriate."
+    ],
+    "appointments": [
+      "Postnatal contacts and infant visits depend on individual need. Follow the plan given at discharge and ask who to contact with concerns."
+    ],
+    "partner": [
+      "Protect rest, manage visitors and logistics, notice warning signs, and take concerns seriously the first time."
+    ],
+    "topics": [
+      "postpartum",
+      "recovery",
+      "newborn",
+      "mental-health",
+      "feeding"
+    ],
+    "audiences": [
+      "parent",
+      "partner",
+      "browsing"
+    ],
+    "helpTier": "care-team",
+    "sourceIds": [
+      "who-postnatal",
+      "who-newborn",
+      "acog-postpartum",
+      "cdc-milestones"
+    ],
+    "milestoneIds": [
+      "first-day-checks"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2027-07-31",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "annual"
+    }
+  },
+  {
+    "id": "postpartum-first-24-hours",
+    "slug": "first-24-hours",
+    "kind": "postpartum",
+    "phase": "postpartum",
+    "ordinal": 101,
+    "windowLabel": "First 24 hours",
+    "title": "Observe, recover, ask",
+    "dek": "Rest, observations, newborn checks and feeding support matter more than mastering a routine.",
+    "summary": [
+      "Rest, observations, newborn checks and feeding support matter more than mastering a routine.",
+      "Both parent and baby deserve care; neither person's warning signs should be minimized.",
+      "Ask for practical help before exhaustion becomes a crisis."
+    ],
+    "bodyMind": [
+      "Bleeding, pain, incision or perineal healing, pelvic symptoms, sleep and mood all deserve space in follow-up care.",
+      "Recovery varies with birth, health, support and feeding; it is not a race back to a previous version of yourself."
+    ],
+    "baby": [
+      "Feeding, alertness, breathing, temperature, color and movement are useful observations to share with your baby's clinician.",
+      "Milestones describe skills most children show by an age; they are not a pass/fail test or diagnosis."
+    ],
+    "doNow": [
+      "Keep parent and baby care contacts easy to find.",
+      "Accept or request specific practical support.",
+      "Bring feeding, sleep, pain and mood questions to follow-up care."
+    ],
+    "avoidAsk": [
+      "Do not ignore heavy bleeding, trouble breathing, chest pain, seizures, severe headache, thoughts of harm or a baby who is hard to wake or struggling to breathe.",
+      "Ask before resuming activities if recovery, complications or surgery affect what is appropriate."
+    ],
+    "appointments": [
+      "Postnatal contacts and infant visits depend on individual need. Follow the plan given at discharge and ask who to contact with concerns."
+    ],
+    "partner": [
+      "Protect rest, manage visitors and logistics, notice warning signs, and take concerns seriously the first time."
+    ],
+    "topics": [
+      "postpartum",
+      "recovery",
+      "newborn",
+      "mental-health",
+      "feeding"
+    ],
+    "audiences": [
+      "parent",
+      "partner",
+      "browsing"
+    ],
+    "helpTier": "care-team",
+    "sourceIds": [
+      "who-postnatal",
+      "who-newborn",
+      "acog-postpartum",
+      "cdc-milestones"
+    ],
+    "milestoneIds": [
+      "first-day-checks"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2027-07-31",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "annual"
+    }
+  },
+  {
+    "id": "postpartum-days-2-3",
+    "slug": "days-2-3",
+    "kind": "postpartum",
+    "phase": "postpartum",
+    "ordinal": 103,
+    "windowLabel": "Days 2–3",
+    "title": "The early transition",
+    "dek": "Feeding, sleep, emotions and physical recovery can change quickly; early questions are worth raising.",
+    "summary": [
+      "Feeding, sleep, emotions and physical recovery can change quickly; early questions are worth raising.",
+      "Both parent and baby deserve care; neither person's warning signs should be minimized.",
+      "Ask for practical help before exhaustion becomes a crisis."
+    ],
+    "bodyMind": [
+      "Bleeding, pain, incision or perineal healing, pelvic symptoms, sleep and mood all deserve space in follow-up care.",
+      "Recovery varies with birth, health, support and feeding; it is not a race back to a previous version of yourself."
+    ],
+    "baby": [
+      "Feeding, alertness, breathing, temperature, color and movement are useful observations to share with your baby's clinician.",
+      "Milestones describe skills most children show by an age; they are not a pass/fail test or diagnosis."
+    ],
+    "doNow": [
+      "Keep parent and baby care contacts easy to find.",
+      "Accept or request specific practical support.",
+      "Bring feeding, sleep, pain and mood questions to follow-up care."
+    ],
+    "avoidAsk": [
+      "Do not ignore heavy bleeding, trouble breathing, chest pain, seizures, severe headache, thoughts of harm or a baby who is hard to wake or struggling to breathe.",
+      "Ask before resuming activities if recovery, complications or surgery affect what is appropriate."
+    ],
+    "appointments": [
+      "Postnatal contacts and infant visits depend on individual need. Follow the plan given at discharge and ask who to contact with concerns."
+    ],
+    "partner": [
+      "Protect rest, manage visitors and logistics, notice warning signs, and take concerns seriously the first time."
+    ],
+    "topics": [
+      "postpartum",
+      "recovery",
+      "newborn",
+      "mental-health",
+      "feeding"
+    ],
+    "audiences": [
+      "parent",
+      "partner",
+      "browsing"
+    ],
+    "helpTier": "care-team",
+    "sourceIds": [
+      "who-postnatal",
+      "who-newborn",
+      "acog-postpartum",
+      "cdc-milestones"
+    ],
+    "milestoneIds": [
+      "day-three-contact"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2027-07-31",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "annual"
+    }
+  },
+  {
+    "id": "postpartum-days-4-7",
+    "slug": "days-4-7",
+    "kind": "postpartum",
+    "phase": "postpartum",
+    "ordinal": 107,
+    "windowLabel": "Days 4–7",
+    "title": "One week at a time",
+    "dek": "Small routines emerge while parent and baby still need close observation and support.",
+    "summary": [
+      "Small routines emerge while parent and baby still need close observation and support.",
+      "Both parent and baby deserve care; neither person's warning signs should be minimized.",
+      "Ask for practical help before exhaustion becomes a crisis."
+    ],
+    "bodyMind": [
+      "Bleeding, pain, incision or perineal healing, pelvic symptoms, sleep and mood all deserve space in follow-up care.",
+      "Recovery varies with birth, health, support and feeding; it is not a race back to a previous version of yourself."
+    ],
+    "baby": [
+      "Feeding, alertness, breathing, temperature, color and movement are useful observations to share with your baby's clinician.",
+      "Milestones describe skills most children show by an age; they are not a pass/fail test or diagnosis."
+    ],
+    "doNow": [
+      "Keep parent and baby care contacts easy to find.",
+      "Accept or request specific practical support.",
+      "Bring feeding, sleep, pain and mood questions to follow-up care."
+    ],
+    "avoidAsk": [
+      "Do not ignore heavy bleeding, trouble breathing, chest pain, seizures, severe headache, thoughts of harm or a baby who is hard to wake or struggling to breathe.",
+      "Ask before resuming activities if recovery, complications or surgery affect what is appropriate."
+    ],
+    "appointments": [
+      "Postnatal contacts and infant visits depend on individual need. Follow the plan given at discharge and ask who to contact with concerns."
+    ],
+    "partner": [
+      "Protect rest, manage visitors and logistics, notice warning signs, and take concerns seriously the first time."
+    ],
+    "topics": [
+      "postpartum",
+      "recovery",
+      "newborn",
+      "mental-health",
+      "feeding"
+    ],
+    "audiences": [
+      "parent",
+      "partner",
+      "browsing"
+    ],
+    "helpTier": "care-team",
+    "sourceIds": [
+      "who-postnatal",
+      "who-newborn",
+      "acog-postpartum",
+      "cdc-milestones"
+    ],
+    "milestoneIds": [
+      "week-two-contact"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2027-07-31",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "annual"
+    }
+  },
+  {
+    "id": "postpartum-week-2",
+    "slug": "week-2",
+    "kind": "postpartum",
+    "phase": "postpartum",
+    "ordinal": 114,
+    "windowLabel": "Week 2",
+    "title": "Recovery is not linear",
+    "dek": "Healing, feeding and emotions can improve unevenly. Bring concerns to the scheduled check-in.",
+    "summary": [
+      "Healing, feeding and emotions can improve unevenly. Bring concerns to the scheduled check-in.",
+      "Both parent and baby deserve care; neither person's warning signs should be minimized.",
+      "Ask for practical help before exhaustion becomes a crisis."
+    ],
+    "bodyMind": [
+      "Bleeding, pain, incision or perineal healing, pelvic symptoms, sleep and mood all deserve space in follow-up care.",
+      "Recovery varies with birth, health, support and feeding; it is not a race back to a previous version of yourself."
+    ],
+    "baby": [
+      "Feeding, alertness, breathing, temperature, color and movement are useful observations to share with your baby's clinician.",
+      "Milestones describe skills most children show by an age; they are not a pass/fail test or diagnosis."
+    ],
+    "doNow": [
+      "Keep parent and baby care contacts easy to find.",
+      "Accept or request specific practical support.",
+      "Bring feeding, sleep, pain and mood questions to follow-up care."
+    ],
+    "avoidAsk": [
+      "Do not ignore heavy bleeding, trouble breathing, chest pain, seizures, severe headache, thoughts of harm or a baby who is hard to wake or struggling to breathe.",
+      "Ask before resuming activities if recovery, complications or surgery affect what is appropriate."
+    ],
+    "appointments": [
+      "Postnatal contacts and infant visits depend on individual need. Follow the plan given at discharge and ask who to contact with concerns."
+    ],
+    "partner": [
+      "Protect rest, manage visitors and logistics, notice warning signs, and take concerns seriously the first time."
+    ],
+    "topics": [
+      "postpartum",
+      "recovery",
+      "newborn",
+      "mental-health",
+      "feeding"
+    ],
+    "audiences": [
+      "parent",
+      "partner",
+      "browsing"
+    ],
+    "helpTier": "common",
+    "sourceIds": [
+      "who-postnatal",
+      "who-newborn",
+      "acog-postpartum",
+      "cdc-milestones"
+    ],
+    "milestoneIds": [
+      "week-two-contact"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2027-07-31",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "annual"
+    }
+  },
+  {
+    "id": "postpartum-week-3",
+    "slug": "week-3",
+    "kind": "postpartum",
+    "phase": "postpartum",
+    "ordinal": 121,
+    "windowLabel": "Week 3",
+    "title": "Support the whole parent",
+    "dek": "This is a useful point to review mood, pain, bleeding, sleep, feeding and the help available at home.",
+    "summary": [
+      "This is a useful point to review mood, pain, bleeding, sleep, feeding and the help available at home.",
+      "Both parent and baby deserve care; neither person's warning signs should be minimized.",
+      "Ask for practical help before exhaustion becomes a crisis."
+    ],
+    "bodyMind": [
+      "Bleeding, pain, incision or perineal healing, pelvic symptoms, sleep and mood all deserve space in follow-up care.",
+      "Recovery varies with birth, health, support and feeding; it is not a race back to a previous version of yourself."
+    ],
+    "baby": [
+      "Feeding, alertness, breathing, temperature, color and movement are useful observations to share with your baby's clinician.",
+      "Milestones describe skills most children show by an age; they are not a pass/fail test or diagnosis."
+    ],
+    "doNow": [
+      "Keep parent and baby care contacts easy to find.",
+      "Accept or request specific practical support.",
+      "Bring feeding, sleep, pain and mood questions to follow-up care."
+    ],
+    "avoidAsk": [
+      "Do not ignore heavy bleeding, trouble breathing, chest pain, seizures, severe headache, thoughts of harm or a baby who is hard to wake or struggling to breathe.",
+      "Ask before resuming activities if recovery, complications or surgery affect what is appropriate."
+    ],
+    "appointments": [
+      "Postnatal contacts and infant visits depend on individual need. Follow the plan given at discharge and ask who to contact with concerns."
+    ],
+    "partner": [
+      "Protect rest, manage visitors and logistics, notice warning signs, and take concerns seriously the first time."
+    ],
+    "topics": [
+      "postpartum",
+      "recovery",
+      "newborn",
+      "mental-health",
+      "feeding"
+    ],
+    "audiences": [
+      "parent",
+      "partner",
+      "browsing"
+    ],
+    "helpTier": "common",
+    "sourceIds": [
+      "who-postnatal",
+      "who-newborn",
+      "acog-postpartum",
+      "cdc-milestones"
+    ],
+    "milestoneIds": [
+      "postpartum-plan"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2027-07-31",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "annual"
+    }
+  },
+  {
+    "id": "postpartum-weeks-4-6",
+    "slug": "weeks-4-6",
+    "kind": "postpartum",
+    "phase": "postpartum",
+    "ordinal": 142,
+    "windowLabel": "Weeks 4–6",
+    "title": "A broader recovery review",
+    "dek": "Postpartum care should include physical, emotional, social and reproductive health—not only one examination.",
+    "summary": [
+      "Postpartum care should include physical, emotional, social and reproductive health—not only one examination.",
+      "Both parent and baby deserve care; neither person's warning signs should be minimized.",
+      "Ask for practical help before exhaustion becomes a crisis."
+    ],
+    "bodyMind": [
+      "Bleeding, pain, incision or perineal healing, pelvic symptoms, sleep and mood all deserve space in follow-up care.",
+      "Recovery varies with birth, health, support and feeding; it is not a race back to a previous version of yourself."
+    ],
+    "baby": [
+      "Feeding, alertness, breathing, temperature, color and movement are useful observations to share with your baby's clinician.",
+      "Milestones describe skills most children show by an age; they are not a pass/fail test or diagnosis."
+    ],
+    "doNow": [
+      "Keep parent and baby care contacts easy to find.",
+      "Accept or request specific practical support.",
+      "Bring feeding, sleep, pain and mood questions to follow-up care."
+    ],
+    "avoidAsk": [
+      "Do not ignore heavy bleeding, trouble breathing, chest pain, seizures, severe headache, thoughts of harm or a baby who is hard to wake or struggling to breathe.",
+      "Ask before resuming activities if recovery, complications or surgery affect what is appropriate."
+    ],
+    "appointments": [
+      "Postnatal contacts and infant visits depend on individual need. Follow the plan given at discharge and ask who to contact with concerns."
+    ],
+    "partner": [
+      "Protect rest, manage visitors and logistics, notice warning signs, and take concerns seriously the first time."
+    ],
+    "topics": [
+      "postpartum",
+      "recovery",
+      "newborn",
+      "mental-health",
+      "feeding"
+    ],
+    "audiences": [
+      "parent",
+      "partner",
+      "browsing"
+    ],
+    "helpTier": "common",
+    "sourceIds": [
+      "who-postnatal",
+      "who-newborn",
+      "acog-postpartum",
+      "cdc-milestones"
+    ],
+    "milestoneIds": [
+      "postpartum-plan"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2027-07-31",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "annual"
+    }
+  },
+  {
+    "id": "postpartum-weeks-7-8",
+    "slug": "weeks-7-8",
+    "kind": "postpartum",
+    "phase": "postpartum",
+    "ordinal": 156,
+    "windowLabel": "Weeks 7–8",
+    "title": "The new routine is still new",
+    "dek": "Recovery and identity continue changing even when the outside world expects normality.",
+    "summary": [
+      "Recovery and identity continue changing even when the outside world expects normality.",
+      "Both parent and baby deserve care; neither person's warning signs should be minimized.",
+      "Ask for practical help before exhaustion becomes a crisis."
+    ],
+    "bodyMind": [
+      "Bleeding, pain, incision or perineal healing, pelvic symptoms, sleep and mood all deserve space in follow-up care.",
+      "Recovery varies with birth, health, support and feeding; it is not a race back to a previous version of yourself."
+    ],
+    "baby": [
+      "Feeding, alertness, breathing, temperature, color and movement are useful observations to share with your baby's clinician.",
+      "Milestones describe skills most children show by an age; they are not a pass/fail test or diagnosis."
+    ],
+    "doNow": [
+      "Keep parent and baby care contacts easy to find.",
+      "Accept or request specific practical support.",
+      "Bring feeding, sleep, pain and mood questions to follow-up care."
+    ],
+    "avoidAsk": [
+      "Do not ignore heavy bleeding, trouble breathing, chest pain, seizures, severe headache, thoughts of harm or a baby who is hard to wake or struggling to breathe.",
+      "Ask before resuming activities if recovery, complications or surgery affect what is appropriate."
+    ],
+    "appointments": [
+      "Postnatal contacts and infant visits depend on individual need. Follow the plan given at discharge and ask who to contact with concerns."
+    ],
+    "partner": [
+      "Protect rest, manage visitors and logistics, notice warning signs, and take concerns seriously the first time."
+    ],
+    "topics": [
+      "postpartum",
+      "recovery",
+      "newborn",
+      "mental-health",
+      "feeding"
+    ],
+    "audiences": [
+      "parent",
+      "partner",
+      "browsing"
+    ],
+    "helpTier": "common",
+    "sourceIds": [
+      "who-postnatal",
+      "who-newborn",
+      "acog-postpartum",
+      "cdc-milestones"
+    ],
+    "milestoneIds": [
+      "two-month-development"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2027-07-31",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "annual"
+    }
+  },
+  {
+    "id": "postpartum-weeks-9-12",
+    "slug": "weeks-9-12",
+    "kind": "postpartum",
+    "phase": "postpartum",
+    "ordinal": 184,
+    "windowLabel": "Weeks 9–12",
+    "title": "Keep care connected",
+    "dek": "Make sure ongoing health needs have a clinician and that concerns have not been lost in baby care.",
+    "summary": [
+      "Make sure ongoing health needs have a clinician and that concerns have not been lost in baby care.",
+      "Both parent and baby deserve care; neither person's warning signs should be minimized.",
+      "Ask for practical help before exhaustion becomes a crisis."
+    ],
+    "bodyMind": [
+      "Bleeding, pain, incision or perineal healing, pelvic symptoms, sleep and mood all deserve space in follow-up care.",
+      "Recovery varies with birth, health, support and feeding; it is not a race back to a previous version of yourself."
+    ],
+    "baby": [
+      "Feeding, alertness, breathing, temperature, color and movement are useful observations to share with your baby's clinician.",
+      "Milestones describe skills most children show by an age; they are not a pass/fail test or diagnosis."
+    ],
+    "doNow": [
+      "Keep parent and baby care contacts easy to find.",
+      "Accept or request specific practical support.",
+      "Bring feeding, sleep, pain and mood questions to follow-up care."
+    ],
+    "avoidAsk": [
+      "Do not ignore heavy bleeding, trouble breathing, chest pain, seizures, severe headache, thoughts of harm or a baby who is hard to wake or struggling to breathe.",
+      "Ask before resuming activities if recovery, complications or surgery affect what is appropriate."
+    ],
+    "appointments": [
+      "Postnatal contacts and infant visits depend on individual need. Follow the plan given at discharge and ask who to contact with concerns."
+    ],
+    "partner": [
+      "Protect rest, manage visitors and logistics, notice warning signs, and take concerns seriously the first time."
+    ],
+    "topics": [
+      "postpartum",
+      "recovery",
+      "newborn",
+      "mental-health",
+      "feeding"
+    ],
+    "audiences": [
+      "parent",
+      "partner",
+      "browsing"
+    ],
+    "helpTier": "common",
+    "sourceIds": [
+      "who-postnatal",
+      "who-newborn",
+      "acog-postpartum",
+      "cdc-milestones"
+    ],
+    "milestoneIds": [
+      "postpartum-plan"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2027-07-31",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "annual"
+    }
+  },
+  {
+    "id": "postpartum-month-3",
+    "slug": "month-3",
+    "kind": "postpartum",
+    "phase": "postpartum",
+    "ordinal": 190,
+    "windowLabel": "Month 3",
+    "title": "A family system in motion",
+    "dek": "Sleep, feeding, work, relationships and recovery often need another practical reset.",
+    "summary": [
+      "Sleep, feeding, work, relationships and recovery often need another practical reset.",
+      "Both parent and baby deserve care; neither person's warning signs should be minimized.",
+      "Ask for practical help before exhaustion becomes a crisis."
+    ],
+    "bodyMind": [
+      "Bleeding, pain, incision or perineal healing, pelvic symptoms, sleep and mood all deserve space in follow-up care.",
+      "Recovery varies with birth, health, support and feeding; it is not a race back to a previous version of yourself."
+    ],
+    "baby": [
+      "Feeding, alertness, breathing, temperature, color and movement are useful observations to share with your baby's clinician.",
+      "Milestones describe skills most children show by an age; they are not a pass/fail test or diagnosis."
+    ],
+    "doNow": [
+      "Keep parent and baby care contacts easy to find.",
+      "Accept or request specific practical support.",
+      "Bring feeding, sleep, pain and mood questions to follow-up care."
+    ],
+    "avoidAsk": [
+      "Do not ignore heavy bleeding, trouble breathing, chest pain, seizures, severe headache, thoughts of harm or a baby who is hard to wake or struggling to breathe.",
+      "Ask before resuming activities if recovery, complications or surgery affect what is appropriate."
+    ],
+    "appointments": [
+      "Postnatal contacts and infant visits depend on individual need. Follow the plan given at discharge and ask who to contact with concerns."
+    ],
+    "partner": [
+      "Protect rest, manage visitors and logistics, notice warning signs, and take concerns seriously the first time."
+    ],
+    "topics": [
+      "postpartum",
+      "recovery",
+      "newborn",
+      "mental-health",
+      "feeding"
+    ],
+    "audiences": [
+      "parent",
+      "partner",
+      "browsing"
+    ],
+    "helpTier": "common",
+    "sourceIds": [
+      "who-postnatal",
+      "who-newborn",
+      "acog-postpartum",
+      "cdc-milestones"
+    ],
+    "milestoneIds": [
+      "two-month-development"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2027-07-31",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "annual"
+    }
+  },
+  {
+    "id": "postpartum-month-4",
+    "slug": "month-4",
+    "kind": "postpartum",
+    "phase": "postpartum",
+    "ordinal": 220,
+    "windowLabel": "Month 4",
+    "title": "Notice, play, respond",
+    "dek": "Developmental milestones are conversation prompts, while safe sleep and responsive care remain foundations.",
+    "summary": [
+      "Developmental milestones are conversation prompts, while safe sleep and responsive care remain foundations.",
+      "Both parent and baby deserve care; neither person's warning signs should be minimized.",
+      "Ask for practical help before exhaustion becomes a crisis."
+    ],
+    "bodyMind": [
+      "Bleeding, pain, incision or perineal healing, pelvic symptoms, sleep and mood all deserve space in follow-up care.",
+      "Recovery varies with birth, health, support and feeding; it is not a race back to a previous version of yourself."
+    ],
+    "baby": [
+      "Feeding, alertness, breathing, temperature, color and movement are useful observations to share with your baby's clinician.",
+      "Milestones describe skills most children show by an age; they are not a pass/fail test or diagnosis."
+    ],
+    "doNow": [
+      "Keep parent and baby care contacts easy to find.",
+      "Accept or request specific practical support.",
+      "Bring feeding, sleep, pain and mood questions to follow-up care."
+    ],
+    "avoidAsk": [
+      "Do not ignore heavy bleeding, trouble breathing, chest pain, seizures, severe headache, thoughts of harm or a baby who is hard to wake or struggling to breathe.",
+      "Ask before resuming activities if recovery, complications or surgery affect what is appropriate."
+    ],
+    "appointments": [
+      "Postnatal contacts and infant visits depend on individual need. Follow the plan given at discharge and ask who to contact with concerns."
+    ],
+    "partner": [
+      "Protect rest, manage visitors and logistics, notice warning signs, and take concerns seriously the first time."
+    ],
+    "topics": [
+      "postpartum",
+      "recovery",
+      "newborn",
+      "mental-health",
+      "feeding"
+    ],
+    "audiences": [
+      "parent",
+      "partner",
+      "browsing"
+    ],
+    "helpTier": "common",
+    "sourceIds": [
+      "who-postnatal",
+      "who-newborn",
+      "acog-postpartum",
+      "cdc-milestones"
+    ],
+    "milestoneIds": [
+      "four-month-development"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2027-07-31",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "annual"
+    }
+  },
+  {
+    "id": "postpartum-month-5",
+    "slug": "month-5",
+    "kind": "postpartum",
+    "phase": "postpartum",
+    "ordinal": 250,
+    "windowLabel": "Month 5",
+    "title": "Prepare for the next stage",
+    "dek": "Ask about feeding transitions, mobility, home safety and your own ongoing recovery before changes arrive.",
+    "summary": [
+      "Ask about feeding transitions, mobility, home safety and your own ongoing recovery before changes arrive.",
+      "Both parent and baby deserve care; neither person's warning signs should be minimized.",
+      "Ask for practical help before exhaustion becomes a crisis."
+    ],
+    "bodyMind": [
+      "Bleeding, pain, incision or perineal healing, pelvic symptoms, sleep and mood all deserve space in follow-up care.",
+      "Recovery varies with birth, health, support and feeding; it is not a race back to a previous version of yourself."
+    ],
+    "baby": [
+      "Feeding, alertness, breathing, temperature, color and movement are useful observations to share with your baby's clinician.",
+      "Milestones describe skills most children show by an age; they are not a pass/fail test or diagnosis."
+    ],
+    "doNow": [
+      "Keep parent and baby care contacts easy to find.",
+      "Accept or request specific practical support.",
+      "Bring feeding, sleep, pain and mood questions to follow-up care."
+    ],
+    "avoidAsk": [
+      "Do not ignore heavy bleeding, trouble breathing, chest pain, seizures, severe headache, thoughts of harm or a baby who is hard to wake or struggling to breathe.",
+      "Ask before resuming activities if recovery, complications or surgery affect what is appropriate."
+    ],
+    "appointments": [
+      "Postnatal contacts and infant visits depend on individual need. Follow the plan given at discharge and ask who to contact with concerns."
+    ],
+    "partner": [
+      "Protect rest, manage visitors and logistics, notice warning signs, and take concerns seriously the first time."
+    ],
+    "topics": [
+      "postpartum",
+      "recovery",
+      "newborn",
+      "mental-health",
+      "feeding"
+    ],
+    "audiences": [
+      "parent",
+      "partner",
+      "browsing"
+    ],
+    "helpTier": "common",
+    "sourceIds": [
+      "who-postnatal",
+      "who-newborn",
+      "acog-postpartum",
+      "cdc-milestones"
+    ],
+    "milestoneIds": [],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2027-07-31",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "annual"
+    }
+  },
+  {
+    "id": "postpartum-month-6",
+    "slug": "month-6",
+    "kind": "postpartum",
+    "phase": "postpartum",
+    "ordinal": 280,
+    "windowLabel": "Month 6",
+    "title": "Six months, still becoming",
+    "dek": "Review development, feeding, preventive care, parent health and what support the family needs next.",
+    "summary": [
+      "Review development, feeding, preventive care, parent health and what support the family needs next.",
+      "Both parent and baby deserve care; neither person's warning signs should be minimized.",
+      "Ask for practical help before exhaustion becomes a crisis."
+    ],
+    "bodyMind": [
+      "Bleeding, pain, incision or perineal healing, pelvic symptoms, sleep and mood all deserve space in follow-up care.",
+      "Recovery varies with birth, health, support and feeding; it is not a race back to a previous version of yourself."
+    ],
+    "baby": [
+      "Feeding, alertness, breathing, temperature, color and movement are useful observations to share with your baby's clinician.",
+      "Milestones describe skills most children show by an age; they are not a pass/fail test or diagnosis."
+    ],
+    "doNow": [
+      "Keep parent and baby care contacts easy to find.",
+      "Accept or request specific practical support.",
+      "Bring feeding, sleep, pain and mood questions to follow-up care."
+    ],
+    "avoidAsk": [
+      "Do not ignore heavy bleeding, trouble breathing, chest pain, seizures, severe headache, thoughts of harm or a baby who is hard to wake or struggling to breathe.",
+      "Ask before resuming activities if recovery, complications or surgery affect what is appropriate."
+    ],
+    "appointments": [
+      "Postnatal contacts and infant visits depend on individual need. Follow the plan given at discharge and ask who to contact with concerns."
+    ],
+    "partner": [
+      "Protect rest, manage visitors and logistics, notice warning signs, and take concerns seriously the first time."
+    ],
+    "topics": [
+      "postpartum",
+      "recovery",
+      "newborn",
+      "mental-health",
+      "feeding"
+    ],
+    "audiences": [
+      "parent",
+      "partner",
+      "browsing"
+    ],
+    "helpTier": "common",
+    "sourceIds": [
+      "who-postnatal",
+      "who-newborn",
+      "acog-postpartum",
+      "cdc-milestones"
+    ],
+    "milestoneIds": [
+      "six-month-development"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2027-07-31",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "annual"
+    }
+  }
+]

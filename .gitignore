@@ -1,0 +1,13 @@
+node_modules/
+dist/
+.audit-dist-base/
+.astro/
+.cache/
+playwright-report/
+test-results/
+coverage/
+.DS_Store
+*.log
+.env
+.env.*
+!.env.example

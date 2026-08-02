@@ -1,0 +1,269 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import JourneySetup from "@/components/react/JourneySetup";
+import SiteSearch from "@/components/react/SiteSearch";
+import PregnancyMonthMap from "@/components/PregnancyMonthMap.astro";
+import { withBase } from "@/lib/paths";
+
+const essentials = (await getCollection("essentials"))
+  .sort((a, b) => a.data.number - b.data.number)
+  .slice(0, 6);
+const timeline = await getCollection("timeline");
+const preconceptionGuide = (await getCollection("preconception"))[0];
+const positiveTest = timeline.find(
+  (entry) => entry.data.id === "positive-test",
+);
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "MedicalWebPage",
+  name: "Pregnancy, Clearly",
+  description:
+    "A calm, practical guide to all nine months of pregnancy, week by week.",
+  audience: { "@type": "PeopleAudience", suggestedMinAge: 16 },
+  lastReviewed: "2026-07-31",
+  medicalAudience: ["Patient", "Caregiver"],
+};
+---
+
+<BaseLayout schema={schema}>
+  <section class="hero">
+    <div class="shell hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">The nine months of pregnancy, made followable</p>
+        <h1>Pregnancy,<br /><em>made clear.</em></h1>
+        <p class="lede">
+          Find your month and week. See what may happen, what to do now, what
+          not to do, and when a symptom needs a call—without ads, judgment or
+          information overload.
+        </p>
+        <div class="hero-actions">
+          <a class="button" href="#my-timeline"
+            >Set my timeline <span aria-hidden="true">→</span></a
+          >
+          <a class="button secondary" href={withBase("/timeline/")}
+            >Browse without setup</a
+          >
+        </div>
+        <div class="page-meta">
+          <span>9-month map</span><span>•</span><span>40 weekly chapters</span
+          ><span>•</span><span>Private on your device</span>
+        </div>
+      </div>
+      <div id="my-timeline" class="hero-timeline-entry">
+        <JourneySetup client:load compact={true} hero={true} />
+      </div>
+    </div>
+  </section>
+
+  {
+    preconceptionGuide && (
+      <section class="preconception-home-entry">
+        <div class="shell preconception-entry-card">
+          <div>
+            <p class="eyebrow">Before a positive test</p>
+            <h2>{preconceptionGuide.data.title}</h2>
+            <p>{preconceptionGuide.data.dek}</p>
+          </div>
+          <div class="preconception-entry-actions">
+            <div aria-label="Guide topics">
+              {preconceptionGuide.data.orientation.map((item) => (
+                <span>{item.label}</span>
+              ))}
+            </div>
+            <a class="button secondary" href={withBase("/getting-pregnant/")}>
+              Open the getting-pregnant guide
+            </a>
+          </div>
+        </div>
+      </section>
+    )
+  }
+
+  <section class="section">
+    <div class="shell">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">A positive test</p><h2>
+            Three things for right now
+          </h2><p>
+            No frantic master list. Start with the decisions that protect you
+            while everything still feels new.
+          </p>
+        </div>
+        <a class="button secondary" href={withBase("/timeline/positive-test/")}
+          >Open the full first steps</a
+        >
+      </div>
+      <div class="quick-start">
+        <article class="quick-step">
+          <div class="step-number">1</div><h3>Arrange care</h3><p>
+            {positiveTest?.data.doNow[0]}
+          </p>
+        </article>
+        <article class="quick-step">
+          <div class="step-number">2</div><h3>Review medicines</h3><p>
+            {positiveTest?.data.doNow[1]}
+          </p>
+        </article>
+        <article class="quick-step">
+          <div class="step-number">3</div><h3>Save the urgent route</h3><p>
+            {positiveTest?.data.bodyMind[1]}
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section soft search-home-section">
+    <div class="shell">
+      <SiteSearch client:load />
+    </div>
+  </section>
+
+  <section class="section pregnancy-map-section">
+    <div class="shell">
+      <PregnancyMonthMap />
+    </div>
+  </section>
+
+  {
+    positiveTest && (
+      <section class="section do-dont-section">
+        <div class="shell">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">The pregnancy basics</p>
+              <h2>Do this. Pause before that.</h2>
+              <p>
+                Start with a short, safe baseline. Each week then adds the
+                actions and cautions relevant to that point in pregnancy.
+              </p>
+            </div>
+          </div>
+          <div class="do-dont-grid">
+            <article class="do-panel">
+              <p class="eyebrow">Do now</p>
+              <h3>Your first practical steps</h3>
+              <ul>
+                {positiveTest.data.doNow.map((item) => (
+                  <li>{item}</li>
+                ))}
+              </ul>
+            </article>
+            <article class="dont-panel">
+              <p class="eyebrow">Do not—or ask first</p>
+              <h3>Where a quick check matters</h3>
+              <ul>
+                {positiveTest.data.avoidAsk.map((item) => (
+                  <li>{item}</li>
+                ))}
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+    )
+  }
+
+  <section class="section">
+    <div class="shell">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Everyday pregnancy essentials</p><h2>
+            Clear dos and don’ts—kept in one place
+          </h2><p>
+            Food and dishes, drinks, exercise, medicines, home tasks, work and
+            travel—plus a searchable swap finder for coffee, cola, sushi and
+            other things you may not want to give up. Everything is visible;
+            nothing is hidden in an FAQ.
+          </p>
+        </div>
+        <a class="button secondary" href={withBase("/essentials/")}
+          >Open all dos and don’ts</a
+        >
+      </div>
+      <div class="guide-grid">
+        {
+          essentials.map((item) => (
+            <a
+              class="guide-card"
+              href={withBase(`/essentials/#${item.data.slug}`)}
+            >
+              <p class="eyebrow">{item.data.eyebrow}</p>
+              <h3>{item.data.title}</h3>
+              <p>{item.data.intro}</p>
+              <span class="arrow" aria-hidden="true">
+                See dos, don’ts and examples →
+              </span>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="section plum">
+    <div class="shell">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">For every support person</p><h2>
+            Help through the pregnancy, not only at birth.
+          </h2><p class="lede">
+            Learn the current week, own practical work, know the urgent route
+            and take a concern seriously the first time.
+          </p>
+        </div><a class="button ghost" href={withBase("/partners/")}
+          >Open the partner playbook</a
+        >
+      </div>
+      <div class="card-grid four">
+        <article class="editorial-card">
+          <span class="index">01</span><h3>Protect rest</h3><p>
+            Meals, smells, errands, housework and appointment admin are real
+            pregnancy support.
+          </p>
+        </article>
+        <article class="editorial-card">
+          <span class="index">02</span><h3>Know this week</h3><p>
+            Read the same chapter and know what may be coming next.
+          </p>
+        </article>
+        <article class="editorial-card">
+          <span class="index">03</span><h3>Respect autonomy</h3><p>
+            Support communication without taking over consent or decisions.
+          </p>
+        </article>
+        <article class="editorial-card">
+          <span class="index">04</span><h3>Believe concerns</h3><p>
+            Help call when pain, bleeding, movement or other symptoms change.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section after-birth-home">
+    <div class="shell">
+      <div class="continuation-panel">
+        <div>
+          <p class="eyebrow">The journey continues</p><h2>
+            After birth is here when you reach it.
+          </h2>
+          <p>
+            A separate continuation covers birth day, parent recovery and baby
+            basics through six months without crowding the pregnancy timeline.
+          </p>
+        </div>
+        <a class="button secondary" href={withBase("/timeline/#after-birth")}
+          >See the after-birth continuation</a
+        >
+      </div>
+      <p class="quiet-trust">
+        This is general pregnancy guidance, not a diagnosis or personal care
+        plan. Your doctor or midwife should guide decisions that depend on your
+        health, medicines, symptoms or pregnancy.
+      </p>
+    </div>
+  </section>
+</BaseLayout>

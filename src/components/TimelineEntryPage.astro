@@ -1,0 +1,316 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Breadcrumbs from "@/components/Breadcrumbs.astro";
+import { withBase } from "@/lib/paths";
+import { getPregnancyMonth, weekFromTimelineId } from "@/config/pregnancy";
+
+interface Props {
+  entry: any;
+  milestones: any[];
+  previousEntry?: any;
+  nextEntry?: any;
+  careTeamHelp: any;
+  urgentHelp: any;
+}
+const {
+  entry,
+  milestones,
+  previousEntry,
+  nextEntry,
+  careTeamHelp,
+  urgentHelp,
+} = Astro.props;
+const data = entry.data;
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "MedicalWebPage",
+  name: data.title,
+  description: data.dek,
+  lastReviewed: data.review.reviewedAt,
+  medicalAudience: ["Patient", "Caregiver"],
+};
+const timelineHref =
+  data.phase === "postpartum" ? "/timeline/#after-birth" : "/timeline/";
+const week = weekFromTimelineId(data.id);
+const month = week === null ? null : getPregnancyMonth(week);
+const previousHref =
+  week === null
+    ? null
+    : week <= 3
+      ? "/timeline/positive-test/"
+      : `/timeline/week-${week - 1}/`;
+const nextHref =
+  week === null
+    ? null
+    : week >= 42
+      ? "/timeline/postpartum/birth-day/"
+      : `/timeline/week-${week + 1}/`;
+const progress =
+  week === null ? 0 : Math.min(100, Math.max(0, ((week - 3) / 37) * 100));
+const progressLabel =
+  week !== null && week <= 40
+    ? `${40 - week} weeks to the due-date marker`
+    : "Following an individual plan";
+const periodLabel =
+  month?.kind === "post-due"
+    ? `Beyond the estimated due date · ${month.trimester}`
+    : month
+      ? `${month.trimester} · Month ${month.month} of 9`
+      : data.windowLabel;
+const previousLabel = previousEntry
+  ? `← Week ${week! - 1}: ${previousEntry.data.title.replace(/^Week \d+: /, "")}`
+  : "← Positive test";
+const nextLabel = nextEntry
+  ? `Week ${week! + 1}: ${nextEntry.data.title.replace(/^Week \d+: /, "")} →`
+  : "Birth day →";
+---
+
+<BaseLayout title={data.title} description={data.dek} schema={schema}>
+  <section class="page-hero">
+    <div class="shell">
+      <Breadcrumbs
+        items={[
+          { label: "Timeline", href: "/timeline/" },
+          ...(data.phase === "postpartum"
+            ? [{ label: "After birth", href: timelineHref }]
+            : []),
+          { label: data.windowLabel },
+        ]}
+      />
+      <p class="eyebrow">
+        {periodLabel}
+      </p><h1>{data.title}</h1><p class="lede">
+        {data.dek}
+      </p>
+      {
+        week !== null && (
+          <div
+            class="week-progress"
+            aria-label={`Pregnancy progress at week ${week}`}
+          >
+            <div class="week-progress-copy">
+              <span>
+                {month?.kind === "post-due"
+                  ? "Past the estimated due date"
+                  : `Month ${month?.month} · Week ${week}`}
+              </span>
+              <strong>{progressLabel}</strong>
+            </div>
+            <div class="week-progress-track" aria-hidden="true">
+              <span style={`width: ${progress}%`} />
+            </div>
+          </div>
+        )
+      }
+      {
+        month && week !== null && (
+          <div class="pregnancy-position" aria-label="Pregnancy position">
+            <div>
+              <span>{month.kind === "post-due" ? "Stage" : "Month"}</span>
+              <strong>
+                {month.kind === "post-due"
+                  ? "Beyond due date"
+                  : `${month.month} of 9`}
+              </strong>
+            </div>
+            <div>
+              <span>Week</span>
+              <strong>{week}</strong>
+            </div>
+            <div>
+              <span>Period</span>
+              <strong>{month.trimester}</strong>
+            </div>
+            <div>
+              <span>This month</span>
+              <strong>{month.title}</strong>
+            </div>
+          </div>
+        )
+      }
+    </div>
+  </section>
+  <section class="section" style="padding-top: 0">
+    <div class="shell content-layout">
+      <article class="article-stack">
+        <section class="content-section summary-card" id="know-now">
+          <p class="eyebrow">In 60 seconds</p>
+          <h2>
+            {
+              week === null
+                ? "What to know now"
+                : "Your short plan for this week"
+            }
+          </h2>
+          {
+            week !== null ? (
+              <div class="weekly-brief">
+                {data.summary.map((item: string, index: number) => (
+                  <div>
+                    <span>
+                      {["Do now", "Coming up", "Pause and ask"][index]}
+                    </span>
+                    <p>{item}</p>
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <ul>
+                {data.summary.map((item: string) => (
+                  <li>{item}</li>
+                ))}
+              </ul>
+            )
+          }
+        </section>
+        <section class="content-section" id="body">
+          <p class="eyebrow">What you may notice</p><h2>
+            {
+              data.phase === "postpartum"
+                ? "Your recovery and mind"
+                : "Your body and how you may feel"
+            }
+          </h2>{data.bodyMind.map((item: string) => <p>{item}</p>)}
+        </section>
+        <section class="content-section" id="baby">
+          <p class="eyebrow">What is happening</p><h2>
+            {
+              data.phase === "postpartum"
+                ? "Baby care and development"
+                : "Baby’s development this week"
+            }
+          </h2>{data.baby.map((item: string) => <p>{item}</p>)}
+        </section>
+        {
+          data.variationNote && (
+            <aside class="variation-note">
+              <strong>Normal does not mean identical.</strong>
+              <p>{data.variationNote}</p>
+            </aside>
+          )
+        }
+        {
+          data.clarifications?.length > 0 && (
+            <section class="content-section example-card" id="examples">
+              <p class="eyebrow">Plain-language examples</p>
+              <h2>What this means in real life</h2>
+              {data.clarifications.map((item: string) => (
+                <p>{item}</p>
+              ))}
+            </section>
+          )
+        }
+        <section class="content-section" id="do-now">
+          <p class="eyebrow">A short checklist</p><h2>What to do now</h2><ul>
+            {data.doNow.map((item: string) => <li>{item}</li>)}
+          </ul>
+        </section>
+        <section class="content-section help-card" id="avoid">
+          <p class="eyebrow">Pause and check</p><h2>
+            What not to do—or what to ask first
+          </h2><ul>
+            {data.avoidAsk.map((item: string) => <li>{item}</li>)}
+          </ul><a class="inline-guide-link" href={withBase("/essentials/")}
+            >Check food, medicines, exercise and everyday activities →</a
+          >
+        </section>
+        <section class="content-section" id="appointments">
+          <p class="eyebrow">What may be coming up</p><h2>
+            Appointments, tests and decisions
+          </h2>{data.appointments.map((item: string) => <p>{item}</p>)}{
+            milestones.length > 0 && (
+              <div class="milestone-board">
+                {milestones.map((item: any) => (
+                  <article class="milestone-card">
+                    <div class="meta">Common planning window</div>
+                    <h3>{item.data.title}</h3>
+                    <p>{item.data.description}</p>
+                  </article>
+                ))}
+              </div>
+            )
+          }
+        </section>
+        <section class="content-section" id="partner">
+          <p class="eyebrow">For the support person</p><h2>
+            One useful thing a partner can do
+          </h2><ul>{data.partner.map((item: string) => <li>{item}</li>)}</ul>
+        </section>
+        <section
+          class="content-section help-card care-team-card"
+          id="contact-care"
+        >
+          <p class="eyebrow">Contact your care team</p>
+          <h2>{careTeamHelp.data.title}</h2>
+          <p>{careTeamHelp.data.intro}</p>
+          <a class="button secondary" href={withBase("/urgent-help/#care-team")}
+            >See when to contact care</a
+          >
+        </section>
+        <section class="content-section help-card urgent">
+          <p class="eyebrow">Urgent or emergency</p>
+          <h2>{urgentHelp.data.title}</h2>
+          <p>{urgentHelp.data.intro}</p>
+          <a class="button danger" href={withBase("/urgent-help/#maternal")}
+            >Open urgent warning signs</a
+          >
+        </section>
+      </article>
+      <aside class="content-aside">
+        <div class="aside-card">
+          <h2>
+            {
+              month
+                ? month.kind === "post-due"
+                  ? "Beyond the due date"
+                  : `Month ${month.month} at a glance`
+                : "On this page"
+            }
+          </h2>
+          {
+            month ? (
+              <>
+                <p>
+                  {month.weeks} · {month.trimester}
+                </p>
+                <strong>{month.focus}</strong>
+              </>
+            ) : (
+              <p>
+                General education for a typical journey. Your symptoms, care
+                plan and doctor's advice take priority.
+              </p>
+            )
+          }
+          <ul class="aside-links">
+            <li><a href="#know-now">What to know</a></li>
+            <li><a href="#do-now">What to do</a></li>
+            <li><a href="#avoid">What to avoid or ask</a></li>
+            <li><a href="#appointments">What is coming up</a></li>
+            <li><a href="#contact-care">When to contact care</a></li>
+          </ul>
+        </div>
+        {
+          week !== null ? (
+            <nav class="week-switcher" aria-label="Previous and next week">
+              <a class="button secondary" href={withBase(previousHref!)}>
+                {previousLabel}
+              </a>
+              <a class="button secondary" href={withBase(nextHref!)}>
+                {nextLabel}
+              </a>
+            </nav>
+          ) : (
+            <a class="button secondary" href={withBase(timelineHref)}>
+              ← Back to timeline
+            </a>
+          )
+        }
+        <p class="doctor-note">
+          This is general guidance. Your doctor or midwife knows your health,
+          medicines and pregnancy and should guide individual decisions.
+        </p>
+      </aside>
+    </div>
+  </section>
+</BaseLayout>
