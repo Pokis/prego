@@ -91,6 +91,35 @@ for (const path of required)
   if (!existsSync(resolve(dist, path)))
     errors.push(`Missing static output ${path}`);
 
+const homeHtmlPath = resolve(dist, "index.html");
+if (existsSync(homeHtmlPath)) {
+  const homeHtml = readFileSync(homeHtmlPath, "utf8");
+  if (
+    !homeHtml.includes('aria-label="Primary navigation"') ||
+    !homeHtml.includes('href="/getting-pregnant/"')
+  )
+    errors.push(
+      "Primary navigation is missing the persistent Getting pregnant entry.",
+    );
+}
+
+const preconceptionHtmlPath = resolve(dist, "getting-pregnant", "index.html");
+if (existsSync(preconceptionHtmlPath)) {
+  const preconceptionHtml = readFileSync(preconceptionHtmlPath, "utf8");
+  for (const fragment of [
+    "#simple-plan",
+    "#dos-donts",
+    "#what-affects-what",
+    "#myths",
+    "#when-to-get-help",
+    "#for-couples",
+  ])
+    if (!preconceptionHtml.includes(`href="${fragment}"`))
+      errors.push(
+        `Getting pregnant section navigation is missing ${fragment}.`,
+      );
+}
+
 const timelineHtmlPath = resolve(dist, "timeline", "index.html");
 if (existsSync(timelineHtmlPath)) {
   const timelineHtml = readFileSync(timelineHtmlPath, "utf8");

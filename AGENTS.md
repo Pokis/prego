@@ -10,7 +10,7 @@ The product must not become a chatbot, symptom checker, diagnostic tool, adverti
 
 ## Product-shape invariants
 
-1. Public navigation stays focused on Timeline, Pregnancy Essentials, For Partners and Urgent Help.
+1. Public navigation stays focused on Getting Pregnant, Timeline, Pregnancy Essentials, For Partners and Urgent Help. The Getting Pregnant entry and its on-page section navigation must remain obvious on desktop and mobile.
 2. Pregnancy remains visually and editorially primary; after-birth content is clearly separated.
 3. Core answers are visible on the page. Do not hide essential guidance in accordions, questions, tooltips or external links.
 4. `src/pages/essentials/index.astro` is the canonical everyday do/don’t/check-first experience.

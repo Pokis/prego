@@ -27,6 +27,34 @@ test("homepage presents the two equal entry paths", async ({ page }) => {
   ).toBeVisible();
 });
 
+test("getting-pregnant guidance is persistent in desktop and mobile navigation", async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 1200, height: 800 });
+  await page.goto("/");
+  const primaryNavigation = page.getByRole("navigation", {
+    name: "Primary navigation",
+  });
+  await expect(
+    primaryNavigation.getByRole("link", {
+      name: "Getting pregnant",
+      exact: true,
+    }),
+  ).toBeVisible();
+
+  await page.setViewportSize({ width: 390, height: 780 });
+  await page.locator(".mobile-nav summary").click();
+  const mobileNavigation = page.getByRole("navigation", {
+    name: "Mobile navigation",
+  });
+  await expect(
+    mobileNavigation.getByRole("link", {
+      name: "Getting pregnant",
+      exact: true,
+    }),
+  ).toBeVisible();
+});
+
 test("positive-test deep link loads directly", async ({ page }) => {
   const response = await page.goto("/timeline/positive-test/");
 
@@ -70,6 +98,18 @@ test("getting-pregnant guide separates chances, health and myths", async ({
   ).toBeVisible();
   await expect(
     page.getByRole("heading", { name: "Egg-providing partner under 35" }),
+  ).toBeVisible();
+  const guideNavigation = page.getByRole("navigation", {
+    name: "Getting pregnant guide sections",
+  });
+  await expect(guideNavigation).toBeVisible();
+  await expect(guideNavigation.getByRole("link")).toHaveCount(6);
+  await guideNavigation.getByRole("link", { name: /Myths and truth/ }).click();
+  await expect(page).toHaveURL(/#myths$/);
+  await expect(
+    page.getByRole("heading", {
+      name: "Remove pressure that biology does not require.",
+    }),
   ).toBeVisible();
   await expect(page.locator("main details")).toHaveCount(0);
 });

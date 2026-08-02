@@ -8,12 +8,13 @@ A premium static guide focused on getting pregnant and the nine months of pregna
 
 The public navigation is deliberately small:
 
+- **Getting pregnant** — conception tips, a six-step plan, dos and don’ts, chance-versus-health explanations, fertility myths, common hurdles and when to seek help.
 - **Timeline** — positive test, nine month map, trimester overviews, weeks 3–42 and important care windows.
 - **Pregnancy essentials** — fourteen direct, fully expanded do/don’t/check-first sections, concrete examples, keyword search and an interactive substitute finder.
 - **For partners** — useful support actions at important pregnancy weeks.
 - **Urgent help** — clearly separated pregnancy, postpartum and young-baby warning signs.
 
-The separate **Getting pregnant** chapter is linked from the homepage, essentials and footer without expanding the primary navigation.
+The **Getting pregnant** chapter has a persistent header entry and its own six-part section navigator on desktop and mobile. It remains a distinct pre-pregnancy chapter while the homepage and main timeline stay pregnancy-first.
 
 The current content includes:
 
