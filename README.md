@@ -235,7 +235,7 @@ npm run audit:base
 npm run audit:github-pages
 ```
 
-The output is `dist/`. `SITE_URL` controls canonical and sitemap URLs; `BASE_PATH` supports subpath hosting. In GitHub Actions, an ordinary `owner/repository` Pages build automatically uses `https://owner.github.io/repository/`; an `owner.github.io` repository uses the domain root.
+The output is `dist/`. `SITE_URL` controls canonical and sitemap URLs; `BASE_PATH` supports subpath hosting. This repository's Pages workflow defaults to `https://prego.potatoroad.lt/` with a root base path and emits the matching `CNAME`. The generic resolver still supports `https://owner.github.io/repository/` project sites and root `owner.github.io` repositories.
 
 ```powershell
 $env:SITE_URL = "https://example.com"

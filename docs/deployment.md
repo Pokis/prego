@@ -13,11 +13,12 @@ The repository includes two intentionally separate workflows:
 
 The build derives GitHub Pages URLs from GitHub's environment:
 
-| Repository type         | Canonical origin          | Base path      |
-| ----------------------- | ------------------------- | -------------- |
-| `owner/project`         | `https://owner.github.io` | `/project/`    |
-| `owner/owner.github.io` | `https://owner.github.io` | `/`            |
-| Custom domain           | value of `SITE_URL`       | `/` by default |
+| Repository type         | Canonical origin              | Base path      |
+| ----------------------- | ----------------------------- | -------------- |
+| `owner/project`         | `https://owner.github.io`     | `/project/`    |
+| `owner/owner.github.io` | `https://owner.github.io`     | `/`            |
+| This repository         | `https://prego.potatoroad.lt` | `/`            |
+| Another custom domain   | value of `SITE_URL`           | `/` by default |
 
 This keeps navigation, canonical links, the sitemap, manifest, social image, search index, React assets and service-worker registration on the same subpath. `public/.nojekyll` is included in every artifact.
 
@@ -29,7 +30,7 @@ This keeps navigation, canonical links, the sitemap, manifest, social image, sea
 4. Obtain clinical approval and update the review records until `npm run build:release` passes.
 5. Only after public release is authorized, open **Actions → Deploy clinically approved site to GitHub Pages → Run workflow** and enable the confirmation input.
 
-For an ordinary project repository no URL variables are needed. GitHub supplies the owner and repository name, producing `https://owner.github.io/repository/` automatically.
+This repository defaults to `https://prego.potatoroad.lt/` in the deployment workflow and includes the same hostname in `public/CNAME`. Repository variables can still override the target. Without the custom-domain fallback, GitHub would build `/prego/` asset paths even though the custom domain serves the site at `/`.
 
 ### Custom domain
 
@@ -51,7 +52,7 @@ npm ci
 npm run audit:github-pages
 ```
 
-The audit builds as `https://example-owner.github.io/pregnancy-clearly/`, checks required files and URL prefixes, validates the guarded workflow, and removes its temporary artifact. It does not start a server or connect to GitHub.
+The audit keeps unit coverage for generic `/repository/` project sites, then builds this repository as `https://prego.potatoroad.lt/`. It checks the root paths, canonical URL, sitemap, `CNAME`, required files and guarded workflow before removing its temporary artifact. It does not start a server or connect to GitHub.
 
 To inspect a specific Pages artifact locally in PowerShell:
 

@@ -2,7 +2,7 @@ import { existsSync, lstatSync, readdirSync, readFileSync } from "node:fs";
 import { relative, resolve } from "node:path";
 import { resolveDeploymentConfig } from "./deployment-config.mjs";
 
-const { site, base, outDir } = resolveDeploymentConfig();
+const { site, base, outDir, target } = resolveDeploymentConfig();
 const output = resolve(outDir);
 const errors = [];
 
@@ -44,6 +44,20 @@ const required = [
 for (const name of required) {
   if (!existsSync(resolve(output, name)))
     errors.push(`Missing Pages artifact: ${name}`);
+}
+
+if (target === "github-custom-domain") {
+  const cnamePath = resolve(output, "CNAME");
+  if (!existsSync(cnamePath)) {
+    errors.push("Custom-domain Pages artifact is missing CNAME");
+  } else {
+    const cname = readFileSync(cnamePath, "utf8").trim().toLowerCase();
+    const expectedHostname = new URL(site).hostname.toLowerCase();
+    if (cname !== expectedHostname)
+      errors.push(
+        `CNAME contains ${cname || "an empty value"}; expected ${expectedHostname}`,
+      );
+  }
 }
 
 const publicUrl = (path = "") =>

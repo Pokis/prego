@@ -24,8 +24,8 @@ jobs:
     runs-on: ubuntu-latest
     env:
       GITHUB_PAGES: "true"
-      SITE_URL: ${{ vars.SITE_URL }}
-      BASE_PATH: ${{ vars.BASE_PATH }}
+      SITE_URL: ${{ vars.SITE_URL || 'https://prego.potatoroad.lt' }}
+      BASE_PATH: ${{ vars.BASE_PATH || '/' }}
     steps:
       - name: Check out repository
         uses: actions/checkout@v6

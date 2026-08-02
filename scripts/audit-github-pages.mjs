@@ -57,10 +57,10 @@ if (basename(output) !== ".audit-dist-github-pages")
 const pagesEnv = {
   ...process.env,
   GITHUB_PAGES: "true",
-  GITHUB_REPOSITORY: "example-owner/pregnancy-clearly",
-  GITHUB_REPOSITORY_OWNER: "example-owner",
-  SITE_URL: "",
-  BASE_PATH: "",
+  GITHUB_REPOSITORY: "Pokis/prego",
+  GITHUB_REPOSITORY_OWNER: "Pokis",
+  SITE_URL: "https://prego.potatoroad.lt",
+  BASE_PATH: "/",
   OUT_DIR: output,
 };
 
@@ -92,6 +92,7 @@ try {
     "actions/configure-pages@v5",
     "actions/upload-pages-artifact@v4",
     "actions/deploy-pages@v4",
+    "https://prego.potatoroad.lt",
   ]) {
     assert.ok(
       workflow.includes(required),
@@ -101,6 +102,11 @@ try {
   assert.ok(
     !/\n\s+(?:push|pull_request):/.test(workflow),
     "The clinical release workflow must not deploy automatically",
+  );
+  assert.equal(
+    readFileSync(resolve("public/CNAME"), "utf8").trim(),
+    "prego.potatoroad.lt",
+    "The generated artifact must carry the configured Pages custom domain",
   );
   console.log("GitHub Pages configuration and guarded workflow audit passed.");
 } finally {
