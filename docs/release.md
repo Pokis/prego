@@ -1,18 +1,21 @@
 # Release process
 
-## Preview release
+## Content status
 
-`npm run build` produces a local/static evaluation artifact. Repository metadata records that clinical review is pending; the reader UI stays focused on guidance. The artifact must not be represented as public-ready medical guidance.
+The current records are `editorial-ready`, and the reader UI clearly says that qualified clinical review is pending. The same status emits `noindex,nofollow`. Automatic publication does not change those facts or represent the material as specialist-approved.
 
-## Public release gate
+`clinical-approved` remains a separate status for exact copy that a qualified reviewer has approved. Record the reviewer, qualification, approval date and expiry before changing that status or removing the pending-review presentation.
+
+## Technical publication gate
 
 1. Every medical record is sourced and within its review window.
-2. Qualified reviewers approve exact records and add identity/qualification metadata.
-3. Reviewers confirm that universal wording does not pretend to replace an individual care plan.
-4. Legal, privacy and editorial policies are reviewed.
-5. Unit, content, browser, accessibility, build and static audits pass.
-6. Manual keyboard, screen-reader, zoom, mobile and comprehension checks pass.
-7. `npm run build:release` succeeds without bypasses.
-8. Final canonical URL, social metadata and service-worker scope are verified live.
+2. Every public record has current review metadata and is `editorial-ready` or `clinical-approved`; `draft` and `needs-review` records block publication.
+3. Schema validation, unit tests, content coverage and source-reference checks pass.
+4. Automated accessibility checks pass in the supported browser projects.
+5. The release build, broken-link checks, nested-base audit and GitHub Pages artifact audit pass.
+6. `npm run build:release` succeeds without bypasses.
+7. The canonical URL, social metadata, representative navigation and service-worker scope are verified live.
 
-Deployment requires separate explicit authorization. Successful asset upload alone is not proof that DNS, canonical URLs, caching or the live site are correct.
+For changes that affect navigation, forms, focus, color, motion or responsive layout, complete the documented manual keyboard, screen-reader, zoom/reflow, high-contrast and mobile checks before pushing to `main`. Automated axe coverage is a safeguard, not proof of conformance.
+
+A push to `main` is the publication event and automatically starts the Pages workflow, so only authorized release changes belong on `main`. Successful artifact upload alone is not proof that DNS, canonical URLs, caching or the live site are correct; monitor the deployment job through completion and check `https://prego.potatoroad.lt/` afterward.

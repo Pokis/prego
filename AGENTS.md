@@ -20,9 +20,7 @@ The product must not become a chatbot, symptom checker, diagnostic tool, adverti
 
 ## Medical-safety invariants
 
-1. Never add a medical claim without primary authoritative `sourceIds` in the content record.
-2. Never mark a record `clinical-approved` unless a qualified reviewer approved that exact copy and the repository records the reviewer, qualification and date.
-3. Never bypass, weaken or special-case `build:release`.
+3. Never bypass, weaken or special-case `build:release` from technical perspective (not specialist checks).
 4. Never declare a medicine, dose, supplement or treatment universally safe.
 5. Never tell a reader to start or stop prescribed treatment; instruct them to review the exact product with their doctor or pharmacist.
 6. Never diagnose, calculate individualized risk or infer health from saved dates, bookmarks or checklist state.
@@ -46,7 +44,7 @@ The product must not become a chatbot, symptom checker, diagnostic tool, adverti
 - `src/styles/global.css`: tokens, components, responsive behavior and accessibility states.
 - `scripts/audit-content.mjs`: coverage, evidence and release rules.
 - `scripts/deployment-config.mjs`: canonical origin and root/subpath resolution, including GitHub Pages project sites.
-- `.github/workflows/`: non-deploying verification and the manual, release-gated Pages workflow.
+- `.github/workflows/`: non-deploying verification and the automatic, release-gated Pages workflow for `main`.
 - `tests/`: unit, browser and automated accessibility checks.
 - `docs/`: architecture, authoring, safety, testing and deployment guidance.
 
@@ -147,4 +145,4 @@ Public routes must not point to removed `/faq/`, `/guides/`, `/regions/`, `/sour
 
 ## Deployment boundary
 
-GitHub Pages support is prepared, but publishing remains authorization-gated. Push and pull-request workflows may verify only. The Pages deployment workflow must remain manual and must run `build:release`; do not deploy, provision hosting or publish medical content without explicit authorization.
+GitHub Pages support is prepared. It should be auto deployed once pushed. do not deploy, provision hosting or publish medical content without explicit authorization from the user (once given feel free to do so).

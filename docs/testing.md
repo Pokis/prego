@@ -6,7 +6,7 @@ Vitest covers date arithmetic, journey transitions, storage versions and generat
 
 ## Content audit
 
-`audit:content` checks minimum counts, unique IDs, source existence, review expiry, weekly/postpartum continuity and essentials coverage. With `--release`, every public health record must be `clinical-approved`.
+`audit:content` checks minimum counts, unique IDs, required source references, review metadata and expiry, weekly/postpartum continuity and essentials coverage. With `--release`, `draft` and `needs-review` records fail; both `editorial-ready` and `clinical-approved` are technically publishable, and their distinct statuses remain visible in repository and product metadata.
 
 ## Browser
 
@@ -14,7 +14,7 @@ Playwright covers Chromium, Firefox, WebKit and a mobile profile. Core journeys 
 
 ## Accessibility
 
-Axe runs on the homepage, timeline, a representative weekly chapter, essentials, partners and urgent-help pages. Serious and critical findings fail the suite. Manual checks remain a release requirement.
+Axe runs on the homepage, timeline, a representative weekly chapter, essentials, partners and urgent-help pages. Serious and critical findings fail the suite. For accessibility-affecting changes, complete the manual checks before pushing to `main`; the automatic release workflow cannot replace them.
 
 ## Static audit
 

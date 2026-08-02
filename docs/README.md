@@ -13,5 +13,5 @@
 - [Accessibility](accessibility.md) — WCAG 2.2 AA implementation and QA.
 - [Testing](testing.md) — unit, content, browser and static checks.
 - [Static deployment](deployment.md) — portable builds and provider examples.
-- [Release](release.md) — preview versus clinically approved release.
+- [Release](release.md) — technical publication gates and separately recorded clinical status.
 - [ADR 0001](adr/0001-static-content-layer.md) — static-first structured-content decision.

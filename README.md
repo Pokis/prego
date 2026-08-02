@@ -2,7 +2,7 @@
 
 A premium static guide focused on getting pregnant and the nine months of pregnancy. It combines a couple-friendly preconception guide, a clear month-and-week timeline and an always-open essentials handbook for food, dishes, drinks, exercise, medicines, work, travel, sex, sleep and everyday life. A practical Swap Finder turns common cravings into close, usable alternatives. An after-birth continuation remains available, but it is intentionally secondary to pregnancy.
 
-> **Medical release status:** the implementation is ready for local evaluation, but the health copy is not yet clinically approved. `npm run build:release` intentionally fails until qualified reviewers approve every public health record. The public UI does not expose editorial machinery or source lists; provenance and approval remain enforced inside the repository.
+> **Release status:** successful pushes to `main` publish automatically to [prego.potatoroad.lt](https://prego.potatoroad.lt/). `npm run build:release` is the technical publication gate: it enforces evidence links, current review metadata and release-ready record states, but it does not claim specialist approval. The current health copy remains `editorial-ready`, so the site keeps its qualified-review-pending banner and `noindex` metadata.
 
 ## Product shape
 
@@ -61,7 +61,7 @@ npm run audit:base     # nested-base-path build and link audit
 npm run audit:pages    # audit the current dist/ as a Pages-ready artifact
 npm run audit:github-pages # disposable GitHub project-site build and workflow audit
 npm run verify         # complete non-browser verification sequence
-npm run build:release  # clinical release gate; expected to fail for now
+npm run build:release  # source-backed, review-current technical release build
 npm run format         # format authored and generated files
 ```
 
@@ -98,7 +98,7 @@ Important locations:
 - `src/lib/storage.ts` — versioned device-state schema and migration.
 - `scripts/audit-content.mjs` — content coverage and medical release rules.
 - `scripts/deployment-config.mjs` — normalized canonical URL and automatic GitHub Pages base-path resolution.
-- `.github/workflows/` — non-deploying CI plus a manually confirmed, release-gated Pages workflow.
+- `.github/workflows/` — non-deploying pull-request CI plus the release-gated automatic Pages workflow for `main`.
 - `tests/` — unit, cross-browser and accessibility verification.
 - `docs/` — focused implementation and authoring documentation.
 
@@ -213,7 +213,8 @@ Reader-facing content is direct, but repository governance remains strict:
 - Separate common information, amber “contact your doctor” advice and red urgent action.
 - Keep internal primary-source IDs and review dates on every claim-bearing record.
 - `npm run build` creates a local/static evaluation artifact.
-- `npm run build:release` fails for missing sources, expired reviews or any public health record without qualified clinical approval.
+- `npm run build:release` fails for missing sources, expired or missing review metadata, and records still marked `draft` or `needs-review`.
+- `editorial-ready` is technically publishable but is not the same as `clinical-approved`; the visible pending-review state remains until a qualified reviewer approves the exact copy.
 
 The absence of public citation panels is not permission to weaken evidence or approval checks.
 
@@ -243,7 +244,7 @@ $env:BASE_PATH = "/pregnancy-guide/"
 npm run build
 ```
 
-See [Static deployment](docs/deployment.md) for the GitHub Pages setup, guarded manual workflow, custom-domain variables, local simulation and provider-neutral alternatives. Push and pull-request CI never deploys. The manual deployment still fails until the clinical release gate passes. No deployment has been performed.
+See [Static deployment](docs/deployment.md) for the automatic GitHub Pages workflow, fixed custom domain, local simulation and provider-neutral alternatives. Pull requests verify without deploying. A push to `main` publishes only after the complete non-browser verifier, automated accessibility checks, the technical release build, broken-link checks and Pages artifact audit pass.
 
 ## Troubleshooting
 
@@ -251,7 +252,7 @@ See [Static deployment](docs/deployment.md) for the GitHub Pages setup, guarded 
 - **A page shows stale copy:** restart the development server after regeneration.
 - **Dates appear one day off:** use `src/lib/date.ts`; never parse a date-only string through local midnight ad hoc.
 - **The essentials page fails schema validation:** check every example status and all required do/don’t/ask arrays.
-- **Release build fails:** approval failures are expected until real clinical review is complete; never bypass the gate.
+- **Release build fails:** fix the reported schema, source, review-freshness or technical-readiness problem; never bypass the gate.
 - **A GitHub project site has broken assets:** run `npm run audit:github-pages`; do not hard-code the repository name in components.
 - **Browser tests cannot start:** install the supported Playwright browsers with `npx playwright install` and rerun the focused command.
 

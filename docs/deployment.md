@@ -1,15 +1,15 @@
 # Static deployment
 
-No deployment has been performed. The portable artifact is `dist/`, and no server-side functions or rewrites are required.
+Production is published at `https://prego.potatoroad.lt/` through GitHub Pages. The portable artifact is `dist/`, and no server-side functions or rewrites are required.
 
-> **Current release status:** health records are still `editorial-ready`, not clinically approved. `npm run build:release` is expected to fail. That failure is a release safeguard, not a hosting problem; never replace it with `npm run build` in a public deployment workflow.
+> **Content status:** health records are currently `editorial-ready`, not `clinical-approved`. The technical release gate permits that state while continuing to enforce sources, review freshness and release readiness. Publishing does not change or overstate the recorded clinical status; the live site retains its pending-review banner and `noindex` metadata.
 
 ## GitHub Pages
 
-The repository includes two intentionally separate workflows:
+The repository includes two complementary workflows:
 
 - `.github/workflows/verify.yml` checks every push and pull request but never deploys.
-- `.github/workflows/deploy-pages.yml` is manual, requires an explicit public-release confirmation, runs the clinical release gate, audits the Pages artifact, then deploys.
+- `.github/workflows/deploy-pages.yml` runs automatically for pushes to `main`. It repeats the complete non-browser verifier, runs automated accessibility checks, builds through `build:release`, audits broken links and the final Pages artifact, then deploys.
 
 The build derives GitHub Pages URLs from GitHub's environment:
 
@@ -24,24 +24,24 @@ This keeps navigation, canonical links, the sitemap, manifest, social image, sea
 
 ### Repository setup
 
-1. Push the repository to GitHub.
-2. Open **Settings → Pages** and choose **GitHub Actions** as the publishing source.
-3. Let the `Verify` workflow pass. It does not publish anything.
-4. Obtain clinical approval and update the review records until `npm run build:release` passes.
-5. Only after public release is authorized, open **Actions → Deploy clinically approved site to GitHub Pages → Run workflow** and enable the confirmation input.
+1. Open **Settings → Pages** and choose **GitHub Actions** as the publishing source.
+2. Configure `prego.potatoroad.lt` as the Pages custom domain and enable HTTPS after GitHub confirms the DNS records.
+3. Push an authorized release change to `main`.
+4. Monitor both workflows. `Verify` never publishes; `Deploy site to GitHub Pages` publishes only when every release job succeeds.
+5. Verify the live domain, canonical URL, service worker and representative navigation after deployment.
 
-This repository defaults to `https://prego.potatoroad.lt/` in the deployment workflow and includes the same hostname in `public/CNAME`. Repository variables can still override the target. Without the custom-domain fallback, GitHub would build `/prego/` asset paths even though the custom domain serves the site at `/`.
+The deployment workflow fixes `SITE_URL` to `https://prego.potatoroad.lt/` and `BASE_PATH` to `/`. `public/CNAME` contains the matching hostname. Keeping all three values aligned prevents GitHub from building `/prego/` asset paths for a custom domain that serves the site at `/`.
 
 ### Custom domain
 
-Only configure this when the real domain and DNS are ready:
+The production custom domain is already represented in source control. To configure or repair it:
 
-1. Add the repository Actions variable `SITE_URL` with the full origin, such as `https://pregnancy.example`.
-2. Add the repository Actions variable `BASE_PATH` with `/` unless the site genuinely lives below a path.
-3. Add `public/CNAME` containing only the exact domain name.
-4. Configure the custom domain and HTTPS in **Settings → Pages**, then complete the DNS records GitHub shows.
+1. Keep the workflow's `SITE_URL` at `https://prego.potatoroad.lt/` and `BASE_PATH` at `/`.
+2. Keep `public/CNAME` as the single line `prego.potatoroad.lt`.
+3. Configure that exact custom domain in **Settings → Pages**.
+4. Complete the DNS records GitHub shows and enable HTTPS after the certificate is ready.
 
-Do not add a placeholder `CNAME`; it changes the published domain behavior.
+Changing domains requires one coordinated change to the workflow, `public/CNAME`, GitHub Pages settings and DNS. Do not add a placeholder `CNAME`; it changes the published domain behavior.
 
 ### Local Pages simulation
 
@@ -52,7 +52,7 @@ npm ci
 npm run audit:github-pages
 ```
 
-The audit keeps unit coverage for generic `/repository/` project sites, then builds this repository as `https://prego.potatoroad.lt/`. It checks the root paths, canonical URL, sitemap, `CNAME`, required files and guarded workflow before removing its temporary artifact. It does not start a server or connect to GitHub.
+The audit keeps unit coverage for generic `/repository/` project sites, then builds this repository as `https://prego.potatoroad.lt/`. It checks root paths, canonical URLs, the sitemap, `CNAME`, required files and the automatic `main`-branch workflow before removing its temporary artifact. It does not start a server or connect to GitHub.
 
 To inspect a specific Pages artifact locally in PowerShell:
 
@@ -94,6 +94,6 @@ The checks cover three distinct cases:
 
 - `npm run audit:static` checks the normal root artifact in `dist/`.
 - `npm run audit:base` checks a generic `/pregnancy-guide/` deployment.
-- `npm run audit:github-pages` checks GitHub's `/repository/` project-site behavior and workflow guardrails.
+- `npm run audit:github-pages` checks GitHub's `/repository/` project-site behavior and automatic-release workflow guardrails.
 
 References: [Astro's GitHub Pages guide](https://docs.astro.build/en/guides/deploy/github/) and [GitHub's custom Pages workflow guide](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages).

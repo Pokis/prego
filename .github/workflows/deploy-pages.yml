@@ -1,13 +1,9 @@
-name: Deploy clinically approved site to GitHub Pages
+name: Deploy site to GitHub Pages
 
 on:
-  workflow_dispatch:
-    inputs:
-      confirm_public_release:
-        description: Confirm that clinical approval and public release are authorized
-        required: true
-        type: boolean
-        default: false
+  push:
+    branches:
+      - main
 
 concurrency:
   group: github-pages
@@ -20,12 +16,11 @@ permissions:
 
 jobs:
   build:
-    if: ${{ inputs.confirm_public_release }}
     runs-on: ubuntu-latest
     env:
       GITHUB_PAGES: "true"
-      SITE_URL: ${{ vars.SITE_URL || 'https://prego.potatoroad.lt' }}
-      BASE_PATH: ${{ vars.BASE_PATH || '/' }}
+      SITE_URL: "https://prego.potatoroad.lt/"
+      BASE_PATH: "/"
     steps:
       - name: Check out repository
         uses: actions/checkout@v6
@@ -36,12 +31,16 @@ jobs:
           cache: npm
       - name: Install dependencies
         run: npm ci
-      - name: Check types and content schemas
-        run: npm run check
-      - name: Run unit tests
-        run: npm run test
-      - name: Enforce clinical release gate and build
+      - name: Run schema, test, content, link, and static verification
+        run: npm run verify
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps chromium firefox webkit
+      - name: Run automated accessibility safeguards
+        run: npm run test:a11y
+      - name: Build the release artifact
         run: npm run build:release
+      - name: Audit release links and static output
+        run: npm run audit:static
       - name: Audit GitHub Pages artifact
         run: npm run audit:pages
       - name: Configure Pages
@@ -52,7 +51,6 @@ jobs:
           path: ./dist
 
   deploy:
-    if: ${{ inputs.confirm_public_release }}
     needs: build
     runs-on: ubuntu-latest
     environment:

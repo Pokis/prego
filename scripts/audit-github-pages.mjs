@@ -59,7 +59,7 @@ const pagesEnv = {
   GITHUB_PAGES: "true",
   GITHUB_REPOSITORY: "Pokis/prego",
   GITHUB_REPOSITORY_OWNER: "Pokis",
-  SITE_URL: "https://prego.potatoroad.lt",
+  SITE_URL: "https://prego.potatoroad.lt/",
   BASE_PATH: "/",
   OUT_DIR: output,
 };
@@ -82,33 +82,45 @@ try {
   run(process.execPath, [resolve("scripts/audit-pages-artifact.mjs")]);
 
   const workflowPath = resolve(".github/workflows/deploy-pages.yml");
-  assert.ok(existsSync(workflowPath), "Missing guarded Pages workflow");
+  assert.ok(existsSync(workflowPath), "Missing automatic Pages workflow");
   const workflow = readFileSync(workflowPath, "utf8");
   for (const required of [
-    "workflow_dispatch:",
-    "confirm_public_release:",
+    "push:",
+    "branches:",
+    "- main",
+    "npm run verify",
+    "npx playwright install --with-deps chromium firefox webkit",
+    "npm run test:a11y",
     "npm run build:release",
+    "npm run audit:static",
     "npm run audit:pages",
     "actions/configure-pages@v5",
     "actions/upload-pages-artifact@v4",
     "actions/deploy-pages@v4",
-    "https://prego.potatoroad.lt",
+    "https://prego.potatoroad.lt/",
   ]) {
     assert.ok(
       workflow.includes(required),
       `Pages workflow is missing ${required}`,
     );
   }
+  assert.match(
+    workflow,
+    /\r?\n  push:\r?\n    branches:\r?\n      - main(?:\r?\n|$)/,
+    "The Pages workflow must deploy automatically for pushes to main",
+  );
   assert.ok(
-    !/\n\s+(?:push|pull_request):/.test(workflow),
-    "The clinical release workflow must not deploy automatically",
+    !/\r?\n  pull_request:/.test(workflow),
+    "The Pages workflow must not deploy pull requests",
   );
   assert.equal(
     readFileSync(resolve("public/CNAME"), "utf8").trim(),
     "prego.potatoroad.lt",
     "The generated artifact must carry the configured Pages custom domain",
   );
-  console.log("GitHub Pages configuration and guarded workflow audit passed.");
+  console.log(
+    "GitHub Pages configuration and automatic main-branch workflow audit passed.",
+  );
 } finally {
   rmSync(output, { recursive: true, force: true });
 }

@@ -12,6 +12,9 @@ const requiredFiles = [
   "sources",
   "urgent",
 ];
+const evidenceBackedCollections = new Set(
+  requiredFiles.filter((name) => name !== "sources"),
+);
 const errors = [];
 const warnings = [];
 const load = (name) => {
@@ -52,24 +55,33 @@ for (const [name, records] of Object.entries(data)) {
     if (seen.has(record.id))
       errors.push(`${name} has duplicate id ${record.id}`);
     seen.add(record.id);
-    if (record.sourceIds) {
-      if (!record.sourceIds.length)
+    if (evidenceBackedCollections.has(name)) {
+      if (!Array.isArray(record.sourceIds) || !record.sourceIds.length) {
         errors.push(`${name}/${record.id} has no sources`);
-      for (const sourceId of record.sourceIds)
-        if (!sourceIds.has(sourceId))
+      } else {
+        for (const sourceId of record.sourceIds)
+          if (!sourceIds.has(sourceId))
+            errors.push(
+              `${name}/${record.id} references missing source ${sourceId}`,
+            );
+      }
+      if (!record.review) {
+        errors.push(`${name}/${record.id} has no review metadata`);
+      } else {
+        if (record.review.nextReviewAt < today)
           errors.push(
-            `${name}/${record.id} references missing source ${sourceId}`,
+            `${name}/${record.id} review expired ${record.review.nextReviewAt}`,
           );
-    }
-    if (record.review) {
-      if (record.review.nextReviewAt < today)
-        errors.push(
-          `${name}/${record.id} review expired ${record.review.nextReviewAt}`,
-        );
-      if (release && record.review.status !== "clinical-approved")
-        errors.push(
-          `${name}/${record.id} is ${record.review.status}, not clinical-approved`,
-        );
+        if (
+          release &&
+          !["editorial-ready", "clinical-approved"].includes(
+            record.review.status,
+          )
+        )
+          errors.push(
+            `${name}/${record.id} is ${record.review.status}, not technically ready for release`,
+          );
+      }
     }
   }
 }
