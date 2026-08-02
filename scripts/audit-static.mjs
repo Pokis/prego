@@ -76,6 +76,7 @@ for (const file of html) {
 }
 
 const required = [
+  ".nojekyll",
   "index.html",
   "timeline/index.html",
   "getting-pregnant/index.html",

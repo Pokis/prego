@@ -58,6 +58,8 @@ npm run audit:content  # coverage, uniqueness, sources and review expiry
 npm run build          # portable static evaluation artifact
 npm run audit:static   # route, link and third-party-runtime audit of dist/
 npm run audit:base     # nested-base-path build and link audit
+npm run audit:pages    # audit the current dist/ as a Pages-ready artifact
+npm run audit:github-pages # disposable GitHub project-site build and workflow audit
 npm run verify         # complete non-browser verification sequence
 npm run build:release  # clinical release gate; expected to fail for now
 npm run format         # format authored and generated files
@@ -95,6 +97,8 @@ Important locations:
 - `src/lib/milestones.ts` — deterministic journey ordering and plain-language date-window labels.
 - `src/lib/storage.ts` — versioned device-state schema and migration.
 - `scripts/audit-content.mjs` — content coverage and medical release rules.
+- `scripts/deployment-config.mjs` — normalized canonical URL and automatic GitHub Pages base-path resolution.
+- `.github/workflows/` — non-deploying CI plus a manually confirmed, release-gated Pages workflow.
 - `tests/` — unit, cross-browser and accessibility verification.
 - `docs/` — focused implementation and authoring documentation.
 
@@ -228,9 +232,10 @@ The absence of public citation panels is not permission to weaken evidence or ap
 npm run build
 npm run audit:static
 npm run audit:base
+npm run audit:github-pages
 ```
 
-The output is `dist/`. `SITE_URL` controls canonical and sitemap URLs; `BASE_PATH` supports subpath hosting.
+The output is `dist/`. `SITE_URL` controls canonical and sitemap URLs; `BASE_PATH` supports subpath hosting. In GitHub Actions, an ordinary `owner/repository` Pages build automatically uses `https://owner.github.io/repository/`; an `owner.github.io` repository uses the domain root.
 
 ```powershell
 $env:SITE_URL = "https://example.com"
@@ -238,7 +243,7 @@ $env:BASE_PATH = "/pregnancy-guide/"
 npm run build
 ```
 
-See [Static deployment](docs/deployment.md) for Cloudflare Pages, GitHub Pages, Netlify and conventional static-server examples. No deployment has been performed.
+See [Static deployment](docs/deployment.md) for the GitHub Pages setup, guarded manual workflow, custom-domain variables, local simulation and provider-neutral alternatives. Push and pull-request CI never deploys. The manual deployment still fails until the clinical release gate passes. No deployment has been performed.
 
 ## Troubleshooting
 
@@ -247,6 +252,7 @@ See [Static deployment](docs/deployment.md) for Cloudflare Pages, GitHub Pages, 
 - **Dates appear one day off:** use `src/lib/date.ts`; never parse a date-only string through local midnight ad hoc.
 - **The essentials page fails schema validation:** check every example status and all required do/don’t/ask arrays.
 - **Release build fails:** approval failures are expected until real clinical review is complete; never bypass the gate.
+- **A GitHub project site has broken assets:** run `npm run audit:github-pages`; do not hard-code the repository name in components.
 - **Browser tests cannot start:** install the supported Playwright browsers with `npx playwright install` and rerun the focused command.
 
 ## Documentation and contribution rules

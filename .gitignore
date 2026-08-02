@@ -1,6 +1,7 @@
 node_modules/
 dist/
 .audit-dist-base/
+.audit-dist-github-pages/
 .astro/
 .cache/
 playwright-report/

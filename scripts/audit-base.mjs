@@ -35,6 +35,8 @@ try {
     throw new Error("The nested-base build did not produce index.html");
   const html = readFileSync(homepage, "utf8");
   for (const expected of [
+    'href="https://example.test/pregnancy-guide/"',
+    'href="/pregnancy-guide/getting-pregnant/"',
     'href="/pregnancy-guide/timeline/"',
     'href="/pregnancy-guide/manifest.webmanifest"',
     'content="https://example.test/pregnancy-guide/og.webp"',
@@ -43,6 +45,8 @@ try {
     if (!html.includes(expected))
       throw new Error(`Nested-base output is missing ${expected}`);
   }
+  if (!existsSync(resolve(output, ".nojekyll")))
+    throw new Error("Nested-base output is missing .nojekyll");
   if (/href="\/(?!pregnancy-guide\/|\/)/.test(html))
     throw new Error("Nested-base homepage contains an unprefixed local link");
   console.log("Nested-base audit passed for /pregnancy-guide/.");

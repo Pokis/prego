@@ -1,7 +1,8 @@
-const CACHE = "pregnancy-clearly-v3";
+const CACHE = "pregnancy-clearly-v4";
 const fromScope = (path) => new URL(path, self.registration.scope).toString();
 const CORE = [
   "./",
+  "getting-pregnant/",
   "timeline/",
   "essentials/",
   "urgent-help/",

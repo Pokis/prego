@@ -45,6 +45,8 @@ The product must not become a chatbot, symptom checker, diagnostic tool, adverti
 - `src/lib/storage.ts`: versioned browser-state migration.
 - `src/styles/global.css`: tokens, components, responsive behavior and accessibility states.
 - `scripts/audit-content.mjs`: coverage, evidence and release rules.
+- `scripts/deployment-config.mjs`: canonical origin and root/subpath resolution, including GitHub Pages project sites.
+- `.github/workflows/`: non-deploying verification and the manual, release-gated Pages workflow.
 - `tests/`: unit, browser and automated accessibility checks.
 - `docs/`: architecture, authoring, safety, testing and deployment guidance.
 
@@ -57,6 +59,7 @@ npm run audit:content
 npm run build
 npm run audit:static
 npm run audit:base
+npm run audit:github-pages
 ```
 
 For UI changes, run the relevant Playwright journeys. For navigation, form, focus, color or responsive changes, run `npm run test:a11y`. Use `npm run verify` for the complete non-browser sequence.
@@ -144,4 +147,4 @@ Public routes must not point to removed `/faq/`, `/guides/`, `/regions/`, `/sour
 
 ## Deployment boundary
 
-The owner requested local implementation only. Do not deploy, provision hosting, add vendor-only functions or publish the medical content without explicit authorization.
+GitHub Pages support is prepared, but publishing remains authorization-gated. Push and pull-request workflows may verify only. The Pages deployment workflow must remain manual and must run `build:release`; do not deploy, provision hosting or publish medical content without explicit authorization.

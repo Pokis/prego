@@ -20,10 +20,12 @@
     "audit:content": "npm run content:generate && node scripts/audit-content.mjs",
     "audit:static": "node scripts/audit-static.mjs",
     "audit:base": "node scripts/audit-base.mjs",
+    "audit:pages": "node scripts/audit-pages-artifact.mjs",
+    "audit:github-pages": "npm run content:generate && node scripts/audit-github-pages.mjs",
     "build": "npm run content:generate && astro build",
     "build:release": "npm run audit:content -- --release && astro build",
     "preview": "astro preview",
-    "verify": "npm run check && npm run test && npm run audit:content && npm run build && npm run audit:static && npm run audit:base",
+    "verify": "npm run check && npm run test && npm run audit:content && npm run build && npm run audit:static && npm run audit:base && npm run audit:github-pages",
     "format": "prettier --write .",
     "format:check": "prettier --check ."
   },
