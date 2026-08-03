@@ -13,11 +13,21 @@ const essentials = (await getCollection("essentials")).sort(
 const substitutions = (await getCollection("substitutions")).map(
   (item) => item.data,
 );
+const priorityOrder = { P0: 0, P1: 1, baseline: 2 };
+const findings = (await getCollection("findings"))
+  .map((item) => item.data)
+  .sort(
+    (a, b) =>
+      priorityOrder[a.priority] - priorityOrder[b.priority] ||
+      a.title.localeCompare(b.title),
+  );
 
 const statusLabel = {
   "generally-ok": "Generally okay",
   avoid: "Avoid",
   "check-first": "Check first",
+  "contact-care": "Contact care",
+  urgent: "Urgent help",
 };
 
 const schema = {
@@ -214,31 +224,48 @@ const schema = {
                 targetId={scopedAnchor(item.data.slug, "real-examples")}
                 label={`${item.data.title}: real examples`}
               />
-              <h3>Real examples</h3>
+              <h3>Direct answers</h3>
               <div class="example-table" role="list">
-                {item.data.examples.map((example) => {
-                  const exampleId = scopedAnchor(item.data.slug, example.name);
-                  return (
-                    <article
-                      class="example-row"
-                      id={exampleId}
-                      data-share-target
-                      tabindex="-1"
-                      role="listitem"
-                    >
-                      <ShareAnchor
-                        targetId={exampleId}
-                        label={example.name}
-                        compact
-                      />
-                      <strong>{example.name}</strong>
-                      <span class={`example-status ${example.status}`}>
-                        {statusLabel[example.status]}
-                      </span>
-                      <p>{example.guidance}</p>
-                    </article>
-                  );
-                })}
+                {findings
+                  .filter((finding) => finding.sectionId === item.data.id)
+                  .map((finding) => {
+                    return (
+                      <article
+                        class="example-row"
+                        id={finding.id}
+                        data-share-target
+                        tabindex="-1"
+                        role="listitem"
+                      >
+                        <ShareAnchor
+                          targetId={finding.id}
+                          label={finding.title}
+                          compact
+                        />
+                        <strong>{finding.title}</strong>
+                        <span class={`example-status ${finding.status}`}>
+                          {statusLabel[finding.status]}
+                        </span>
+                        <div class="example-guidance">
+                          <p>{finding.summary}</p>
+                          {finding.details.map((detail) => (
+                            <p>{detail}</p>
+                          ))}
+                          <div class="finding-factors">
+                            <strong>What changes the answer</strong>
+                            <ul>
+                              {finding.decisionFactors.map((factor) => (
+                                <li>{factor}</li>
+                              ))}
+                            </ul>
+                          </div>
+                          <p class={`finding-care-note ${finding.status}`}>
+                            <strong>Care threshold:</strong> {finding.careNote}
+                          </p>
+                        </div>
+                      </article>
+                    );
+                  })}
               </div>
             </div>
             <a class="back-to-top" href="#essential-topics">

@@ -68,6 +68,46 @@ const essentials = defineCollection({
   }),
 });
 
+const findings = defineCollection({
+  loader: file("src/data/generated/findings.json"),
+  schema: z.object({
+    id: z.string(),
+    sectionId: z.string(),
+    title: z.string(),
+    aliases: z.array(z.string()).min(2),
+    status: z.enum([
+      "generally-ok",
+      "avoid",
+      "check-first",
+      "contact-care",
+      "urgent",
+    ]),
+    priority: z.enum(["baseline", "P0", "P1"]),
+    recordType: z.enum([
+      "food",
+      "drink",
+      "activity",
+      "medicine",
+      "home-exposure",
+      "work-exposure",
+      "travel",
+      "sexual-health",
+      "sleep",
+      "test-or-decision",
+      "symptom",
+      "personal-care",
+      "infection",
+      "mental-health",
+    ]),
+    summary: z.string(),
+    details: z.array(z.string()).min(1).max(3),
+    decisionFactors: z.array(z.string()).min(3).max(4),
+    careNote: z.string(),
+    sourceIds: z.array(z.string()).min(1),
+    review: reviewSchema,
+  }),
+});
+
 const substitutions = defineCollection({
   loader: file("src/data/generated/substitutions.json"),
   schema: z.object({
@@ -197,6 +237,7 @@ const urgent = defineCollection({
 export const collections = {
   timeline,
   essentials,
+  findings,
   substitutions,
   preconception,
   milestones,

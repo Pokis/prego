@@ -1236,6 +1236,56 @@ p {
   margin: 0;
 }
 
+.example-guidance {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.example-guidance p:first-child {
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.finding-factors {
+  background: color-mix(in srgb, var(--paper) 78%, transparent);
+  border: 1px solid var(--line);
+  border-radius: 0.8rem;
+  padding: 0.75rem 0.9rem;
+}
+
+.finding-factors > strong {
+  display: block;
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.4rem;
+  text-transform: uppercase;
+}
+
+.finding-factors ul {
+  display: grid;
+  gap: 0.28rem;
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.finding-factors li {
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.finding-care-note {
+  border-left: 3px solid var(--ochre);
+  padding-left: 0.75rem;
+}
+
+.finding-care-note.contact-care {
+  border-left-color: var(--rose);
+}
+
+.finding-care-note.urgent {
+  border-left-color: var(--danger);
+}
+
 .example-status {
   border-radius: 999px;
   font-size: 0.7rem;
@@ -1259,6 +1309,16 @@ p {
 .example-status.check-first {
   background: var(--amber-pale);
   color: var(--amber);
+}
+
+.example-status.contact-care {
+  background: #e5eff5;
+  color: #244f67;
+}
+
+.example-status.urgent {
+  background: var(--danger-pale);
+  color: var(--danger);
 }
 
 .back-to-top {
@@ -3872,7 +3932,8 @@ p {
     justify-self: start;
   }
 
-  .example-row p {
+  .example-row p,
+  .example-row .example-guidance {
     grid-column: 1 / -1;
   }
 

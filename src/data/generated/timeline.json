@@ -2976,39 +2976,39 @@
     "title": "The first hours",
     "dek": "Care for the recovering parent and newborn begins as an ongoing conversation, not a perfect performance.",
     "summary": [
-      "Care for the recovering parent and newborn begins as an ongoing conversation, not a perfect performance.",
-      "Both parent and baby deserve care; neither person's warning signs should be minimized.",
-      "Ask for practical help before exhaustion becomes a crisis."
+      "The first hours focus on stabilising the recovering parent, checking the newborn and supporting warmth, contact and feeding without pressure.",
+      "Pain relief, bleeding, wounds, urination and any unexpected events should be explained before the care team steps away.",
+      "Feeding support should respect the family's choice and include a practical plan for the next feed."
     ],
     "bodyMind": [
-      "Bleeding, pain, incision or perineal healing, pelvic symptoms, sleep and mood all deserve space in follow-up care.",
-      "Recovery varies with birth, health, support and feeding; it is not a race back to a previous version of yourself."
+      "Observations after birth commonly include bleeding, pulse, blood pressure, temperature, uterine firmness, pain and any caesarean or perineal wound.",
+      "A complicated, frightening or very different birth can take time to process. Ask for a plain-language explanation now and a later debrief if you want one."
     ],
     "baby": [
-      "Feeding, alertness, breathing, temperature, color and movement are useful observations to share with your baby's clinician.",
-      "Milestones describe skills most children show by an age; they are not a pass/fail test or diagnosis."
+      "The newborn is checked for breathing, temperature, colour, tone and transition after birth; extra observation may be needed after prematurity, infection risk or medicines.",
+      "Skin-to-skin contact can support warmth and connection when medically appropriate, but separation for care or not wanting it immediately is not a failure."
     ],
     "doNow": [
-      "Keep parent and baby care contacts easy to find.",
-      "Accept or request specific practical support.",
-      "Bring feeding, sleep, pain and mood questions to follow-up care."
+      "Ask what observations are being done, what is normal now and what would change the plan.",
+      "Tell staff when pain, dizziness, nausea or bleeding changes rather than waiting for the next scheduled check.",
+      "Confirm how to call for help before trying to stand, shower or lift the baby after anaesthesia, surgery or significant blood loss."
     ],
     "avoidAsk": [
-      "Do not ignore heavy bleeding, trouble breathing, chest pain, seizures, severe headache, thoughts of harm or a baby who is hard to wake or struggling to breathe.",
-      "Ask before resuming activities if recovery, complications or surgery affect what is appropriate."
+      "Do not stand alone if your legs feel weak, numb or unsteady, and do not minimise soaking bleeding, faintness, chest pain or trouble breathing.",
+      "Ask before giving the newborn anything not in the agreed feeding plan, including water, herbal products or another person's milk."
     ],
     "appointments": [
-      "Postnatal contacts and infant visits depend on individual need. Follow the plan given at discharge and ask who to contact with concerns."
+      "Before transfer or discharge, ask which parent and newborn checks remain, when results will return and who will explain them."
     ],
     "partner": [
-      "Protect rest, manage visitors and logistics, notice warning signs, and take concerns seriously the first time."
+      "Keep notes, protect consent and rest, bring water and food when allowed, and call staff promptly when either parent or baby changes."
     ],
     "topics": [
       "postpartum",
-      "recovery",
-      "newborn",
-      "mental-health",
-      "feeding"
+      "birth-recovery",
+      "newborn-transition",
+      "feeding-start",
+      "consent"
     ],
     "audiences": [
       "parent",
@@ -3019,8 +3019,7 @@
     "sourceIds": [
       "who-postnatal",
       "who-newborn",
-      "acog-postpartum",
-      "cdc-milestones"
+      "acog-postpartum"
     ],
     "milestoneIds": [
       "first-day-checks"
@@ -3043,39 +3042,39 @@
     "title": "Observe, recover, ask",
     "dek": "Rest, observations, newborn checks and feeding support matter more than mastering a routine.",
     "summary": [
-      "Rest, observations, newborn checks and feeding support matter more than mastering a routine.",
-      "Both parent and baby deserve care; neither person's warning signs should be minimized.",
-      "Ask for practical help before exhaustion becomes a crisis."
+      "Recovery during the first day includes safe movement, bladder function, bleeding, pain control, wound checks and rest.",
+      "Newborn feeding, temperature, breathing, alertness and expected screening should be reviewed together.",
+      "Discharge is a handoff: leave with warning signs, contacts and a concrete follow-up plan for both people."
     ],
     "bodyMind": [
-      "Bleeding, pain, incision or perineal healing, pelvic symptoms, sleep and mood all deserve space in follow-up care.",
-      "Recovery varies with birth, health, support and feeding; it is not a race back to a previous version of yourself."
+      "Ask for help with the first walk or shower if you had an epidural, anaesthetic, surgery, tearing, heavy blood loss or ongoing dizziness.",
+      "Difficulty passing urine, rapidly increasing pain, a severe headache, heavy bleeding or feeling suddenly unwell needs attention before discharge."
     ],
     "baby": [
-      "Feeding, alertness, breathing, temperature, color and movement are useful observations to share with your baby's clinician.",
-      "Milestones describe skills most children show by an age; they are not a pass/fail test or diagnosis."
+      "Early feeds can be frequent and variable; support should look at positioning, transfer or intake, comfort and the baby's alertness rather than a single clock target.",
+      "Ask which newborn examinations, screening tests, preventive medicines or vaccines are offered, and when results will be available."
     ],
     "doNow": [
-      "Keep parent and baby care contacts easy to find.",
-      "Accept or request specific practical support.",
-      "Bring feeding, sleep, pain and mood questions to follow-up care."
+      "Practise the feeding and soothing plan with someone watching so questions surface while help is present.",
+      "Write down the parent and baby warning signs and the correct daytime, after-hours and emergency contacts.",
+      "Arrange transport, medicines, food, sleep space and practical help before leaving care."
     ],
     "avoidAsk": [
-      "Do not ignore heavy bleeding, trouble breathing, chest pain, seizures, severe headache, thoughts of harm or a baby who is hard to wake or struggling to breathe.",
-      "Ask before resuming activities if recovery, complications or surgery affect what is appropriate."
+      "Do not leave uncertainty about how much bleeding is too much, how wounds should be cared for or when the baby should next feed.",
+      "Ask a clinician to review the exact pain medicines, doses and feeding context; do not combine products with overlapping ingredients."
     ],
     "appointments": [
-      "Postnatal contacts and infant visits depend on individual need. Follow the plan given at discharge and ask who to contact with concerns."
+      "Confirm the first parent contact, newborn assessment, feeding or weight follow-up, and any earlier review required by complications."
     ],
     "partner": [
-      "Protect rest, manage visitors and logistics, notice warning signs, and take concerns seriously the first time."
+      "Learn the discharge plan too, including safe sleep setup, medicine timing, feeding cues and who to call when the recovering parent is asleep."
     ],
     "topics": [
       "postpartum",
-      "recovery",
-      "newborn",
-      "mental-health",
-      "feeding"
+      "discharge",
+      "mobility",
+      "newborn-screening",
+      "safe-sleep"
     ],
     "audiences": [
       "parent",
@@ -3086,8 +3085,8 @@
     "sourceIds": [
       "who-postnatal",
       "who-newborn",
-      "acog-postpartum",
-      "cdc-milestones"
+      "aap-safe-sleep",
+      "acog-postpartum"
     ],
     "milestoneIds": [
       "first-day-checks"
@@ -3110,39 +3109,39 @@
     "title": "The early transition",
     "dek": "Feeding, sleep, emotions and physical recovery can change quickly; early questions are worth raising.",
     "summary": [
-      "Feeding, sleep, emotions and physical recovery can change quickly; early questions are worth raising.",
-      "Both parent and baby deserve care; neither person's warning signs should be minimized.",
-      "Ask for practical help before exhaustion becomes a crisis."
+      "Bleeding, breast or chest changes, after-pains, bowel and bladder function, sleep loss and emotion can all shift quickly on days two and three.",
+      "The baby may feed very frequently; a feeding assessment should consider comfort, intake signs, output, weight context and alertness.",
+      "Jaundice, poor feeding, unusual sleepiness, breathing difficulty or temperature concerns need newborn advice promptly."
     ],
     "bodyMind": [
-      "Bleeding, pain, incision or perineal healing, pelvic symptoms, sleep and mood all deserve space in follow-up care.",
-      "Recovery varies with birth, health, support and feeding; it is not a race back to a previous version of yourself."
+      "Tearfulness and emotional sensitivity can appear during this transition, but panic, hopelessness, inability to sleep when given the chance or thoughts of harm need prompt help.",
+      "Increasing wound pain, spreading redness, fever, foul-smelling discharge, worsening headache or heavy bleeding is not a normal price of recovery."
     ],
     "baby": [
-      "Feeding, alertness, breathing, temperature, color and movement are useful observations to share with your baby's clinician.",
-      "Milestones describe skills most children show by an age; they are not a pass/fail test or diagnosis."
+      "Jaundice often appears as yellowing of the skin or eyes; its timing and severity need clinical assessment rather than comparison with photographs.",
+      "Record feeds and wet or dirty nappies only as a practical memory aid, not a score of parenting success."
     ],
     "doNow": [
-      "Keep parent and baby care contacts easy to find.",
-      "Accept or request specific practical support.",
-      "Bring feeding, sleep, pain and mood questions to follow-up care."
+      "Use the scheduled early contact to discuss bleeding, pain, wounds, urination, bowel movements, mood and feeding.",
+      "Ask someone to prepare food, refill water and manage messages while the parent feeds or rests.",
+      "Place the baby on a separate, firm, flat sleep surface on their back for every sleep."
     ],
     "avoidAsk": [
-      "Do not ignore heavy bleeding, trouble breathing, chest pain, seizures, severe headache, thoughts of harm or a baby who is hard to wake or struggling to breathe.",
-      "Ask before resuming activities if recovery, complications or surgery affect what is appropriate."
+      "Do not wait for a routine appointment if the baby is hard to wake, refuses feeds, struggles to breathe, has blue lips or feels unusually hot or cold.",
+      "Ask before using nipple creams, herbal lactation products, laxatives or additional pain medicines because the exact product matters."
     ],
     "appointments": [
-      "Postnatal contacts and infant visits depend on individual need. Follow the plan given at discharge and ask who to contact with concerns."
+      "The early postnatal contact should include parent recovery and newborn feeding, weight and jaundice assessment, with a clear next review date."
     ],
     "partner": [
-      "Protect rest, manage visitors and logistics, notice warning signs, and take concerns seriously the first time."
+      "Take over household work and observe the whole situation: worsening pain, confusion, withdrawal or a baby becoming less alert all deserve action."
     ],
     "topics": [
       "postpartum",
-      "recovery",
-      "newborn",
-      "mental-health",
-      "feeding"
+      "day-three",
+      "jaundice",
+      "feeding-assessment",
+      "baby-blues"
     ],
     "audiences": [
       "parent",
@@ -3153,8 +3152,8 @@
     "sourceIds": [
       "who-postnatal",
       "who-newborn",
-      "acog-postpartum",
-      "cdc-milestones"
+      "who-feeding",
+      "aap-safe-sleep"
     ],
     "milestoneIds": [
       "day-three-contact"
@@ -3177,39 +3176,39 @@
     "title": "One week at a time",
     "dek": "Small routines emerge while parent and baby still need close observation and support.",
     "summary": [
-      "Small routines emerge while parent and baby still need close observation and support.",
-      "Both parent and baby deserve care; neither person's warning signs should be minimized.",
-      "Ask for practical help before exhaustion becomes a crisis."
+      "The first week is for protecting recovery, checking feeding and weight in context, and noticing infection or mental-health warning signs.",
+      "Bleeding should be discussed if it becomes heavier again, smells unpleasant, contains very large clots or comes with faintness or fever.",
+      "A safe sleep space and a realistic night-care plan matter more than trying to establish a rigid newborn routine."
     ],
     "bodyMind": [
-      "Bleeding, pain, incision or perineal healing, pelvic symptoms, sleep and mood all deserve space in follow-up care.",
-      "Recovery varies with birth, health, support and feeding; it is not a race back to a previous version of yourself."
+      "Perineal or caesarean wounds should be getting no worse; opening, discharge, spreading redness, fever or escalating pain needs review.",
+      "Breast or chest redness, a painful hard area, fever or flu-like symptoms may need feeding support and clinical assessment without delay."
     ],
     "baby": [
-      "Feeding, alertness, breathing, temperature, color and movement are useful observations to share with your baby's clinician.",
-      "Milestones describe skills most children show by an age; they are not a pass/fail test or diagnosis."
+      "Feeding effectiveness is judged with the baby's examination, weight pattern, output and behaviour—not by feed length alone.",
+      "Keep the baby's face and head uncovered during sleep and avoid sofas or armchairs when an adult may fall asleep holding them."
     ],
     "doNow": [
-      "Keep parent and baby care contacts easy to find.",
-      "Accept or request specific practical support.",
-      "Bring feeding, sleep, pain and mood questions to follow-up care."
+      "Prepare one-handed food, drinks, medicines and care supplies where the parent usually rests.",
+      "Ask for hands-on feeding help when there is pain, clicking, repeated slipping off, very long feeds or concern about intake.",
+      "Choose one protected rest period and assign another adult to non-feeding care and household decisions."
     ],
     "avoidAsk": [
-      "Do not ignore heavy bleeding, trouble breathing, chest pain, seizures, severe headache, thoughts of harm or a baby who is hard to wake or struggling to breathe.",
-      "Ask before resuming activities if recovery, complications or surgery affect what is appropriate."
+      "Do not dismiss intense sadness, panic, agitation, confusion or frightening thoughts as something every new parent must tolerate.",
+      "Ask before restarting driving, strenuous exercise, tampons, penetrative sex or wound-submerging baths after complications or surgery."
     ],
     "appointments": [
-      "Postnatal contacts and infant visits depend on individual need. Follow the plan given at discharge and ask who to contact with concerns."
+      "At the one-week contact, bring unresolved discharge questions and ask what parent and newborn follow-up happens next."
     ],
     "partner": [
-      "Protect rest, manage visitors and logistics, notice warning signs, and take concerns seriously the first time."
+      "Create uninterrupted opportunities for sleep and food, screen visitors, clean feeding equipment as directed and make the call when help is needed."
     ],
     "topics": [
       "postpartum",
-      "recovery",
-      "newborn",
-      "mental-health",
-      "feeding"
+      "first-week",
+      "wound-care",
+      "mastitis",
+      "newborn-weight"
     ],
     "audiences": [
       "parent",
@@ -3220,8 +3219,8 @@
     "sourceIds": [
       "who-postnatal",
       "who-newborn",
-      "acog-postpartum",
-      "cdc-milestones"
+      "who-feeding",
+      "nice-postnatal"
     ],
     "milestoneIds": [
       "week-two-contact"
@@ -3244,39 +3243,39 @@
     "title": "Recovery is not linear",
     "dek": "Healing, feeding and emotions can improve unevenly. Bring concerns to the scheduled check-in.",
     "summary": [
-      "Healing, feeding and emotions can improve unevenly. Bring concerns to the scheduled check-in.",
-      "Both parent and baby deserve care; neither person's warning signs should be minimized.",
-      "Ask for practical help before exhaustion becomes a crisis."
+      "At two weeks, improvement may be uneven, but pain, mobility, wounds, bladder or bowel problems and feeding concerns should have an active plan.",
+      "Mood symptoms that are intense, worsening or lasting beyond the brief early transition deserve assessment now.",
+      "The baby's weight, feeding and alertness should be reviewed with a clinician rather than managed by repeated unsupervised changes."
     ],
     "bodyMind": [
-      "Bleeding, pain, incision or perineal healing, pelvic symptoms, sleep and mood all deserve space in follow-up care.",
-      "Recovery varies with birth, health, support and feeding; it is not a race back to a previous version of yourself."
+      "Persistent urine leakage, difficulty emptying bladder or bowel, pelvic heaviness, severe constipation or pain that limits walking is worth raising early.",
+      "Tell the care team if sleep is impossible even when the baby is settled, anxiety feels relentless or you feel detached, hopeless or unsafe."
     ],
     "baby": [
-      "Feeding, alertness, breathing, temperature, color and movement are useful observations to share with your baby's clinician.",
-      "Milestones describe skills most children show by an age; they are not a pass/fail test or diagnosis."
+      "Ask how the baby's individual growth pattern will be followed and what feeding signs should trigger an earlier review.",
+      "Short periods of awake, supervised tummy time can begin when the baby is ready; sleep remains flat on the back in a separate clear space."
     ],
     "doNow": [
-      "Keep parent and baby care contacts easy to find.",
-      "Accept or request specific practical support.",
-      "Bring feeding, sleep, pain and mood questions to follow-up care."
+      "List what has improved, what is unchanged and what is worse before the check-in.",
+      "Ask for pelvic-health, wound, feeding or mental-health referral when a concern needs more than reassurance.",
+      "Keep recovery tasks small: food, fluids, prescribed care, gentle movement and protected sleep."
     ],
     "avoidAsk": [
-      "Do not ignore heavy bleeding, trouble breathing, chest pain, seizures, severe headache, thoughts of harm or a baby who is hard to wake or struggling to breathe.",
-      "Ask before resuming activities if recovery, complications or surgery affect what is appropriate."
+      "Do not use comparison with another parent's recovery to decide that a symptom is normal.",
+      "Ask before changing prescribed treatment or starting supplements marketed for milk supply, mood, weight loss or healing."
     ],
     "appointments": [
-      "Postnatal contacts and infant visits depend on individual need. Follow the plan given at discharge and ask who to contact with concerns."
+      "Use the two-week contact to close loops on results, referrals, blood pressure or anaemia follow-up, wounds, feeding and mood."
     ],
     "partner": [
-      "Protect rest, manage visitors and logistics, notice warning signs, and take concerns seriously the first time."
+      "Ask specific questions—about pain, fear, sleep and feeling safe—then remove a concrete burden instead of waiting to be directed."
     ],
     "topics": [
       "postpartum",
-      "recovery",
-      "newborn",
-      "mental-health",
-      "feeding"
+      "week-two",
+      "pelvic-health",
+      "mood-check",
+      "feeding-follow-up"
     ],
     "audiences": [
       "parent",
@@ -3288,7 +3287,7 @@
       "who-postnatal",
       "who-newborn",
       "acog-postpartum",
-      "cdc-milestones"
+      "nhs-mental"
     ],
     "milestoneIds": [
       "week-two-contact"
@@ -3311,39 +3310,39 @@
     "title": "Support the whole parent",
     "dek": "This is a useful point to review mood, pain, bleeding, sleep, feeding and the help available at home.",
     "summary": [
-      "This is a useful point to review mood, pain, bleeding, sleep, feeding and the help available at home.",
-      "Both parent and baby deserve care; neither person's warning signs should be minimized.",
-      "Ask for practical help before exhaustion becomes a crisis."
+      "Week three is a deliberate mental-health checkpoint as support often decreases while sleep debt accumulates.",
+      "Physical recovery still counts: ongoing bleeding, wound problems, headaches, pain, incontinence or bowel symptoms should not disappear behind baby care.",
+      "A sustainable care rota should include protected rest and a route to urgent help at night."
     ],
     "bodyMind": [
-      "Bleeding, pain, incision or perineal healing, pelvic symptoms, sleep and mood all deserve space in follow-up care.",
-      "Recovery varies with birth, health, support and feeding; it is not a race back to a previous version of yourself."
+      "Depression or anxiety can appear as dread, anger, numbness, guilt, panic, intrusive thoughts or feeling unable to cope—not only visible sadness.",
+      "Confusion, hallucinations, extreme agitation, rapidly changing mood or unusual beliefs can be an emergency after birth and need immediate help."
     ],
     "baby": [
-      "Feeding, alertness, breathing, temperature, color and movement are useful observations to share with your baby's clinician.",
-      "Milestones describe skills most children show by an age; they are not a pass/fail test or diagnosis."
+      "Periods of crying commonly increase over the early weeks; ask about feeding, illness and soothing when the pattern worries you.",
+      "Put the baby somewhere safe and step away briefly if overwhelmed; never shake a baby, and call another adult when you are at your limit."
     ],
     "doNow": [
-      "Keep parent and baby care contacts easy to find.",
-      "Accept or request specific practical support.",
-      "Bring feeding, sleep, pain and mood questions to follow-up care."
+      "Name one person who can come now, one clinician to call, and one emergency route before a crisis happens.",
+      "Review whether each caregiver is getting any uninterrupted sleep and change the rota if nobody is functioning safely.",
+      "Share intrusive or frightening thoughts with a clinician; their presence does not by itself define intent, but they deserve assessment."
     ],
     "avoidAsk": [
-      "Do not ignore heavy bleeding, trouble breathing, chest pain, seizures, severe headache, thoughts of harm or a baby who is hard to wake or struggling to breathe.",
-      "Ask before resuming activities if recovery, complications or surgery affect what is appropriate."
+      "Do not leave a parent alone with escalating confusion, suicidal thoughts, thoughts of harm or loss of contact with reality.",
+      "Ask for same-day help when mental or physical symptoms are worsening, even if the standard appointment is weeks away."
     ],
     "appointments": [
-      "Postnatal contacts and infant visits depend on individual need. Follow the plan given at discharge and ask who to contact with concerns."
+      "Request an earlier postnatal or mental-health review if mood, anxiety, sleep or safety concerns cannot wait for the comprehensive visit."
     ],
     "partner": [
-      "Protect rest, manage visitors and logistics, notice warning signs, and take concerns seriously the first time."
+      "Treat a disclosure as health information: listen without judgement, stay present, contact care and reduce immediate demands."
     ],
     "topics": [
       "postpartum",
-      "recovery",
-      "newborn",
-      "mental-health",
-      "feeding"
+      "week-three",
+      "postnatal-depression",
+      "postpartum-psychosis",
+      "crying"
     ],
     "audiences": [
       "parent",
@@ -3353,9 +3352,9 @@
     "helpTier": "common",
     "sourceIds": [
       "who-postnatal",
-      "who-newborn",
-      "acog-postpartum",
-      "cdc-milestones"
+      "nhs-mental",
+      "cdc-warning",
+      "who-newborn"
     ],
     "milestoneIds": [
       "postpartum-plan"
@@ -3378,39 +3377,39 @@
     "title": "A broader recovery review",
     "dek": "Postpartum care should include physical, emotional, social and reproductive health—not only one examination.",
     "summary": [
-      "Postpartum care should include physical, emotional, social and reproductive health—not only one examination.",
-      "Both parent and baby deserve care; neither person's warning signs should be minimized.",
-      "Ask for practical help before exhaustion becomes a crisis."
+      "The comprehensive postnatal review should cover physical recovery, mood, sleep, feeding, chronic conditions, relationships, contraception and future care.",
+      "It is a planning visit, not a pass/fail inspection or automatic clearance for every activity.",
+      "Bring the concerns most likely to be missed when the conversation focuses only on the baby."
     ],
     "bodyMind": [
-      "Bleeding, pain, incision or perineal healing, pelvic symptoms, sleep and mood all deserve space in follow-up care.",
-      "Recovery varies with birth, health, support and feeding; it is not a race back to a previous version of yourself."
+      "Discuss bleeding, pain, wounds, pelvic floor, bladder and bowel function, headaches, blood pressure, anaemia risk, sleep and mental health.",
+      "Sex may feel physically or emotionally different; contraception, comfort, consent, dryness, pain and trauma history can be discussed separately."
     ],
     "baby": [
-      "Feeding, alertness, breathing, temperature, color and movement are useful observations to share with your baby's clinician.",
-      "Milestones describe skills most children show by an age; they are not a pass/fail test or diagnosis."
+      "Review feeding, growth, safe sleep, development, immunisation plans and who provides ongoing infant care.",
+      "Ask what normal variation looks like and what specific change should prompt an earlier baby assessment."
     ],
     "doNow": [
-      "Keep parent and baby care contacts easy to find.",
-      "Accept or request specific practical support.",
-      "Bring feeding, sleep, pain and mood questions to follow-up care."
+      "Write a short agenda and put the most important concern first.",
+      "Reconcile every prescription, over-the-counter medicine and supplement with the clinician and pharmacist.",
+      "Make referrals and follow-up dates concrete before the visit ends."
     ],
     "avoidAsk": [
-      "Do not ignore heavy bleeding, trouble breathing, chest pain, seizures, severe headache, thoughts of harm or a baby who is hard to wake or struggling to breathe.",
-      "Ask before resuming activities if recovery, complications or surgery affect what is appropriate."
+      "Do not assume the calendar alone makes heavy exercise, driving, penetration or lifting appropriate after pain, surgery, prolapse or other complications.",
+      "Ask about pregnancy spacing and contraception before relying on periods or feeding as proof that pregnancy cannot occur."
     ],
     "appointments": [
-      "Postnatal contacts and infant visits depend on individual need. Follow the plan given at discharge and ask who to contact with concerns."
+      "The postnatal review should connect unresolved pregnancy complications with primary, specialist, pelvic-health or mental-health care."
     ],
     "partner": [
-      "Protect rest, manage visitors and logistics, notice warning signs, and take concerns seriously the first time."
+      "Help prepare the agenda, cover baby care during the visit and make sure the recovering parent's questions are answered in their own right."
     ],
     "topics": [
       "postpartum",
-      "recovery",
-      "newborn",
-      "mental-health",
-      "feeding"
+      "six-week-review",
+      "contraception",
+      "pelvic-floor",
+      "chronic-care"
     ],
     "audiences": [
       "parent",
@@ -3419,10 +3418,10 @@
     ],
     "helpTier": "common",
     "sourceIds": [
-      "who-postnatal",
-      "who-newborn",
       "acog-postpartum",
-      "cdc-milestones"
+      "who-postnatal",
+      "nice-postnatal",
+      "cdc-medicine"
     ],
     "milestoneIds": [
       "postpartum-plan"
@@ -3445,39 +3444,39 @@
     "title": "The new routine is still new",
     "dek": "Recovery and identity continue changing even when the outside world expects normality.",
     "summary": [
-      "Recovery and identity continue changing even when the outside world expects normality.",
-      "Both parent and baby deserve care; neither person's warning signs should be minimized.",
-      "Ask for practical help before exhaustion becomes a crisis."
+      "At seven to eight weeks, ongoing pain, leakage, low mood or feeding difficulty still deserves treatment even if daily routines look more established.",
+      "Return-to-work or caregiving plans should include feeding, transport, sleep, medicines, appointments and what happens when the baby is unwell.",
+      "The two-month infant visit is a chance to review development, growth, feeding, safe sleep and preventive care."
     ],
     "bodyMind": [
-      "Bleeding, pain, incision or perineal healing, pelvic symptoms, sleep and mood all deserve space in follow-up care.",
-      "Recovery varies with birth, health, support and feeding; it is not a race back to a previous version of yourself."
+      "Gradual movement can build confidence, but heaviness, bulging, leakage, bleeding or pain during activity is a reason for pelvic-health assessment.",
+      "Identity, relationship and body changes can be difficult without meaning that gratitude or attachment is absent."
     ],
     "baby": [
-      "Feeding, alertness, breathing, temperature, color and movement are useful observations to share with your baby's clinician.",
-      "Milestones describe skills most children show by an age; they are not a pass/fail test or diagnosis."
+      "At around two months, clinicians look at a range of social, movement, communication and learning skills in context.",
+      "Vaccines and preventive care depend on the local clinical schedule; ask for the exact plan and expected after-care."
     ],
     "doNow": [
-      "Keep parent and baby care contacts easy to find.",
-      "Accept or request specific practical support.",
-      "Bring feeding, sleep, pain and mood questions to follow-up care."
+      "Test the practical work or care-day routine once before it becomes mandatory.",
+      "Arrange a clinical review for symptoms that have plateaued rather than waiting indefinitely for spontaneous recovery.",
+      "Keep safe sleep consistent across every caregiver and location."
     ],
     "avoidAsk": [
-      "Do not ignore heavy bleeding, trouble breathing, chest pain, seizures, severe headache, thoughts of harm or a baby who is hard to wake or struggling to breathe.",
-      "Ask before resuming activities if recovery, complications or surgery affect what is appropriate."
+      "Do not return to high-impact exercise only because a generic programme labels this week as safe.",
+      "Ask what to do after infant vaccination and which temperature or behaviour changes require care."
     ],
     "appointments": [
-      "Postnatal contacts and infant visits depend on individual need. Follow the plan given at discharge and ask who to contact with concerns."
+      "Bring parent concerns to your own clinician and infant concerns to the baby's visit; one appointment may not be designed to assess both fully."
     ],
     "partner": [
-      "Protect rest, manage visitors and logistics, notice warning signs, and take concerns seriously the first time."
+      "Own parts of the routine end to end—appointments, supplies, washing or night settling—so responsibility is shared, not merely tasks."
     ],
     "topics": [
       "postpartum",
-      "recovery",
-      "newborn",
-      "mental-health",
-      "feeding"
+      "two-months",
+      "return-to-work",
+      "exercise-return",
+      "infant-vaccines"
     ],
     "audiences": [
       "parent",
@@ -3486,10 +3485,10 @@
     ],
     "helpTier": "common",
     "sourceIds": [
-      "who-postnatal",
-      "who-newborn",
       "acog-postpartum",
-      "cdc-milestones"
+      "cdc-milestones",
+      "aap-safe-sleep",
+      "who-postnatal"
     ],
     "milestoneIds": [
       "two-month-development"
@@ -3512,39 +3511,39 @@
     "title": "Keep care connected",
     "dek": "Make sure ongoing health needs have a clinician and that concerns have not been lost in baby care.",
     "summary": [
-      "Make sure ongoing health needs have a clinician and that concerns have not been lost in baby care.",
-      "Both parent and baby deserve care; neither person's warning signs should be minimized.",
-      "Ask for practical help before exhaustion becomes a crisis."
+      "By three months, unresolved birth-related symptoms need an owner and follow-up rather than being normalised as permanent.",
+      "Postnatal depression and anxiety can start any time in the first year; a later onset is still real and treatable.",
+      "Feeding, sleep and contraception plans can be revised as needs change without framing the change as failure."
     ],
     "bodyMind": [
-      "Bleeding, pain, incision or perineal healing, pelvic symptoms, sleep and mood all deserve space in follow-up care.",
-      "Recovery varies with birth, health, support and feeding; it is not a race back to a previous version of yourself."
+      "Seek review for persistent pelvic or back pain, incontinence, painful sex, prolapse symptoms, wound sensitivity or weakness that limits ordinary life.",
+      "Ask about thyroid, anaemia, blood pressure or other medical causes when fatigue, racing heart, dizziness or low mood is marked or worsening."
     ],
     "baby": [
-      "Feeding, alertness, breathing, temperature, color and movement are useful observations to share with your baby's clinician.",
-      "Milestones describe skills most children show by an age; they are not a pass/fail test or diagnosis."
+      "A baby's sleep and feeding pattern can change during growth and illness; use safe foundations rather than promises of a fixed schedule.",
+      "Responsive talking, holding, floor play and noticing cues support development without turning every interaction into a lesson."
     ],
     "doNow": [
-      "Keep parent and baby care contacts easy to find.",
-      "Accept or request specific practical support.",
-      "Bring feeding, sleep, pain and mood questions to follow-up care."
+      "Check that every abnormal pregnancy or birth result has a documented follow-up plan.",
+      "Revisit contraception if the initial method is unacceptable or no longer fits feeding, bleeding or health needs.",
+      "Book care for symptoms that affect work, movement, sleep, sex or confidence."
     ],
     "avoidAsk": [
-      "Do not ignore heavy bleeding, trouble breathing, chest pain, seizures, severe headache, thoughts of harm or a baby who is hard to wake or struggling to breathe.",
-      "Ask before resuming activities if recovery, complications or surgery affect what is appropriate."
+      "Do not stop prescribed mental-health, blood-pressure, thyroid or other treatment because pregnancy has ended without a clinician's plan.",
+      "Ask for help with relationship conflict, isolation or unequal care work before resentment or exhaustion becomes a safety problem."
     ],
     "appointments": [
-      "Postnatal contacts and infant visits depend on individual need. Follow the plan given at discharge and ask who to contact with concerns."
+      "Use primary or specialist care to continue parent follow-up after routine maternity contacts end, and keep infant preventive visits separate."
     ],
     "partner": [
-      "Protect rest, manage visitors and logistics, notice warning signs, and take concerns seriously the first time."
+      "Notice the invisible planning load and take responsibility for recurring tasks, while continuing to check mood and safety directly."
     ],
     "topics": [
       "postpartum",
-      "recovery",
-      "newborn",
-      "mental-health",
-      "feeding"
+      "three-months",
+      "late-onset-mood",
+      "persistent-symptoms",
+      "contraception-review"
     ],
     "audiences": [
       "parent",
@@ -3553,9 +3552,9 @@
     ],
     "helpTier": "common",
     "sourceIds": [
-      "who-postnatal",
-      "who-newborn",
       "acog-postpartum",
+      "who-postnatal",
+      "nhs-mental",
       "cdc-milestones"
     ],
     "milestoneIds": [
@@ -3579,39 +3578,39 @@
     "title": "A family system in motion",
     "dek": "Sleep, feeding, work, relationships and recovery often need another practical reset.",
     "summary": [
-      "Sleep, feeding, work, relationships and recovery often need another practical reset.",
-      "Both parent and baby deserve care; neither person's warning signs should be minimized.",
-      "Ask for practical help before exhaustion becomes a crisis."
+      "Month three often brings another transition in work, care arrangements, feeding and sleep rather than a settled finish line.",
+      "Parent recovery remains health care when pain, mood, continence, bleeding or chronic conditions interfere with life.",
+      "The family plan should work on difficult days, not only when everyone is rested and the baby is well."
     ],
     "bodyMind": [
-      "Bleeding, pain, incision or perineal healing, pelvic symptoms, sleep and mood all deserve space in follow-up care.",
-      "Recovery varies with birth, health, support and feeding; it is not a race back to a previous version of yourself."
+      "Build activity by function and symptoms, with pelvic-health or medical guidance when pain, pressure, leakage or unusual bleeding appears.",
+      "Loneliness, loss of identity, anxiety about separation or returning to work can coexist with attachment to the baby and deserve support."
     ],
     "baby": [
-      "Feeding, alertness, breathing, temperature, color and movement are useful observations to share with your baby's clinician.",
-      "Milestones describe skills most children show by an age; they are not a pass/fail test or diagnosis."
+      "Conversation, songs, face-to-face response and supervised floor time are simple ways to support connection and emerging skills.",
+      "Avoid propping bottles or leaving a feeding baby unattended; positioning and feeding plans should match the baby's needs."
     ],
     "doNow": [
-      "Keep parent and baby care contacts easy to find.",
-      "Accept or request specific practical support.",
-      "Bring feeding, sleep, pain and mood questions to follow-up care."
+      "Map handoffs for medicines, feeds, safe sleep, emergency contacts and transport across caregivers.",
+      "Protect recurring time for the parent's appointments, rehabilitation, sleep and non-care identity.",
+      "Review whether equipment still fits and whether the baby's increasing movement changes home risks."
     ],
     "avoidAsk": [
-      "Do not ignore heavy bleeding, trouble breathing, chest pain, seizures, severe headache, thoughts of harm or a baby who is hard to wake or struggling to breathe.",
-      "Ask before resuming activities if recovery, complications or surgery affect what is appropriate."
+      "Do not compare sleep, feeding, weight or development with social-media snapshots as a substitute for clinical context.",
+      "Ask the baby's clinician before adding food, cereal or supplements solely to change sleep."
     ],
     "appointments": [
-      "Postnatal contacts and infant visits depend on individual need. Follow the plan given at discharge and ask who to contact with concerns."
+      "Keep the next infant preventive visit and any parent follow-up visible to every caregiver, including the questions each person wants answered."
     ],
     "partner": [
-      "Protect rest, manage visitors and logistics, notice warning signs, and take concerns seriously the first time."
+      "Make the return-to-work or care transition a shared operational plan, including nights, sick days, appointments and the recovering parent's care."
     ],
     "topics": [
       "postpartum",
-      "recovery",
-      "newborn",
-      "mental-health",
-      "feeding"
+      "month-three",
+      "care-handoffs",
+      "responsive-play",
+      "parent-identity"
     ],
     "audiences": [
       "parent",
@@ -3622,8 +3621,8 @@
     "sourceIds": [
       "who-postnatal",
       "who-newborn",
-      "acog-postpartum",
-      "cdc-milestones"
+      "cdc-milestones",
+      "acog-postpartum"
     ],
     "milestoneIds": [
       "two-month-development"
@@ -3646,39 +3645,39 @@
     "title": "Notice, play, respond",
     "dek": "Developmental milestones are conversation prompts, while safe sleep and responsive care remain foundations.",
     "summary": [
-      "Developmental milestones are conversation prompts, while safe sleep and responsive care remain foundations.",
-      "Both parent and baby deserve care; neither person's warning signs should be minimized.",
-      "Ask for practical help before exhaustion becomes a crisis."
+      "At four months, development is observed across movement, communication, learning and social connection rather than one isolated trick.",
+      "Safe sleep remains a firm, flat, separate space on the back even when sleep patterns change.",
+      "Parent mental and physical health still belongs on the care agenda, including symptoms that first appear now."
     ],
     "bodyMind": [
-      "Bleeding, pain, incision or perineal healing, pelvic symptoms, sleep and mood all deserve space in follow-up care.",
-      "Recovery varies with birth, health, support and feeding; it is not a race back to a previous version of yourself."
+      "A new increase in anxiety, low mood, rage, intrusive thoughts or sleep difficulty needs assessment even months after birth.",
+      "Progressive strengthening should remain symptom-led; pain, pelvic pressure, leakage or bleeding is information to bring to a clinician."
     ],
     "baby": [
-      "Feeding, alertness, breathing, temperature, color and movement are useful observations to share with your baby's clinician.",
-      "Milestones describe skills most children show by an age; they are not a pass/fail test or diagnosis."
+      "Offer supervised floor and tummy time while awake, talk back to sounds and make space for safe reaching and movement.",
+      "If a skill is lost or you are concerned about hearing, vision, movement, feeding or interaction, raise it promptly rather than waiting for the next milestone list."
     ],
     "doNow": [
-      "Keep parent and baby care contacts easy to find.",
-      "Accept or request specific practical support.",
-      "Bring feeding, sleep, pain and mood questions to follow-up care."
+      "Move medicines, cords, hot drinks and small objects out of reach before rolling and grabbing become predictable.",
+      "Review sleep spaces used by relatives or childcare, not only the main cot at home.",
+      "Write down developmental observations and questions for the four-month visit."
     ],
     "avoidAsk": [
-      "Do not ignore heavy bleeding, trouble breathing, chest pain, seizures, severe headache, thoughts of harm or a baby who is hard to wake or struggling to breathe.",
-      "Ask before resuming activities if recovery, complications or surgery affect what is appropriate."
+      "Do not use weighted sleep products, positioners or improvised padding to try to extend sleep.",
+      "Ask about feeding readiness and individual growth rather than treating four months as a universal date to start solids."
     ],
     "appointments": [
-      "Postnatal contacts and infant visits depend on individual need. Follow the plan given at discharge and ask who to contact with concerns."
+      "The four-month development and preventive-care visit should include caregiver concerns, growth, feeding, sleep and the next-stage safety plan."
     ],
     "partner": [
-      "Protect rest, manage visitors and logistics, notice warning signs, and take concerns seriously the first time."
+      "Check every care setting for safe sleep and emerging mobility risks, and keep protecting the parent's time for recovery and health care."
     ],
     "topics": [
       "postpartum",
-      "recovery",
-      "newborn",
-      "mental-health",
-      "feeding"
+      "month-four",
+      "safe-sleep",
+      "rolling",
+      "development-review"
     ],
     "audiences": [
       "parent",
@@ -3687,10 +3686,10 @@
     ],
     "helpTier": "common",
     "sourceIds": [
-      "who-postnatal",
+      "cdc-milestones",
+      "aap-safe-sleep",
       "who-newborn",
-      "acog-postpartum",
-      "cdc-milestones"
+      "acog-postpartum"
     ],
     "milestoneIds": [
       "four-month-development"
@@ -3713,39 +3712,39 @@
     "title": "Prepare for the next stage",
     "dek": "Ask about feeding transitions, mobility, home safety and your own ongoing recovery before changes arrive.",
     "summary": [
-      "Ask about feeding transitions, mobility, home safety and your own ongoing recovery before changes arrive.",
-      "Both parent and baby deserve care; neither person's warning signs should be minimized.",
-      "Ask for practical help before exhaustion becomes a crisis."
+      "Month five is a useful time to prepare for greater mobility and feeding changes without rushing either milestone.",
+      "Readiness for complementary food is assessed in context; age alone is not the only signal.",
+      "Persistent parent symptoms at five months are still worth diagnosis and treatment rather than acceptance."
     ],
     "bodyMind": [
-      "Bleeding, pain, incision or perineal healing, pelvic symptoms, sleep and mood all deserve space in follow-up care.",
-      "Recovery varies with birth, health, support and feeding; it is not a race back to a previous version of yourself."
+      "Follow up ongoing pain, numbness, incontinence, prolapse symptoms, painful sex, low mood or exhaustion that is out of proportion to available sleep.",
+      "Contraception needs can change with bleeding, feeding, side effects and future pregnancy plans; request a review if the method does not fit."
     ],
     "baby": [
-      "Feeding, alertness, breathing, temperature, color and movement are useful observations to share with your baby's clinician.",
-      "Milestones describe skills most children show by an age; they are not a pass/fail test or diagnosis."
+      "Prepare a safe seated feeding setup and learn the difference between gagging and choking before complementary foods begin.",
+      "Expect reaching, rolling or floor movement to make cords, falls, hot liquids, pets and small objects newly important hazards."
     ],
     "doNow": [
-      "Keep parent and baby care contacts easy to find.",
-      "Accept or request specific practical support.",
-      "Bring feeding, sleep, pain and mood questions to follow-up care."
+      "Ask the baby's clinician about readiness, allergens, textures, iron-rich foods and choking prevention before starting solids.",
+      "Get onto the floor and inspect each regular care space from the baby's reach level.",
+      "Book overdue parent dental, primary, pelvic-health or mental-health care rather than waiting for the infant schedule to become quieter."
     ],
     "avoidAsk": [
-      "Do not ignore heavy bleeding, trouble breathing, chest pain, seizures, severe headache, thoughts of harm or a baby who is hard to wake or struggling to breathe.",
-      "Ask before resuming activities if recovery, complications or surgery affect what is appropriate."
+      "Do not put cereal or food in a bottle unless a clinician has given a specific medical plan.",
+      "Ask before using herbal teething products, numbing gels, supplements or non-prescribed medicines for the baby."
     ],
     "appointments": [
-      "Postnatal contacts and infant visits depend on individual need. Follow the plan given at discharge and ask who to contact with concerns."
+      "Prepare feeding, mobility and development questions for the six-month review and confirm the continuing parent-care route."
     ],
     "partner": [
-      "Protect rest, manage visitors and logistics, notice warning signs, and take concerns seriously the first time."
+      "Lead the home-safety sweep and learn the feeding plan and choking response rather than leaving the transition to one caregiver."
     ],
     "topics": [
       "postpartum",
-      "recovery",
-      "newborn",
-      "mental-health",
-      "feeding"
+      "month-five",
+      "solids-readiness",
+      "home-safety",
+      "persistent-recovery"
     ],
     "audiences": [
       "parent",
@@ -3754,10 +3753,10 @@
     ],
     "helpTier": "common",
     "sourceIds": [
-      "who-postnatal",
+      "who-feeding",
+      "cdc-milestones",
       "who-newborn",
-      "acog-postpartum",
-      "cdc-milestones"
+      "acog-postpartum"
     ],
     "milestoneIds": [],
     "review": {
@@ -3778,39 +3777,39 @@
     "title": "Six months, still becoming",
     "dek": "Review development, feeding, preventive care, parent health and what support the family needs next.",
     "summary": [
-      "Review development, feeding, preventive care, parent health and what support the family needs next.",
-      "Both parent and baby deserve care; neither person's warning signs should be minimized.",
-      "Ask for practical help before exhaustion becomes a crisis."
+      "At six months, review development, growth, feeding, safe mobility and preventive care while continuing to treat parent health as its own priority.",
+      "Complementary foods add to milk feeding and should progress with safe textures, variety and responsive cues.",
+      "The end of this guide's timeline is a handoff to ongoing parent and child care, not the end of recovery or questions."
     ],
     "bodyMind": [
-      "Bleeding, pain, incision or perineal healing, pelvic symptoms, sleep and mood all deserve space in follow-up care.",
-      "Recovery varies with birth, health, support and feeding; it is not a race back to a previous version of yourself."
+      "Review chronic conditions and pregnancy complications with primary or specialist care because some affect long-term cardiovascular, metabolic or mental health.",
+      "Pelvic floor, abdominal wall, scar, pain, sexual-health and mood concerns can still improve with appropriate assessment and treatment."
     ],
     "baby": [
-      "Feeding, alertness, breathing, temperature, color and movement are useful observations to share with your baby's clinician.",
-      "Milestones describe skills most children show by an age; they are not a pass/fail test or diagnosis."
+      "The six-month review looks at skills across domains and should include any loss of skills or caregiver concern, even if a checklist appears reassuring.",
+      "Offer developmentally suitable textures and iron-rich foods with close upright supervision; continue the milk-feeding plan recommended for the baby."
     ],
     "doNow": [
-      "Keep parent and baby care contacts easy to find.",
-      "Accept or request specific practical support.",
-      "Bring feeding, sleep, pain and mood questions to follow-up care."
+      "Bring a concise list of development, feeding, sleep, hearing, vision and movement observations to the infant visit.",
+      "Confirm vaccines, dental guidance, medicines, emergency contacts and the next preventive appointment.",
+      "Create a written parent follow-up plan for unresolved birth recovery, chronic disease, mental health, contraception and future pregnancy preparation."
     ],
     "avoidAsk": [
-      "Do not ignore heavy bleeding, trouble breathing, chest pain, seizures, severe headache, thoughts of harm or a baby who is hard to wake or struggling to breathe.",
-      "Ask before resuming activities if recovery, complications or surgery affect what is appropriate."
+      "Do not use milestone attainment to dismiss a specific concern or loss of a previously used skill.",
+      "Ask for individual guidance on choking hazards, allergens, drink choices and food texture rather than copying a rigid menu from social media."
     ],
     "appointments": [
-      "Postnatal contacts and infant visits depend on individual need. Follow the plan given at discharge and ask who to contact with concerns."
+      "Leave the six-month transition with named clinicians and dates for both ongoing infant preventive care and any parent health follow-up."
     ],
     "partner": [
-      "Protect rest, manage visitors and logistics, notice warning signs, and take concerns seriously the first time."
+      "Share feeding, safety, appointments and night care while actively supporting the parent's long-term health plan beyond maternity services."
     ],
     "topics": [
       "postpartum",
-      "recovery",
-      "newborn",
-      "mental-health",
-      "feeding"
+      "month-six",
+      "complementary-feeding",
+      "long-term-parent-health",
+      "care-handoff"
     ],
     "audiences": [
       "parent",
@@ -3819,10 +3818,10 @@
     ],
     "helpTier": "common",
     "sourceIds": [
-      "who-postnatal",
-      "who-newborn",
+      "who-feeding",
+      "cdc-milestones",
       "acog-postpartum",
-      "cdc-milestones"
+      "who-postnatal"
     ],
     "milestoneIds": [
       "six-month-development"

@@ -2,15 +2,15 @@
 
 ## Unit
 
-Vitest covers date arithmetic, journey transitions, storage versions and generated-content coverage.
+Vitest covers date arithmetic, journey transitions, storage versions, generated-content coverage and search normalization/ranking. Search regressions include expected positive matches, protected zero-result terms, phrase and alias ranking, exact fragment destinations, unrelated queries and substring false positives.
 
 ## Content audit
 
-`audit:content` checks minimum counts, unique IDs, required source references, review metadata and expiry, weekly/postpartum continuity and essentials coverage. With `--release`, `draft` and `needs-review` records fail; both `editorial-ready` and `clinical-approved` are technically publishable, and their distinct statuses remain visible in repository and product metadata.
+`audit:content` checks the 350-record floor, section and priority floors, unique IDs, required source references, review metadata and expiry, weekly continuity and required topic families. Finding audits also require a valid record type, three distinct decision factors, an explicit care threshold and at least 30 words of direct answer plus supporting detail; duplicate normalized aliases, summary-as-detail filler and direct guidance reused across findings fail. Search records must preserve controlled aliases, record types and exact anchors. Postpartum audits reject duplicated filler across every required stage-specific field. With `--release`, `draft` and `needs-review` records fail; both `editorial-ready` and `clinical-approved` are technically publishable, and their distinct statuses remain visible in repository and product metadata.
 
 ## Browser
 
-Playwright covers Chromium, Firefox, WebKit and a mobile profile. Core journeys include home entry paths, device-only date personalization, static search, meaningful topic filters, bookmark retrieval, hidden-milestone restoration, copyable finding links, direct fragment loading, direct essentials, week/month orientation, care tiers, urgent help and 320px overflow.
+Playwright covers Chromium, Firefox, WebKit and a mobile profile. Core journeys include home entry paths, device-only date personalization, static search loading/failure/offline states, ranked finding results and exact fragment navigation, meaningful topic filters, bookmark retrieval, hidden-milestone restoration, copyable finding links, direct fragment loading, direct essentials, week/month orientation, care tiers, urgent help and 320px overflow.
 
 ## Accessibility
 

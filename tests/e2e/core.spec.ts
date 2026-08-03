@@ -128,6 +128,97 @@ test("site search finds concrete guidance instead of an FAQ", async ({
   ).toBeVisible();
 });
 
+test("site search ranks a finding and opens its exact shareable anchor", async ({
+  page,
+}) => {
+  await page.goto("/");
+  const search = page.getByRole("searchbox", {
+    name: "What do you want to find?",
+  });
+  await search.fill("hot tub");
+  const result = page
+    .locator(".search-results")
+    .getByRole("link", { name: /Hot tub or sauna/i });
+  await expect(result).toBeVisible();
+  await result.click();
+  await expect(page).toHaveURL(
+    /\/essentials\/#everyday-home-hot-tub-or-sauna$/,
+  );
+  const finding = page.locator("#everyday-home-hot-tub-or-sauna");
+  await expect(finding).toBeVisible();
+  await expect(finding).toContainText("Avoid hot tubs, Jacuzzis, saunas");
+  await expect(finding).toContainText("What changes the answer");
+  await expect(finding).toContainText("Care threshold:");
+});
+
+test("site search covers specialist work and monitoring vocabulary", async ({
+  page,
+}) => {
+  await page.goto("/");
+  const search = page.getByRole("searchbox", {
+    name: "What do you want to find?",
+  });
+  await search.fill("chemotherapy nurse");
+  const workResult = page
+    .locator(".search-results")
+    .getByRole("link", { name: /Chemotherapy and other hazardous drugs/i });
+  await expect(workResult).toBeVisible();
+
+  await search.fill("nonstress test");
+  const monitoringResult = page
+    .locator(".search-results")
+    .getByRole("link", { name: /Nonstress test/i });
+  await expect(monitoringResult).toBeVisible();
+  await monitoringResult.click();
+  await expect(page).toHaveURL(
+    /\/essentials\/#appointments-warning-signs-nonstress-test$/,
+  );
+  await expect(
+    page.locator("#appointments-warning-signs-nonstress-test"),
+  ).toContainText("pregnancy week, movement and the reason for monitoring");
+});
+
+test("site search distinguishes loading from an honest zero result", async ({
+  page,
+}) => {
+  await page.route("**/data/search-index.json", async (route) => {
+    await new Promise((resolve) => setTimeout(resolve, 500));
+    await route.continue();
+  });
+  await page.goto("/");
+  await expect(page.getByText("Loading the search index…")).toBeVisible();
+  await expect(
+    page.getByRole("searchbox", { name: "What do you want to find?" }),
+  ).toBeDisabled();
+  await expect(
+    page.getByRole("searchbox", { name: "What do you want to find?" }),
+  ).toBeEnabled();
+});
+
+test("site search reports loading failure instead of zero results", async ({
+  page,
+}) => {
+  await page.route("**/data/search-index.json", (route) => route.abort());
+  await page.goto("/");
+  await expect(page.getByText(/Search could not load/)).toBeVisible();
+  await expect(
+    page.getByRole("button", { name: "Retry search" }),
+  ).toBeVisible();
+  await expect(page.getByText(/0 useful results/)).toHaveCount(0);
+});
+
+test("site search names the offline state", async ({ page }) => {
+  await page.addInitScript(() => {
+    Object.defineProperty(window.navigator, "onLine", {
+      configurable: true,
+      get: () => false,
+    });
+  });
+  await page.route("**/data/search-index.json", (route) => route.abort());
+  await page.goto("/");
+  await expect(page.getByText(/Search is offline on this visit/)).toBeVisible();
+});
+
 test("timeline personalization stays in local storage", async ({ page }) => {
   await page.goto("/timeline/");
   await page.getByLabel("Due date given by care").fill("2026-11-07");
@@ -227,7 +318,7 @@ test("essentials show direct dos, donts and food examples", async ({
     page.getByRole("heading", { name: "Food and everyday dishes" }),
   ).toBeVisible();
   await expect(
-    page.getByText("Well-cooked chicken, beef, pork or lamb"),
+    page.getByText("Well-cooked chicken, beef, pork or lamb", { exact: true }),
   ).toBeVisible();
   await expect(page.locator("main details")).toHaveCount(0);
   await expect(

@@ -10,7 +10,7 @@ The public navigation is deliberately small:
 
 - **Getting pregnant** — conception tips, a six-step plan, dos and don’ts, chance-versus-health explanations, fertility myths, common hurdles and when to seek help.
 - **Timeline** — positive test, nine month map, trimester overviews, weeks 3–42 and important care windows.
-- **Pregnancy essentials** — fourteen direct, fully expanded do/don’t/check-first sections, concrete examples, keyword search and an interactive substitute finder.
+- **Pregnancy essentials** — fourteen direct, fully expanded do/don’t/check-first sections, 368 anchored findings, resilient whole-term search and an interactive substitute finder.
 - **For partners** — useful support actions at important pregnancy weeks.
 - **Urgent help** — clearly separated pregnancy, postpartum and young-baby warning signs.
 
@@ -21,14 +21,15 @@ The current content includes:
 - 40 distinct weekly pregnancy chapters with a unique title, action, caution, clarification, appointment prompt and partner action.
 - A fully expanded getting-pregnant guide with a six-step plan, couple-level dos and don’ts, nine chance-versus-health comparisons, eight myth corrections and clear points for seeking help.
 - A nine-month orientation map that also explains why medical care counts pregnancy in weeks.
-- Fourteen pregnancy-essential sections and more than 70 concrete examples, including common dishes, activities, symptoms, personal care, infections and mental health.
+- Fourteen pregnancy-essential sections and 368 source-backed finding records. The catalog includes 166 P0 and 135 P1 answers across food and drinks, exercise, medicines, home and work exposures, travel, sexual health, sleep, tests, birth choices, symptoms, personal care, infections, vaccination, mental health and safety.
+- Each finding is a database-like public record with a stable ID and direct anchor, record type, controlled aliases, concise answer, supporting detail, three decision factors, an explicit care threshold, internal sources and review metadata. The catalog is intentionally broad but remains general guidance—not a diagnostic or individualized-risk database.
 - Fourteen searchable substitute cards for common drinks and foods, each with one clear verdict, the reason, two or three ranked alternatives and a label check.
 - 21 date-window milestones for appointments, tests, decisions and preparation.
 - Optional due-date or last-period personalization stored only on the device.
-- A searchable full-text index spanning preconception, weeks, essentials, practical substitutes and warning-sign guidance.
+- A searchable static index spanning preconception, weeks, findings, practical substitutes, milestones, partner guidance and warning signs. Whole-term matching, exact-phrase boosts and controlled aliases prevent accidental substring matches; loading, offline and failure states are distinct from a genuine zero result.
 - Stable copy-link anchors for major sections, individual examples, cautions, milestones and care notes, with visible highlighting when a shared fragment opens.
 - Retrievable bookmarks, restorable hidden milestones, completed milestones, an actual birth-date transition and one-click local-data deletion.
-- 13 after-birth checkpoints through month six as a separate continuation.
+- 13 stage-specific after-birth checkpoints through month six as a separate continuation, with distinct recovery, newborn, feeding, mental-health, safety and follow-up guidance at every period.
 - Static, semantic routes that remain useful without JavaScript.
 
 The project intentionally has no accounts, backend, public location packs, FAQ library, chatbot, symptom checker, tracking, ads, affiliate links, comments, remote persistence or reader-facing source directory.
@@ -85,7 +86,7 @@ Important locations:
 
 - `src/config/site.ts` — brand, navigation and product-level disclaimer.
 - `src/config/pregnancy.ts` — canonical month/week/trimester mapping.
-- `scripts/generate-content.mjs` — authored preconception, timeline, essentials, practical substitutes, milestones, urgent copy and internal evidence links.
+- `scripts/generate-content.mjs` — authored preconception, timeline, essentials, finding-level answers, postpartum guidance, practical substitutes, milestones, urgent copy and internal evidence links.
 - `src/content.config.ts` — public content contracts.
 - `src/pages/` — static route composition.
 - `src/components/PregnancyMonthMap.astro` — reusable nine-month orientation.
@@ -96,6 +97,7 @@ Important locations:
 - `src/components/react/JourneySnapshot.tsx` — device-only Now/Next/Later pregnancy summary.
 - `src/lib/date.ts` — timezone-safe date-only calculations.
 - `src/lib/milestones.ts` — deterministic journey ordering and plain-language date-window labels.
+- `src/lib/search.ts` — deterministic whole-term matching, controlled-alias and phrase ranking.
 - `src/lib/storage.ts` — versioned device-state schema and migration.
 - `scripts/audit-content.mjs` — content coverage and medical release rules.
 - `scripts/deployment-config.mjs` — normalized canonical URL and automatic GitHub Pages base-path resolution.
@@ -162,6 +164,16 @@ All cards are server-rendered. Search and category chips enhance the page after 
 3. Add concrete examples that match one of the three supported statuses.
 4. State when doctor review is needed and avoid universal medicine approval.
 5. Add internal evidence IDs, regenerate and run all content checks.
+
+### Add or update a finding
+
+1. Add or edit the `finding(...)` record in `scripts/generate-content.mjs`; never hand-edit generated JSON.
+2. Keep the stable slug ID and assign it to one canonical essentials section.
+3. Add the phrases people genuinely type as distinct controlled aliases, one direct summary, visible supporting details, status, priority, internal sources and review metadata. The section metadata supplies the validated record type, three decision factors and status-specific care threshold.
+4. Use P0 for a high-consequence or predictably common gap, P1 for a meaningful breadth gap, and `baseline` for an existing essentials example.
+5. Update `scripts/content-coverage.mjs` when the record establishes a required topic family or a zero-result query that must stay protected.
+6. Add a positive, ranking and false-positive regression when the term needs new alias behaviour.
+7. Regenerate and run schema, unit, content, browser, static and accessibility checks.
 
 ### Add or update a practical substitute
 

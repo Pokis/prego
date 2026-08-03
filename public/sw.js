@@ -1,4 +1,4 @@
-const CACHE = "pregnancy-clearly-v4";
+const CACHE = "pregnancy-clearly-v6";
 const fromScope = (path) => new URL(path, self.registration.scope).toString();
 const CORE = [
   "./",
@@ -6,6 +6,7 @@ const CORE = [
   "timeline/",
   "essentials/",
   "urgent-help/",
+  "data/search-index.json",
   "manifest.webmanifest",
 ].map(fromScope);
 

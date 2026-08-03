@@ -388,5 +388,275 @@
     "retrievedAt": "2026-08-02",
     "cadence": "stable",
     "note": "Global preconception health and pregnancy-outcome foundation for women, men and couples."
+  },
+  {
+    "id": "acog-substances",
+    "authority": "American College of Obstetricians and Gynecologists",
+    "title": "Tobacco, Alcohol, Drugs, and Pregnancy",
+    "url": "https://www.acog.org/womens-health/faqs/tobacco-alcohol-drugs-and-pregnancy",
+    "publishedOrUpdated": "Current page; date not stated",
+    "retrievedAt": "2026-08-03",
+    "cadence": "rapid-review",
+    "note": "Tobacco, nicotine, vaping, alcohol, cannabis, opioids and nonmedical drug-use guidance in pregnancy."
+  },
+  {
+    "id": "acog-cannabis",
+    "authority": "American College of Obstetricians and Gynecologists",
+    "title": "Marijuana (Cannabis) and Pregnancy",
+    "url": "https://www.acog.org/womens-health/faqs/marijuana-and-pregnancy",
+    "publishedOrUpdated": "Current page; date not stated",
+    "retrievedAt": "2026-08-03",
+    "cadence": "rapid-review",
+    "note": "Cannabis, marijuana and CBD guidance across smoked, vaped and edible products."
+  },
+  {
+    "id": "acog-prenatal-testing",
+    "authority": "American College of Obstetricians and Gynecologists",
+    "title": "ACOG Explains: Prenatal Genetic Testing",
+    "url": "https://www.acog.org/womens-health/videos/prenatal-genetic-testing",
+    "publishedOrUpdated": "2025-02-01",
+    "retrievedAt": "2026-08-03",
+    "cadence": "rapid-review",
+    "note": "Distinguishes screening from diagnostic tests and names cell-free DNA/NIPT, CVS and amniocentesis."
+  },
+  {
+    "id": "acog-preeclampsia",
+    "authority": "American College of Obstetricians and Gynecologists",
+    "title": "Preeclampsia and High Blood Pressure During Pregnancy",
+    "url": "https://www.acog.org/womens-health/faqs/preeclampsia-and-high-blood-pressure-during-pregnancy",
+    "publishedOrUpdated": "Current page; date not stated",
+    "retrievedAt": "2026-08-03",
+    "cadence": "rapid-review",
+    "note": "High blood pressure, pre-eclampsia terminology, monitoring and warning signs during pregnancy and after birth."
+  },
+  {
+    "id": "acog-gbs",
+    "authority": "American College of Obstetricians and Gynecologists",
+    "title": "Group B Strep and Pregnancy",
+    "url": "https://www.acog.org/womens-health/faqs/group-b-strep-and-pregnancy",
+    "publishedOrUpdated": "Current page; date not stated",
+    "retrievedAt": "2026-08-03",
+    "cadence": "rapid-review",
+    "note": "Group B streptococcus terminology, screening discussion and birth-plan implications."
+  },
+  {
+    "id": "acog-labour-birth",
+    "authority": "American College of Obstetricians and Gynecologists",
+    "title": "Labor & Delivery",
+    "url": "https://www.acog.org/womens-health/pregnancy/labor-and-delivery",
+    "publishedOrUpdated": "Current page; date not stated",
+    "retrievedAt": "2026-08-03",
+    "cadence": "rapid-review",
+    "note": "Birth preparation, labour signs, induction, breech presentation, caesarean birth, VBAC and preterm birth topic foundation."
+  },
+  {
+    "id": "acog-labour-pain",
+    "authority": "American College of Obstetricians and Gynecologists",
+    "title": "Medications for Pain Relief During Labor and Delivery",
+    "url": "https://www.acog.org/womens-health/faqs/medications-for-pain-relief-during-labor-and-delivery",
+    "publishedOrUpdated": "Current page; date not stated",
+    "retrievedAt": "2026-08-03",
+    "cadence": "rapid-review",
+    "note": "Questions and choices around nonmedical support, systemic medicine, nitrous oxide, epidural and spinal pain relief."
+  },
+  {
+    "id": "acog-travel",
+    "authority": "American College of Obstetricians and Gynecologists",
+    "title": "Travel During Pregnancy",
+    "url": "https://www.acog.org/womens-health/faqs/travel-during-pregnancy",
+    "publishedOrUpdated": "Current page; date not stated",
+    "retrievedAt": "2026-08-03",
+    "cadence": "rapid-review",
+    "note": "Travel planning, long journeys, destination infection risks, flights, cruises and urgent symptoms away from home."
+  },
+  {
+    "id": "nhs-pregnancy-symptoms",
+    "authority": "National Health Service",
+    "title": "Pregnancy symptoms",
+    "url": "https://www.nhs.uk/pregnancy/common-symptoms/",
+    "publishedOrUpdated": "Current page; date not stated",
+    "retrievedAt": "2026-08-03",
+    "cadence": "rapid-review",
+    "note": "Common symptom index covering pain, headaches, reflux, piles, swelling, sleep, thrush, bleeding, discharge and vomiting."
+  },
+  {
+    "id": "nhs-symptoms-help",
+    "authority": "National Health Service",
+    "title": "Pregnancy symptoms you need to get help for",
+    "url": "https://www.nhs.uk/pregnancy/common-symptoms/pregnancy-symptoms-you-need-to-get-help-for/",
+    "publishedOrUpdated": "2026-07-01",
+    "retrievedAt": "2026-08-03",
+    "cadence": "rapid-review",
+    "note": "Escalation for movement changes, fluid loss, fever, itching, pain, breathlessness, severe headache, swelling and vision changes."
+  },
+  {
+    "id": "cdc-workplace",
+    "authority": "US Centers for Disease Control and Prevention, NIOSH",
+    "title": "Examples of Jobs and Reproductive Health",
+    "url": "https://www.cdc.gov/niosh/reproductive-health/risk-factors/index.html",
+    "publishedOrUpdated": "2024-04-03",
+    "retrievedAt": "2026-08-03",
+    "cadence": "annual",
+    "note": "Work-specific exposure prompts for healthcare, childcare, laboratories, salons, farming, veterinary work, heat, shifts and physical demands."
+  },
+  {
+    "id": "cdc-parvovirus",
+    "authority": "US Centers for Disease Control and Prevention",
+    "title": "Parvovirus B19 in Pregnancy",
+    "url": "https://www.cdc.gov/parvovirus-b19/about/parvovirus-b19-in-pregnancy.html",
+    "publishedOrUpdated": "2025-12-17",
+    "retrievedAt": "2026-08-03",
+    "cadence": "rapid-review",
+    "note": "Exposure, symptoms, testing and monitoring conversations for parvovirus B19 or fifth disease in pregnancy."
+  },
+  {
+    "id": "acog-during-pregnancy",
+    "authority": "American College of Obstetricians and Gynecologists",
+    "title": "During Pregnancy",
+    "url": "https://www.acog.org/womens-health/pregnancy/during-pregnancy",
+    "publishedOrUpdated": "Current page; date not stated",
+    "retrievedAt": "2026-08-03",
+    "cadence": "rapid-review",
+    "note": "Professional topic map for pregnancy health, infections, medical problems, multiple pregnancy and pregnancy loss."
+  },
+  {
+    "id": "acog-nutrition",
+    "authority": "American College of Obstetricians and Gynecologists",
+    "title": "Healthy Eating During Pregnancy",
+    "url": "https://www.acog.org/womens-health/faqs/healthy-eating-during-pregnancy",
+    "publishedOrUpdated": "Current page; date not stated",
+    "retrievedAt": "2026-08-03",
+    "cadence": "annual",
+    "note": "Pregnancy nutrition, food variety and key nutrient context without rigid meal prescriptions."
+  },
+  {
+    "id": "acog-gestational-diabetes",
+    "authority": "American College of Obstetricians and Gynecologists",
+    "title": "Gestational Diabetes",
+    "url": "https://www.acog.org/womens-health/faqs/gestational-diabetes",
+    "publishedOrUpdated": "Current page; date not stated",
+    "retrievedAt": "2026-08-03",
+    "cadence": "rapid-review",
+    "note": "Gestational-diabetes screening, monitoring, individual treatment and post-pregnancy follow-up."
+  },
+  {
+    "id": "acog-bleeding",
+    "authority": "American College of Obstetricians and Gynecologists",
+    "title": "Bleeding During Pregnancy",
+    "url": "https://www.acog.org/womens-health/faqs/bleeding-during-pregnancy",
+    "publishedOrUpdated": "Current page; date not stated",
+    "retrievedAt": "2026-08-03",
+    "cadence": "rapid-review",
+    "note": "Bleeding and spotting context across pregnancy, including urgent associated symptoms and placental causes."
+  },
+  {
+    "id": "acog-cesarean",
+    "authority": "American College of Obstetricians and Gynecologists",
+    "title": "Cesarean Birth",
+    "url": "https://www.acog.org/womens-health/faqs/cesarean-birth",
+    "publishedOrUpdated": "Current page; date not stated",
+    "retrievedAt": "2026-08-03",
+    "cadence": "rapid-review",
+    "note": "Reasons, preparation, anaesthesia, recovery and future-pregnancy considerations for caesarean birth."
+  },
+  {
+    "id": "acog-multiple-pregnancy",
+    "authority": "American College of Obstetricians and Gynecologists",
+    "title": "Multiple Pregnancy",
+    "url": "https://www.acog.org/womens-health/faqs/multiple-pregnancy",
+    "publishedOrUpdated": "Current page; date not stated",
+    "retrievedAt": "2026-08-03",
+    "cadence": "rapid-review",
+    "note": "Chorionicity, monitoring, screening, growth, preterm birth and birth planning in multiple pregnancy."
+  },
+  {
+    "id": "acog-prenatal-care",
+    "authority": "American College of Obstetricians and Gynecologists",
+    "title": "Prenatal Care",
+    "url": "https://www.acog.org/womens-health/faqs/prenatal-care",
+    "publishedOrUpdated": "2025-04-01",
+    "retrievedAt": "2026-08-03",
+    "cadence": "rapid-review",
+    "note": "What prenatal care includes and why visit, examination, blood, urine and ultrasound plans vary."
+  },
+  {
+    "id": "acog-genetic-screening",
+    "authority": "American College of Obstetricians and Gynecologists",
+    "title": "Prenatal Genetic Screening Tests",
+    "url": "https://www.acog.org/womens-health/faqs/prenatal-genetic-screening-tests",
+    "publishedOrUpdated": "Current page; date not stated",
+    "retrievedAt": "2026-08-03",
+    "cadence": "rapid-review",
+    "note": "Blood and ultrasound screening choices, limitations and follow-up diagnostic testing."
+  },
+  {
+    "id": "acog-sleep",
+    "authority": "American College of Obstetricians and Gynecologists",
+    "title": "Sleep Health and Disorders",
+    "url": "https://www.acog.org/womens-health/faqs/sleep-health-and-disorders",
+    "publishedOrUpdated": "Current page; date not stated",
+    "retrievedAt": "2026-08-03",
+    "cadence": "annual",
+    "note": "Insomnia, obstructive sleep apnoea, restless legs and reasons to discuss persistent sleep problems."
+  },
+  {
+    "id": "nhs-medicines",
+    "authority": "National Health Service",
+    "title": "Medicines in pregnancy",
+    "url": "https://www.nhs.uk/pregnancy/keeping-well/medicines/",
+    "publishedOrUpdated": "2025-09-23",
+    "retrievedAt": "2026-08-03",
+    "cadence": "rapid-review",
+    "note": "Exact-product medicine review and the instruction not to stop prescribed treatment without clinical advice."
+  },
+  {
+    "id": "cdc-work-solvents",
+    "authority": "US Centers for Disease Control and Prevention, NIOSH",
+    "title": "About Solvents and Reproductive Health",
+    "url": "https://www.cdc.gov/niosh/reproductive-health/prevention/solvents.html",
+    "publishedOrUpdated": "2024-02-12",
+    "retrievedAt": "2026-08-03",
+    "cadence": "annual",
+    "note": "Solvent identification, ventilation, skin and inhalation exposure, PPE and work-specific review."
+  },
+  {
+    "id": "cdc-work-hazardous-drugs",
+    "authority": "US Centers for Disease Control and Prevention, NIOSH",
+    "title": "Hazardous Drugs Exposures in Healthcare",
+    "url": "https://www.cdc.gov/niosh/healthcare/hazardous-drugs/",
+    "publishedOrUpdated": "2026-03-03",
+    "retrievedAt": "2026-08-03",
+    "cadence": "rapid-review",
+    "note": "Healthcare exposure to chemotherapy and other hazardous drugs across preparation, administration, cleaning, laundry and waste tasks."
+  },
+  {
+    "id": "cdc-work-ppe",
+    "authority": "US Centers for Disease Control and Prevention, NIOSH",
+    "title": "About Personal Protective Equipment",
+    "url": "https://www.cdc.gov/niosh/reproductive-health/about/ppe.html",
+    "publishedOrUpdated": "2024-04-03",
+    "retrievedAt": "2026-08-03",
+    "cadence": "annual",
+    "note": "Correct glove, respirator and protective-equipment selection and refitting during pregnancy."
+  },
+  {
+    "id": "cdc-pregnant-healthcare-workers",
+    "authority": "US Centers for Disease Control and Prevention",
+    "title": "Special Populations: Pregnant Healthcare Personnel",
+    "url": "https://www.cdc.gov/infection-control/hcp/healthcare-personnel-epidemiology-control/pregnant-hcp.html",
+    "publishedOrUpdated": "2025-01-08",
+    "retrievedAt": "2026-08-03",
+    "cadence": "rapid-review",
+    "note": "Infection-control and occupational-health planning for pregnant healthcare personnel."
+  },
+  {
+    "id": "cdc-ionizing-radiation",
+    "authority": "US Centers for Disease Control and Prevention",
+    "title": "About Ionizing Radiation",
+    "url": "https://www.cdc.gov/radiation-health/about/ionizing-radiation.html",
+    "publishedOrUpdated": "2024-02-19",
+    "retrievedAt": "2026-08-03",
+    "cadence": "annual",
+    "note": "Ionizing-radiation sources and the need to distinguish diagnostic, occupational and high-dose exposure."
   }
 ]

@@ -22,6 +22,105 @@ describe("generated content coverage", () => {
     expect(food.examples.length).toBeGreaterThanOrEqual(10);
   });
 
+  it("ships broad finding-level coverage with stable direct anchors", () => {
+    const findings = load("findings");
+    expect(findings.length).toBeGreaterThanOrEqual(350);
+    expect(
+      findings.filter((finding: any) => finding.priority === "P0").length,
+    ).toBeGreaterThanOrEqual(155);
+    expect(
+      findings.filter((finding: any) => finding.priority === "P1").length,
+    ).toBeGreaterThanOrEqual(125);
+    expect(new Set(findings.map((finding: any) => finding.id)).size).toBe(
+      findings.length,
+    );
+    expect(
+      findings.every(
+        (finding: any) =>
+          finding.aliases.length >= 2 &&
+          finding.recordType &&
+          finding.summary &&
+          finding.details.length &&
+          finding.decisionFactors.length >= 3 &&
+          finding.careNote &&
+          finding.sourceIds.length &&
+          finding.review,
+      ),
+    ).toBe(true);
+    expect(
+      findings.every(
+        (finding: any) =>
+          `${finding.summary} ${finding.details.join(" ")}`.split(/\s+/)
+            .length >= 30,
+      ),
+    ).toBe(true);
+    expect(
+      findings.every((finding: any) =>
+        finding.details.every(
+          (detail: string) =>
+            detail.trim().toLowerCase() !==
+            finding.summary.trim().toLowerCase(),
+        ),
+      ),
+    ).toBe(true);
+
+    const sections = new Set(findings.map((finding: any) => finding.sectionId));
+    expect(sections).toEqual(
+      new Set([
+        "food-dishes",
+        "drinks-caffeine",
+        "exercise-movement",
+        "medicines-supplements",
+        "everyday-home",
+        "work-lifting",
+        "travel",
+        "sex-relationships",
+        "sleep-comfort",
+        "appointments-warning-signs",
+        "common-symptoms",
+        "dental-skin-personal-care",
+        "infections-vaccinations",
+        "mental-health-safety",
+      ]),
+    );
+    const sectionCounts = new Map<string, number>();
+    for (const finding of findings)
+      sectionCounts.set(
+        finding.sectionId,
+        (sectionCounts.get(finding.sectionId) ?? 0) + 1,
+      );
+    expect(
+      sectionCounts.get("appointments-warning-signs"),
+    ).toBeGreaterThanOrEqual(42);
+    expect(sectionCounts.get("common-symptoms")).toBeGreaterThanOrEqual(42);
+    expect(sectionCounts.get("work-lifting")).toBeGreaterThanOrEqual(25);
+    expect(sectionCounts.get("infections-vaccinations")).toBeGreaterThanOrEqual(
+      26,
+    );
+  });
+
+  it("keeps every postpartum period stage-specific", () => {
+    const postpartum = load("timeline").filter(
+      (entry: any) => entry.kind === "postpartum",
+    );
+    expect(postpartum).toHaveLength(13);
+    for (const field of [
+      "summary",
+      "bodyMind",
+      "baby",
+      "doNow",
+      "avoidAsk",
+      "appointments",
+      "partner",
+      "topics",
+    ]) {
+      expect(
+        new Set(postpartum.map((entry: any) => JSON.stringify(entry[field])))
+          .size,
+      ).toBe(postpartum.length);
+    }
+  });
+
   it("ships useful substitutes with clear verdicts and ranked alternatives", () => {
     const substitutions = load("substitutions");
     expect(substitutions).toHaveLength(14);
@@ -88,7 +187,7 @@ describe("generated content coverage", () => {
   });
 
   it("indexes direct guidance and care tiers for static search", () => {
-    const search = JSON.parse(
+    const search: any[] = JSON.parse(
       readFileSync(resolve("public/data/search-index.json"), "utf8"),
     );
     const haystack = JSON.stringify(search).toLowerCase();
@@ -99,6 +198,16 @@ describe("generated content coverage", () => {
     expect(haystack).toContain(
       "contact your doctor or maternity team promptly",
     );
+    const findings = load("findings");
+    const indexed = new Map<string, any>(
+      search.map((record: any) => [record.id, record]),
+    );
+    expect(
+      findings.every(
+        (finding: any) =>
+          indexed.get(finding.id)?.href === `/essentials/#${finding.id}`,
+      ),
+    ).toBe(true);
   });
 
   it("keeps every weekly chapter concrete and distinct", () => {
