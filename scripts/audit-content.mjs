@@ -4,8 +4,10 @@ import {
   minimumFindingCounts,
   minimumFindingsBySection,
   requiredFindingFamilies,
+  requiredFindingIntents,
   requiredPostpartumFields,
   requiredPostpartumSlugs,
+  requiredPostpartumTopicIds,
   requiredSearchMatches,
 } from "./content-coverage.mjs";
 
@@ -20,6 +22,7 @@ const requiredFiles = [
   "milestones",
   "sources",
   "urgent",
+  "postpartumTopics",
 ];
 const evidenceBackedCollections = new Set(
   requiredFiles.filter((name) => name !== "sources"),
@@ -50,6 +53,7 @@ const targets = {
   milestones: 20,
   sources: 39,
   urgent: 3,
+  postpartumTopics: requiredPostpartumTopicIds.length,
 };
 for (const [name, target] of Object.entries(targets)) {
   if (data[name].length < target)
@@ -175,7 +179,12 @@ const findingRecordTypes = new Set([
   "personal-care",
   "infection",
   "mental-health",
+  "health-condition",
+  "complication",
+  "loss-support",
+  "birth-preparation",
 ]);
+const findingCareTiers = new Set(["common", "care-team", "urgent"]);
 const findingDetailSignatures = new Map();
 
 for (const finding of data.findings) {
@@ -190,6 +199,23 @@ for (const finding of data.findings) {
     errors.push(`finding ${finding.id} has duplicated controlled aliases`);
   if (!findingRecordTypes.has(finding.recordType))
     errors.push(`finding ${finding.id} has invalid record type`);
+  if (finding.stage !== "pregnancy")
+    errors.push(`finding ${finding.id} must declare pregnancy stage`);
+  if (!findingCareTiers.has(finding.careTier))
+    errors.push(`finding ${finding.id} has invalid care tier`);
+  if (
+    !Array.isArray(finding.intents) ||
+    finding.intents.length === 0 ||
+    finding.intents.some((intent) => !requiredFindingIntents.includes(intent))
+  )
+    errors.push(`finding ${finding.id} has invalid task intent metadata`);
+  if (
+    !Array.isArray(finding.relatedIds) ||
+    finding.relatedIds.length > 3 ||
+    finding.relatedIds.includes(finding.id) ||
+    finding.relatedIds.some((id) => !findingIds.has(id))
+  )
+    errors.push(`finding ${finding.id} has invalid related finding ids`);
   if (!finding.summary?.trim())
     errors.push(`finding ${finding.id} has no summary`);
   if (!Array.isArray(finding.details) || finding.details.length === 0)
@@ -238,7 +264,7 @@ for (const finding of data.findings) {
     errors.push(`Search index is missing finding ${finding.id}`);
     continue;
   }
-  if (record.href !== `/essentials/#${finding.id}`)
+  if (record.href !== `/essentials/finding/${finding.id}/`)
     errors.push(
       `Search finding ${finding.id} does not link to its direct anchor`,
     );
@@ -246,6 +272,73 @@ for (const finding of data.findings) {
     errors.push(`Search finding ${finding.id} lost its controlled aliases`);
   if (!record.topics?.includes(finding.recordType))
     errors.push(`Search finding ${finding.id} lost its record type`);
+  if (record.status !== finding.status || record.careTier !== finding.careTier)
+    errors.push(`Search finding ${finding.id} lost its safety facets`);
+  if (JSON.stringify(record.intents) !== JSON.stringify(finding.intents))
+    errors.push(`Search finding ${finding.id} lost its task intents`);
+}
+
+for (const intent of requiredFindingIntents) {
+  if (!data.findings.some((finding) => finding.intents.includes(intent)))
+    errors.push(`No direct findings cover the ${intent} task intent`);
+}
+
+const postpartumTopicIds = new Set(
+  data.postpartumTopics.map((topic) => topic.id),
+);
+for (const id of requiredPostpartumTopicIds)
+  if (!postpartumTopicIds.has(id))
+    errors.push(`Missing after-birth topic ${id}`);
+const postpartumTopicSignatures = new Set();
+for (const topic of data.postpartumTopics) {
+  for (const field of ["summary", "practicalSteps", "contactCare", "urgent"]) {
+    const value = topic[field];
+    if (
+      (typeof value === "string" && !value.trim()) ||
+      (Array.isArray(value) && value.length === 0)
+    )
+      errors.push(`after-birth topic ${topic.id} has no ${field}`);
+  }
+  const signature = [
+    topic.summary,
+    ...(topic.practicalSteps ?? []),
+    ...(topic.contactCare ?? []),
+    ...(topic.urgent ?? []),
+  ]
+    .map(normalizeFindingTerm)
+    .join("|");
+  if (postpartumTopicSignatures.has(signature))
+    errors.push(`after-birth topic ${topic.id} duplicates another topic`);
+  postpartumTopicSignatures.add(signature);
+}
+
+const manifestFile = resolve("public/data/search-manifest.json");
+const manifest = existsSync(manifestFile)
+  ? JSON.parse(readFileSync(manifestFile, "utf8"))
+  : null;
+if (!manifest?.shards?.length) {
+  errors.push("Search shard manifest is missing or empty");
+} else {
+  const shardedRecords = [];
+  for (const shard of manifest.shards) {
+    const shardFile = resolve("public", shard.href.replace(/^\//, ""));
+    if (!existsSync(shardFile)) {
+      errors.push(`Search shard ${shard.id} is missing`);
+      continue;
+    }
+    const records = JSON.parse(readFileSync(shardFile, "utf8"));
+    if (records.length !== shard.count)
+      errors.push(`Search shard ${shard.id} count does not match its manifest`);
+    shardedRecords.push(...records);
+  }
+  const shardedIds = shardedRecords.map((record) => record.id);
+  if (new Set(shardedIds).size !== shardedIds.length)
+    errors.push("Search shards contain duplicate records");
+  if (
+    new Set(shardedIds).size !== searchIndex.length ||
+    searchIndex.some((record) => !shardedIds.includes(record.id))
+  )
+    errors.push("Search shards do not preserve the complete search index");
 }
 
 const normalize = (value) =>
@@ -282,5 +375,5 @@ if (errors.length) {
 }
 
 console.log(
-  `Content audit passed: ${data.timeline.length} timeline entries, ${data.essentials.length} pregnancy essentials, ${data.findings.length} direct findings, ${data.substitutions.length} practical swaps, ${data.preconception.length} preconception guide and ${data.milestones.length} milestones.`,
+  `Content audit passed: ${data.timeline.length} timeline entries, ${data.essentials.length} pregnancy essentials, ${data.findings.length} direct findings, ${data.substitutions.length} practical swaps, ${data.postpartumTopics.length} after-birth topics, ${data.preconception.length} preconception guide and ${data.milestones.length} milestones.`,
 );

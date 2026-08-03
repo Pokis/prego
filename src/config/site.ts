@@ -13,10 +13,26 @@ export const siteConfig = {
   educationDisclaimer:
     "Pregnancy, Clearly provides general education, not diagnosis or individual medical advice. Your doctor or midwife knows your health and pregnancy.",
   navigation: [
-    { label: "Getting pregnant", href: "/getting-pregnant/" },
-    { label: "Timeline", href: "/timeline/" },
-    { label: "Pregnancy essentials", href: "/essentials/" },
-    { label: "For partners", href: "/partners/" },
+    {
+      label: "Getting pregnant",
+      description: "Before a positive test",
+      href: "/getting-pregnant/",
+    },
+    {
+      label: "Timeline",
+      description: "Pregnancy week by week",
+      href: "/timeline/",
+    },
+    {
+      label: "Pregnancy essentials",
+      description: "Food, symptoms, tests and more",
+      href: "/essentials/",
+    },
+    {
+      label: "For partners",
+      description: "Practical ways to help",
+      href: "/partners/",
+    },
   ],
 } as const;
 

@@ -1,0 +1,138 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Breadcrumbs from "@/components/Breadcrumbs.astro";
+import ShareAnchor from "@/components/react/ShareAnchor";
+import { formatReviewDate } from "@/lib/findings";
+import { withBase } from "@/lib/paths";
+
+const topics = (await getCollection("postpartumTopics")).map(
+  (item) => item.data,
+);
+const timeline = (await getCollection("timeline"))
+  .map((item) => item.data)
+  .filter((item) => item.phase === "postpartum")
+  .sort((a, b) => a.ordinal - b.ordinal);
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "MedicalWebPage",
+  name: "After birth: recovery and newborn care",
+  description:
+    "A separate after-birth continuation covering recovery, feeding, pelvic health, mood, contraception, newborn care and urgent help.",
+  lastReviewed: topics[0]?.review.reviewedAt,
+};
+---
+
+<BaseLayout
+  title="After birth: recovery and newborn care"
+  description="A separate continuation for parent recovery, feeding, pelvic health, mood, contraception and newborn care through six months."
+  schema={schema}
+>
+  <section class="page-hero after-birth-overview-hero">
+    <div class="shell">
+      <Breadcrumbs
+        items={[
+          { label: "Home", href: "/" },
+          { label: "Timeline", href: "/timeline/" },
+          { label: "After birth" },
+        ]}
+      />
+      <p class="eyebrow">Separate continuation · when you need it</p>
+      <h1>After birth,<br />made followable.</h1>
+      <p class="lede">
+        Parent recovery and newborn care deserve their own attention. Start with
+        the topic you need or follow the checkpoints from birth day through six
+        months.
+      </p>
+      <div class="after-birth-separation-note">
+        Pregnancy remains the primary guide. Nothing switches to after-birth
+        content until an actual birth date is entered.
+      </div>
+    </div>
+  </section>
+
+  <section class="section after-birth-topic-section">
+    <div class="shell">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Start with the need</p>
+          <h2>Recovery and newborn topics</h2>
+          <p>
+            Common information, contact-care guidance and urgent thresholds stay
+            visibly separate in every topic.
+          </p>
+        </div>
+      </div>
+      <nav class="after-birth-topic-nav" aria-label="After-birth topics">
+        {topics.map((topic) => <a href={`#${topic.id}`}>{topic.title}</a>)}
+      </nav>
+      <div class="after-birth-topic-list">
+        {
+          topics.map((topic) => (
+            <article
+              id={topic.id}
+              class="after-birth-topic"
+              data-share-target
+              tabindex="-1"
+            >
+              <ShareAnchor targetId={topic.id} label={topic.title} compact />
+              <p class="eyebrow">{topic.eyebrow}</p>
+              <h2>{topic.title}</h2>
+              <p class="after-birth-topic-summary">{topic.summary}</p>
+              <div class="after-birth-guidance-grid">
+                <section class="common" aria-label="Practical steps">
+                  <h3>Practical steps</h3>
+                  <ul>
+                    {topic.practicalSteps.map((step) => (
+                      <li>{step}</li>
+                    ))}
+                  </ul>
+                </section>
+                <section class="care-team" aria-label="Contact care">
+                  <h3>Contact your care team</h3>
+                  {topic.contactCare.map((step) => (
+                    <p>{step}</p>
+                  ))}
+                </section>
+                <section class="urgent" aria-label="Urgent help">
+                  <h3>Urgent help</h3>
+                  {topic.urgent.map((step) => (
+                    <p>{step}</p>
+                  ))}
+                </section>
+              </div>
+              <p class="reviewed-date">
+                Reviewed {formatReviewDate(topic.review.reviewedAt)}
+              </p>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="section soft">
+    <div class="shell">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Follow time as well as topic</p>
+          <h2>After-birth checkpoints through month six</h2>
+          <p>
+            Each checkpoint combines parent recovery, baby development,
+            practical actions, appointments and support-person tasks.
+          </p>
+        </div>
+      </div>
+      <nav class="postpartum-links" aria-label="After-birth checkpoints">
+        {
+          timeline.map((entry) => (
+            <a href={withBase(`/timeline/postpartum/${entry.slug}/`)}>
+              <span>{entry.windowLabel}</span>
+              <strong>{entry.title}</strong>
+            </a>
+          ))
+        }
+      </nav>
+    </div>
+  </section>
+</BaseLayout>

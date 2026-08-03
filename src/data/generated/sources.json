@@ -658,5 +658,145 @@
     "retrievedAt": "2026-08-03",
     "cadence": "annual",
     "note": "Ionizing-radiation sources and the need to distinguish diagnostic, occupational and high-dose exposure."
+  },
+  {
+    "id": "who-maternal-2025",
+    "authority": "World Health Organization",
+    "title": "WHO recommendations on maternal health, second edition",
+    "url": "https://www.who.int/publications/b/59332",
+    "publishedOrUpdated": "2025",
+    "retrievedAt": "2026-08-03",
+    "cadence": "rapid-review",
+    "note": "Current consolidated WHO recommendations for prevention, identification and management of maternal complications across pregnancy, birth and after birth."
+  },
+  {
+    "id": "who-disability-reproductive-health",
+    "authority": "World Health Organization and United Nations Population Fund",
+    "title": "Promoting sexual and reproductive health for persons with disabilities",
+    "url": "https://www.who.int/publications/i/item/9789241598682",
+    "publishedOrUpdated": "2009-01-01",
+    "retrievedAt": "2026-08-03",
+    "cadence": "stable",
+    "note": "Equal reproductive-health needs, accessible information, supported decision-making and removal of service barriers for disabled people."
+  },
+  {
+    "id": "nhs-existing-conditions",
+    "authority": "National Health Service",
+    "title": "Existing conditions and pregnancy",
+    "url": "https://www.nhs.uk/pregnancy/existing-health-conditions/",
+    "publishedOrUpdated": "Current page; date not stated",
+    "retrievedAt": "2026-08-03",
+    "cadence": "rapid-review",
+    "note": "Pregnancy planning and coordinated care for asthma, diabetes, epilepsy, heart disease, hypertension and other existing conditions."
+  },
+  {
+    "id": "acog-type1-type2-diabetes",
+    "authority": "American College of Obstetricians and Gynecologists",
+    "title": "Pregnancy With Type 1 or Type 2 Diabetes",
+    "url": "https://www.acog.org/womens-health/faqs/pregnancy-with-type-1-or-type-2-diabetes",
+    "publishedOrUpdated": "Current page; date not stated",
+    "retrievedAt": "2026-08-03",
+    "cadence": "rapid-review",
+    "note": "Pregestational diabetes planning, monitoring, medicine coordination and pregnancy-specific care."
+  },
+  {
+    "id": "acog-preterm-labor",
+    "authority": "American College of Obstetricians and Gynecologists",
+    "title": "Preterm Labor and Birth",
+    "url": "https://www.acog.org/womens-health/faqs/preterm-labor-and-birth",
+    "publishedOrUpdated": "Current page; date not stated",
+    "retrievedAt": "2026-08-03",
+    "cadence": "rapid-review",
+    "note": "Signs of preterm labour, immediate assessment, uncertainty about progression and individualized treatment planning."
+  },
+  {
+    "id": "acog-placenta-accreta",
+    "authority": "American College of Obstetricians and Gynecologists",
+    "title": "Placenta Accreta Spectrum",
+    "url": "https://www.acog.org/clinical/clinical-guidance/obstetric-care-consensus/articles/2018/12/placenta-accreta-spectrum",
+    "publishedOrUpdated": "2018-12-01",
+    "retrievedAt": "2026-08-03",
+    "cadence": "rapid-review",
+    "note": "Specialist diagnosis, multidisciplinary planning and delivery-location needs when placenta accreta spectrum is suspected."
+  },
+  {
+    "id": "nhs-placenta-complications",
+    "authority": "National Health Service",
+    "title": "Placenta complications",
+    "url": "https://www.nhs.uk/pregnancy/labour-and-birth/placenta-complications/",
+    "publishedOrUpdated": "2026-06-01",
+    "retrievedAt": "2026-08-03",
+    "cadence": "rapid-review",
+    "note": "Plain-language orientation to low-lying placenta, placenta praevia, placental abruption and retained placenta."
+  },
+  {
+    "id": "nhs-cholestasis",
+    "authority": "National Health Service",
+    "title": "Itching and intrahepatic cholestasis of pregnancy",
+    "url": "https://www.nhs.uk/pregnancy/complications/itching-and-intrahepatic-cholestasis/",
+    "publishedOrUpdated": "2026-03-01",
+    "retrievedAt": "2026-08-03",
+    "cadence": "rapid-review",
+    "note": "Pregnancy itching that needs assessment, bile-acid testing and individualized monitoring and birth planning."
+  },
+  {
+    "id": "acog-pregnancy-loss-support",
+    "authority": "American College of Obstetricians and Gynecologists",
+    "title": "Finding Emotional Support After Pregnancy Loss",
+    "url": "https://www.acog.org/womens-health/experts-and-stories/the-latest/finding-emotional-support-after-pregnancy-loss",
+    "publishedOrUpdated": "2025-02-01",
+    "retrievedAt": "2026-08-03",
+    "cadence": "annual",
+    "note": "Individual grief responses, partner differences and professional or peer support after miscarriage or stillbirth."
+  },
+  {
+    "id": "acog-stillbirth",
+    "authority": "American College of Obstetricians and Gynecologists",
+    "title": "Stillbirth",
+    "url": "https://www.acog.org/womens-health/faqs/stillbirth",
+    "publishedOrUpdated": "Current page; date not stated",
+    "retrievedAt": "2026-08-03",
+    "cadence": "rapid-review",
+    "note": "Evaluation, communication, individualized bereavement care and planning after stillbirth."
+  },
+  {
+    "id": "acog-postpartum-birth-control",
+    "authority": "American College of Obstetricians and Gynecologists",
+    "title": "Postpartum Birth Control",
+    "url": "https://www.acog.org/womens-health/faqs/postpartum-birth-control",
+    "publishedOrUpdated": "Current page; date not stated",
+    "retrievedAt": "2026-08-03",
+    "cadence": "rapid-review",
+    "note": "Contraception choices after birth, timing, feeding considerations and individual medical eligibility."
+  },
+  {
+    "id": "acog-breastfeeding-challenges",
+    "authority": "American College of Obstetricians and Gynecologists",
+    "title": "Breastfeeding Challenges",
+    "url": "https://www.acog.org/clinical/clinical-guidance/committee-opinion/articles/2021/02/breastfeeding-challenges",
+    "publishedOrUpdated": "2021-02-01",
+    "retrievedAt": "2026-08-03",
+    "cadence": "rapid-review",
+    "note": "Assessment and support for pain, latch, engorgement, milk transfer and other feeding challenges."
+  },
+  {
+    "id": "cdc-safe-sleep",
+    "authority": "US Centers for Disease Control and Prevention",
+    "title": "Providing Care for Babies to Sleep Safely",
+    "url": "https://www.cdc.gov/sudden-infant-death/sleep-safely/",
+    "publishedOrUpdated": "2024-09-17",
+    "retrievedAt": "2026-08-03",
+    "cadence": "annual",
+    "note": "Back sleeping, a firm flat surface, a clear sleep space and avoiding overheating and smoke exposure."
+  },
+  {
+    "id": "nhs-body-after-birth",
+    "authority": "National Health Service",
+    "title": "Your body after the birth",
+    "url": "https://www.nhs.uk/pregnancy/labour-and-birth/your-body/",
+    "publishedOrUpdated": "Current page; date not stated",
+    "retrievedAt": "2026-08-03",
+    "cadence": "rapid-review",
+    "note": "Bleeding, perineal recovery, bladder and bowel changes, pelvic-floor recovery and reasons to contact postnatal care."
   }
 ]

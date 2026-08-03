@@ -1,6 +1,6 @@
 import { expect, test } from "@playwright/test";
 
-test("homepage presents the two equal entry paths", async ({ page }) => {
+test("homepage presents clear task-based entry paths", async ({ page }) => {
   await page.goto("/");
   await expect(
     page.getByRole("heading", {
@@ -10,10 +10,10 @@ test("homepage presents the two equal entry paths", async ({ page }) => {
     }),
   ).toBeVisible();
   await expect(
-    page.getByRole("link", { name: /Set my timeline/ }),
+    page.getByRole("link", { name: /Follow my pregnancy/ }),
   ).toBeVisible();
   await expect(
-    page.getByRole("link", { name: /Browse without setup/ }),
+    page.getByRole("link", { name: /Find a direct answer/ }),
   ).toBeVisible();
   await expect(
     page.getByRole("navigation", {
@@ -22,6 +22,14 @@ test("homepage presents the two equal entry paths", async ({ page }) => {
   ).toBeVisible();
   await expect(page.getByText("Month 9", { exact: true })).toBeVisible();
   await expect(page.getByLabel("Due date given by care")).toBeVisible();
+  await expect(
+    page.getByRole("heading", {
+      name: "Choose the part of the journey you need.",
+    }),
+  ).toBeVisible();
+  await expect(
+    page.getByRole("link", { name: /After birth/ }).first(),
+  ).toBeVisible();
   await expect(
     page.getByText(/health content is awaiting qualified clinical review/i),
   ).toBeVisible();
@@ -37,8 +45,7 @@ test("getting-pregnant guidance is persistent in desktop and mobile navigation",
   });
   await expect(
     primaryNavigation.getByRole("link", {
-      name: "Getting pregnant",
-      exact: true,
+      name: /Getting pregnant/,
     }),
   ).toBeVisible();
 
@@ -49,8 +56,7 @@ test("getting-pregnant guidance is persistent in desktop and mobile navigation",
   });
   await expect(
     mobileNavigation.getByRole("link", {
-      name: "Getting pregnant",
-      exact: true,
+      name: /Getting pregnant/,
     }),
   ).toBeVisible();
 });
@@ -128,7 +134,7 @@ test("site search finds concrete guidance instead of an FAQ", async ({
   ).toBeVisible();
 });
 
-test("site search ranks a finding and opens its exact shareable anchor", async ({
+test("site search ranks a finding and opens its stable direct page", async ({
   page,
 }) => {
   await page.goto("/");
@@ -142,13 +148,16 @@ test("site search ranks a finding and opens its exact shareable anchor", async (
   await expect(result).toBeVisible();
   await result.click();
   await expect(page).toHaveURL(
-    /\/essentials\/#everyday-home-hot-tub-or-sauna$/,
+    /\/essentials\/finding\/everyday-home-hot-tub-or-sauna\/$/,
   );
   const finding = page.locator("#everyday-home-hot-tub-or-sauna");
   await expect(finding).toBeVisible();
   await expect(finding).toContainText("Avoid hot tubs, Jacuzzis, saunas");
   await expect(finding).toContainText("What changes the answer");
-  await expect(finding).toContainText("Care threshold:");
+  await expect(finding).toContainText("When to get individual help");
+  await expect(
+    finding.getByRole("button", { name: "Save answer" }),
+  ).toBeVisible();
 });
 
 test("site search covers specialist work and monitoring vocabulary", async ({
@@ -171,7 +180,7 @@ test("site search covers specialist work and monitoring vocabulary", async ({
   await expect(monitoringResult).toBeVisible();
   await monitoringResult.click();
   await expect(page).toHaveURL(
-    /\/essentials\/#appointments-warning-signs-nonstress-test$/,
+    /\/essentials\/finding\/appointments-warning-signs-nonstress-test\/$/,
   );
   await expect(
     page.locator("#appointments-warning-signs-nonstress-test"),
@@ -181,7 +190,7 @@ test("site search covers specialist work and monitoring vocabulary", async ({
 test("site search distinguishes loading from an honest zero result", async ({
   page,
 }) => {
-  await page.route("**/data/search-index.json", async (route) => {
+  await page.route("**/data/search-manifest.json", async (route) => {
     await new Promise((resolve) => setTimeout(resolve, 500));
     await route.continue();
   });
@@ -193,11 +202,17 @@ test("site search distinguishes loading from an honest zero result", async ({
   await expect(
     page.getByRole("searchbox", { name: "What do you want to find?" }),
   ).toBeEnabled();
+  await page
+    .getByRole("searchbox", { name: "What do you want to find?" })
+    .fill("quantum carburetor");
+  await expect(page.getByText("0 useful results")).toBeVisible();
+  await expect(page.getByText(/does not assess symptoms/)).toBeVisible();
 });
 
 test("site search reports loading failure instead of zero results", async ({
   page,
 }) => {
+  await page.route("**/data/search-manifest.json", (route) => route.abort());
   await page.route("**/data/search-index.json", (route) => route.abort());
   await page.goto("/");
   await expect(page.getByText(/Search could not load/)).toBeVisible();
@@ -214,6 +229,7 @@ test("site search names the offline state", async ({ page }) => {
       get: () => false,
     });
   });
+  await page.route("**/data/search-manifest.json", (route) => route.abort());
   await page.route("**/data/search-index.json", (route) => route.abort());
   await page.goto("/");
   await expect(page.getByText(/Search is offline on this visit/)).toBeVisible();
@@ -313,7 +329,7 @@ test("hidden milestones can be restored without clearing all data", async ({
 test("essentials show direct dos, donts and food examples", async ({
   page,
 }) => {
-  await page.goto("/essentials/");
+  await page.goto("/essentials/food-dishes/");
   await expect(
     page.getByRole("heading", { name: "Food and everyday dishes" }),
   ).toBeVisible();
@@ -322,14 +338,18 @@ test("essentials show direct dos, donts and food examples", async ({
   ).toBeVisible();
   await expect(page.locator("main details")).toHaveCount(0);
   await expect(
-    page.getByRole("heading", {
-      name: "Common symptoms and practical self-care",
-    }),
+    page.getByText("What changes the answer", { exact: true }).first(),
+  ).toBeVisible();
+  await page.goto("/essentials/");
+  await expect(
+    page
+      .getByRole("link", { name: /Common symptoms and practical self-care/ })
+      .first(),
   ).toBeVisible();
   await expect(
-    page.getByRole("heading", {
-      name: "Mental health, relationships and safety",
-    }),
+    page
+      .getByRole("link", { name: /Mental health, relationships and safety/ })
+      .first(),
   ).toBeVisible();
 });
 
@@ -344,7 +364,7 @@ test("important findings have copyable deep links", async ({ page }) => {
     });
   });
 
-  await page.goto("/essentials/");
+  await page.goto("/essentials/finding/food-dishes-sushi/");
   const finding = page.locator("#food-dishes-sushi");
   await finding.getByRole("link", { name: "Copy link to Sushi" }).click();
 
@@ -355,7 +375,7 @@ test("important findings have copyable deep links", async ({ page }) => {
   await expect(finding).toBeFocused();
   expect(
     await page.evaluate(() => sessionStorage.getItem("copied-finding-link")),
-  ).toMatch(/\/essentials\/#food-dishes-sushi$/);
+  ).toMatch(/\/essentials\/finding\/food-dishes-sushi\/#food-dishes-sushi$/);
 
   const response = await page.goto(
     "/urgent-help/#maternal-baby-movement-stops-or-slows",
@@ -368,7 +388,7 @@ test("important findings have copyable deep links", async ({ page }) => {
   ).toBe(true);
 
   await page.setViewportSize({ width: 320, height: 780 });
-  await page.goto("/essentials/#food-dishes-sushi");
+  await page.goto("/essentials/finding/food-dishes-sushi/#food-dishes-sushi");
   await expect
     .poll(() =>
       page
@@ -378,13 +398,52 @@ test("important findings have copyable deep links", async ({ page }) => {
     .toBeLessThan(180);
 });
 
+test("direct answers keep private recent and saved shortcuts", async ({
+  page,
+}) => {
+  await page.goto("/essentials/finding/everyday-home-hot-tub-or-sauna/");
+  await page.getByRole("button", { name: "Save answer" }).click();
+  await expect(page.getByRole("button", { name: "Saved" })).toBeVisible();
+
+  await page.goto("/essentials/");
+  const shelf = page
+    .getByRole("heading", { name: "Your answers" })
+    .locator("..");
+  await expect(
+    page.getByRole("heading", { name: "Your answers" }),
+  ).toBeVisible();
+  await expect(
+    page.getByRole("link", { name: "Hot tub or sauna" }).first(),
+  ).toBeVisible();
+  expect(
+    await page.evaluate(() =>
+      localStorage.getItem("pregnancy-clearly:recent-findings:v1"),
+    ),
+  ).toContain("everyday-home-hot-tub-or-sauna");
+  expect(await shelf.count()).toBe(1);
+});
+
+test("after-birth guidance is separate and keeps care tiers visible", async ({
+  page,
+}) => {
+  await page.goto("/timeline/after-birth/");
+  await expect(
+    page.getByRole("heading", { level: 1, name: /After birth/ }),
+  ).toBeVisible();
+  const caesarean = page.locator("#recovery-caesarean");
+  await expect(caesarean).toContainText("Practical steps");
+  await expect(caesarean).toContainText("Contact your care team");
+  await expect(caesarean).toContainText("Urgent help");
+  await expect(page.getByRole("link", { name: /Birth day/ })).toBeVisible();
+});
+
 test("swap finder turns a craving into a concrete alternative", async ({
   page,
 }) => {
   await page.goto("/essentials/#smart-swaps");
   await expect(
     page.getByRole("heading", {
-      name: "Keep the thing you love. Change only what matters.",
+      name: "Looking for a practical substitute?",
     }),
   ).toBeVisible();
 
@@ -471,7 +530,14 @@ test("partner milestones use the same chronological source of truth", async ({
 
 test("mobile pages do not overflow horizontally", async ({ page }) => {
   await page.setViewportSize({ width: 320, height: 780 });
-  for (const path of ["/timeline/", "/getting-pregnant/", "/essentials/"]) {
+  for (const path of [
+    "/timeline/",
+    "/getting-pregnant/",
+    "/essentials/",
+    "/essentials/pregnancy-complications/",
+    "/essentials/finding/everyday-home-hot-tub-or-sauna/",
+    "/timeline/after-birth/",
+  ]) {
     await page.goto(path);
     const overflow = await page.evaluate(
       () =>

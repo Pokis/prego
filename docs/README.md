@@ -1,6 +1,7 @@
 # Documentation index
 
 - [Architecture](architecture.md) — system shape and data flow.
+- [Information architecture](information-architecture.md) — navigation hierarchy, task paths and stable answer routes.
 - [Design system](design-system.md) — visual tokens, components and interaction rules.
 - [Content model](content-model.md) — collection contracts and authoring workflow.
 - [Editorial voice](editorial-voice.md) — tone, readability and inclusive language.

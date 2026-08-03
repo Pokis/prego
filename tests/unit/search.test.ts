@@ -2,8 +2,11 @@ import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { describe, expect, it } from "vitest";
 import {
+  explainSearchMatch,
+  highlightSearchTerms,
   normalizeSearchText,
   searchRecords,
+  suggestSearchQueries,
   type SearchRecord,
 } from "../../src/lib/search";
 
@@ -41,6 +44,35 @@ const expectedQueries = [
   ["pregnancy after loss", "mental-health-pregnancy-after-loss"],
   ["tick bite", "infections-tick-bite-lyme"],
   ["left side sleeping", "sleep-comfort-left-versus-right-side"],
+  [
+    "type 1 diabetes",
+    "health-conditions-accessibility-type-1-or-type-2-diabetes-before-pregnancy",
+  ],
+  [
+    "wheelchair",
+    "health-conditions-accessibility-wheelchair-mobility-transfers",
+  ],
+  [
+    "placenta previa",
+    "pregnancy-complications-low-lying-placenta-or-placenta-praevia",
+  ],
+  [
+    "itchy palms",
+    "pregnancy-complications-persistent-itching-or-possible-cholestasis",
+  ],
+  [
+    "inconclusive scan",
+    "loss-uncertainty-support-early-scan-that-is-not-yet-conclusive",
+  ],
+  [
+    "miscarriage recovery",
+    "loss-uncertainty-support-physical-recovery-after-miscarriage",
+  ],
+  [
+    "birth preferences",
+    "birth-newborn-preparation-a-one-page-birth-preference-note",
+  ],
+  ["safe sleep space", "birth-newborn-preparation-newborn-sleep-space"],
 ] as const;
 
 describe("guide search", () => {
@@ -71,12 +103,12 @@ describe("guide search", () => {
     );
   });
 
-  it("sends finding results to their exact shareable anchors", () => {
+  it("sends finding results to their stable direct pages", () => {
     for (const [query, expectedId] of expectedQueries) {
       const match = searchRecords(records, query).find(
         (result) => result.id === expectedId,
       );
-      expect(match?.href).toBe(`/essentials/#${expectedId}`);
+      expect(match?.href).toBe(`/essentials/finding/${expectedId}/`);
     }
   });
 
@@ -128,6 +160,20 @@ describe("guide search", () => {
     expect(searchRecords(records, "pre eclampsia").at(0)?.id).toBe(
       "common-symptoms-preeclampsia",
     );
+  });
+
+  it("explains matches, highlights terms and offers controlled typo recovery", () => {
+    const hotTub = searchRecords(records, "hot tub").at(0);
+    expect(hotTub).toBeDefined();
+    expect(explainSearchMatch(hotTub!, "hot tub")).toMatch(
+      /Exact title|Known term|Known phrase/,
+    );
+    expect(
+      highlightSearchTerms("Hot tub and sauna guidance", "hot tub")
+        .filter((segment) => segment.match)
+        .map((segment) => segment.text.toLowerCase()),
+    ).toEqual(["hot", "tub"]);
+    expect(suggestSearchQueries(records, "jacuzzie")).toContain("jacuzzi");
   });
 
   it("still gives an honest zero for unrelated input", () => {

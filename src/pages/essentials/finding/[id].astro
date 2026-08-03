@@ -1,0 +1,168 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Breadcrumbs from "@/components/Breadcrumbs.astro";
+import FindingSummary from "@/components/FindingSummary.astro";
+import FindingActions from "@/components/react/FindingActions";
+import ShareAnchor from "@/components/react/ShareAnchor";
+import {
+  careTierLabels,
+  essentialTopicHref,
+  findingHref,
+  findingStatusLabels,
+  formatReviewDate,
+  recordTypeLabels,
+} from "@/lib/findings";
+import { withBase } from "@/lib/paths";
+
+export async function getStaticPaths() {
+  const findings = await getCollection("findings");
+  return findings.map((finding) => ({
+    params: { id: finding.data.id },
+    props: { findingId: finding.data.id },
+  }));
+}
+
+interface Props {
+  findingId: string;
+}
+
+const { findingId } = Astro.props;
+const allFindings = (await getCollection("findings")).map((item) => item.data);
+const finding = allFindings.find((item) => item.id === findingId);
+if (!finding) throw new Error(`Unknown finding ${findingId}`);
+const topics = (await getCollection("essentials")).map((item) => item.data);
+const topic = topics.find((item) => item.id === finding.sectionId);
+if (!topic) throw new Error(`Missing topic ${finding.sectionId}`);
+const related = finding.relatedIds
+  .map((id) => allFindings.find((item) => item.id === id))
+  .filter((item): item is NonNullable<typeof item> => Boolean(item));
+const canonicalPath = findingHref(finding.id);
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "MedicalWebPage",
+  name: finding.title,
+  description: finding.summary,
+  lastReviewed: finding.review.reviewedAt,
+  about: topic.title,
+};
+---
+
+<BaseLayout
+  title={`${finding.title}: pregnancy guidance`}
+  description={finding.summary}
+  schema={schema}
+>
+  <article class="finding-page" id={finding.id} data-share-target tabindex="-1">
+    <header class="finding-page-hero">
+      <div class="shell finding-page-hero-inner">
+        <Breadcrumbs
+          items={[
+            { label: "Home", href: "/" },
+            { label: "Pregnancy essentials", href: "/essentials/" },
+            { label: topic.title, href: essentialTopicHref(topic.slug) },
+            { label: finding.title },
+          ]}
+        />
+        <div class="finding-page-heading">
+          <div class="finding-page-kickers">
+            <span class={`example-status ${finding.status}`}>
+              {findingStatusLabels[finding.status]}
+            </span>
+            <span class={`care-tier-chip ${finding.careTier}`}>
+              {careTierLabels[finding.careTier]}
+            </span>
+            <span class="record-type-chip">
+              {recordTypeLabels[finding.recordType]}
+            </span>
+          </div>
+          <ShareAnchor targetId={finding.id} label={finding.title} compact />
+          <h1>{finding.title}</h1>
+          <p class="finding-answer-lede">{finding.summary}</p>
+          <FindingActions
+            client:load
+            id={finding.id}
+            title={finding.title}
+            summary={finding.summary}
+            href={canonicalPath}
+          />
+        </div>
+      </div>
+    </header>
+
+    <div class="shell finding-page-grid">
+      <div class="finding-page-content">
+        <section aria-labelledby="direct-guidance-title">
+          <p class="eyebrow">Direct guidance</p>
+          <h2 id="direct-guidance-title">What to know or do</h2>
+          {finding.details.map((detail) => <p>{detail}</p>)}
+        </section>
+        <section class="finding-factors" aria-labelledby="answer-factors-title">
+          <h2 id="answer-factors-title">What changes the answer</h2>
+          <ul>
+            {finding.decisionFactors.map((factor) => <li>{factor}</li>)}
+          </ul>
+        </section>
+        <section
+          class={`finding-page-care ${finding.careTier}`}
+          aria-labelledby="care-threshold-title"
+        >
+          <p class="eyebrow">{careTierLabels[finding.careTier]}</p>
+          <h2 id="care-threshold-title">When to get individual help</h2>
+          <p>{finding.careNote}</p>
+          {
+            finding.careTier === "urgent" && (
+              <a class="button" href={withBase("/urgent-help/")}>
+                Open urgent warning signs
+              </a>
+            )
+          }
+        </section>
+      </div>
+
+      <aside class="finding-page-aside" aria-label="Answer context">
+        <section>
+          <p class="eyebrow">Topic</p>
+          <h2>{topic.title}</h2>
+          <p>{topic.intro}</p>
+          <a href={withBase(essentialTopicHref(topic.slug))}>
+            Browse all {topic.title.toLowerCase()} answers
+          </a>
+        </section>
+        <section class="review-marker">
+          <p class="eyebrow">Content review</p>
+          <strong>Reviewed {formatReviewDate(finding.review.reviewedAt)}</strong
+          >
+          <p>
+            Source-backed internal evidence is recorded in the repository. This
+            evaluation build still awaits qualified clinical sign-off.
+          </p>
+        </section>
+      </aside>
+    </div>
+
+    {
+      related.length > 0 && (
+        <section class="section soft related-findings">
+          <div class="shell">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">Authored connections</p>
+                <h2>Related guidance</h2>
+                <p>
+                  These links are selected in the content record. They are not a
+                  diagnosis or a personalized recommendation.
+                </p>
+              </div>
+            </div>
+            <div class="related-finding-grid">
+              {related.map((item) => (
+                <FindingSummary finding={item} compact />
+              ))}
+            </div>
+          </div>
+        </section>
+      )
+    }
+  </article>
+</BaseLayout>

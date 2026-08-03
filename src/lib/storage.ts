@@ -1,6 +1,14 @@
 import { siteConfig } from "../config/site";
 import type { UserPreferences } from "./types";
 
+export const recentFindingsStorageKey = "pregnancy-clearly:recent-findings:v1";
+export const recentSearchesStorageKey = "pregnancy-clearly:recent-searches:v1";
+export const applicationStorageKeys = [
+  siteConfig.storageKey,
+  recentFindingsStorageKey,
+  recentSearchesStorageKey,
+] as const;
+
 export const defaultPreferences: UserPreferences = {
   version: 2,
   dueDateSource: null,
@@ -60,5 +68,5 @@ export function savePreferences(
 export function clearPreferences(
   storage: Pick<Storage, "removeItem"> = localStorage,
 ): void {
-  storage.removeItem(siteConfig.storageKey);
+  for (const key of applicationStorageKeys) storage.removeItem(key);
 }

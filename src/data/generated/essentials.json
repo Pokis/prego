@@ -897,5 +897,271 @@
       "reviewer": "Clinical reviewer required before public release",
       "volatility": "annual"
     }
+  },
+  {
+    "id": "health-conditions-accessibility",
+    "slug": "health-conditions-accessibility",
+    "number": 15,
+    "title": "Health conditions, disability and access needs",
+    "eyebrow": "Coordinate care around the whole person",
+    "intro": "A long-term condition or disability does not reduce your right to clear, respectful pregnancy care. The useful plan connects maternity care with the clinicians, medicines, equipment, communication support and everyday access you already rely on.",
+    "dos": [
+      "Bring a current condition, medicine, allergy, specialist and equipment list to pregnancy care and agree who coordinates changes.",
+      "Ask for information in the format you use, enough appointment time, physical access, an interpreter or communication support when needed.",
+      "Keep treatment monitoring and ordinary specialist follow-up unless the responsible clinicians make a pregnancy-specific plan.",
+      "Write down what a flare, seizure, breathing change, glucose problem or other deterioration looks like for you and which service to contact."
+    ],
+    "donts": [
+      "Do not stop prescribed treatment, mobility aids, respiratory support or mental-health care because pregnancy began.",
+      "Do not let every new symptom be dismissed as either pregnancy or your existing condition without appropriate assessment.",
+      "Do not accept inaccessible examinations or communication when a reasonable adjustment can make care usable.",
+      "Do not assume a diagnosis determines the birth method; the current condition, pregnancy and available support all matter."
+    ],
+    "askDoctor": [
+      "Ask who will coordinate maternity and specialist care, how results are shared and which changes require same-day or urgent contact.",
+      "Ask for an exact medicine, monitoring and equipment plan rather than general reassurance that a condition is controlled.",
+      "Ask for an access plan covering transfers, positioning, sensory needs, communication, support people and recovery after birth."
+    ],
+    "examples": [
+      {
+        "name": "Type 1 or type 2 diabetes before pregnancy",
+        "status": "check-first",
+        "guidance": "Arrange coordinated diabetes and maternity care promptly; pregnancy can change glucose targets, medicine needs, eye or kidney monitoring and scan plans."
+      },
+      {
+        "name": "Epilepsy or a seizure disorder",
+        "status": "check-first",
+        "guidance": "Continue prescribed treatment until specialist review and ask for a written plan for medicines, folic acid, seizures, sleep and urgent help."
+      },
+      {
+        "name": "Heart, kidney or autoimmune disease",
+        "status": "check-first",
+        "guidance": "Ask for early specialist coordination because the condition, organ function, antibodies, medicines and pregnancy monitoring all affect the plan."
+      },
+      {
+        "name": "Physical, sensory, learning or communication disability",
+        "status": "generally-ok",
+        "guidance": "Pregnancy care should be accessible and support your own consent; request the adjustments, equipment and communication format that make care usable."
+      },
+      {
+        "name": "Eating disorder or highly restricted intake",
+        "status": "check-first",
+        "guidance": "Ask for nonjudgmental maternity, nutrition and mental-health support before symptoms or food rules make eating, monitoring or appointments harder."
+      }
+    ],
+    "sourceIds": [
+      "who-maternal-2025",
+      "who-disability-reproductive-health",
+      "nhs-existing-conditions",
+      "acog-type1-type2-diabetes",
+      "cdc-medicine"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2026-10-29",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "rapid-review"
+    }
+  },
+  {
+    "id": "pregnancy-complications",
+    "slug": "pregnancy-complications",
+    "number": 16,
+    "title": "Complications and specialist care",
+    "eyebrow": "Understand the finding and the next decision",
+    "intro": "A complication label is the start of an individualized plan, not a complete prognosis. Ask what was found, how certain it is, what is being monitored, which symptoms change the urgency and where the right level of care is available.",
+    "dos": [
+      "Ask for the exact finding in writing, including the pregnancy week, measurements, uncertainty and planned follow-up.",
+      "Keep a short record of appointments, results, medicines, symptoms and the service to contact between visits.",
+      "Ask what the plan is trying to prevent or detect and what would change monitoring, treatment, transfer or birth timing.",
+      "Request an interpreter, extra decision time or a second specialist discussion when information is difficult to absorb."
+    ],
+    "donts": [
+      "Do not treat one scan phrase, laboratory value or risk percentage as a diagnosis or fixed outcome by itself.",
+      "Do not start bed rest, aspirin, supplements or another treatment unless the responsible clinician recommends it for your case.",
+      "Do not miss urgent symptoms because a complication is already being monitored routinely.",
+      "Do not assume a planned birth date is fixed when new maternal or fetal information may change the balance."
+    ],
+    "askDoctor": [
+      "Ask what is known, what remains uncertain, which alternative explanations were considered and when the next result should arrive.",
+      "Ask whether a maternal–fetal medicine, anaesthesia, neonatal or other specialist discussion would help before a decision is urgent.",
+      "Ask which bleeding, pain, contractions, fluid loss, movement change, headache, vision change or breathing symptom needs immediate assessment."
+    ],
+    "examples": [
+      {
+        "name": "Low-lying placenta or placenta praevia",
+        "status": "check-first",
+        "guidance": "Ask how close the placenta is to the cervix, when it will be rechecked, what bleeding requires urgent care and how the location may affect birth planning."
+      },
+      {
+        "name": "Suspected placenta accreta spectrum",
+        "status": "check-first",
+        "guidance": "Early specialist referral and multidisciplinary birth planning matter; ask about diagnostic uncertainty, delivery location, blood support and who coordinates the team."
+      },
+      {
+        "name": "Baby measuring small or fetal growth restriction",
+        "status": "check-first",
+        "guidance": "Ask which measurements are concerning, whether blood-flow or fluid monitoring is needed and what findings would change surveillance or birth timing."
+      },
+      {
+        "name": "Contractions, pressure or fluid loss before 37 weeks",
+        "status": "avoid",
+        "guidance": "Do not wait for a routine visit; contact maternity assessment immediately because preterm labour cannot be confirmed or excluded from symptoms alone."
+      },
+      {
+        "name": "Persistent itching or possible cholestasis",
+        "status": "check-first",
+        "guidance": "Contact pregnancy care for assessment, especially for itching of the palms or soles; diagnosis and planning depend on symptoms, blood tests and pregnancy week."
+      }
+    ],
+    "sourceIds": [
+      "who-maternal-2025",
+      "acog-bleeding",
+      "acog-placenta-accreta",
+      "nhs-placenta-complications",
+      "acog-preterm-labor",
+      "nhs-cholestasis"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2026-10-29",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "rapid-review"
+    }
+  },
+  {
+    "id": "loss-uncertainty-support",
+    "slug": "loss-uncertainty-support",
+    "number": 17,
+    "title": "Loss, uncertainty and bereavement",
+    "eyebrow": "Clear information without blame",
+    "intro": "Uncertain scans, pregnancy loss and bereavement need direct clinical explanations and care that respects different emotional, cultural and practical needs. Grief can include sadness, anger, numbness, relief or changing feelings; there is no required way to respond.",
+    "dos": [
+      "Ask what is confirmed, what remains uncertain, which test or time interval could clarify it and when you will receive results.",
+      "Ask for written physical-recovery instructions, expected bleeding or pain, an urgent contact route and follow-up of any tests.",
+      "Choose whether you want a support person, private time, memory-making, spiritual care, peer support or counselling.",
+      "Tell care promptly when grief, anxiety, sleep or intrusive thoughts make daily life or safety difficult."
+    ],
+    "donts": [
+      "Do not blame exercise, ordinary stress, sex or one everyday action for a loss without clinical evidence.",
+      "Do not let pressure from relatives or staff decide how you name, remember, disclose or grieve the pregnancy.",
+      "Do not leave without knowing who will explain pathology, genetic or placental results and what unanswered results mean.",
+      "Do not wait alone with thoughts of self-harm, severe confusion or loss of contact with reality."
+    ],
+    "askDoctor": [
+      "Ask which physical symptoms after the loss need same-day or emergency care and how pain and bleeding should be managed.",
+      "Ask when follow-up is planned, what results may inform future pregnancy and whether specialist or genetic counselling is relevant.",
+      "Ask for support that includes the pregnant person, partner or family without assuming everyone grieves in the same way."
+    ],
+    "examples": [
+      {
+        "name": "Early scan that is not yet conclusive",
+        "status": "check-first",
+        "guidance": "Ask what was visible, whether dates could explain uncertainty, when repeat testing is appropriate and which pain, bleeding or faintness needs urgent care."
+      },
+      {
+        "name": "Miscarriage diagnosis and management choices",
+        "status": "check-first",
+        "guidance": "Ask for the available options, expected course, pain and bleeding plan, follow-up and urgent thresholds; the right choice depends on clinical findings and your preferences."
+      },
+      {
+        "name": "Pregnancy after a previous loss",
+        "status": "check-first",
+        "guidance": "Ask what monitoring is medically useful and what emotional support would help; reassurance needs can be real even when extra testing is not indicated."
+      },
+      {
+        "name": "Stillbirth or later pregnancy loss",
+        "status": "check-first",
+        "guidance": "Request clear communication, individualized birth and bereavement choices, physical follow-up and a planned conversation about test results and future care."
+      },
+      {
+        "name": "Partners grieving differently",
+        "status": "generally-ok",
+        "guidance": "Different timing and expression of grief are common; make room for each person while seeking help when distress, conflict or isolation is becoming unmanageable."
+      }
+    ],
+    "sourceIds": [
+      "acog-pregnancy-loss-support",
+      "acog-stillbirth",
+      "acog-postpartum",
+      "acog-mental-health",
+      "cdc-warning"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2026-10-29",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "rapid-review"
+    }
+  },
+  {
+    "id": "birth-newborn-preparation",
+    "slug": "birth-newborn-preparation",
+    "number": 18,
+    "title": "Birth and newborn preparation",
+    "eyebrow": "Prepare for decisions, not a perfect script",
+    "intro": "Useful preparation covers communication, consent, pain options, possible changes, parent recovery and the baby’s first care. A flexible plan helps you ask better questions without promising that birth will follow one route.",
+    "dos": [
+      "Write short preferences for communication, consent, support people, pain relief, feeding support and newborn care.",
+      "Ask what the planned birth setting can provide and how transfer, urgent theatre, blood or neonatal care would work if needed.",
+      "Learn the first recovery and newborn checks before labour so unexpected monitoring or support is easier to understand.",
+      "Prepare practical help for meals, transport, sleep, wound or perineal care, feeding and follow-up after discharge."
+    ],
+    "donts": [
+      "Do not treat a birth preference as consent for every later procedure; each material change still needs explanation and agreement when possible.",
+      "Do not assume feeding success or difficulty reflects effort, attachment or worth; ask early for skilled assessment.",
+      "Do not use positioners, pillows, nests or inclined products as a newborn sleep surface.",
+      "Do not let the baby’s appointments replace follow-up for the recovering parent."
+    ],
+    "askDoctor": [
+      "Ask how induction, assisted birth, caesarean birth, pain relief and urgent changes are discussed in your planned setting.",
+      "Ask which newborn medicines, screening, feeding checks and follow-up are offered and how choices are documented.",
+      "Ask for separate urgent routes for the recovering parent and the newborn before leaving the birth setting."
+    ],
+    "examples": [
+      {
+        "name": "A one-page birth preference note",
+        "status": "generally-ok",
+        "guidance": "Keep it short and flexible: communication, consent, support, pain relief, feeding and newborn priorities are more useful than a fixed sequence."
+      },
+      {
+        "name": "Possible caesarean or assisted birth",
+        "status": "check-first",
+        "guidance": "Ask what might make it advisable, how consent and anaesthesia work, what recovery differs and how support or feeding can continue afterward."
+      },
+      {
+        "name": "Feeding plan and early support",
+        "status": "generally-ok",
+        "guidance": "State your preference and ask who assesses positioning, milk transfer, bottle feeding, pain or supplementation when the first plan needs help."
+      },
+      {
+        "name": "Newborn sleep space",
+        "status": "generally-ok",
+        "guidance": "Prepare a firm, flat sleep surface with a fitted sheet and no pillows, loose bedding, bumpers, toys or positioners."
+      },
+      {
+        "name": "Possible preterm birth or neonatal admission",
+        "status": "check-first",
+        "guidance": "Ask which neonatal services are available, when transfer may be recommended and how parents can receive updates, participate in care and get feeding support."
+      }
+    ],
+    "sourceIds": [
+      "who-postnatal",
+      "acog-labour-birth",
+      "acog-cesarean",
+      "acog-breastfeeding-challenges",
+      "cdc-safe-sleep",
+      "who-newborn"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2026-10-29",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "rapid-review"
+    }
   }
 ]

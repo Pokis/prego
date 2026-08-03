@@ -66,12 +66,16 @@ describe("local journey storage", () => {
     expect(loadPreferences(storage)).not.toHaveProperty("region");
   });
 
-  it("clears only the application key", () => {
+  it("clears every application key without touching unrelated storage", () => {
     const storage = new MemoryStorage();
     storage.setItem(siteConfig.storageKey, "saved");
+    storage.setItem("pregnancy-clearly:recent-findings:v1", "saved");
+    storage.setItem("pregnancy-clearly:recent-searches:v1", "saved");
     storage.setItem("other", "preserve");
     clearPreferences(storage);
     expect(storage.getItem(siteConfig.storageKey)).toBeNull();
+    expect(storage.getItem("pregnancy-clearly:recent-findings:v1")).toBeNull();
+    expect(storage.getItem("pregnancy-clearly:recent-searches:v1")).toBeNull();
     expect(storage.getItem("other")).toBe("preserve");
   });
 });

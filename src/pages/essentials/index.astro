@@ -1,60 +1,89 @@
 ---
 import { getCollection } from "astro:content";
 import BaseLayout from "@/layouts/BaseLayout.astro";
+import EssentialTopicDirectory from "@/components/EssentialTopicDirectory.astro";
+import FindingSummary from "@/components/FindingSummary.astro";
+import RecentFindings from "@/components/react/RecentFindings";
 import SiteSearch from "@/components/react/SiteSearch";
 import SwapFinder from "@/components/react/SwapFinder";
 import ShareAnchor from "@/components/react/ShareAnchor";
-import { scopedAnchor } from "@/lib/anchors";
+import {
+  essentialTopicHref,
+  findingHref,
+  findingIntentDefinitions,
+  findingPriority,
+  findingStatusLabels,
+  formatReviewDate,
+} from "@/lib/findings";
 import { withBase } from "@/lib/paths";
 
-const essentials = (await getCollection("essentials")).sort(
-  (a, b) => a.data.number - b.data.number,
-);
+const topics = (await getCollection("essentials"))
+  .map((item) => item.data)
+  .sort((a, b) => a.number - b.number);
 const substitutions = (await getCollection("substitutions")).map(
   (item) => item.data,
 );
-const priorityOrder = { P0: 0, P1: 1, baseline: 2 };
 const findings = (await getCollection("findings"))
   .map((item) => item.data)
   .sort(
     (a, b) =>
-      priorityOrder[a.priority] - priorityOrder[b.priority] ||
+      findingPriority[a.priority] - findingPriority[b.priority] ||
       a.title.localeCompare(b.title),
   );
-
-const statusLabel = {
-  "generally-ok": "Generally okay",
-  avoid: "Avoid",
-  "check-first": "Check first",
-  "contact-care": "Contact care",
-  urgent: "Urgent help",
-};
+const featuredFindings = topics
+  .map((topic) =>
+    findings.find(
+      (finding) => finding.sectionId === topic.id && finding.priority === "P0",
+    ),
+  )
+  .filter((finding): finding is NonNullable<typeof finding> =>
+    Boolean(finding),
+  );
+const recentCatalog = findings.map((finding) => ({
+  id: finding.id,
+  title: finding.title,
+  summary: finding.summary,
+  href: findingHref(finding.id),
+}));
 
 const schema = {
   "@context": "https://schema.org",
   "@type": "MedicalWebPage",
   name: "Pregnancy essentials: clear dos and don'ts",
   description:
-    "Direct pregnancy guidance for food, dishes, drinks, exercise, medicines, work, travel, sex, sleep and appointments.",
+    "Direct pregnancy guidance for food, drinks, activities, medicines, symptoms, tests, work, health conditions, complications and birth preparation.",
+  lastReviewed: topics[0]?.review.reviewedAt,
 };
 ---
 
 <BaseLayout
-  title="Pregnancy essentials: dos and don’ts"
-  description="Direct pregnancy dos, don’ts and check-first guidance for food, dishes, drinks, exercise, medicines, work, travel, sex and sleep."
+  title="Pregnancy essentials: find a direct answer"
+  description="Search 419 source-backed pregnancy findings or browse complete do, don’t and check-first guidance by topic."
   schema={schema}
 >
-  <section class="page-hero essentials-hero">
+  <section class="page-hero essentials-hero essentials-overview-hero">
     <div class="shell">
-      <p class="eyebrow">No FAQ maze · no hidden answers</p>
-      <h1>Pregnancy dos<br />and don’ts.</h1>
+      <p class="eyebrow">One handbook · no hidden answers</p>
+      <h1>Find the pregnancy<br />answer you need.</h1>
       <p class="lede">
-        The everyday things people actually wonder about—food and dishes,
-        coffee, exercise, medicine, cleaning, lifting, travel, sex and sleep—in
-        one direct guide.
+        Search the whole guide, start with what you are trying to do, or browse
+        one complete topic. Every direct answer has a stable page, care
+        threshold and review date.
       </p>
+    </div>
+  </section>
+
+  <section
+    class="section essentials-search-section"
+    id="find-an-answer"
+    data-share-target
+    tabindex="-1"
+  >
+    <div class="shell">
+      <ShareAnchor targetId="find-an-answer" label="pregnancy answer search" />
+      <SiteSearch client:load />
       <div
-        class="doctor-banner"
+        class="doctor-banner essentials-search-boundary"
         id="individual-care-baseline"
         data-share-target
         tabindex="-1"
@@ -65,18 +94,142 @@ const schema = {
           compact
         />
         <strong>Use this as the general baseline.</strong>
-        Your doctor or midwife should make any decision that depends on your health,
-        medicines, symptoms or pregnancy.
+        Your doctor or midwife should make decisions that depend on your health, medicines,
+        symptoms or pregnancy. Search cannot assess a symptom.
       </div>
-      <a class="swap-hero-link" href="#smart-swaps">
-        <span>New · practical substitutes</span>
-        Missing coffee, Coca-Cola, sushi or soft cheese? Find the closest useful swap
-        →
-      </a>
-      <a class="before-pregnancy-link" href={withBase("/getting-pregnant/")}>
-        <span>Before pregnancy</span>
-        Trying to conceive? Open the dos, don’ts and fertility-myth guide →
-      </a>
+    </div>
+  </section>
+
+  <section
+    class="section soft intent-section"
+    id="start-with-your-question"
+    data-share-target
+    tabindex="-1"
+  >
+    <div class="shell">
+      <ShareAnchor
+        targetId="start-with-your-question"
+        label="pregnancy question starting points"
+      />
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Start with what you are trying to do</p>
+          <h2>Six clearer ways into the handbook</h2>
+          <p>
+            These are navigation shortcuts, not a symptom checker. Each opens a
+            complete pregnancy topic with visible guidance.
+          </p>
+        </div>
+      </div>
+      <nav class="intent-grid" aria-label="Browse by question type">
+        {
+          findingIntentDefinitions.map((intent) => (
+            <a href={withBase(intent.href)}>
+              <strong>{intent.label}</strong>
+              <span>{intent.detail}</span>
+              <small>Browse guidance →</small>
+            </a>
+          ))
+        }
+      </nav>
+    </div>
+  </section>
+
+  <section class="section personal-finding-section">
+    <div class="shell">
+      <RecentFindings client:load catalog={recentCatalog} />
+    </div>
+  </section>
+
+  <section class="section topic-directory-section">
+    <div class="shell">
+      <EssentialTopicDirectory topics={topics} />
+    </div>
+  </section>
+
+  <section
+    class="section soft essentials-baseline-overview"
+    id="everyday-baseline"
+    data-share-target
+    tabindex="-1"
+  >
+    <div class="shell">
+      <ShareAnchor
+        targetId="everyday-baseline"
+        label="pregnancy essentials baseline"
+      />
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Useful without search</p>
+          <h2>Every topic at a glance</h2>
+          <p>
+            The first do, don’t and check-first action remains visible here.
+            Open a topic for its full baseline and every direct answer.
+          </p>
+        </div>
+      </div>
+      <div class="baseline-topic-grid">
+        {
+          topics.map((topic) => (
+            <article>
+              <span class="baseline-topic-number" aria-hidden="true">
+                {String(topic.number).padStart(2, "0")}
+              </span>
+              <p class="eyebrow">{topic.eyebrow}</p>
+              <h3>{topic.title}</h3>
+              <p>{topic.intro}</p>
+              <dl>
+                <div>
+                  <dt>Do</dt>
+                  <dd>{topic.dos[0]}</dd>
+                </div>
+                <div>
+                  <dt>Don’t</dt>
+                  <dd>{topic.donts[0]}</dd>
+                </div>
+                <div>
+                  <dt>Check first</dt>
+                  <dd>{topic.askDoctor[0]}</dd>
+                </div>
+              </dl>
+              <a href={withBase(essentialTopicHref(topic.slug))}>
+                Open {topic.title.toLowerCase()} →
+              </a>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section
+    class="section featured-finding-section"
+    id="important-direct-answers"
+    data-share-target
+    tabindex="-1"
+  >
+    <div class="shell">
+      <ShareAnchor
+        targetId="important-direct-answers"
+        label="important pregnancy direct answers"
+      />
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Important direct answers</p>
+          <h2>One high-priority answer from every topic</h2>
+          <p>
+            These are broad entry points. Open any answer for its full factors,
+            care threshold, related guidance, save, share and print controls.
+          </p>
+        </div>
+      </div>
+      <div class="featured-finding-grid">
+        {
+          featuredFindings.map((finding) => (
+            <FindingSummary finding={finding} compact idPrefix="featured-" />
+          ))
+        }
+      </div>
     </div>
   </section>
 
@@ -90,190 +243,63 @@ const schema = {
       <ShareAnchor targetId="smart-swaps" label="pregnancy swap finder" />
       <header class="swap-section-heading">
         <div>
-          <p class="eyebrow">The pregnancy swap finder</p>
-          <h2>Keep the thing you love.<br />Change only what matters.</h2>
+          <p class="eyebrow">A separate, food-and-drink-only tool</p>
+          <h2>Looking for a practical substitute?</h2>
         </div>
         <p>
-          Search a familiar food or drink. You’ll see whether to keep it within
-          a limit, change how it is prepared, choose another version or check
-          the exact product first—plus the closest alternatives.
+          The main search above covers the whole guide. Use this smaller finder
+          only when you want an alternative to coffee, cola, sushi, cheese or
+          another familiar food or drink.
         </p>
       </header>
-      <SwapFinder client:load items={substitutions} />
+      <SwapFinder client:visible items={substitutions} />
     </div>
   </section>
 
-  <section class="section" style="padding-top: 0">
+  <section
+    class="section soft legacy-finding-directory"
+    id="all-direct-answers"
+    data-share-target
+    tabindex="-1"
+  >
     <div class="shell">
-      <nav
-        class="essential-jump"
-        id="essential-topics"
-        data-share-target
-        tabindex="-1"
-        aria-label="Pregnancy essentials topics"
-      >
-        <ShareAnchor
-          targetId="essential-topics"
-          label="pregnancy essentials topics"
-        />
+      <ShareAnchor
+        targetId="all-direct-answers"
+        label="all pregnancy direct answers"
+      />
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Stable link directory</p>
+          <h2>All {findings.length} answers, A–Z</h2>
+          <p>
+            Existing shared anchors remain valid. Each item now opens a smaller,
+            permanent finding page with its complete guidance.
+          </p>
+        </div>
+      </div>
+      <ol class="legacy-finding-list">
         {
-          essentials.map((item) => (
-            <a href={`#${item.data.slug}`}>
-              <span>{String(item.data.number).padStart(2, "0")}</span>
-              {item.data.title}
-            </a>
-          ))
+          [...findings]
+            .sort((a, b) => a.title.localeCompare(b.title))
+            .map((finding) => (
+              <li id={finding.id} data-share-target tabindex="-1">
+                <a href={withBase(findingHref(finding.id))}>
+                  <span class={`example-status ${finding.status}`}>
+                    {findingStatusLabels[finding.status]}
+                  </span>
+                  <strong>{finding.title}</strong>
+                  <small>{finding.summary}</small>
+                </a>
+              </li>
+            ))
         }
-      </nav>
-      <SiteSearch client:load compact={true} />
+      </ol>
+      <p class="reviewed-date">
+        Topic records reviewed {
+          formatReviewDate(topics[0]?.review.reviewedAt ?? "2026-08-03")
+        }. Qualified clinical sign-off remains pending for this evaluation
+        build.
+      </p>
     </div>
   </section>
-
-  <div class="essentials-stack">
-    {
-      essentials.map((item, index) => (
-        <section
-          class:list={["section", { soft: index % 2 === 1 }]}
-          id={item.data.slug}
-          data-share-target
-          tabindex="-1"
-        >
-          <div class="shell essential-section">
-            <ShareAnchor targetId={item.data.slug} label={item.data.title} />
-            <header class="essential-heading">
-              <div class="essential-index">
-                {String(item.data.number).padStart(2, "0")}
-              </div>
-              <div>
-                <p class="eyebrow">{item.data.eyebrow}</p>
-                <h2>{item.data.title}</h2>
-                <p>{item.data.intro}</p>
-              </div>
-            </header>
-
-            <div class="essential-rule-grid">
-              <article
-                class="rule-column do"
-                id={scopedAnchor(item.data.slug, "do")}
-                data-share-target
-                tabindex="-1"
-              >
-                <ShareAnchor
-                  targetId={scopedAnchor(item.data.slug, "do")}
-                  label={`${item.data.title}: do`}
-                  compact
-                />
-                <p class="rule-label">
-                  <span aria-hidden="true">✓</span> Do
-                </p>
-                <ul>
-                  {item.data.dos.map((rule) => (
-                    <li>{rule}</li>
-                  ))}
-                </ul>
-              </article>
-              <article
-                class="rule-column dont"
-                id={scopedAnchor(item.data.slug, "avoid")}
-                data-share-target
-                tabindex="-1"
-              >
-                <ShareAnchor
-                  targetId={scopedAnchor(item.data.slug, "avoid")}
-                  label={`${item.data.title}: don't`}
-                  compact
-                />
-                <p class="rule-label">
-                  <span aria-hidden="true">!</span> Don’t
-                </p>
-                <ul>
-                  {item.data.donts.map((rule) => (
-                    <li>{rule}</li>
-                  ))}
-                </ul>
-              </article>
-              <article
-                class="rule-column ask"
-                id={scopedAnchor(item.data.slug, "check-first")}
-                data-share-target
-                tabindex="-1"
-              >
-                <ShareAnchor
-                  targetId={scopedAnchor(item.data.slug, "check-first")}
-                  label={`${item.data.title}: ask your doctor`}
-                  compact
-                />
-                <p class="rule-label">
-                  <span aria-hidden="true">?</span> Ask your doctor
-                </p>
-                <ul>
-                  {item.data.askDoctor.map((rule) => (
-                    <li>{rule}</li>
-                  ))}
-                </ul>
-              </article>
-            </div>
-
-            <div
-              class="example-table-wrap"
-              id={scopedAnchor(item.data.slug, "real-examples")}
-              data-share-target
-              tabindex="-1"
-            >
-              <ShareAnchor
-                targetId={scopedAnchor(item.data.slug, "real-examples")}
-                label={`${item.data.title}: real examples`}
-              />
-              <h3>Direct answers</h3>
-              <div class="example-table" role="list">
-                {findings
-                  .filter((finding) => finding.sectionId === item.data.id)
-                  .map((finding) => {
-                    return (
-                      <article
-                        class="example-row"
-                        id={finding.id}
-                        data-share-target
-                        tabindex="-1"
-                        role="listitem"
-                      >
-                        <ShareAnchor
-                          targetId={finding.id}
-                          label={finding.title}
-                          compact
-                        />
-                        <strong>{finding.title}</strong>
-                        <span class={`example-status ${finding.status}`}>
-                          {statusLabel[finding.status]}
-                        </span>
-                        <div class="example-guidance">
-                          <p>{finding.summary}</p>
-                          {finding.details.map((detail) => (
-                            <p>{detail}</p>
-                          ))}
-                          <div class="finding-factors">
-                            <strong>What changes the answer</strong>
-                            <ul>
-                              {finding.decisionFactors.map((factor) => (
-                                <li>{factor}</li>
-                              ))}
-                            </ul>
-                          </div>
-                          <p class={`finding-care-note ${finding.status}`}>
-                            <strong>Care threshold:</strong> {finding.careNote}
-                          </p>
-                        </div>
-                      </article>
-                    );
-                  })}
-              </div>
-            </div>
-            <a class="back-to-top" href="#essential-topics">
-              Back to topics ↑
-            </a>
-          </div>
-        </section>
-      ))
-    }
-  </div>
 </BaseLayout>

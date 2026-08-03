@@ -5,7 +5,7 @@ Pregnancy, Clearly is an Astro 7 static site. Every route is generated at build 
 ## Flow
 
 1. Authored records and compact generation rules live in `scripts/generate-content.mjs`.
-2. `npm run content:generate` writes normalized preconception, timeline, essentials, finding, substitution, milestone, urgent and internal-source JSON plus a search index.
+2. `npm run content:generate` writes normalized preconception, timeline, essentials, finding, after-birth topic, substitution, milestone, urgent and internal-source JSON plus a complete search index and four search shards.
 3. `src/content.config.ts` validates every record through Astro Content Collections.
 4. Static routes query collections with `getCollection()`.
 5. Astro emits semantic HTML to `dist/`.
@@ -22,4 +22,4 @@ Pregnancy, Clearly is an Astro 7 static site. Every route is generated at build 
 
 ## Why generation exists
 
-The getting-pregnant guide, forty weekly pages, fourteen large essentials sections, 368 direct findings, thirteen stage-specific postpartum periods and the practical substitute catalog need canonical, repeatable structure. The generator keeps IDs, record types, decision factors, care thresholds, source-backed prose, review metadata, controlled search aliases and direct anchors consistent while emitting inspectable JSON. It is not runtime AI generation and does not fetch content.
+The getting-pregnant guide, forty weekly pages, eighteen essentials topics, 419 direct finding pages, eight after-birth topic guides, thirteen stage-specific postpartum periods and the practical substitute catalog need canonical, repeatable structure. The generator keeps IDs, task intents, record types, decision factors, care thresholds, related records, source-backed prose, review metadata, controlled search aliases and direct anchors consistent while emitting inspectable JSON. It is not runtime AI generation and does not fetch content.

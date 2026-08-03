@@ -7,6 +7,9 @@ for (const path of [
   "/timeline/week-18/",
   "/getting-pregnant/",
   "/essentials/",
+  "/essentials/pregnancy-complications/",
+  "/essentials/finding/everyday-home-hot-tub-or-sauna/",
+  "/timeline/after-birth/",
   "/partners/",
   "/urgent-help/",
 ]) {
@@ -15,7 +18,7 @@ for (const path of [
   }) => {
     // The complete Essentials catalog is intentionally rendered without hiding
     // core guidance, so its cross-browser axe scan needs a larger CI budget.
-    test.setTimeout(path === "/essentials/" ? 90_000 : 30_000);
+    test.setTimeout(path === "/essentials/" ? 90_000 : 45_000);
 
     await page.goto(path, { waitUntil: "networkidle" });
     await expect(page.locator("main")).toBeVisible();

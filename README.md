@@ -10,7 +10,7 @@ The public navigation is deliberately small:
 
 - **Getting pregnant** — conception tips, a six-step plan, dos and don’ts, chance-versus-health explanations, fertility myths, common hurdles and when to seek help.
 - **Timeline** — positive test, nine month map, trimester overviews, weeks 3–42 and important care windows.
-- **Pregnancy essentials** — fourteen direct, fully expanded do/don’t/check-first sections, 368 anchored findings, resilient whole-term search and an interactive substitute finder.
+- **Pregnancy essentials** — eighteen direct do/don’t/check-first topics, 419 stable finding pages, resilient whole-term search and a separate food-and-drink substitute finder.
 - **For partners** — useful support actions at important pregnancy weeks.
 - **Urgent help** — clearly separated pregnancy, postpartum and young-baby warning signs.
 
@@ -21,15 +21,15 @@ The current content includes:
 - 40 distinct weekly pregnancy chapters with a unique title, action, caution, clarification, appointment prompt and partner action.
 - A fully expanded getting-pregnant guide with a six-step plan, couple-level dos and don’ts, nine chance-versus-health comparisons, eight myth corrections and clear points for seeking help.
 - A nine-month orientation map that also explains why medical care counts pregnancy in weeks.
-- Fourteen pregnancy-essential sections and 368 source-backed finding records. The catalog includes 166 P0 and 135 P1 answers across food and drinks, exercise, medicines, home and work exposures, travel, sexual health, sleep, tests, birth choices, symptoms, personal care, infections, vaccination, mental health and safety.
-- Each finding is a database-like public record with a stable ID and direct anchor, record type, controlled aliases, concise answer, supporting detail, three decision factors, an explicit care threshold, internal sources and review metadata. The catalog is intentionally broad but remains general guidance—not a diagnostic or individualized-risk database.
+- Eighteen pregnancy-essential topics and 419 source-backed finding records. The catalog includes 179 P0, 153 P1 and 87 baseline answers across food and drinks, exercise, medicines, home and work exposures, travel, sexual health, sleep, tests, birth choices, symptoms, personal care, infections, mental health, chronic conditions, accessibility, pregnancy complications, loss and uncertainty, and newborn preparation.
+- Each finding is a database-like public record with a stable ID, permanent page and direct anchor, record type, task intents, care tier, controlled aliases, concise answer, supporting detail, three decision factors, related records, an explicit care threshold, internal sources and review metadata. The catalog is intentionally broad but remains general guidance—not a diagnostic or individualized-risk database.
 - Fourteen searchable substitute cards for common drinks and foods, each with one clear verdict, the reason, two or three ranked alternatives and a label check.
 - 21 date-window milestones for appointments, tests, decisions and preparation.
 - Optional due-date or last-period personalization stored only on the device.
-- A searchable static index spanning preconception, weeks, findings, practical substitutes, milestones, partner guidance and warning signs. Whole-term matching, exact-phrase boosts and controlled aliases prevent accidental substring matches; loading, offline and failure states are distinct from a genuine zero result.
+- A sharded searchable static index spanning preconception, weeks, findings, practical substitutes, milestones, partner guidance, warning signs and after-birth topics. Whole-term matching, exact-phrase boosts and controlled aliases prevent accidental substring matches; result explanations, controlled typo suggestions, loading, offline and failure states remain distinct from a genuine zero result.
 - Stable copy-link anchors for major sections, individual examples, cautions, milestones and care notes, with visible highlighting when a shared fragment opens.
-- Retrievable bookmarks, restorable hidden milestones, completed milestones, an actual birth-date transition and one-click local-data deletion.
-- 13 stage-specific after-birth checkpoints through month six as a separate continuation, with distinct recovery, newborn, feeding, mental-health, safety and follow-up guidance at every period.
+- Retrievable bookmarks, recently viewed and saved answers, recent searches, restorable hidden milestones, completed milestones, an actual birth-date transition and one-click local-data deletion.
+- Eight topic-based after-birth guides plus 13 stage-specific checkpoints through month six as a separate continuation, with common information, contact-care advice and urgent thresholds visibly distinct.
 - Static, semantic routes that remain useful without JavaScript.
 
 The project intentionally has no accounts, backend, public location packs, FAQ library, chatbot, symptom checker, tracking, ads, affiliate links, comments, remote persistence or reader-facing source directory.
@@ -57,6 +57,7 @@ npm run test           # date, storage, content and migration tests
 npm run test:e2e       # Playwright journeys in the configured browsers
 npm run test:a11y      # focused automated accessibility checks
 npm run audit:content  # coverage, uniqueness, sources and review expiry
+npm run report:coverage # human-readable coverage by topic, priority, intent and search shard
 npm run build          # portable static evaluation artifact
 npm run audit:static   # route, link and third-party-runtime audit of dist/
 npm run audit:base     # nested-base-path build and link audit
@@ -89,9 +90,11 @@ Important locations:
 - `scripts/generate-content.mjs` — authored preconception, timeline, essentials, finding-level answers, postpartum guidance, practical substitutes, milestones, urgent copy and internal evidence links.
 - `src/content.config.ts` — public content contracts.
 - `src/pages/` — static route composition.
+- `src/pages/essentials/[topic].astro` — complete pregnancy topic pages.
+- `src/pages/essentials/finding/[id].astro` — permanent direct-answer pages.
 - `src/components/PregnancyMonthMap.astro` — reusable nine-month orientation.
 - `src/components/TimelineEntryPage.astro` — predictable weekly chapter layout.
-- `src/components/react/` — date setup, timeline filters, bookmarks, milestones and privacy controls.
+- `src/components/react/` — date setup, search, timeline filters, recent/saved answers, bookmarks, milestones and privacy controls.
 - `src/components/react/SiteSearch.tsx` — build-time indexed, client-side search with no server or tracking.
 - `src/components/react/SwapFinder.tsx` — progressively enhanced search and category filters over fully rendered substitute cards.
 - `src/components/react/JourneySnapshot.tsx` — device-only Now/Next/Later pregnancy summary.
@@ -133,6 +136,8 @@ Each essential contains:
 - Internal evidence IDs and review metadata.
 
 The labels are general guidance, not individualized approval. “Check first” always means checking the exact product, activity, symptom or health context with a doctor, midwife or pharmacist.
+
+Each topic has its own `/essentials/<topic>/` route with the full baseline and every finding visible. Each finding also has a permanent `/essentials/finding/<id>/` route with a matching anchor, related answers, reviewed date and device-only save/share/print controls. Legacy `/essentials/#<id>` links remain valid through the A–Z directory.
 
 ### Practical substitute
 
@@ -215,8 +220,9 @@ The browser may save:
 - Last menstrual period when used for an estimate.
 - Actual birth date.
 - Audience view, bookmarks and milestone state.
+- Up to eight recently viewed answers and five recent search phrases.
 
-The version-2 state contains no location or unit preference. Version-1 records migrate dates and lists while dropping old location fields. Data stays in one `localStorage` key, is never uploaded, and can be erased from the Privacy page.
+The version-2 journey state contains no location or unit preference. Version-1 records migrate dates and lists while dropping old location fields. Journey state and the two small activity lists use namespaced `localStorage` keys, are never uploaded, and are all erased by the Privacy page.
 
 ## Medical safety and release
 
@@ -236,8 +242,8 @@ The absence of public citation panels is not permission to weaken evidence or ap
 - WCAG 2.2 AA is the target.
 - Interactive targets are at least 44×44 CSS pixels.
 - Timeline, essentials and urgent information are present in static HTML.
-- Shareable findings use ordinary fragment links in static HTML; JavaScript only adds one-click copying, focus and confirmation.
-- JavaScript enhances private personalization, full-text search, meaningful topic filtering, bookmarks and milestone state only.
+- Shareable findings use permanent static pages with ordinary fragment links; JavaScript only adds one-click copying, focus and confirmation.
+- JavaScript enhances private personalization, full-text search, meaningful topic filtering, recently viewed/saved answers, bookmarks and milestone state only.
 - The layout is tested at 320 CSS pixels, zoom/reflow, keyboard input and reduced motion.
 - Color is paired with text labels such as “Generally okay,” “Avoid” and “Check first.”
 
@@ -258,7 +264,7 @@ $env:BASE_PATH = "/pregnancy-guide/"
 npm run build
 ```
 
-See [Static deployment](docs/deployment.md) for the automatic GitHub Pages workflow, fixed custom domain, local simulation and provider-neutral alternatives. Pull requests verify without deploying. A push to `main` publishes only after the complete non-browser verifier, automated accessibility checks, the technical release build, broken-link checks and Pages artifact audit pass.
+See [Information architecture](docs/information-architecture.md) for the navigation hierarchy and [Static deployment](docs/deployment.md) for the automatic GitHub Pages workflow, fixed custom domain, local simulation and provider-neutral alternatives. Pull requests verify without deploying. A push to `main` publishes only after the complete non-browser verifier, automated accessibility checks, the technical release build, broken-link checks and Pages artifact audit pass.
 
 ## Troubleshooting
 

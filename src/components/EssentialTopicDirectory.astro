@@ -1,0 +1,65 @@
+---
+import ShareAnchor from "@/components/react/ShareAnchor";
+import { essentialTopicHref } from "@/lib/findings";
+import { withBase } from "@/lib/paths";
+
+interface Topic {
+  id: string;
+  slug: string;
+  number: number;
+  title: string;
+  eyebrow: string;
+  intro: string;
+}
+
+interface Props {
+  topics: Topic[];
+  activeId?: string;
+  heading?: string;
+  description?: string;
+}
+
+const {
+  topics,
+  activeId,
+  heading = "Browse every pregnancy topic",
+  description = "Choose a topic for the complete do, don’t, check-first and direct-answer collection.",
+} = Astro.props;
+---
+
+<section
+  class="topic-directory"
+  id="pregnancy-topic-directory"
+  data-share-target
+  tabindex="-1"
+  aria-labelledby="topic-directory-title"
+>
+  <ShareAnchor
+    targetId="pregnancy-topic-directory"
+    label="pregnancy topic directory"
+  />
+  <div class="topic-directory-heading">
+    <div>
+      <p class="eyebrow">Pregnancy essentials</p>
+      <h2 id="topic-directory-title">{heading}</h2>
+    </div>
+    <p>{description}</p>
+  </div>
+  <nav class="topic-directory-grid" aria-label="Pregnancy essentials topics">
+    {
+      topics.map((topic) => (
+        <a
+          class:list={{ active: topic.id === activeId }}
+          href={withBase(essentialTopicHref(topic.slug))}
+          aria-current={topic.id === activeId ? "page" : undefined}
+        >
+          <span>{String(topic.number).padStart(2, "0")}</span>
+          <div>
+            <strong>{topic.title}</strong>
+            <small>{topic.eyebrow}</small>
+          </div>
+        </a>
+      ))
+    }
+  </nav>
+</section>

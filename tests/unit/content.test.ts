@@ -15,7 +15,7 @@ describe("generated content coverage", () => {
 
   it("ships direct, always-visible pregnancy essentials", () => {
     const essentials = load("essentials");
-    expect(essentials).toHaveLength(14);
+    expect(essentials).toHaveLength(18);
     const food = essentials.find((item: any) => item.id === "food-dishes");
     expect(food.dos.length).toBeGreaterThanOrEqual(4);
     expect(food.donts.length).toBeGreaterThanOrEqual(4);
@@ -24,13 +24,13 @@ describe("generated content coverage", () => {
 
   it("ships broad finding-level coverage with stable direct anchors", () => {
     const findings = load("findings");
-    expect(findings.length).toBeGreaterThanOrEqual(350);
+    expect(findings.length).toBeGreaterThanOrEqual(419);
     expect(
       findings.filter((finding: any) => finding.priority === "P0").length,
-    ).toBeGreaterThanOrEqual(155);
+    ).toBeGreaterThanOrEqual(179);
     expect(
       findings.filter((finding: any) => finding.priority === "P1").length,
-    ).toBeGreaterThanOrEqual(125);
+    ).toBeGreaterThanOrEqual(153);
     expect(new Set(findings.map((finding: any) => finding.id)).size).toBe(
       findings.length,
     );
@@ -39,6 +39,10 @@ describe("generated content coverage", () => {
         (finding: any) =>
           finding.aliases.length >= 2 &&
           finding.recordType &&
+          finding.stage === "pregnancy" &&
+          finding.intents.length >= 1 &&
+          ["common", "care-team", "urgent"].includes(finding.careTier) &&
+          finding.relatedIds.length <= 3 &&
           finding.summary &&
           finding.details.length &&
           finding.decisionFactors.length >= 3 &&
@@ -81,6 +85,10 @@ describe("generated content coverage", () => {
         "dental-skin-personal-care",
         "infections-vaccinations",
         "mental-health-safety",
+        "health-conditions-accessibility",
+        "pregnancy-complications",
+        "loss-uncertainty-support",
+        "birth-newborn-preparation",
       ]),
     );
     const sectionCounts = new Map<string, number>();
@@ -97,6 +105,10 @@ describe("generated content coverage", () => {
     expect(sectionCounts.get("infections-vaccinations")).toBeGreaterThanOrEqual(
       26,
     );
+    expect(sectionCounts.get("health-conditions-accessibility")).toBe(13);
+    expect(sectionCounts.get("pregnancy-complications")).toBe(13);
+    expect(sectionCounts.get("loss-uncertainty-support")).toBe(12);
+    expect(sectionCounts.get("birth-newborn-preparation")).toBe(13);
   });
 
   it("keeps every postpartum period stage-specific", () => {
@@ -119,6 +131,45 @@ describe("generated content coverage", () => {
           .size,
       ).toBe(postpartum.length);
     }
+  });
+
+  it("ships distinct practical after-birth topic families", () => {
+    const topics = load("postpartumTopics");
+    expect(topics).toHaveLength(8);
+    expect(new Set(topics.map((topic: any) => topic.id))).toEqual(
+      new Set([
+        "recovery-vaginal-perineal",
+        "recovery-caesarean",
+        "pelvic-bladder-bowel",
+        "feeding-support",
+        "mood-trauma-sleep",
+        "sex-contraception",
+        "newborn-feeding-jaundice-temperature",
+        "newborn-safe-sleep-home",
+      ]),
+    );
+    expect(
+      topics.every(
+        (topic: any) =>
+          topic.practicalSteps.length >= 3 &&
+          topic.contactCare.length >= 1 &&
+          topic.urgent.length >= 1 &&
+          topic.sourceIds.length >= 1 &&
+          topic.review,
+      ),
+    ).toBe(true);
+    expect(
+      new Set(
+        topics.map((topic: any) =>
+          JSON.stringify([
+            topic.summary,
+            topic.practicalSteps,
+            topic.contactCare,
+            topic.urgent,
+          ]),
+        ),
+      ).size,
+    ).toBe(topics.length);
   });
 
   it("ships useful substitutes with clear verdicts and ranked alternatives", () => {
@@ -205,9 +256,29 @@ describe("generated content coverage", () => {
     expect(
       findings.every(
         (finding: any) =>
-          indexed.get(finding.id)?.href === `/essentials/#${finding.id}`,
+          indexed.get(finding.id)?.href ===
+            `/essentials/finding/${finding.id}/` &&
+          indexed.get(finding.id)?.careTier === finding.careTier &&
+          JSON.stringify(indexed.get(finding.id)?.intents) ===
+            JSON.stringify(finding.intents),
       ),
     ).toBe(true);
+
+    const manifest = JSON.parse(
+      readFileSync(resolve("public/data/search-manifest.json"), "utf8"),
+    );
+    const sharded = manifest.shards.flatMap((shard: any) =>
+      JSON.parse(
+        readFileSync(
+          resolve(`public/${shard.href.replace(/^\//, "")}`),
+          "utf8",
+        ),
+      ),
+    );
+    expect(sharded).toHaveLength(search.length);
+    expect(new Set(sharded.map((record: any) => record.id)).size).toBe(
+      search.length,
+    );
   });
 
   it("keeps every weekly chapter concrete and distinct", () => {

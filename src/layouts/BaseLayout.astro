@@ -113,7 +113,8 @@ const evaluationBuild = siteConfig.clinicalStatus === "awaiting-review";
                 href={withBase(item.href)}
                 aria-current={isCurrent(item.href) ? "page" : undefined}
               >
-                {item.label}
+                <span>{item.label}</span>
+                <small>{item.description}</small>
               </a>
             ))
           }
@@ -121,12 +122,13 @@ const evaluationBuild = siteConfig.clinicalStatus === "awaiting-review";
             class="urgent-nav"
             href={withBase("/urgent-help/")}
             aria-current={isCurrent("/urgent-help/") ? "page" : undefined}
-            >Urgent help</a
+            ><span>Urgent help</span><small>Signs and next steps</small></a
           >
         </nav>
         <details class="mobile-nav">
-          <summary>Menu</summary>
+          <summary>Explore guide</summary>
           <nav class="mobile-menu" aria-label="Mobile navigation">
+            <p>Choose where to start</p>
             {
               siteConfig.navigation.map((item) => (
                 <a
@@ -136,13 +138,14 @@ const evaluationBuild = siteConfig.clinicalStatus === "awaiting-review";
                   href={withBase(item.href)}
                   aria-current={isCurrent(item.href) ? "page" : undefined}
                 >
-                  {item.label}
+                  <span>{item.label}</span>
+                  <small>{item.description}</small>
                 </a>
               ))
             }
-            <a class="urgent-nav" href={withBase("/urgent-help/")}
-              >Urgent help</a
-            >
+            <a class="urgent-nav" href={withBase("/urgent-help/")}>
+              <span>Urgent help</span><small>Signs and next steps</small>
+            </a>
           </nav>
         </details>
       </div>
@@ -168,7 +171,7 @@ const evaluationBuild = siteConfig.clinicalStatus === "awaiting-review";
             <a href={withBase("/timeline/")}>Timeline</a>
             <a href={withBase("/essentials/")}>Pregnancy essentials</a>
             <a href={withBase("/partners/")}>For partners</a>
-            <a href={withBase("/timeline/#after-birth")}>After birth</a>
+            <a href={withBase("/timeline/after-birth/")}>After birth</a>
           </div>
           <div class="footer-column">
             <h3>Your data</h3>

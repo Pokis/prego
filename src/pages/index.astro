@@ -5,6 +5,7 @@ import JourneySetup from "@/components/react/JourneySetup";
 import SiteSearch from "@/components/react/SiteSearch";
 import ShareAnchor from "@/components/react/ShareAnchor";
 import PregnancyMonthMap from "@/components/PregnancyMonthMap.astro";
+import GuideWayfinder from "@/components/GuideWayfinder.astro";
 import { withBase } from "@/lib/paths";
 
 const essentials = (await getCollection("essentials"))
@@ -40,10 +41,12 @@ const schema = {
         </p>
         <div class="hero-actions">
           <a class="button" href="#my-timeline"
-            >Set my timeline <span aria-hidden="true">→</span></a
+            >Follow my pregnancy <span aria-hidden="true">→</span></a
           >
-          <a class="button secondary" href={withBase("/timeline/")}
-            >Browse without setup</a
+          <a
+            class="button secondary"
+            href={withBase("/essentials/#find-an-answer")}
+            >Find a direct answer</a
           >
         </div>
         <div class="page-meta">
@@ -54,6 +57,16 @@ const schema = {
       <div id="my-timeline" class="hero-timeline-entry">
         <JourneySetup client:load compact={true} hero={true} />
       </div>
+    </div>
+  </section>
+
+  <section class="home-wayfinder-section">
+    <div class="shell">
+      <div class="home-wayfinder-heading">
+        <p class="eyebrow">Not sure where to start?</p>
+        <h2>Choose the part of the journey you need.</h2>
+      </div>
+      <GuideWayfinder />
     </div>
   </section>
 
@@ -278,7 +291,7 @@ const schema = {
           essentials.map((item) => (
             <a
               class="guide-card"
-              href={withBase(`/essentials/#${item.data.slug}`)}
+              href={withBase(`/essentials/${item.data.slug}/`)}
             >
               <p class="eyebrow">{item.data.eyebrow}</p>
               <h3>{item.data.title}</h3>
@@ -357,7 +370,7 @@ const schema = {
             basics through six months without crowding the pregnancy timeline.
           </p>
         </div>
-        <a class="button secondary" href={withBase("/timeline/#after-birth")}
+        <a class="button secondary" href={withBase("/timeline/after-birth/")}
           >See the after-birth continuation</a
         >
       </div>

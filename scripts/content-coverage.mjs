@@ -1,8 +1,8 @@
 export const minimumFindingCounts = {
-  total: 350,
-  P0: 155,
-  P1: 125,
-  baseline: 65,
+  total: 419,
+  P0: 179,
+  P1: 153,
+  baseline: 87,
 };
 
 export const minimumFindingsBySection = {
@@ -20,6 +20,10 @@ export const minimumFindingsBySection = {
   "dental-skin-personal-care": 25,
   "infections-vaccinations": 26,
   "mental-health-safety": 21,
+  "health-conditions-accessibility": 13,
+  "pregnancy-complications": 13,
+  "loss-uncertainty-support": 12,
+  "birth-newborn-preparation": 13,
 };
 
 export const requiredFindingFamilies = {
@@ -136,6 +140,35 @@ export const requiredFindingFamilies = {
     "sex-relationships-painful-sex",
     "sex-relationships-consent-pressure-safety",
   ],
+  chronicConditionsAndAccess: [
+    "health-conditions-accessibility-type-1-or-type-2-diabetes-before-pregnancy",
+    "health-conditions-accessibility-epilepsy-or-a-seizure-disorder",
+    "health-conditions-accessibility-chronic-hypertension",
+    "health-conditions-accessibility-wheelchair-mobility-transfers",
+    "health-conditions-accessibility-communication-sensory-access",
+  ],
+  pregnancyComplications: [
+    "pregnancy-complications-low-lying-placenta-or-placenta-praevia",
+    "pregnancy-complications-baby-measuring-small-or-fetal-growth-restriction",
+    "pregnancy-complications-contractions-pressure-or-fluid-loss-before-37-weeks",
+    "pregnancy-complications-persistent-itching-or-possible-cholestasis",
+    "pregnancy-complications-gestational-diabetes-diagnosis",
+    "pregnancy-complications-multiple-pregnancy-chorionicity",
+  ],
+  lossAndUncertainty: [
+    "loss-uncertainty-support-early-scan-that-is-not-yet-conclusive",
+    "loss-uncertainty-support-miscarriage-diagnosis-and-management-choices",
+    "loss-uncertainty-support-stillbirth-or-later-pregnancy-loss",
+    "loss-uncertainty-support-physical-recovery-after-miscarriage",
+    "loss-uncertainty-support-partner-family-grief",
+  ],
+  birthAndNewbornPreparation: [
+    "birth-newborn-preparation-a-one-page-birth-preference-note",
+    "birth-newborn-preparation-possible-caesarean-or-assisted-birth",
+    "birth-newborn-preparation-feeding-plan-and-early-support",
+    "birth-newborn-preparation-newborn-sleep-space",
+    "birth-newborn-preparation-possible-preterm-birth-or-neonatal-admission",
+  ],
 };
 
 export const requiredSearchMatches = [
@@ -168,6 +201,55 @@ export const requiredSearchMatches = [
   ["pregnancy after loss", "mental-health-pregnancy-after-loss"],
   ["tick bite", "infections-tick-bite-lyme"],
   ["left side sleeping", "sleep-comfort-left-versus-right-side"],
+  [
+    "type 1 diabetes",
+    "health-conditions-accessibility-type-1-or-type-2-diabetes-before-pregnancy",
+  ],
+  [
+    "wheelchair",
+    "health-conditions-accessibility-wheelchair-mobility-transfers",
+  ],
+  [
+    "placenta previa",
+    "pregnancy-complications-low-lying-placenta-or-placenta-praevia",
+  ],
+  [
+    "itchy palms",
+    "pregnancy-complications-persistent-itching-or-possible-cholestasis",
+  ],
+  [
+    "inconclusive scan",
+    "loss-uncertainty-support-early-scan-that-is-not-yet-conclusive",
+  ],
+  [
+    "miscarriage recovery",
+    "loss-uncertainty-support-physical-recovery-after-miscarriage",
+  ],
+  [
+    "birth preferences",
+    "birth-newborn-preparation-a-one-page-birth-preference-note",
+  ],
+  ["safe sleep space", "birth-newborn-preparation-newborn-sleep-space"],
+];
+
+export const requiredFindingIntents = [
+  "eat-drink",
+  "do-use",
+  "symptom-support",
+  "test-care",
+  "work-home",
+  "plan-birth",
+];
+
+export const requiredPostpartumTopicIds = [
+  "recovery-vaginal-perineal",
+  "recovery-caesarean",
+  "pelvic-bladder-bowel",
+  "feeding-support",
+  "mood-trauma-sleep",
+  "sex-contraception",
+  "newborn-feeding-jaundice-temperature",
+  "newborn-safe-sleep-home",
 ];
 
 export const requiredPostpartumSlugs = [

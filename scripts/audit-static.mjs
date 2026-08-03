@@ -18,9 +18,9 @@ const walk = (dir) =>
 const files = walk(dist);
 const html = files.filter((file) => file.endsWith(".html"));
 const fileSet = new Set(files.map((file) => file.replaceAll("\\", "/")));
-if (html.length < 60)
+if (html.length < 500)
   errors.push(
-    `Only ${html.length} HTML pages generated; expected at least 60.`,
+    `Only ${html.length} HTML pages generated; expected at least 500.`,
   );
 
 for (const file of html) {
@@ -100,12 +100,22 @@ const required = [
   "timeline/index.html",
   "getting-pregnant/index.html",
   "essentials/index.html",
+  "essentials/food-dishes/index.html",
+  "essentials/pregnancy-complications/index.html",
+  "essentials/finding/everyday-home-hot-tub-or-sauna/index.html",
+  "essentials/finding/health-conditions-accessibility-wheelchair-mobility-transfers/index.html",
+  "timeline/after-birth/index.html",
   "urgent-help/index.html",
   "manifest.webmanifest",
   "og.webp",
   "robots.txt",
   "sw.js",
   "data/search-index.json",
+  "data/search-manifest.json",
+  "data/search/core.json",
+  "data/search/everyday.json",
+  "data/search/care.json",
+  "data/search/planning.json",
 ];
 for (const path of required)
   if (!existsSync(resolve(dist, path)))
@@ -227,12 +237,77 @@ if (existsSync(essentialsHtmlPath)) {
 
   for (const id of [
     "individual-care-baseline",
-    "food-dishes-real-examples",
-    "food-dishes-sushi",
+    "find-an-answer",
+    "start-with-your-question",
+    "pregnancy-topic-directory",
+    "important-direct-answers",
+    "all-direct-answers",
     "swap-cola-label-check",
   ])
     if (!essentialsHtml.includes(`data-share-anchor="${id}"`))
       errors.push(`Essentials static HTML is missing copy link for #${id}.`);
+
+  for (const legacyId of [
+    "food-dishes-sushi",
+    "everyday-home-hot-tub-or-sauna",
+    "pregnancy-complications-gestational-diabetes-diagnosis",
+  ])
+    if (!essentialsHtml.includes(`id="${legacyId}"`))
+      errors.push(`Essentials static HTML lost legacy anchor #${legacyId}.`);
+}
+
+const topicHtmlPath = resolve(dist, "essentials", "food-dishes", "index.html");
+if (existsSync(topicHtmlPath)) {
+  const topicHtml = readFileSync(topicHtmlPath, "utf8");
+  for (const expected of [
+    'id="topic-baseline"',
+    'id="direct-answers"',
+    'id="food-dishes-sushi"',
+    "What changes the answer",
+    "Care threshold:",
+  ])
+    if (!topicHtml.includes(expected))
+      errors.push(`Pregnancy topic page is missing ${expected}.`);
+}
+
+const findingHtmlPath = resolve(
+  dist,
+  "essentials",
+  "finding",
+  "everyday-home-hot-tub-or-sauna",
+  "index.html",
+);
+if (existsSync(findingHtmlPath)) {
+  const findingHtml = readFileSync(findingHtmlPath, "utf8");
+  for (const expected of [
+    'id="everyday-home-hot-tub-or-sauna"',
+    'data-share-anchor="everyday-home-hot-tub-or-sauna"',
+    "What to know or do",
+    "What changes the answer",
+    "When to get individual help",
+    "Reviewed",
+  ])
+    if (!findingHtml.includes(expected))
+      errors.push(`Direct finding page is missing ${expected}.`);
+}
+
+const afterBirthHtmlPath = resolve(
+  dist,
+  "timeline",
+  "after-birth",
+  "index.html",
+);
+if (existsSync(afterBirthHtmlPath)) {
+  const afterBirthHtml = readFileSync(afterBirthHtmlPath, "utf8");
+  for (const expected of [
+    'id="recovery-caesarean"',
+    'id="feeding-support"',
+    'id="newborn-safe-sleep-home"',
+    "Contact your care team",
+    "Urgent help",
+  ])
+    if (!afterBirthHtml.includes(expected))
+      errors.push(`After-birth overview is missing ${expected}.`);
 }
 
 const urgentHtmlPath = resolve(dist, "urgent-help", "index.html");

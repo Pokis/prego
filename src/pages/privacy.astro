@@ -46,8 +46,9 @@ import ShareAnchor from "@/components/react/ShareAnchor";
         />
         <h2>What this device can save</h2><p>
           Your audience view, estimated due date or last-period estimate, actual
-          birth date, bookmarks and milestone state can be stored locally.
-          Someone with access to this browser profile may be able to see it.
+          birth date, bookmarks, milestone state, recently viewed answers and
+          recent search phrases can be stored locally. Someone with access to
+          this browser profile may be able to see them.
         </p>
       </section><section
         class="content-section"
@@ -57,8 +58,9 @@ import ShareAnchor from "@/components/react/ShareAnchor";
       >
         <ShareAnchor targetId="clear-everything" label="clear saved data" />
         <h2>Clear everything</h2><p>
-          This removes Pregnancy, Clearly's saved journey state from this
-          browser. It does not affect browser history or downloaded pages.
+          This removes Pregnancy, Clearly's saved journey, answers and recent
+          activity from this browser. It does not affect browser history,
+          unrelated site storage or downloaded pages.
         </p><PrivacyControls client:load />
       </section>
     </div>

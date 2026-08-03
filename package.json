@@ -18,6 +18,7 @@
     "test:e2e": "npm run content:generate && playwright test",
     "test:a11y": "npm run content:generate && playwright test tests/e2e/accessibility.spec.ts",
     "audit:content": "npm run content:generate && node scripts/audit-content.mjs",
+    "report:coverage": "npm run content:generate && node scripts/report-content-coverage.mjs",
     "audit:static": "node scripts/audit-static.mjs",
     "audit:base": "node scripts/audit-base.mjs",
     "audit:pages": "node scripts/audit-pages-artifact.mjs",

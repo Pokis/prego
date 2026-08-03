@@ -1,0 +1,236 @@
+[
+  {
+    "id": "recovery-vaginal-perineal",
+    "title": "Recovery after vaginal birth, tears or episiotomy",
+    "eyebrow": "Perineum, bleeding and comfort",
+    "summary": "Soreness, swelling, cramping and vaginal bleeding can change across the first weeks. Recovery should gradually become more manageable rather than demand silent endurance.",
+    "practicalSteps": [
+      "Follow the wound-cleaning, pain-relief and activity plan given at discharge and check every medicine against your health and feeding plan.",
+      "Use pads rather than internal products until postnatal care says healing is sufficient, and notice whether bleeding, smell, pain and swelling are improving.",
+      "Ask for examination when pain prevents sitting, walking, sleeping or using the toilet; severe pain is not a test of resilience."
+    ],
+    "contactCare": [
+      "Contact postnatal care for worsening pain, wound opening, bad-smelling discharge, feverishness, difficulty passing urine or stool, or bleeding that becomes heavier again."
+    ],
+    "urgent": [
+      "Use urgent care for rapidly soaking pads, very large clots with weakness, fainting, severe pain, chest symptoms or feeling seriously unwell."
+    ],
+    "sourceIds": [
+      "who-postnatal",
+      "nhs-body-after-birth",
+      "cdc-warning"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2026-10-29",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "rapid-review"
+    }
+  },
+  {
+    "id": "recovery-caesarean",
+    "title": "Recovery after caesarean birth",
+    "eyebrow": "Abdominal surgery and newborn care together",
+    "summary": "Caesarean recovery includes abdominal wound healing, vaginal bleeding, pain control, circulation, bowel and bladder recovery and caring for a baby at the same time.",
+    "practicalSteps": [
+      "Use the individualized pain and wound plan, accept help for lifting and transport, and increase movement gradually without forcing a timetable.",
+      "Ask how to get out of bed, cough, feed and hold the baby with less strain and when driving, lifting, exercise and sex can be reconsidered.",
+      "Keep chronic-condition and clot-prevention instructions visible; do not skip prescribed treatment because attention has moved to the baby."
+    ],
+    "contactCare": [
+      "Contact care for increasing wound redness, heat, swelling, discharge or opening; worsening abdominal pain; feverishness; difficult urination; or pain that is not controlled by the plan."
+    ],
+    "urgent": [
+      "Use urgent care for heavy bleeding, fainting, chest pain, trouble breathing, one-sided leg swelling, collapse or a rapidly worsening condition."
+    ],
+    "sourceIds": [
+      "acog-cesarean",
+      "acog-postpartum",
+      "cdc-warning"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2026-10-29",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "rapid-review"
+    }
+  },
+  {
+    "id": "pelvic-bladder-bowel",
+    "title": "Pelvic floor, bladder and bowel recovery",
+    "eyebrow": "Function deserves follow-up",
+    "summary": "Leaking, pelvic heaviness, painful bowel movements, numbness and difficulty controlling urine or stool are health concerns worth discussing, not an unavoidable price of birth.",
+    "practicalSteps": [
+      "Ask for a pelvic-health assessment when symptoms affect walking, exercise, sex, sleep, work or confidence.",
+      "Use gentle movement and the individualized pelvic-floor plan provided by care; more squeezing is not always the answer when muscles are painful or overactive.",
+      "Keep fluids, fibre and prescribed bowel care realistic while wounds and medicines change comfort."
+    ],
+    "contactCare": [
+      "Contact care for inability to pass urine, new loss of bladder or bowel control, severe pelvic pressure, worsening wound pain or constipation that is not responding to the plan."
+    ],
+    "urgent": [
+      "Use urgent care for sudden leg weakness or numbness, loss of bladder or bowel control with severe back pain, collapse or other rapid neurological change."
+    ],
+    "sourceIds": [
+      "nhs-body-after-birth",
+      "acog-postpartum",
+      "cdc-warning"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2027-07-31",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "annual"
+    }
+  },
+  {
+    "id": "feeding-support",
+    "title": "Breast, chest, bottle and combination feeding support",
+    "eyebrow": "Feed the baby and support the parent",
+    "summary": "Feeding needs an observable plan for the baby’s intake and growth plus support for pain, milk transfer, preparation, parent health and informed choice.",
+    "practicalSteps": [
+      "Ask someone skilled to observe a feed when latch, pain, swallowing, bottle pacing or milk transfer is uncertain.",
+      "Know the baby’s follow-up weight and output plan and who to contact when feeds are too infrequent, exhausting or ineffective.",
+      "Check medicines using the exact product and feeding context; do not stop necessary treatment or leave a baby unfed while seeking an idealized feeding plan."
+    ],
+    "contactCare": [
+      "Contact feeding or newborn care promptly for persistent nipple or breast pain, feverishness, a hot red area, poor latch, reduced wet nappies, marked sleepiness or concern about intake."
+    ],
+    "urgent": [
+      "Use urgent newborn care when the baby is difficult to wake, cannot feed, has breathing difficulty, appears dehydrated or seems seriously unwell."
+    ],
+    "sourceIds": [
+      "who-feeding",
+      "acog-breastfeeding-challenges",
+      "who-newborn",
+      "cdc-warning"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2026-10-29",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "rapid-review"
+    }
+  },
+  {
+    "id": "mood-trauma-sleep",
+    "title": "Mood, birth trauma and severe sleep disruption",
+    "eyebrow": "Mental health is postnatal health",
+    "summary": "Mood can include joy, numbness, grief, anxiety, anger or disconnection. Persistent distress, traumatic memories, intrusive thoughts or inability to sleep even when there is an opportunity need support.",
+    "practicalSteps": [
+      "Tell a health professional about past mental-health conditions, birth trauma, current medicines and the early signs that usually mean you are becoming unwell.",
+      "Protect at least one practical route for rest and one person who can notice change without taking over your choices.",
+      "Ask for debriefing, therapy, peer support or medicine review when the birth or postnatal period is difficult to process."
+    ],
+    "contactCare": [
+      "Contact care for persistent low mood, panic, intrusive thoughts, frightening memories, severe irritability, inability to function or sleep that is not explained only by the baby waking."
+    ],
+    "urgent": [
+      "Use emergency help for thoughts of harm, severe confusion, hallucinations, paranoia, extreme agitation or loss of contact with reality; do not stay alone."
+    ],
+    "sourceIds": [
+      "who-postnatal",
+      "acog-mental-health",
+      "cdc-warning"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2026-10-29",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "rapid-review"
+    }
+  },
+  {
+    "id": "sex-contraception",
+    "title": "Sex, comfort and contraception after birth",
+    "eyebrow": "Consent and timing are personal; fertility can return",
+    "summary": "There is no required date for resuming sex. Comfort, desire, healing, contraception, infection risk, feeding, medicines and the birth experience all affect the plan.",
+    "practicalSteps": [
+      "Choose postpartum contraception before it becomes urgent and review the exact method against health conditions, medicines, feeding and preferences.",
+      "Resume sexual activity only with consent and comfort; use lubrication and slower pacing if dryness or tenderness is present.",
+      "Ask for pelvic-health or trauma-informed support when pain, fear, leaking or pressure makes intimacy difficult."
+    ],
+    "contactCare": [
+      "Contact care for persistent painful sex, bleeding that is more than light spotting, wound pain, bad-smelling discharge, coercion or concern that contraception failed."
+    ],
+    "urgent": [
+      "Use emergency or confidential safety help for forced sex, immediate danger, severe bleeding, collapse or severe abdominal pain."
+    ],
+    "sourceIds": [
+      "acog-postpartum-birth-control",
+      "acog-postpartum",
+      "nhs-body-after-birth",
+      "acog-ipv"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2026-10-29",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "rapid-review"
+    }
+  },
+  {
+    "id": "newborn-feeding-jaundice-temperature",
+    "title": "Newborn feeding, jaundice, temperature and alertness",
+    "eyebrow": "Notice the whole pattern",
+    "summary": "A newborn’s feeding, wet nappies, colour, temperature, breathing and alertness belong together. Young babies can deteriorate quickly, so a clear change deserves prompt assessment.",
+    "practicalSteps": [
+      "Keep the newborn follow-up plan and know who checks weight, jaundice, feeding and screening results after discharge.",
+      "Learn the measurement method and temperature thresholds given by local newborn care rather than relying on touch alone.",
+      "Record feeds and wet nappies temporarily when care asks for it, but use the baby’s overall condition rather than one number in isolation."
+    ],
+    "contactCare": [
+      "Contact newborn care promptly for deepening yellow colour, poor feeding, fewer wet nappies, repeated vomiting, unusual sleepiness or a baby who is becoming harder to settle or wake."
+    ],
+    "urgent": [
+      "Use urgent care for breathing difficulty, blue or grey colour, abnormal temperature, seizure, limpness, inability to feed or a baby who seems seriously unwell."
+    ],
+    "sourceIds": [
+      "who-newborn",
+      "who-postnatal",
+      "cdc-warning"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2026-10-29",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "rapid-review"
+    }
+  },
+  {
+    "id": "newborn-safe-sleep-home",
+    "title": "Safe sleep and the first weeks at home",
+    "eyebrow": "A simple sleep space and realistic support",
+    "summary": "Use a firm, flat infant sleep surface with a fitted sheet, place the baby on their back and keep pillows, loose bedding, toys, nests and positioners out of the sleep space.",
+    "practicalSteps": [
+      "Keep the sleep space in the same room as the caregiver, avoid smoke exposure and prevent overheating.",
+      "Plan how an exhausted caregiver can put the baby down safely before feeding begins, especially during night feeds.",
+      "Ask for practical help with meals, chores and protected rest rather than using unsafe sleep products to solve exhaustion."
+    ],
+    "contactCare": [
+      "Ask newborn care about reflux, noisy breathing, repeated choking or another concern before changing the sleep angle or adding a positioning product."
+    ],
+    "urgent": [
+      "Use emergency care for breathing pauses, blue or grey colour, limpness, choking with inability to recover or a baby who cannot be woken normally."
+    ],
+    "sourceIds": [
+      "cdc-safe-sleep",
+      "aap-safe-sleep",
+      "who-postnatal"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2027-07-31",
+      "reviewer": "Clinical reviewer required before public release",
+      "volatility": "annual"
+    }
+  }
+]

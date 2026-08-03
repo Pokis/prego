@@ -1,0 +1,184 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Breadcrumbs from "@/components/Breadcrumbs.astro";
+import EssentialTopicDirectory from "@/components/EssentialTopicDirectory.astro";
+import FindingSummary from "@/components/FindingSummary.astro";
+import ShareAnchor from "@/components/react/ShareAnchor";
+import {
+  essentialTopicHref,
+  findingPriority,
+  formatReviewDate,
+} from "@/lib/findings";
+import { withBase } from "@/lib/paths";
+
+export async function getStaticPaths() {
+  const topics = await getCollection("essentials");
+  return topics.map((topic) => ({
+    params: { topic: topic.data.slug },
+    props: { topicId: topic.data.id },
+  }));
+}
+
+interface Props {
+  topicId: string;
+}
+
+const { topicId } = Astro.props;
+const topics = (await getCollection("essentials"))
+  .map((item) => item.data)
+  .sort((a, b) => a.number - b.number);
+const topic = topics.find((item) => item.id === topicId);
+if (!topic) throw new Error(`Unknown Essentials topic ${topicId}`);
+
+const findings = (await getCollection("findings"))
+  .map((item) => item.data)
+  .filter((finding) => finding.sectionId === topic.id)
+  .sort(
+    (a, b) =>
+      findingPriority[a.priority] - findingPriority[b.priority] ||
+      a.title.localeCompare(b.title),
+  );
+const currentIndex = topics.findIndex((item) => item.id === topic.id);
+const previousTopic = topics[currentIndex - 1];
+const nextTopic = topics[currentIndex + 1];
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "MedicalWebPage",
+  name: `${topic.title} in pregnancy`,
+  description: topic.intro,
+  lastReviewed: topic.review.reviewedAt,
+};
+---
+
+<BaseLayout
+  title={`${topic.title}: pregnancy guidance`}
+  description={topic.intro}
+  schema={schema}
+>
+  <section class="topic-page-hero">
+    <div class="shell">
+      <Breadcrumbs
+        items={[
+          { label: "Home", href: "/" },
+          { label: "Pregnancy essentials", href: "/essentials/" },
+          { label: topic.title },
+        ]}
+      />
+      <div class="topic-page-heading">
+        <div class="essential-index">
+          {String(topic.number).padStart(2, "0")}
+        </div>
+        <div>
+          <p class="eyebrow">{topic.eyebrow}</p>
+          <h1>{topic.title}</h1>
+          <p class="lede">{topic.intro}</p>
+          <div class="topic-page-meta">
+            <span>{findings.length} direct answers</span>
+            <span>Reviewed {formatReviewDate(topic.review.reviewedAt)}</span>
+            <span>General pregnancy guidance</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <nav class="topic-page-actions shell" aria-label="Topic navigation">
+    <a href={withBase("/essentials/#find-an-answer")}>Search all answers</a>
+    <a href="#topic-baseline">Read the baseline</a>
+    <a href="#direct-answers">Browse direct answers</a>
+    <a href="#pregnancy-topic-directory">All topics</a>
+  </nav>
+
+  <section
+    class="section topic-baseline-section"
+    id="topic-baseline"
+    data-share-target
+    tabindex="-1"
+  >
+    <div class="shell">
+      <ShareAnchor
+        targetId="topic-baseline"
+        label={`${topic.title} baseline`}
+      />
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">The practical baseline</p>
+          <h2>Do, don’t and check first</h2>
+          <p>
+            These rules remain visible and useful without search or JavaScript.
+          </p>
+        </div>
+      </div>
+      <div class="essential-rule-grid">
+        <article class="rule-column do">
+          <p class="rule-label"><span aria-hidden="true">✓</span> Do</p>
+          <ul>{topic.dos.map((rule) => <li>{rule}</li>)}</ul>
+        </article>
+        <article class="rule-column dont">
+          <p class="rule-label"><span aria-hidden="true">!</span> Don’t</p>
+          <ul>{topic.donts.map((rule) => <li>{rule}</li>)}</ul>
+        </article>
+        <article class="rule-column ask">
+          <p class="rule-label">
+            <span aria-hidden="true">?</span> Check first
+          </p>
+          <ul>{topic.askDoctor.map((rule) => <li>{rule}</li>)}</ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section
+    class="section soft"
+    id="direct-answers"
+    data-share-target
+    tabindex="-1"
+  >
+    <div class="shell">
+      <ShareAnchor
+        targetId="direct-answers"
+        label={`${topic.title} direct answers`}
+      />
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Complete topic collection</p>
+          <h2>{findings.length} direct answers</h2>
+          <p>
+            Each answer leads with the bottom line, then shows what changes it
+            and when care is needed. Nothing is hidden in an accordion.
+          </p>
+        </div>
+      </div>
+      <div class="topic-finding-list">
+        {findings.map((finding) => <FindingSummary finding={finding} />)}
+      </div>
+    </div>
+  </section>
+
+  <section class="section topic-directory-section">
+    <div class="shell">
+      <EssentialTopicDirectory topics={topics} activeId={topic.id} />
+      <nav class="previous-next-topics" aria-label="Previous and next topics">
+        {
+          previousTopic ? (
+            <a href={withBase(essentialTopicHref(previousTopic.slug))}>
+              <span>Previous topic</span>
+              <strong>{previousTopic.title}</strong>
+            </a>
+          ) : (
+            <span />
+          )
+        }
+        {
+          nextTopic && (
+            <a href={withBase(essentialTopicHref(nextTopic.slug))}>
+              <span>Next topic</span>
+              <strong>{nextTopic.title}</strong>
+            </a>
+          )
+        }
+      </nav>
+    </div>
+  </section>
+</BaseLayout>

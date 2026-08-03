@@ -18,8 +18,8 @@ export default function PrivacyControls() {
       </button>
       {cleared && (
         <p role="status" style={{ marginTop: "1rem" }}>
-          Your saved dates, timeline, bookmarks and checklist state have been
-          removed from this browser.
+          Your saved dates, timeline, answers, recent findings and recent
+          searches have been removed from this browser.
         </p>
       )}
     </div>

@@ -8,7 +8,8 @@ export type SearchRecord = {
     | "preconception"
     | "urgent"
     | "milestone"
-    | "partner";
+    | "partner"
+    | "postpartum";
   title: string;
   summary: string;
   href: string;
@@ -16,6 +17,11 @@ export type SearchRecord = {
   aliases: string[];
   text: string;
   priority?: number;
+  status?: "generally-ok" | "avoid" | "check-first" | "contact-care" | "urgent";
+  careTier?: "common" | "care-team" | "urgent";
+  sectionId?: string;
+  reviewedAt?: string;
+  intents?: string[];
 };
 
 export type RankedSearchRecord = SearchRecord & { score: number };
@@ -100,3 +106,101 @@ export const searchRecords = (
         a.href.localeCompare(b.href),
     )
     .slice(0, limit);
+
+export const explainSearchMatch = (record: SearchRecord, query: string) => {
+  const normalizedQuery = normalizeSearchText(query);
+  const title = normalizeSearchText(record.title);
+  const exactAlias = record.aliases.find(
+    (alias) => normalizeSearchText(alias) === normalizedQuery,
+  );
+  if (title === normalizedQuery) return "Exact title match";
+  if (exactAlias) return `Known term: ${exactAlias}`;
+  if (hasWholePhrase(title, normalizedQuery)) return "Title phrase match";
+  if (
+    record.aliases.some((alias) =>
+      hasWholePhrase(normalizeSearchText(alias), normalizedQuery),
+    )
+  )
+    return "Known phrase match";
+  if (hasWholePhrase(normalizeSearchText(record.summary), normalizedQuery))
+    return "Direct-answer match";
+  return "Related topic match";
+};
+
+const editDistance = (left: string, right: string) => {
+  const rows = Array.from({ length: left.length + 1 }, (_, index) => index);
+  for (let rightIndex = 1; rightIndex <= right.length; rightIndex += 1) {
+    let previous = rows[0] ?? 0;
+    rows[0] = rightIndex;
+    for (let leftIndex = 1; leftIndex <= left.length; leftIndex += 1) {
+      const current = rows[leftIndex] ?? leftIndex;
+      rows[leftIndex] = Math.min(
+        (rows[leftIndex] ?? leftIndex) + 1,
+        (rows[leftIndex - 1] ?? leftIndex - 1) + 1,
+        previous + (left[leftIndex - 1] === right[rightIndex - 1] ? 0 : 1),
+      );
+      previous = current;
+    }
+  }
+  return rows[left.length] ?? right.length;
+};
+
+export const suggestSearchQueries = (
+  records: SearchRecord[],
+  query: string,
+  limit = 4,
+) => {
+  const normalizedQuery = normalizeSearchText(query);
+  const queryTerms = tokens(normalizedQuery);
+  if (!normalizedQuery || queryTerms.some((term) => term.length < 4)) return [];
+
+  const candidates = new Map<string, { label: string; score: number }>();
+  for (const record of records) {
+    for (const label of [record.title, ...record.aliases]) {
+      const normalizedLabel = normalizeSearchText(label);
+      const labelTerms = tokens(normalizedLabel);
+      if (
+        !normalizedLabel ||
+        Math.abs(labelTerms.length - queryTerms.length) > 1
+      )
+        continue;
+      const distances = queryTerms.map((queryTerm) =>
+        Math.min(
+          ...labelTerms.map((labelTerm) => editDistance(queryTerm, labelTerm)),
+        ),
+      );
+      if (distances.some((distance) => distance > 1)) continue;
+      const score = distances.reduce((total, distance) => total + distance, 0);
+      if (score === 0) continue;
+      const current = candidates.get(normalizedLabel);
+      if (!current || score < current.score)
+        candidates.set(normalizedLabel, { label, score });
+    }
+  }
+
+  return [...candidates.values()]
+    .sort((a, b) => a.score - b.score || a.label.localeCompare(b.label))
+    .slice(0, limit)
+    .map((candidate) => candidate.label);
+};
+
+export type HighlightSegment = { text: string; match: boolean };
+
+export const highlightSearchTerms = (
+  value: string,
+  query: string,
+): HighlightSegment[] => {
+  const terms = [...new Set(tokens(query))].filter((term) => term.length >= 2);
+  if (!terms.length) return [{ text: value, match: false }];
+  const escaped = terms
+    .sort((a, b) => b.length - a.length)
+    .map((term) => term.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"));
+  const expression = new RegExp(`(${escaped.join("|")})`, "gi");
+  return value
+    .split(expression)
+    .filter(Boolean)
+    .map((text) => ({
+      text,
+      match: terms.includes(normalizeSearchText(text)),
+    }));
+};

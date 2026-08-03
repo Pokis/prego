@@ -1,0 +1,83 @@
+---
+import ShareAnchor from "@/components/react/ShareAnchor";
+import {
+  careTierLabels,
+  findingHref,
+  findingStatusLabels,
+  formatReviewDate,
+  recordTypeLabels,
+} from "@/lib/findings";
+import { withBase } from "@/lib/paths";
+
+interface Finding {
+  id: string;
+  title: string;
+  status: keyof typeof findingStatusLabels;
+  careTier: keyof typeof careTierLabels;
+  recordType: keyof typeof recordTypeLabels;
+  summary: string;
+  details: string[];
+  decisionFactors: string[];
+  careNote: string;
+  review: { reviewedAt: string };
+}
+
+interface Props {
+  finding: Finding;
+  compact?: boolean;
+  idPrefix?: string;
+}
+
+const { finding, compact = false, idPrefix = "" } = Astro.props;
+const anchorId = `${idPrefix}${finding.id}`;
+---
+
+<article
+  class:list={["finding-summary", { compact }]}
+  id={anchorId}
+  data-share-target
+  tabindex="-1"
+>
+  <div class="finding-summary-topline">
+    <div class="finding-chips">
+      <span class={`example-status ${finding.status}`}>
+        {findingStatusLabels[finding.status]}
+      </span>
+      <span class={`care-tier-chip ${finding.careTier}`}>
+        {careTierLabels[finding.careTier]}
+      </span>
+      <span class="record-type-chip"
+        >{recordTypeLabels[finding.recordType]}</span
+      >
+    </div>
+    <ShareAnchor targetId={anchorId} label={finding.title} compact />
+  </div>
+  <h3>{finding.title}</h3>
+  <p class="finding-direct-answer">{finding.summary}</p>
+  {
+    !compact && (
+      <>
+        {finding.details.map((detail) => (
+          <p>{detail}</p>
+        ))}
+        <div class="finding-factors">
+          <strong>What changes the answer</strong>
+          <ul>
+            {finding.decisionFactors.map((factor) => (
+              <li>{factor}</li>
+            ))}
+          </ul>
+        </div>
+        <p class={`finding-care-note ${finding.status}`}>
+          <strong>Care threshold:</strong> {finding.careNote}
+        </p>
+      </>
+    )
+  }
+  <div class="finding-summary-footer">
+    <span>Reviewed {formatReviewDate(finding.review.reviewedAt)}</span>
+    <a href={withBase(findingHref(finding.id))}>
+      Open the complete answer <span aria-hidden="true">→</span>
+    </a>
+  </div>
+</article>

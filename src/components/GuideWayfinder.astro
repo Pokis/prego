@@ -1,0 +1,35 @@
+---
+import { withBase } from "@/lib/paths";
+
+interface Props {
+  compact?: boolean;
+}
+
+const { compact = false } = Astro.props;
+---
+
+<nav
+  class:list={["guide-wayfinder", { compact }]}
+  aria-label="Choose where to start"
+>
+  <a href={withBase("/getting-pregnant/")}>
+    <span>Before pregnancy</span>
+    <strong>Getting pregnant</strong>
+    <small>Preparation, chances and myths</small>
+  </a>
+  <a href={withBase("/timeline/")}>
+    <span>During pregnancy</span>
+    <strong>Follow your week</strong>
+    <small>The timeline from positive test to due date</small>
+  </a>
+  <a href={withBase("/essentials/#find-an-answer")}>
+    <span>During pregnancy</span>
+    <strong>Find an answer</strong>
+    <small>Food, symptoms, tests, products and activities</small>
+  </a>
+  <a class="after-birth" href={withBase("/timeline/after-birth/")}>
+    <span>Separate continuation</span>
+    <strong>After birth</strong>
+    <small>Recovery and newborn care through six months</small>
+  </a>
+</nav>

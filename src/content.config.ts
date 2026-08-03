@@ -98,11 +98,45 @@ const findings = defineCollection({
       "personal-care",
       "infection",
       "mental-health",
+      "health-condition",
+      "complication",
+      "loss-support",
+      "birth-preparation",
     ]),
+    stage: z.literal("pregnancy"),
+    intents: z
+      .array(
+        z.enum([
+          "eat-drink",
+          "do-use",
+          "symptom-support",
+          "test-care",
+          "work-home",
+          "plan-birth",
+        ]),
+      )
+      .min(1),
     summary: z.string(),
     details: z.array(z.string()).min(1).max(3),
     decisionFactors: z.array(z.string()).min(3).max(4),
     careNote: z.string(),
+    careTier: z.enum(["common", "care-team", "urgent"]),
+    relatedIds: z.array(z.string()).max(3),
+    sourceIds: z.array(z.string()).min(1),
+    review: reviewSchema,
+  }),
+});
+
+const postpartumTopics = defineCollection({
+  loader: file("src/data/generated/postpartumTopics.json"),
+  schema: z.object({
+    id: z.string(),
+    title: z.string(),
+    eyebrow: z.string(),
+    summary: z.string(),
+    practicalSteps: z.array(z.string()).min(3),
+    contactCare: z.array(z.string()).min(1),
+    urgent: z.array(z.string()).min(1),
     sourceIds: z.array(z.string()).min(1),
     review: reviewSchema,
   }),
@@ -240,6 +274,7 @@ export const collections = {
   findings,
   substitutions,
   preconception,
+  postpartumTopics,
   milestones,
   sources,
   urgent,
