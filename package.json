@@ -10,6 +10,7 @@
   "scripts": {
     "content:generate": "node scripts/generate-content.mjs",
     "assets:optimize": "node scripts/optimize-assets.mjs",
+    "assets:pwa": "node scripts/generate-pwa-icons.mjs",
     "dev": "npm run content:generate && astro dev",
     "dev:foreground": "npm run content:generate && node scripts/dev-server.mjs",
     "check": "npm run content:generate && astro check",
@@ -23,10 +24,10 @@
     "audit:base": "node scripts/audit-base.mjs",
     "audit:pages": "node scripts/audit-pages-artifact.mjs",
     "audit:github-pages": "npm run content:generate && node scripts/audit-github-pages.mjs",
-    "build": "npm run content:generate && astro build",
-    "build:release": "npm run audit:content -- --release && astro build",
+    "audit:pwa": "node scripts/audit-pwa.mjs",
+    "build": "npm run content:generate && astro build && node scripts/finalize-pwa.mjs",
     "preview": "astro preview",
-    "verify": "npm run check && npm run test && npm run audit:content && npm run build && npm run audit:static && npm run audit:base && npm run audit:github-pages",
+    "verify": "npm run check && npm run test && npm run audit:content && npm run build && npm run audit:pwa && npm run audit:static && npm run audit:base && npm run audit:github-pages",
     "format": "prettier --write .",
     "format:check": "prettier --check ."
   },

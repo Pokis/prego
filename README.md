@@ -2,7 +2,7 @@
 
 A premium static guide focused on getting pregnant and the nine months of pregnancy. It combines a couple-friendly preconception guide, a clear month-and-week timeline and an always-open essentials handbook for food, dishes, drinks, exercise, medicines, work, travel, sex, sleep and everyday life. A practical Swap Finder turns common cravings into close, usable alternatives. An after-birth continuation remains available, but it is intentionally secondary to pregnancy.
 
-> **Release status:** successful pushes to `main` publish automatically to [prego.potatoroad.lt](https://prego.potatoroad.lt/). `npm run build:release` is the technical publication gate: it enforces evidence links, current review metadata and release-ready record states, but it does not claim specialist approval. The current health copy remains `editorial-ready`, so the site keeps its qualified-review-pending banner and `noindex` metadata.
+> **Release status:** successful pushes to `main` publish automatically to [prego.potatoroad.lt](https://prego.potatoroad.lt/). GitHub performs a straight static build and Pages deployment with no cloud test or audit jobs. Run the complete verification suite locally before pushing an authorized release.
 
 ## Product shape
 
@@ -22,10 +22,10 @@ The current content includes:
 - A fully expanded getting-pregnant guide with a six-step plan, couple-level dos and don’ts, nine chance-versus-health comparisons, eight myth corrections and clear points for seeking help.
 - A nine-month orientation map that also explains why medical care counts pregnancy in weeks.
 - Eighteen pregnancy-essential topics and 419 source-backed finding records. The catalog includes 179 P0, 153 P1 and 87 baseline answers across food and drinks, exercise, medicines, home and work exposures, travel, sexual health, sleep, tests, birth choices, symptoms, personal care, infections, mental health, chronic conditions, accessibility, pregnancy complications, loss and uncertainty, and newborn preparation.
-- Each finding is a database-like public record with a stable ID, permanent page and direct anchor, record type, task intents, care tier, controlled aliases, concise answer, supporting detail, three decision factors, related records, an explicit care threshold, internal sources and review metadata. The catalog is intentionally broad but remains general guidance—not a diagnostic or individualized-risk database.
+- Each finding is a database-like public record with a stable ID, permanent page and direct anchor, record type, task intents, care tier, controlled aliases, concise answer, supporting detail, three decision factors, related records, an explicit care threshold and internal sources. The catalog is intentionally broad but remains general guidance—not a diagnostic or individualized-risk database.
 - Fourteen searchable substitute cards for common drinks and foods, each with one clear verdict, the reason, two or three ranked alternatives and a label check.
 - 21 date-window milestones for appointments, tests, decisions and preparation.
-- Optional due-date or last-period personalization stored only on the device.
+- Optional due-date or last-period personalization stored only on the device, with an editable “Baby loading” bar showing the estimated timeline and time remaining.
 - A sharded searchable static index spanning preconception, weeks, findings, practical substitutes, milestones, partner guidance, warning signs and after-birth topics. Whole-term matching, exact-phrase boosts and controlled aliases prevent accidental substring matches; result explanations, controlled typo suggestions, loading, offline and failure states remain distinct from a genuine zero result.
 - Stable copy-link anchors for major sections, individual examples, cautions, milestones and care notes, with visible highlighting when a shared fragment opens.
 - Retrievable bookmarks, recently viewed and saved answers, recent searches, restorable hidden milestones, completed milestones, an actual birth-date transition and one-click local-data deletion.
@@ -56,15 +56,16 @@ npm run check          # schema validation and Astro/TypeScript checks
 npm run test           # date, storage, content and migration tests
 npm run test:e2e       # Playwright journeys in the configured browsers
 npm run test:a11y      # focused automated accessibility checks
-npm run audit:content  # coverage, uniqueness, sources and review expiry
+npm run audit:content  # coverage, uniqueness and source-reference integrity
 npm run report:coverage # human-readable coverage by topic, priority, intent and search shard
 npm run build          # portable static evaluation artifact
 npm run audit:static   # route, link and third-party-runtime audit of dist/
 npm run audit:base     # nested-base-path build and link audit
 npm run audit:pages    # audit the current dist/ as a Pages-ready artifact
 npm run audit:github-pages # disposable GitHub project-site build and workflow audit
+npm run audit:pwa      # manifest, icons, precache and offline-behavior audit
 npm run verify         # complete non-browser verification sequence
-npm run build:release  # source-backed, review-current technical release build
+npm run assets:pwa     # regenerate install icons from the tracked SVG source
 npm run format         # format authored and generated files
 ```
 
@@ -122,7 +123,7 @@ Every public timeline record contains:
 - A real-life clarification or example.
 - Direct “what to do” and “what not to do / ask first” lists.
 - Appointment/decision and partner actions.
-- Help tier, milestone links, internal source IDs and review metadata.
+- Help tier, milestone links and internal source IDs.
 
 Medical prose belongs in validated content records, never in presentational components.
 
@@ -133,7 +134,7 @@ Each essential contains:
 - An always-visible introduction.
 - `dos`, `donts` and `askDoctor` arrays.
 - Concrete examples labeled `generally-ok`, `avoid` or `check-first`.
-- Internal evidence IDs and review metadata.
+- Internal evidence IDs.
 
 The labels are general guidance, not individualized approval. “Check first” always means checking the exact product, activity, symptom or health context with a doctor, midwife or pharmacist.
 
@@ -147,7 +148,7 @@ Each substitute record contains:
 - One verdict: keep within a limit, prepare differently, choose another version or check the exact product.
 - A direct bottom line and a visible explanation.
 - Two or three alternatives ordered by practical fit, such as closest taste, easiest change or keeping the original in a smaller amount.
-- A specific packaging or preparation check, internal evidence IDs and review metadata.
+- A specific packaging or preparation check and internal evidence IDs.
 
 All cards are server-rendered. Search and category chips enhance the page after hydration; without JavaScript, every answer remains visible.
 
@@ -158,7 +159,7 @@ All cards are server-rendered. Search and category chips enhance the page after 
 1. Edit `babyByWeek`, `bodyByWeek` or the matching `weekDetails` record in `scripts/generate-content.mjs`.
 2. Keep the stable `week-{n}` ID.
 3. Make the week-specific action, clarification, caution and appointment prompt genuinely distinct.
-4. Attach primary internal `sourceIds` and current review metadata.
+4. Attach relevant primary internal `sourceIds`.
 5. Run `npm run content:generate`, `npm run check`, `npm run test` and `npm run audit:content`.
 6. Run the relevant Playwright journey for layout or interaction changes.
 
@@ -174,7 +175,7 @@ All cards are server-rendered. Search and category chips enhance the page after 
 
 1. Add or edit the `finding(...)` record in `scripts/generate-content.mjs`; never hand-edit generated JSON.
 2. Keep the stable slug ID and assign it to one canonical essentials section.
-3. Add the phrases people genuinely type as distinct controlled aliases, one direct summary, visible supporting details, status, priority, internal sources and review metadata. The section metadata supplies the validated record type, three decision factors and status-specific care threshold.
+3. Add the phrases people genuinely type as distinct controlled aliases, one direct summary, visible supporting details, status, priority and internal sources. The section metadata supplies the validated record type, three decision factors and status-specific care threshold.
 4. Use P0 for a high-consequence or predictably common gap, P1 for a meaningful breadth gap, and `baseline` for an existing essentials example.
 5. Update `scripts/content-coverage.mjs` when the record establishes a required topic family or a zero-result query that must stay protected.
 6. Add a positive, ranking and false-positive regression when the term needs new alias behaviour.
@@ -195,11 +196,11 @@ Add a stable record to the milestone catalog with an anchor, week/day window, im
 
 ### Add an internal source
 
-Use a primary health authority or professional guideline. Record the canonical URL, publication/update date, retrieval date, supported claim and review cadence. Sources support clinical governance inside the repository and are not a separate reader journey.
+Use a primary health authority or professional guideline. Record the canonical URL, supported claim and available publication or update information. Sources provide internal editorial provenance and are not a separate reader journey or publication gate.
 
 ### Add a translation
 
-Keep stable content IDs, create a complete locale edition, set the correct page language, and validate hydrated dates, filters, urgent wording and all essential examples. Translation does not introduce location-specific care packs. Medical translation still requires qualified review.
+Keep stable content IDs, create a complete locale edition, set the correct page language, and validate hydrated dates, filters, urgent wording and all essential examples. Translation does not introduce location-specific care packs.
 
 ## Date and timeline rules
 
@@ -224,18 +225,17 @@ The browser may save:
 
 The version-2 journey state contains no location or unit preference. Version-1 records migrate dates and lists while dropping old location fields. Journey state and the two small activity lists use namespaced `localStorage` keys, are never uploaded, and are all erased by the Privacy page.
 
-## Medical safety and release
+## Reader safety and release
 
-Reader-facing content is direct, but repository governance remains strict:
+Reader-facing content remains bounded general guidance:
 
 - Never diagnose symptoms, calculate individualized risk, approve a medicine universally or tell someone to stop prescribed treatment.
 - Separate common information, amber “contact your doctor” advice and red urgent action.
-- Keep internal primary-source IDs and review dates on every claim-bearing record.
-- `npm run build` creates a local/static evaluation artifact.
-- `npm run build:release` fails for missing sources, expired or missing review metadata, and records still marked `draft` or `needs-review`.
-- `editorial-ready` is technically publishable but is not the same as `clinical-approved`; the visible pending-review state remains until a qualified reviewer approves the exact copy.
+- Keep internal primary-source IDs for traceability.
+- `npm run build` creates the deployable static PWA artifact.
+- Run all schema, unit, content, browser, accessibility, static, Pages and PWA checks locally before pushing to `main`.
 
-The absence of public citation panels is not permission to weaken evidence or approval checks.
+The absence of public citation panels is not permission to turn the guide into diagnosis or individualized treatment advice.
 
 ## Accessibility and progressive enhancement
 
@@ -264,7 +264,7 @@ $env:BASE_PATH = "/pregnancy-guide/"
 npm run build
 ```
 
-See [Information architecture](docs/information-architecture.md) for the navigation hierarchy and [Static deployment](docs/deployment.md) for the automatic GitHub Pages workflow, fixed custom domain, local simulation and provider-neutral alternatives. Pull requests verify without deploying. A push to `main` publishes only after the complete non-browser verifier, automated accessibility checks, the technical release build, broken-link checks and Pages artifact audit pass.
+See [Information architecture](docs/information-architecture.md) for the navigation hierarchy and [Static deployment](docs/deployment.md) for the automatic GitHub Pages workflow, fixed custom domain, local simulation and provider-neutral alternatives. GitHub runs only the static build and deployment; all verification is local before the push to `main`.
 
 ## Troubleshooting
 
@@ -272,7 +272,7 @@ See [Information architecture](docs/information-architecture.md) for the navigat
 - **A page shows stale copy:** restart the development server after regeneration.
 - **Dates appear one day off:** use `src/lib/date.ts`; never parse a date-only string through local midnight ad hoc.
 - **The essentials page fails schema validation:** check every example status and all required do/don’t/ask arrays.
-- **Release build fails:** fix the reported schema, source, review-freshness or technical-readiness problem; never bypass the gate.
+- **PWA audit fails:** rebuild first, then fix the reported manifest, icon, service-worker or precache problem.
 - **A GitHub project site has broken assets:** run `npm run audit:github-pages`; do not hard-code the repository name in components.
 - **Browser tests cannot start:** install the supported Playwright browsers with `npx playwright install` and rerun the focused command.
 

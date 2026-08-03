@@ -1,21 +1,27 @@
 # Release process
 
-## Content status
+A push to `main` is the publication event. GitHub Actions performs a straight static build and Pages deployment; it does not run verification jobs.
 
-The current records are `editorial-ready`, and the reader UI clearly says that qualified clinical review is pending. The same status emits `noindex,nofollow`. Automatic publication does not change those facts or represent the material as specialist-approved.
+## Before pushing
 
-`clinical-approved` remains a separate status for exact copy that a qualified reviewer has approved. Record the reviewer, qualification, approval date and expiry before changing that status or removing the pending-review presentation.
+Run locally:
 
-## Technical publication gate
+```sh
+npm run verify
+npm run test:e2e
+npm run test:a11y
+```
 
-1. Every medical record is sourced and within its review window.
-2. Every public record has current review metadata and is `editorial-ready` or `clinical-approved`; `draft` and `needs-review` records block publication.
-3. Schema validation, unit tests, content coverage and source-reference checks pass.
-4. Automated accessibility checks pass in the supported browser projects.
-5. The release build, broken-link checks, nested-base audit and GitHub Pages artifact audit pass.
-6. `npm run build:release` succeeds without bypasses.
-7. The canonical URL, social metadata, representative navigation and service-worker scope are verified live.
+Resolve failures before the authorized push. For navigation, forms, focus, color, motion or responsive changes, also complete the documented manual keyboard, screen-reader, zoom/reflow, high-contrast and mobile checks.
 
-For changes that affect navigation, forms, focus, color, motion or responsive layout, complete the documented manual keyboard, screen-reader, zoom/reflow, high-contrast and mobile checks before pushing to `main`. Automated axe coverage is a safeguard, not proof of conformance.
+Sources and existing provenance fields remain part of the content data, but they do not control whether GitHub Pages publishes.
 
-A push to `main` is the publication event and automatically starts the Pages workflow, so only authorized release changes belong on `main`. Successful artifact upload alone is not proof that DNS, canonical URLs, caching or the live site are correct; monitor the deployment job through completion and check `https://prego.potatoroad.lt/` afterward.
+## Publish
+
+1. Confirm the intended changes and a clean local verification result.
+2. Commit them to `main`.
+3. Push `main` to `origin`.
+4. Monitor `Deploy site to GitHub Pages` through completion.
+5. Verify `https://prego.potatoroad.lt/`, representative routes, the PWA manifest, install icons and service-worker response.
+
+The workflow is intentionally minimal: checkout, Node setup, `npm ci`, `npm run build`, Pages upload and Pages deploy.

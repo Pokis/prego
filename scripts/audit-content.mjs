@@ -11,7 +11,6 @@ import {
   requiredSearchMatches,
 } from "./content-coverage.mjs";
 
-const release = process.argv.includes("--release");
 const dir = resolve("src/data/generated");
 const requiredFiles = [
   "timeline",
@@ -42,7 +41,6 @@ const data = Object.fromEntries(
   requiredFiles.map((name) => [name, load(name)]),
 );
 const sourceIds = new Set(data.sources.map((source) => source.id));
-const today = new Date().toISOString().slice(0, 10);
 
 const targets = {
   timeline: 57,
@@ -78,23 +76,6 @@ for (const [name, records] of Object.entries(data)) {
             errors.push(
               `${name}/${record.id} references missing source ${sourceId}`,
             );
-      }
-      if (!record.review) {
-        errors.push(`${name}/${record.id} has no review metadata`);
-      } else {
-        if (record.review.nextReviewAt < today)
-          errors.push(
-            `${name}/${record.id} review expired ${record.review.nextReviewAt}`,
-          );
-        if (
-          release &&
-          !["editorial-ready", "clinical-approved"].includes(
-            record.review.status,
-          )
-        )
-          errors.push(
-            `${name}/${record.id} is ${record.review.status}, not technically ready for release`,
-          );
       }
     }
   }

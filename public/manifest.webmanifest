@@ -2,8 +2,50 @@
   "name": "Pregnancy, Clearly",
   "short_name": "Clearly",
   "description": "A clear week-by-week pregnancy guide with direct dos and don'ts.",
+  "id": "./",
   "start_url": "./",
+  "scope": "./",
   "display": "standalone",
+  "display_override": ["window-controls-overlay", "standalone", "minimal-ui"],
+  "orientation": "any",
   "background_color": "#fbf6ed",
-  "theme_color": "#5f2847"
+  "theme_color": "#5f2847",
+  "categories": ["education", "health", "lifestyle"],
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Pregnancy timeline",
+      "short_name": "Timeline",
+      "url": "timeline/"
+    },
+    {
+      "name": "Find a direct answer",
+      "short_name": "Essentials",
+      "url": "essentials/"
+    },
+    {
+      "name": "Urgent help",
+      "short_name": "Urgent help",
+      "url": "urgent-help/"
+    }
+  ]
 }

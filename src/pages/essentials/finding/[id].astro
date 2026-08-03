@@ -130,12 +130,15 @@ const schema = {
           </a>
         </section>
         <section class="review-marker">
-          <p class="eyebrow">Content review</p>
-          <strong>Reviewed {formatReviewDate(finding.review.reviewedAt)}</strong
+          <p class="eyebrow">Content provenance</p>
+          <strong
+            >Record updated {
+              formatReviewDate(finding.review.reviewedAt)
+            }</strong
           >
           <p>
-            Source-backed internal evidence is recorded in the repository. This
-            evaluation build still awaits qualified clinical sign-off.
+            Supporting internal sources are recorded in the repository. The date
+            shown above describes this version of the record.
           </p>
         </section>
       </aside>

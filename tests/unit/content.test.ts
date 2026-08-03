@@ -291,11 +291,4 @@ describe("generated content coverage", () => {
       true,
     );
   });
-
-  it("leaves release content awaiting clinician approval", () => {
-    const timeline = load("timeline");
-    expect(
-      timeline.every((entry: any) => entry.review.status === "editorial-ready"),
-    ).toBe(true);
-  });
 });

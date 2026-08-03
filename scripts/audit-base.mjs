@@ -29,6 +29,23 @@ if (build.status !== 0) {
   process.exit(build.status ?? 1);
 }
 
+for (const script of ["finalize-pwa.mjs", "audit-pwa.mjs"]) {
+  const result = spawnSync(process.execPath, [resolve("scripts", script)], {
+    cwd: process.cwd(),
+    env: {
+      ...process.env,
+      SITE_URL: "https://example.test",
+      BASE_PATH: "/pregnancy-guide/",
+      OUT_DIR: output,
+    },
+    encoding: "utf8",
+  });
+  process.stdout.write(result.stdout || "");
+  process.stderr.write(result.stderr || "");
+  if (result.error) throw result.error;
+  if (result.status !== 0) process.exit(result.status ?? 1);
+}
+
 try {
   const homepage = resolve(output, "index.html");
   if (!existsSync(homepage))

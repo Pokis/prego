@@ -7,7 +7,6 @@ export const siteConfig = {
   themeColor: "#5f2847",
   storageKey: "pregnancy-clearly:journey:v1",
   storageVersion: 2,
-  clinicalStatus: "awaiting-review" as const,
   emergencyDisclaimer:
     "This guide cannot assess symptoms. If you think you or your baby may be in immediate danger, contact local emergency services now.",
   educationDisclaimer:

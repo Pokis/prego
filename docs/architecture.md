@@ -16,10 +16,10 @@ Pregnancy, Clearly is an Astro 7 static site. Every route is generated at build 
 
 - Pages decide composition, metadata and structured data.
 - Components decide presentation and interaction.
-- Content records hold medical prose, internal source IDs and review status.
+- Content records hold medical prose and internal source IDs.
 - `src/lib/date.ts` is the only source for journey date calculations.
 - Audit scripts enforce editorial and release invariants separately from type checking.
 
 ## Why generation exists
 
-The getting-pregnant guide, forty weekly pages, eighteen essentials topics, 419 direct finding pages, eight after-birth topic guides, thirteen stage-specific postpartum periods and the practical substitute catalog need canonical, repeatable structure. The generator keeps IDs, task intents, record types, decision factors, care thresholds, related records, source-backed prose, review metadata, controlled search aliases and direct anchors consistent while emitting inspectable JSON. It is not runtime AI generation and does not fetch content.
+The getting-pregnant guide, forty weekly pages, eighteen essentials topics, 419 direct finding pages, eight after-birth topic guides, thirteen stage-specific postpartum periods and the practical substitute catalog need canonical, repeatable structure. The generator keeps IDs, task intents, record types, decision factors, care thresholds, related records, source-backed prose, controlled search aliases and direct anchors consistent while emitting inspectable JSON. It is not runtime AI generation and does not fetch content.

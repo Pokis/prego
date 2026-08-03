@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title">
+  <title id="title">Pregnancy, Clearly</title>
+  <rect width="512" height="512" rx="112" fill="#5f2847"/>
+  <circle cx="256" cy="256" r="176" fill="#fbf6ed"/>
+  <path d="M350 164A132 132 0 1 0 350 348" fill="none" stroke="#5f2847" stroke-width="58" stroke-linecap="round"/>
+</svg>

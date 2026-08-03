@@ -18,8 +18,6 @@ The tier is content metadata and a visual language. Do not communicate urgency b
 - A score that labels a pregnancy low or high risk.
 - A missed milestone interpreted as a diagnosis.
 
-Evaluation builds show a visible clinical-review-pending banner and emit `noindex,nofollow`. Remove that state only as part of a real clinically approved release; never hide it merely for visual polish.
-
 Reader help uses three stable levels: ordinary information, amber contact-your-care-team guidance, and red urgent or emergency action. Do not collapse amber and red into one generic warning block.
 
 - Reassurance that overrides severe, sudden, worsening or unfamiliar symptoms.

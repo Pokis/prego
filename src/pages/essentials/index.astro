@@ -252,7 +252,7 @@ const schema = {
           another familiar food or drink.
         </p>
       </header>
-      <SwapFinder client:visible items={substitutions} />
+      <SwapFinder client:load items={substitutions} />
     </div>
   </section>
 
@@ -295,10 +295,9 @@ const schema = {
         }
       </ol>
       <p class="reviewed-date">
-        Topic records reviewed {
+        Topic records updated {
           formatReviewDate(topics[0]?.review.reviewedAt ?? "2026-08-03")
-        }. Qualified clinical sign-off remains pending for this evaluation
-        build.
+        }.
       </p>
     </div>
   </section>

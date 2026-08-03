@@ -6,7 +6,7 @@ The schemas in `src/content.config.ts` are the contract. Records that do not con
 
 - `timeline`: positive test, trimester overviews, gestational weeks and postpartum windows.
 - `essentials`: always-open do, don’t, ask-doctor and concrete-example sections.
-- `findings`: stable, directly anchored answers with a canonical essentials section, pregnancy stage, task intents, record type, controlled aliases, priority, status, care tier, summary, visible details, decision factors, a care threshold, related records, sources and review metadata.
+- `findings`: stable, directly anchored answers with a canonical essentials section, pregnancy stage, task intents, record type, controlled aliases, priority, status, care tier, summary, visible details, decision factors, a care threshold, related records and sources.
 - `postpartumTopics`: separate practical after-birth topics with common actions, contact-care advice and urgent thresholds.
 - `substitutions`: searchable common foods and drinks with one verdict, a direct explanation, ranked alternatives and an exact label/preparation check.
 - `preconception`: the getting-pregnant plan, direct rules, chance-versus-health factors, myths, help timing and partner actions.
@@ -14,7 +14,7 @@ The schemas in `src/content.config.ts` are the contract. Records that do not con
 - `sources`: internal authority, canonical URL, dates, cadence and support note.
 - `urgent`: an amber contact-care group plus red maternal and infant urgent-warning groups.
 
-Every health-bearing record includes source IDs and review metadata. IDs are public contracts: routes, bookmarks, completion state and cross-links depend on them. Do not rename an ID casually; add a migration when stored state is affected.
+Records retain source and provenance fields for traceability. IDs are public contracts: routes, bookmarks, completion state and cross-links depend on them. Do not rename an ID casually; add a migration when stored state is affected.
 
 ## Authoring process
 
@@ -24,7 +24,6 @@ Every health-bearing record includes source IDs and review metadata. IDs are pub
 4. Add source IDs and volatility.
 5. Generate and audit.
 6. Review the rendered route in context.
-7. Obtain editorial and clinical review.
 
 Generated JSON must not become a second source of truth. Edit the generator, regenerate, then commit both source and output.
 

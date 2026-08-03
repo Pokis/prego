@@ -75,7 +75,7 @@ const anchorId = `${idPrefix}${finding.id}`;
     )
   }
   <div class="finding-summary-footer">
-    <span>Reviewed {formatReviewDate(finding.review.reviewedAt)}</span>
+    <span>Updated {formatReviewDate(finding.review.reviewedAt)}</span>
     <a href={withBase(findingHref(finding.id))}>
       Open the complete answer <span aria-hidden="true">→</span>
     </a>

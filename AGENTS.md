@@ -16,17 +16,15 @@ The product must not become a chatbot, symptom checker, diagnostic tool, adverti
 4. `src/pages/essentials/index.astro` is the canonical everyday do/don’t/check-first experience.
 5. `src/pages/getting-pregnant/index.astro` is the canonical preconception experience; keep conception chances distinct from future-baby health.
 6. Do not reintroduce reader location selection or country-specific care packs. General guidance must tell readers when their doctor or midwife should individualize it.
-7. Internal evidence and review metadata remain required even though source/review pages are not part of the public product.
 
-## Medical-safety invariants
+## Reader-safety invariants
 
-3. Never bypass, weaken or special-case `build:release` from technical perspective (not specialist checks).
-4. Never declare a medicine, dose, supplement or treatment universally safe.
-5. Never tell a reader to start or stop prescribed treatment; instruct them to review the exact product with their doctor or pharmacist.
-6. Never diagnose, calculate individualized risk or infer health from saved dates, bookmarks or checklist state.
-7. Keep common information, “contact your doctor” advice and urgent help visually and semantically distinct.
-8. Medical prose belongs in validated content records, not presentational components.
-9. A disclaimer is not a substitute for precise, safe wording.
+1. Never declare a medicine, dose, supplement or treatment universally safe.
+2. Never tell a reader to start or stop prescribed treatment; instruct them to review the exact product with their doctor or pharmacist.
+3. Never diagnose, calculate individualized risk or infer health from saved dates, bookmarks or checklist state.
+4. Keep common information, “contact your doctor” advice and urgent help visually and semantically distinct.
+5. Medical prose belongs in validated content records, not presentational components.
+6. A disclaimer is not a substitute for precise, safe wording.
 
 ## Repository map
 
@@ -42,9 +40,9 @@ The product must not become a chatbot, symptom checker, diagnostic tool, adverti
 - `src/lib/milestones.ts`: canonical milestone ordering and timing labels.
 - `src/lib/storage.ts`: versioned browser-state migration.
 - `src/styles/global.css`: tokens, components, responsive behavior and accessibility states.
-- `scripts/audit-content.mjs`: coverage, evidence and release rules.
+- `scripts/audit-content.mjs`: coverage, uniqueness and source-reference integrity.
 - `scripts/deployment-config.mjs`: canonical origin and root/subpath resolution, including GitHub Pages project sites.
-- `.github/workflows/`: non-deploying verification and the automatic, release-gated Pages workflow for `main`.
+- `.github/workflows/`: the automatic deployment-only Pages workflow for `main`; verification runs locally before push.
 - `tests/`: unit, browser and automated accessibility checks.
 - `docs/`: architecture, authoring, safety, testing and deployment guidance.
 
@@ -55,6 +53,7 @@ npm run check
 npm run test
 npm run audit:content
 npm run build
+npm run audit:pwa
 npm run audit:static
 npm run audit:base
 npm run audit:github-pages
@@ -62,7 +61,7 @@ npm run audit:github-pages
 
 For UI changes, run the relevant Playwright journeys. For navigation, form, focus, color or responsive changes, run `npm run test:a11y`. Use `npm run verify` for the complete non-browser sequence.
 
-Never claim public medical readiness while `npm run build:release` fails. Do not deploy without explicit owner authorization.
+Run verification locally before pushing to `main`. Do not deploy without explicit owner authorization.
 
 ## Content recipes
 
@@ -79,7 +78,7 @@ Every week must have:
 - A specific caution.
 - A relevant appointment or decision prompt.
 - One concrete partner action.
-- Internal sources and current review metadata.
+- Relevant internal sources where they improve traceability.
 
 Do not fall back to repeated trimester filler. Regenerate and run the content uniqueness tests.
 
@@ -90,7 +89,7 @@ Use an `essentials` record with:
 - `dos`, `donts` and `askDoctor` arrays.
 - Concrete examples with `generally-ok`, `avoid` or `check-first` status.
 - Plain wording that works without an accordion or linked article.
-- Internal sources and review metadata.
+- Relevant internal sources where they improve traceability.
 
 Examples must name the actual food, dish, product, activity or situation. Avoid vague entries such as “eat safely” without explaining what that means.
 
@@ -108,11 +107,11 @@ Add a stable ID, date anchor, start/end window, importance, action-oriented desc
 
 ### Add an internal source
 
-Prefer WHO, public health authorities, national clinical guidance and established professional bodies. Record canonical URL, supported claims, publication/update date, retrieval date and review cadence. Do not link the reader away as a substitute for writing a complete answer here.
+Prefer WHO, public health authorities, national clinical guidance and established professional bodies. Record the canonical URL, supported claims and available publication/update information. Do not link the reader away as a substitute for writing a complete answer here.
 
 ### Add a locale
 
-Preserve stable IDs and make a complete translated edition. Do not add country-specific appointments, emergency numbers or public-service packs through localization. Medical translation needs qualified review.
+Preserve stable IDs and make a complete translated edition. Do not add country-specific appointments, emergency numbers or public-service packs through localization. Verify routes, language metadata, interaction copy and urgent wording locally.
 
 ## Voice and UX
 
@@ -145,4 +144,4 @@ Public routes must not point to removed `/faq/`, `/guides/`, `/regions/`, `/sour
 
 ## Deployment boundary
 
-GitHub Pages support is prepared. It should be auto deployed once pushed. do not deploy, provision hosting or publish medical content without explicit authorization from the user (once given feel free to do so).
+GitHub Pages publishes automatically after a push to `main`. The GitHub workflow only installs dependencies, builds the static PWA artifact and deploys it; it must not run schema checks, tests, content audits, link audits or accessibility suites. Run the repository verification commands locally before the authorized push. Do not deploy or provision hosting without explicit authorization from the user; once given, the scoped deployment may proceed.

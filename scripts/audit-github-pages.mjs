@@ -79,7 +79,9 @@ const run = (command, args) => {
 rmSync(output, { recursive: true, force: true });
 try {
   run(process.execPath, [resolve("node_modules/astro/bin/astro.mjs"), "build"]);
+  run(process.execPath, [resolve("scripts/finalize-pwa.mjs")]);
   run(process.execPath, [resolve("scripts/audit-pages-artifact.mjs")]);
+  run(process.execPath, [resolve("scripts/audit-pwa.mjs")]);
 
   const workflowPath = resolve(".github/workflows/deploy-pages.yml");
   assert.ok(existsSync(workflowPath), "Missing automatic Pages workflow");
@@ -88,12 +90,7 @@ try {
     "push:",
     "branches:",
     "- main",
-    "npm run verify",
-    "npx playwright install --with-deps chromium firefox webkit",
-    "npm run test:a11y",
-    "npm run build:release",
-    "npm run audit:static",
-    "npm run audit:pages",
+    "npm run build",
     "actions/configure-pages@v5",
     "actions/upload-pages-artifact@v4",
     "actions/deploy-pages@v4",
@@ -112,6 +109,22 @@ try {
   assert.ok(
     !/\r?\n  pull_request:/.test(workflow),
     "The Pages workflow must not deploy pull requests",
+  );
+  for (const forbidden of [
+    "npm run verify",
+    "npm run test",
+    "npm run check",
+    "npm run audit",
+    "playwright",
+  ]) {
+    assert.ok(
+      !workflow.toLowerCase().includes(forbidden),
+      `Pages workflow must remain deployment-only; found ${forbidden}`,
+    );
+  }
+  assert.ok(
+    !existsSync(resolve(".github/workflows/verify.yml")),
+    "Cloud verification workflow must remain removed; verification is local-only",
   );
   assert.equal(
     readFileSync(resolve("public/CNAME"), "utf8").trim(),

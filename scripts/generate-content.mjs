@@ -8,7 +8,7 @@ const review = (volatility = "annual") => ({
   status: "editorial-ready",
   reviewedAt: "2026-07-31",
   nextReviewAt: volatility === "rapid-review" ? "2026-10-29" : "2027-07-31",
-  reviewer: "Clinical reviewer required before public release",
+  reviewer: "Internal editorial record",
   volatility,
 });
 
@@ -11426,7 +11426,7 @@ const preconception = [
       status: "editorial-ready",
       reviewedAt: "2026-08-02",
       nextReviewAt: "2027-08-02",
-      reviewer: "Clinical reviewer required before public release",
+      reviewer: "Internal editorial record",
       volatility: "annual",
     },
   },

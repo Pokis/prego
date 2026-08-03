@@ -2,14 +2,16 @@
 
 Production is published at `https://prego.potatoroad.lt/` through GitHub Pages. The portable artifact is `dist/`, and no server-side functions or rewrites are required.
 
-> **Content status:** health records are currently `editorial-ready`, not `clinical-approved`. The technical release gate permits that state while continuing to enforce sources, review freshness and release readiness. Publishing does not change or overstate the recorded clinical status; the live site retains its pending-review banner and `noindex` metadata.
-
 ## GitHub Pages
 
-The repository includes two complementary workflows:
+`.github/workflows/deploy-pages.yml` runs automatically for pushes to `main`. It deliberately does only the work needed to publish:
 
-- `.github/workflows/verify.yml` checks every push and pull request but never deploys.
-- `.github/workflows/deploy-pages.yml` runs automatically for pushes to `main`. It repeats the complete non-browser verifier, runs automated accessibility checks, builds through `build:release`, audits broken links and the final Pages artifact, then deploys.
+1. Check out the repository.
+2. Set up Node.js and run `npm ci`.
+3. Run `npm run build` to generate the static PWA artifact.
+4. Upload `dist/` and deploy it to GitHub Pages.
+
+The workflow does not run schema checks, unit tests, content audits, link audits, Playwright or accessibility tests. Run the local verification suite before pushing an authorized release to `main`.
 
 The build derives GitHub Pages URLs from GitHub's environment:
 
@@ -20,80 +22,74 @@ The build derives GitHub Pages URLs from GitHub's environment:
 | This repository         | `https://prego.potatoroad.lt` | `/`            |
 | Another custom domain   | value of `SITE_URL`           | `/` by default |
 
-This keeps navigation, canonical links, the sitemap, manifest, social image, search index, React assets and service-worker registration on the same subpath. `public/.nojekyll` is included in every artifact.
+This keeps navigation, canonical links, the sitemap, PWA manifest, icons, search index, React assets and service-worker scope on the same subpath. `public/.nojekyll` is included in every artifact.
 
 ### Repository setup
 
 1. Open **Settings → Pages** and choose **GitHub Actions** as the publishing source.
 2. Configure `prego.potatoroad.lt` as the Pages custom domain and enable HTTPS after GitHub confirms the DNS records.
-3. Push an authorized release change to `main`.
-4. Monitor both workflows. `Verify` never publishes; `Deploy site to GitHub Pages` publishes only when every release job succeeds.
-5. Verify the live domain, canonical URL, service worker and representative navigation after deployment.
+3. Run the full local verification suite.
+4. Push an authorized release change to `main`.
+5. Monitor `Deploy site to GitHub Pages` through completion and verify the live domain, canonical URL, PWA manifest, service worker and representative navigation.
 
-The deployment workflow fixes `SITE_URL` to `https://prego.potatoroad.lt/` and `BASE_PATH` to `/`. `public/CNAME` contains the matching hostname. Keeping all three values aligned prevents GitHub from building `/prego/` asset paths for a custom domain that serves the site at `/`.
+The deployment workflow fixes `SITE_URL` to `https://prego.potatoroad.lt/` and `BASE_PATH` to `/`. `public/CNAME` contains the matching hostname. Keep all three aligned.
 
-### Custom domain
-
-The production custom domain is already represented in source control. To configure or repair it:
-
-1. Keep the workflow's `SITE_URL` at `https://prego.potatoroad.lt/` and `BASE_PATH` at `/`.
-2. Keep `public/CNAME` as the single line `prego.potatoroad.lt`.
-3. Configure that exact custom domain in **Settings → Pages**.
-4. Complete the DNS records GitHub shows and enable HTTPS after the certificate is ready.
-
-Changing domains requires one coordinated change to the workflow, `public/CNAME`, GitHub Pages settings and DNS. Do not add a placeholder `CNAME`; it changes the published domain behavior.
-
-### Local Pages simulation
-
-Run the same URL derivation against a disposable project-site build:
+### Local release verification
 
 ```sh
 npm ci
-npm run audit:github-pages
+npm run verify
+npm run test:e2e
+npm run test:a11y
 ```
 
-The audit keeps unit coverage for generic `/repository/` project sites, then builds this repository as `https://prego.potatoroad.lt/`. It checks root paths, canonical URLs, the sitemap, `CNAME`, required files and the automatic `main`-branch workflow before removing its temporary artifact. It does not start a server or connect to GitHub.
+`npm run verify` includes schema and unit checks, content/static/link audits, nested-base and GitHub Pages simulations, plus the PWA artifact audit. None of these commands run in GitHub Actions.
 
 To inspect a specific Pages artifact locally in PowerShell:
 
 ```powershell
 $env:GITHUB_PAGES = "true"
-$env:GITHUB_REPOSITORY_OWNER = "your-owner"
-$env:GITHUB_REPOSITORY = "your-owner/your-repository"
+$env:GITHUB_REPOSITORY_OWNER = "Pokis"
+$env:GITHUB_REPOSITORY = "Pokis/prego"
+$env:SITE_URL = "https://prego.potatoroad.lt/"
+$env:BASE_PATH = "/"
 npm run build
 npm run audit:pages
+npm run audit:pwa
 ```
 
-Clear those environment variables before testing a different hosting target.
+Clear those environment variables before testing another hosting target.
+
+### Custom domain
+
+Keep these values together:
+
+- Workflow `SITE_URL`: `https://prego.potatoroad.lt/`
+- Workflow `BASE_PATH`: `/`
+- `public/CNAME`: `prego.potatoroad.lt`
+- GitHub Pages custom-domain setting: `prego.potatoroad.lt`
+
+Changing domains requires one coordinated change to the workflow, `public/CNAME`, GitHub Pages settings and DNS.
 
 ## Other static hosts
 
-Set `SITE_URL` to the canonical origin. Set `BASE_PATH` only when the site is hosted under a subdirectory.
+Set `SITE_URL` to the canonical origin and `BASE_PATH` only for subdirectory hosting.
 
 ```powershell
 $env:SITE_URL = "https://example.com"
 $env:BASE_PATH = "/pregnancy-guide/"
-npm run build:release
+npm run build
 npm run audit:pages
+npm run audit:pwa
 ```
 
 Provider-neutral settings:
 
-- Build command: `npm run build:release`
+- Build command: `npm run build`
 - Output directory: `dist`
 - Node.js: 22 or newer
 - Functions/server rendering: none
 
-Cloudflare Pages, Netlify and conventional static hosts can publish `dist/` directly. A conventional server should serve directory `index.html` files and the generated `404.html` page.
-
-## How path handling works
-
-`scripts/deployment-config.mjs` resolves one canonical origin and base path. Astro uses them for generated assets and the sitemap; application links use `src/lib/paths.ts`. The service worker derives cached URLs from its registration scope, so root and project-subpath builds have separate caches.
-
-The checks cover three distinct cases:
-
-- `npm run audit:static` checks the normal root artifact in `dist/`.
-- `npm run audit:base` checks a generic `/pregnancy-guide/` deployment.
-- `npm run audit:github-pages` checks GitHub's `/repository/` project-site behavior and automatic-release workflow guardrails.
+The build finalizes the service worker with the current hashed CSS, JavaScript, font and image assets. The service worker derives URLs from its registration scope, so root and project-subpath builds keep separate caches.
 
 References: [Astro's GitHub Pages guide](https://docs.astro.build/en/guides/deploy/github/) and [GitHub's custom Pages workflow guide](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages).

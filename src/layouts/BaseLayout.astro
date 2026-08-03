@@ -37,8 +37,8 @@ const pathWithoutBase =
 const isCurrent = (href: string) =>
   href === "/" ? pathWithoutBase === "/" : pathWithoutBase.startsWith(href);
 const serviceWorkerPath = withBase("/sw.js");
+const serviceWorkerScope = withBase("/");
 const enableServiceWorker = import.meta.env.PROD;
-const evaluationBuild = siteConfig.clinicalStatus === "awaiting-review";
 ---
 
 <!doctype html>
@@ -47,16 +47,26 @@ const evaluationBuild = siteConfig.clinicalStatus === "awaiting-review";
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="theme-color" content={siteConfig.themeColor} />
+    <meta name="color-scheme" content="light" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content={siteConfig.shortName} />
     <meta name="description" content={description} />
     <meta name="generator" content={Astro.generator} />
     <meta
       name="robots"
-      content={noindex || evaluationBuild
+      content={noindex
         ? "noindex,nofollow"
         : "index,follow,max-image-preview:large"}
     />
     <link rel="canonical" href={canonical} />
     <link rel="manifest" href={withBase("/manifest.webmanifest")} />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href={withBase("/icons/apple-touch-icon.png")}
+    />
     <meta property="og:type" content="website" />
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={description} />
@@ -73,11 +83,22 @@ const evaluationBuild = siteConfig.clinicalStatus === "awaiting-review";
         />
       )
     }
-    <script is:inline define:vars={{ enableServiceWorker, serviceWorkerPath }}>
+    <script
+      is:inline
+      define:vars={{
+        enableServiceWorker,
+        serviceWorkerPath,
+        serviceWorkerScope,
+      }}
+    >
       if (enableServiceWorker && "serviceWorker" in navigator) {
         window.addEventListener("load", () =>
           navigator.serviceWorker
-            .register(serviceWorkerPath)
+            .register(serviceWorkerPath, {
+              scope: serviceWorkerScope,
+              updateViaCache: "none",
+            })
+            .then((registration) => registration.update())
             .catch(() => undefined),
         );
       }
@@ -85,14 +106,6 @@ const evaluationBuild = siteConfig.clinicalStatus === "awaiting-review";
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to content</a>
-    {
-      evaluationBuild && (
-        <div class="site-status" role="status">
-          Evaluation build · health content is awaiting qualified clinical
-          review
-        </div>
-      )
-    }
     <header class="site-header">
       <div class="shell nav-wrap">
         <a

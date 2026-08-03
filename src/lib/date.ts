@@ -1,6 +1,13 @@
 import type { JourneyPosition } from "./types";
 
 const DAY_MS = 86_400_000;
+const PREGNANCY_DAYS = 280;
+
+export interface PregnancyProgress {
+  elapsedDays: number;
+  remainingDays: number;
+  percent: number;
+}
 
 function utcDate(value: string): number {
   const [year, month, day] = value.split("-").map(Number);
@@ -18,12 +25,28 @@ export function daysBetween(from: string, to: string): number {
 }
 
 export function estimateDueDateFromLmp(lmp: string): string {
-  return addDays(lmp, 280);
+  return addDays(lmp, PREGNANCY_DAYS);
 }
 
 export function gestationalWeek(dueDate: string, today: string): number {
-  const pregnancyStart = addDays(dueDate, -280);
+  const pregnancyStart = addDays(dueDate, -PREGNANCY_DAYS);
   return Math.max(0, Math.floor(daysBetween(pregnancyStart, today) / 7));
+}
+
+export function pregnancyProgress(
+  dueDate: string,
+  today: string,
+): PregnancyProgress {
+  const pregnancyStart = addDays(dueDate, -PREGNANCY_DAYS);
+  const elapsedDays = daysBetween(pregnancyStart, today);
+  const remainingDays = daysBetween(today, dueDate);
+  const completedDays = Math.min(PREGNANCY_DAYS, Math.max(0, elapsedDays));
+
+  return {
+    elapsedDays,
+    remainingDays,
+    percent: Math.round((completedDays / PREGNANCY_DAYS) * 100),
+  };
 }
 
 export function journeyPosition(args: {

@@ -29,3 +29,31 @@ for (const path of [
     expect(serious).toEqual([]);
   });
 }
+
+test("the saved baby loader has no serious accessibility violations", async ({
+  page,
+}) => {
+  await page.goto("/timeline/");
+  const dueDate = await page.evaluate(() => {
+    const now = new Date();
+    const localToday = new Date(
+      now.getTime() - now.getTimezoneOffset() * 60_000,
+    );
+    localToday.setUTCDate(localToday.getUTCDate() + 63);
+    return localToday.toISOString().slice(0, 10);
+  });
+
+  await page.getByLabel("Due date given by care").fill(dueDate);
+  await page.getByRole("button", { name: "Show my baby loader" }).click();
+  await expect(
+    page.getByRole("heading", { name: "Baby loading…" }),
+  ).toBeVisible();
+
+  const results = await new AxeBuilder({ page })
+    .include("#baby-loader")
+    .analyze();
+  const serious = results.violations.filter((violation) =>
+    ["serious", "critical"].includes(violation.impact || ""),
+  );
+  expect(serious).toEqual([]);
+});

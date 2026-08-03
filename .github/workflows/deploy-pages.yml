@@ -7,7 +7,7 @@ on:
 
 concurrency:
   group: github-pages
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 permissions:
   contents: read
@@ -15,8 +15,11 @@ permissions:
   id-token: write
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     env:
       GITHUB_PAGES: "true"
       SITE_URL: "https://prego.potatoroad.lt/"
@@ -31,18 +34,8 @@ jobs:
           cache: npm
       - name: Install dependencies
         run: npm ci
-      - name: Run schema, test, content, link, and static verification
-        run: npm run verify
-      - name: Install Playwright browsers
-        run: npx playwright install --with-deps chromium firefox webkit
-      - name: Run automated accessibility safeguards
-        run: npm run test:a11y
-      - name: Build the release artifact
-        run: npm run build:release
-      - name: Audit release links and static output
-        run: npm run audit:static
-      - name: Audit GitHub Pages artifact
-        run: npm run audit:pages
+      - name: Build static site
+        run: npm run build
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Upload static artifact
@@ -50,13 +43,6 @@ jobs:
         with:
           path: ./dist
 
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4

@@ -30,9 +30,50 @@ test("homepage presents clear task-based entry paths", async ({ page }) => {
   await expect(
     page.getByRole("link", { name: /After birth/ }).first(),
   ).toBeVisible();
-  await expect(
-    page.getByText(/health content is awaiting qualified clinical review/i),
-  ).toBeVisible();
+  await expect(page.locator('meta[name="robots"]')).toHaveAttribute(
+    "content",
+    "index,follow,max-image-preview:large",
+  );
+});
+
+test("publishes installable PWA metadata and assets", async ({ page }) => {
+  await page.goto("/");
+  await expect(page.locator('link[rel="manifest"]')).toHaveAttribute(
+    "href",
+    "/manifest.webmanifest",
+  );
+  await expect(page.locator('link[rel="apple-touch-icon"]')).toHaveAttribute(
+    "href",
+    "/icons/apple-touch-icon.png",
+  );
+
+  const manifestResponse = await page.request.get("/manifest.webmanifest");
+  expect(manifestResponse.ok()).toBe(true);
+  const manifest = await manifestResponse.json();
+  expect(manifest).toMatchObject({
+    id: "./",
+    start_url: "./",
+    scope: "./",
+    display: "standalone",
+  });
+  expect(manifest.icons).toEqual(
+    expect.arrayContaining([
+      expect.objectContaining({ sizes: "192x192", type: "image/png" }),
+      expect.objectContaining({ sizes: "512x512", purpose: "maskable" }),
+    ]),
+  );
+
+  for (const icon of manifest.icons) {
+    const iconResponse = await page.request.get(`/${icon.src}`);
+    expect(iconResponse.ok()).toBe(true);
+    expect(iconResponse.headers()["content-type"]).toContain("image/png");
+  }
+
+  const serviceWorkerResponse = await page.request.get("/sw.js");
+  expect(serviceWorkerResponse.ok()).toBe(true);
+  expect(await serviceWorkerResponse.text()).toContain(
+    'event.request.mode === "navigate"',
+  );
 });
 
 test("getting-pregnant guidance is persistent in desktop and mobile navigation", async ({
@@ -237,14 +278,83 @@ test("site search names the offline state", async ({ page }) => {
 
 test("timeline personalization stays in local storage", async ({ page }) => {
   await page.goto("/timeline/");
-  await page.getByLabel("Due date given by care").fill("2026-11-07");
+  const dueDate = await page.evaluate(() => {
+    const now = new Date();
+    const localToday = new Date(
+      now.getTime() - now.getTimezoneOffset() * 60_000,
+    );
+    localToday.setUTCDate(localToday.getUTCDate() + 63);
+    return localToday.toISOString().slice(0, 10);
+  });
+
+  await page.getByLabel("Due date given by care").fill(dueDate);
+  await page.getByRole("button", { name: "Show my baby loader" }).click();
   await expect(page.getByText(/You’re at Month \d · Week \d+/)).toBeVisible();
+  await expect(
+    page.getByRole("heading", { name: "Baby loading…" }),
+  ).toBeVisible();
+  await expect(
+    page.getByText("9 weeks until the estimated due date"),
+  ).toBeVisible();
+  await expect(
+    page.getByRole("progressbar", {
+      name: "78% of the 40-week pregnancy timeline elapsed",
+    }),
+  ).toHaveAttribute("value", "78");
+  await expect(page.locator("#baby-loader")).toBeVisible();
+  await expect(page.locator(`time[datetime="${dueDate}"]`)).toBeVisible();
+  await expect(
+    page.getByRole("link", { name: "Copy link to baby loader" }),
+  ).toBeVisible();
+  expect(
+    await page.evaluate(
+      () =>
+        document.documentElement.scrollWidth <=
+        document.documentElement.clientWidth,
+    ),
+  ).toBe(true);
+
   const state = await page.evaluate(() =>
     localStorage.getItem("pregnancy-clearly:journey:v1"),
   );
   expect(state).toContain('"version":2');
-  expect(state).toContain('"estimatedDueDate":"2026-11-07"');
+  expect(state).toContain(`"estimatedDueDate":"${dueDate}"`);
   expect(state).not.toContain('"region"');
+
+  await page.getByRole("button", { name: "Edit expected date" }).click();
+  await expect(page.getByLabel("Due date given by care")).toHaveValue(dueDate);
+  await expect(page.getByLabel("Due date given by care")).toBeFocused();
+  await page.getByRole("button", { name: "Cancel" }).click();
+  await expect(
+    page.getByRole("heading", { name: "Baby loading…" }),
+  ).toBeVisible();
+});
+
+test("baby loader stays in pregnancy mode after the estimated date", async ({
+  page,
+}) => {
+  await page.goto("/timeline/");
+  const pastDueDate = await page.evaluate(() => {
+    const now = new Date();
+    const localToday = new Date(
+      now.getTime() - now.getTimezoneOffset() * 60_000,
+    );
+    localToday.setUTCDate(localToday.getUTCDate() - 9);
+    return localToday.toISOString().slice(0, 10);
+  });
+
+  await page.getByLabel("Due date given by care").fill(pastDueDate);
+  await page.getByRole("button", { name: "Show my baby loader" }).click();
+
+  await expect(
+    page.getByText("1 week, 2 days past the estimated due date"),
+  ).toBeVisible();
+  await expect(page.getByRole("progressbar")).toHaveAttribute("value", "100");
+  await expect(
+    page.getByText(/does not switch the site to after-birth mode/i),
+  ).toBeVisible();
+  await expect(page.getByText(/You’re at Beyond the due date/)).toBeVisible();
+  await expect(page.getByText(/Baby has arrived/)).toHaveCount(0);
 });
 
 test("important pregnancy dates stay in chronological order", async ({
