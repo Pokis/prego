@@ -7,6 +7,7 @@ import MilestoneTracker from "@/components/react/MilestoneTracker";
 import JourneySnapshot from "@/components/react/JourneySnapshot";
 import PregnancyMonthMap from "@/components/PregnancyMonthMap.astro";
 import TrimesterIllustration from "@/components/TrimesterIllustration.astro";
+import ShareAnchor from "@/components/react/ShareAnchor";
 import { withBase } from "@/lib/paths";
 
 const timeline = (await getCollection("timeline")).sort(
@@ -46,8 +47,12 @@ const pregnancyMilestones = milestones.filter(
     />
     <PregnancyMonthMap />
   </div>
-  <section class="section">
+  <section class="section" id="weekly-chapters" data-share-target tabindex="-1">
     <div class="shell">
+      <ShareAnchor
+        targetId="weekly-chapters"
+        label="weekly pregnancy chapters"
+      />
       <div class="section-heading">
         <div>
           <p class="eyebrow">Open any week</p><h2>
@@ -86,8 +91,14 @@ const pregnancyMilestones = milestones.filter(
     </div>
   </section>
 
-  <section class="section after-birth-section" id="after-birth">
+  <section
+    class="section after-birth-section"
+    id="after-birth"
+    data-share-target
+    tabindex="-1"
+  >
     <div class="shell">
+      <ShareAnchor targetId="after-birth" label="after-birth timeline" />
       <div class="section-heading">
         <div>
           <p class="eyebrow">Continue later</p>

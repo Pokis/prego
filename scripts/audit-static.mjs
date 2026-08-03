@@ -36,6 +36,25 @@ for (const file of html) {
   if (/localhost:|127\.0\.0\.1:/.test(content))
     errors.push(`${file} contains a local URL`);
 
+  const ids = [...content.matchAll(/\sid="([^"]+)"/g)].map((match) => match[1]);
+  const seenIds = new Set();
+  for (const id of ids) {
+    if (seenIds.has(id)) errors.push(`${file} contains duplicate id #${id}`);
+    seenIds.add(id);
+  }
+
+  for (const match of content.matchAll(
+    /<[a-z][^>]*data-share-target[^>]*>/gi,
+  )) {
+    if (!/\sid="[^"]+"/.test(match[0]))
+      errors.push(`${file} contains a share target without an id`);
+  }
+
+  for (const match of content.matchAll(/data-share-anchor="([^"]+)"/g)) {
+    if (!seenIds.has(match[1]))
+      errors.push(`${file} has a copy-link control for missing #${match[1]}`);
+  }
+
   const relativePage = file
     .replace(dist, "")
     .replaceAll("\\", "/")
@@ -119,6 +138,15 @@ if (existsSync(preconceptionHtmlPath)) {
       errors.push(
         `Getting pregnant section navigation is missing ${fragment}.`,
       );
+
+  for (const id of [
+    "chance-vs-future-health",
+    "preconception-baseline-note",
+    "dos-donts-check-first",
+    "fertility-evaluation-note",
+  ])
+    if (!preconceptionHtml.includes(`data-share-anchor="${id}"`))
+      errors.push(`Getting pregnant guide is missing copy link for #${id}.`);
 }
 
 const timelineHtmlPath = resolve(dist, "timeline", "index.html");
@@ -196,6 +224,36 @@ if (existsSync(essentialsHtmlPath)) {
       errors.push(
         `Essentials static HTML is missing substitute content: ${expected}`,
       );
+
+  for (const id of [
+    "individual-care-baseline",
+    "food-dishes-real-examples",
+    "food-dishes-sushi",
+    "swap-cola-label-check",
+  ])
+    if (!essentialsHtml.includes(`data-share-anchor="${id}"`))
+      errors.push(`Essentials static HTML is missing copy link for #${id}.`);
+}
+
+const urgentHtmlPath = resolve(dist, "urgent-help", "index.html");
+if (existsSync(urgentHtmlPath)) {
+  const urgentHtml = readFileSync(urgentHtmlPath, "utf8");
+  for (const id of ["care-team", "maternal-what-to-do", "infant-what-to-do"])
+    if (!urgentHtml.includes(`data-share-anchor="${id}"`))
+      errors.push(`Urgent help is missing copy link for #${id}.`);
+}
+
+const weekHtmlPath = resolve(dist, "timeline", "week-20", "index.html");
+if (existsSync(weekHtmlPath)) {
+  const weekHtml = readFileSync(weekHtmlPath, "utf8");
+  for (const id of [
+    "know-now",
+    "variation-note",
+    "appointments",
+    "individual-care-note",
+  ])
+    if (!weekHtml.includes(`data-share-anchor="${id}"`))
+      errors.push(`Timeline week is missing copy link for #${id}.`);
 }
 
 const searchIndexPath = resolve(dist, "data", "search-index.json");

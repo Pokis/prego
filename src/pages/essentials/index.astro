@@ -3,6 +3,8 @@ import { getCollection } from "astro:content";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import SiteSearch from "@/components/react/SiteSearch";
 import SwapFinder from "@/components/react/SwapFinder";
+import ShareAnchor from "@/components/react/ShareAnchor";
+import { scopedAnchor } from "@/lib/anchors";
 import { withBase } from "@/lib/paths";
 
 const essentials = (await getCollection("essentials")).sort(
@@ -41,7 +43,17 @@ const schema = {
         coffee, exercise, medicine, cleaning, lifting, travel, sex and sleep—in
         one direct guide.
       </p>
-      <div class="doctor-banner">
+      <div
+        class="doctor-banner"
+        id="individual-care-baseline"
+        data-share-target
+        tabindex="-1"
+      >
+        <ShareAnchor
+          targetId="individual-care-baseline"
+          label="individual care baseline"
+          compact
+        />
         <strong>Use this as the general baseline.</strong>
         Your doctor or midwife should make any decision that depends on your health,
         medicines, symptoms or pregnancy.
@@ -58,8 +70,14 @@ const schema = {
     </div>
   </section>
 
-  <section class="section swap-section" id="smart-swaps">
+  <section
+    class="section swap-section"
+    id="smart-swaps"
+    data-share-target
+    tabindex="-1"
+  >
     <div class="shell">
+      <ShareAnchor targetId="smart-swaps" label="pregnancy swap finder" />
       <header class="swap-section-heading">
         <div>
           <p class="eyebrow">The pregnancy swap finder</p>
@@ -80,8 +98,14 @@ const schema = {
       <nav
         class="essential-jump"
         id="essential-topics"
+        data-share-target
+        tabindex="-1"
         aria-label="Pregnancy essentials topics"
       >
+        <ShareAnchor
+          targetId="essential-topics"
+          label="pregnancy essentials topics"
+        />
         {
           essentials.map((item) => (
             <a href={`#${item.data.slug}`}>
@@ -101,8 +125,11 @@ const schema = {
         <section
           class:list={["section", { soft: index % 2 === 1 }]}
           id={item.data.slug}
+          data-share-target
+          tabindex="-1"
         >
           <div class="shell essential-section">
+            <ShareAnchor targetId={item.data.slug} label={item.data.title} />
             <header class="essential-heading">
               <div class="essential-index">
                 {String(item.data.number).padStart(2, "0")}
@@ -115,7 +142,17 @@ const schema = {
             </header>
 
             <div class="essential-rule-grid">
-              <article class="rule-column do">
+              <article
+                class="rule-column do"
+                id={scopedAnchor(item.data.slug, "do")}
+                data-share-target
+                tabindex="-1"
+              >
+                <ShareAnchor
+                  targetId={scopedAnchor(item.data.slug, "do")}
+                  label={`${item.data.title}: do`}
+                  compact
+                />
                 <p class="rule-label">
                   <span aria-hidden="true">✓</span> Do
                 </p>
@@ -125,7 +162,17 @@ const schema = {
                   ))}
                 </ul>
               </article>
-              <article class="rule-column dont">
+              <article
+                class="rule-column dont"
+                id={scopedAnchor(item.data.slug, "avoid")}
+                data-share-target
+                tabindex="-1"
+              >
+                <ShareAnchor
+                  targetId={scopedAnchor(item.data.slug, "avoid")}
+                  label={`${item.data.title}: don't`}
+                  compact
+                />
                 <p class="rule-label">
                   <span aria-hidden="true">!</span> Don’t
                 </p>
@@ -135,7 +182,17 @@ const schema = {
                   ))}
                 </ul>
               </article>
-              <article class="rule-column ask">
+              <article
+                class="rule-column ask"
+                id={scopedAnchor(item.data.slug, "check-first")}
+                data-share-target
+                tabindex="-1"
+              >
+                <ShareAnchor
+                  targetId={scopedAnchor(item.data.slug, "check-first")}
+                  label={`${item.data.title}: ask your doctor`}
+                  compact
+                />
                 <p class="rule-label">
                   <span aria-hidden="true">?</span> Ask your doctor
                 </p>
@@ -147,18 +204,41 @@ const schema = {
               </article>
             </div>
 
-            <div class="example-table-wrap">
+            <div
+              class="example-table-wrap"
+              id={scopedAnchor(item.data.slug, "real-examples")}
+              data-share-target
+              tabindex="-1"
+            >
+              <ShareAnchor
+                targetId={scopedAnchor(item.data.slug, "real-examples")}
+                label={`${item.data.title}: real examples`}
+              />
               <h3>Real examples</h3>
               <div class="example-table" role="list">
-                {item.data.examples.map((example) => (
-                  <article class="example-row" role="listitem">
-                    <strong>{example.name}</strong>
-                    <span class={`example-status ${example.status}`}>
-                      {statusLabel[example.status]}
-                    </span>
-                    <p>{example.guidance}</p>
-                  </article>
-                ))}
+                {item.data.examples.map((example) => {
+                  const exampleId = scopedAnchor(item.data.slug, example.name);
+                  return (
+                    <article
+                      class="example-row"
+                      id={exampleId}
+                      data-share-target
+                      tabindex="-1"
+                      role="listitem"
+                    >
+                      <ShareAnchor
+                        targetId={exampleId}
+                        label={example.name}
+                        compact
+                      />
+                      <strong>{example.name}</strong>
+                      <span class={`example-status ${example.status}`}>
+                        {statusLabel[example.status]}
+                      </span>
+                      <p>{example.guidance}</p>
+                    </article>
+                  );
+                })}
               </div>
             </div>
             <a class="back-to-top" href="#essential-topics">

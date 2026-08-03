@@ -1,6 +1,7 @@
 ---
 import { beyondDuePeriod, pregnancyMonths } from "@/config/pregnancy";
 import { withBase } from "@/lib/paths";
+import ShareAnchor from "@/components/react/ShareAnchor";
 
 interface Props {
   compact?: boolean;
@@ -29,8 +30,15 @@ const beyondDueIsCurrent =
 
 <nav
   class:list={["month-map", { compact }]}
+  id="pregnancy-month-map"
+  data-share-target
+  tabindex="-1"
   aria-label="Pregnancy journey from a positive test through the due date"
 >
+  <ShareAnchor
+    targetId="pregnancy-month-map"
+    label="nine-month pregnancy map"
+  />
   <div class="month-map-intro">
     <div>
       <p class="eyebrow">The nine-month map</p>
@@ -42,7 +50,13 @@ const beyondDueIsCurrent =
     </p>
   </div>
   <ol>
-    <li class="journey-start">
+    <li
+      class="journey-start"
+      id="pregnancy-start"
+      data-share-target
+      tabindex="-1"
+    >
+      <ShareAnchor targetId="pregnancy-start" label="positive test" compact />
       <a href={withBase("/timeline/positive-test/")}>
         <span class="month-number">Start here</span>
         <strong>Positive test</strong>
@@ -58,7 +72,17 @@ const beyondDueIsCurrent =
     </li>
     {
       periods.map((period) => (
-        <li class:list={{ current: period.current }}>
+        <li
+          class:list={{ current: period.current }}
+          id={`pregnancy-month-${period.month}`}
+          data-share-target
+          tabindex="-1"
+        >
+          <ShareAnchor
+            targetId={`pregnancy-month-${period.month}`}
+            label={`pregnancy month ${period.month}`}
+            compact
+          />
           <a
             href={withBase(`/timeline/week-${period.startWeek}/`)}
             aria-current={period.current ? "step" : undefined}
@@ -71,7 +95,17 @@ const beyondDueIsCurrent =
         </li>
       ))
     }
-    <li class:list={["journey-beyond", { current: beyondDueIsCurrent }]}>
+    <li
+      class:list={["journey-beyond", { current: beyondDueIsCurrent }]}
+      id="beyond-the-due-date"
+      data-share-target
+      tabindex="-1"
+    >
+      <ShareAnchor
+        targetId="beyond-the-due-date"
+        label="beyond the estimated due date"
+        compact
+      />
       <a
         href={withBase("/timeline/week-41/")}
         aria-current={beyondDueIsCurrent ? "step" : undefined}

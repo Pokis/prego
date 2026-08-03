@@ -242,6 +242,51 @@ test("essentials show direct dos, donts and food examples", async ({
   ).toBeVisible();
 });
 
+test("important findings have copyable deep links", async ({ page }) => {
+  await page.addInitScript(() => {
+    Object.defineProperty(navigator, "clipboard", {
+      configurable: true,
+      value: {
+        writeText: async (value: string) =>
+          sessionStorage.setItem("copied-finding-link", value),
+      },
+    });
+  });
+
+  await page.goto("/essentials/");
+  const finding = page.locator("#food-dishes-sushi");
+  await finding.getByRole("link", { name: "Copy link to Sushi" }).click();
+
+  await expect(page).toHaveURL(/#food-dishes-sushi$/);
+  await expect(page.locator("#share-link-status")).toHaveText(
+    "Link to Sushi copied.",
+  );
+  await expect(finding).toBeFocused();
+  expect(
+    await page.evaluate(() => sessionStorage.getItem("copied-finding-link")),
+  ).toMatch(/\/essentials\/#food-dishes-sushi$/);
+
+  const response = await page.goto(
+    "/urgent-help/#maternal-baby-movement-stops-or-slows",
+  );
+  expect(response?.ok()).toBe(true);
+  const urgentFinding = page.locator("#maternal-baby-movement-stops-or-slows");
+  await expect(urgentFinding).toBeVisible();
+  expect(
+    await urgentFinding.evaluate((element) => element.matches(":target")),
+  ).toBe(true);
+
+  await page.setViewportSize({ width: 320, height: 780 });
+  await page.goto("/essentials/#food-dishes-sushi");
+  await expect
+    .poll(() =>
+      page
+        .locator("#food-dishes-sushi")
+        .evaluate((element) => element.getBoundingClientRect().top),
+    )
+    .toBeLessThan(180);
+});
+
 test("swap finder turns a craving into a concrete alternative", async ({
   page,
 }) => {

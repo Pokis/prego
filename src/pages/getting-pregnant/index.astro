@@ -1,6 +1,8 @@
 ---
 import { getCollection } from "astro:content";
 import BaseLayout from "@/layouts/BaseLayout.astro";
+import ShareAnchor from "@/components/react/ShareAnchor";
+import { anchorSlug } from "@/lib/anchors";
 import { withBase } from "@/lib/paths";
 
 const guide = (await getCollection("preconception"))[0];
@@ -82,7 +84,18 @@ const schema = {
           <a class="button secondary" href="#myths">Check the myths</a>
         </div>
       </div>
-      <aside class="preconception-promise" aria-label="What this guide covers">
+      <aside
+        class="preconception-promise"
+        id="what-changes-the-odds"
+        data-share-target
+        tabindex="-1"
+        aria-label="What this guide covers"
+      >
+        <ShareAnchor
+          targetId="what-changes-the-odds"
+          label="what changes the odds"
+          compact
+        />
         <span class="promise-orbit one" aria-hidden="true"></span>
         <span class="promise-orbit two" aria-hidden="true"></span>
         <p class="eyebrow">One question at a time</p>
@@ -122,8 +135,17 @@ const schema = {
     </div>
   </section>
 
-  <section class="section preconception-orientation-section">
+  <section
+    class="section preconception-orientation-section"
+    id="chance-vs-future-health"
+    data-share-target
+    tabindex="-1"
+  >
     <div class="shell">
+      <ShareAnchor
+        targetId="chance-vs-future-health"
+        label="conception chance versus future-baby health"
+      />
       <div class="section-heading narrow-heading">
         <div>
           <p class="eyebrow">The most useful distinction</p>
@@ -139,8 +161,16 @@ const schema = {
           guide.data.orientation.map((item, index) => (
             <article
               class={`compass-card compass-${index + 1}`}
+              id={`chance-vs-health-${anchorSlug(item.title)}`}
+              data-share-target
+              tabindex="-1"
               role="listitem"
             >
+              <ShareAnchor
+                targetId={`chance-vs-health-${anchorSlug(item.title)}`}
+                label={item.title}
+                compact
+              />
               <span>{String(index + 1).padStart(2, "0")}</span>
               <p class="eyebrow">{item.label}</p>
               <h3>{item.title}</h3>
@@ -149,12 +179,30 @@ const schema = {
           ))
         }
       </div>
-      <p class="route-note">{guide.data.routeNote}</p>
+      <p
+        class="route-note"
+        id="preconception-baseline-note"
+        data-share-target
+        tabindex="-1"
+      >
+        <ShareAnchor
+          targetId="preconception-baseline-note"
+          label="preconception baseline note"
+          compact
+        />
+        {guide.data.routeNote}
+      </p>
     </div>
   </section>
 
-  <section class="section soft" id="simple-plan">
+  <section
+    class="section soft"
+    id="simple-plan"
+    data-share-target
+    tabindex="-1"
+  >
     <div class="shell">
+      <ShareAnchor targetId="simple-plan" label="six-step plan" />
       <div class="section-heading">
         <div>
           <p class="eyebrow">Start here</p>
@@ -168,7 +216,16 @@ const schema = {
       <ol class="preconception-plan">
         {
           guide.data.plan.map((item, index) => (
-            <li>
+            <li
+              id={`simple-plan-${anchorSlug(item.title)}`}
+              data-share-target
+              tabindex="-1"
+            >
+              <ShareAnchor
+                targetId={`simple-plan-${anchorSlug(item.title)}`}
+                label={item.title}
+                compact
+              />
               <span aria-hidden="true">
                 {String(index + 1).padStart(2, "0")}
               </span>
@@ -183,8 +240,9 @@ const schema = {
     </div>
   </section>
 
-  <section class="section" id="dos-donts">
+  <section class="section" id="dos-donts" data-share-target tabindex="-1">
     <div class="shell">
+      <ShareAnchor targetId="dos-donts" label="preconception dos and don'ts" />
       <div class="section-heading">
         <div>
           <p class="eyebrow">Keep this practical</p>
@@ -196,19 +254,45 @@ const schema = {
         </div>
       </div>
       <div class="essential-rule-grid preconception-rules">
-        <article class="rule-column do">
+        <article
+          class="rule-column do"
+          id="dos-donts-do"
+          data-share-target
+          tabindex="-1"
+        >
+          <ShareAnchor targetId="dos-donts-do" label="what to do" compact />
           <p class="rule-label"><span aria-hidden="true">✓</span> Do</p>
           <ul>
             {guide.data.dos.map((rule) => <li>{rule}</li>)}
           </ul>
         </article>
-        <article class="rule-column dont">
+        <article
+          class="rule-column dont"
+          id="dos-donts-avoid"
+          data-share-target
+          tabindex="-1"
+        >
+          <ShareAnchor
+            targetId="dos-donts-avoid"
+            label="what not to do"
+            compact
+          />
           <p class="rule-label"><span aria-hidden="true">!</span> Don’t</p>
           <ul>
             {guide.data.donts.map((rule) => <li>{rule}</li>)}
           </ul>
         </article>
-        <article class="rule-column ask">
+        <article
+          class="rule-column ask"
+          id="dos-donts-check-first"
+          data-share-target
+          tabindex="-1"
+        >
+          <ShareAnchor
+            targetId="dos-donts-check-first"
+            label="what to ask your doctor"
+            compact
+          />
           <p class="rule-label">
             <span aria-hidden="true">?</span> Ask your doctor
           </p>
@@ -220,8 +304,17 @@ const schema = {
     </div>
   </section>
 
-  <section class="section factor-section" id="what-affects-what">
+  <section
+    class="section factor-section"
+    id="what-affects-what"
+    data-share-target
+    tabindex="-1"
+  >
     <div class="shell">
+      <ShareAnchor
+        targetId="what-affects-what"
+        label="what affects pregnancy chance and health"
+      />
       <div class="section-heading">
         <div>
           <p class="eyebrow">Compare without guessing</p>
@@ -242,7 +335,18 @@ const schema = {
       <div class="factor-list" role="list">
         {
           guide.data.factors.map((factor) => (
-            <article class="factor-card" role="listitem">
+            <article
+              class="factor-card"
+              id={`factor-${anchorSlug(factor.name)}`}
+              data-share-target
+              tabindex="-1"
+              role="listitem"
+            >
+              <ShareAnchor
+                targetId={`factor-${anchorSlug(factor.name)}`}
+                label={factor.name}
+                compact
+              />
               <header>
                 <span class={`factor-badge ${factor.category}`}>
                   {categoryLabel[factor.category]}
@@ -269,8 +373,9 @@ const schema = {
     </div>
   </section>
 
-  <section class="section soft" id="myths">
+  <section class="section soft" id="myths" data-share-target tabindex="-1">
     <div class="shell">
+      <ShareAnchor targetId="myths" label="fertility myths and truth" />
       <div class="section-heading">
         <div>
           <p class="eyebrow">Myth versus truth</p>
@@ -284,7 +389,18 @@ const schema = {
       <div class="myth-grid" role="list">
         {
           guide.data.myths.map((item) => (
-            <article class="myth-card" role="listitem">
+            <article
+              class="myth-card"
+              id={`myth-${anchorSlug(item.myth)}`}
+              data-share-target
+              tabindex="-1"
+              role="listitem"
+            >
+              <ShareAnchor
+                targetId={`myth-${anchorSlug(item.myth)}`}
+                label={`Myth: ${item.myth}`}
+                compact
+              />
               <p class="myth-label">Myth</p>
               <h3>{item.myth}</h3>
               <div class="truth-block">
@@ -301,25 +417,52 @@ const schema = {
     </div>
   </section>
 
-  <section class="section help-timing-section" id="when-to-get-help">
+  <section
+    class="section help-timing-section"
+    id="when-to-get-help"
+    data-share-target
+    tabindex="-1"
+  >
     <div class="shell help-timing-grid">
       <div class="help-timing-intro">
+        <ShareAnchor
+          targetId="when-to-get-help"
+          label="when to get fertility help"
+        />
         <p class="eyebrow">When trying needs medical help</p>
         <h2>Do not use one waiting rule for every couple.</h2>
         <p>
           The usual timeline is based mainly on the age of the person providing
           the egg. Medical history can make an earlier conversation sensible.
         </p>
-        <p class="doctor-banner">
-          A fertility evaluation should consider both partners from the start.
-          Asking for help is information-gathering—not proof that pregnancy is
-          impossible.
+        <p
+          class="doctor-banner"
+          id="fertility-evaluation-note"
+          data-share-target
+          tabindex="-1"
+        >
+          <ShareAnchor
+            targetId="fertility-evaluation-note"
+            label="fertility evaluation note"
+            compact
+          />
+          A fertility evaluation should consider both partners from the start. Asking
+          for help is information-gathering—not proof that pregnancy is impossible.
         </p>
       </div>
       <ol class="help-timing-list">
         {
           guide.data.help.map((item, index) => (
-            <li>
+            <li
+              id={`help-${anchorSlug(item.title)}`}
+              data-share-target
+              tabindex="-1"
+            >
+              <ShareAnchor
+                targetId={`help-${anchorSlug(item.title)}`}
+                label={item.title}
+                compact
+              />
               <span>{String(index + 1).padStart(2, "0")}</span>
               <div>
                 <h3>{item.title}</h3>
@@ -332,9 +475,15 @@ const schema = {
     </div>
   </section>
 
-  <section class="section plum" id="for-couples">
+  <section
+    class="section plum"
+    id="for-couples"
+    data-share-target
+    tabindex="-1"
+  >
     <div class="shell partner-preconception">
       <div>
+        <ShareAnchor targetId="for-couples" label="plan for couples" />
         <p class="eyebrow">A couple-level plan</p>
         <h2>Share the preparation. Remove the blame.</h2>
         <p class="lede">
@@ -348,9 +497,18 @@ const schema = {
     </div>
   </section>
 
-  <section class="section">
+  <section
+    class="section"
+    id="positive-test-next-steps"
+    data-share-target
+    tabindex="-1"
+  >
     <div class="shell continuation-panel">
       <div>
+        <ShareAnchor
+          targetId="positive-test-next-steps"
+          label="positive-test next steps"
+        />
         <p class="eyebrow">When the test is positive</p>
         <h2>Move into the pregnancy timeline.</h2>
         <p>

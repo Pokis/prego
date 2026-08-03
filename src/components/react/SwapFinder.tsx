@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from "react";
+import ShareAnchor from "./ShareAnchor";
 
 type SwapGroup =
   "drinks" | "coffee-tea" | "meals" | "dairy" | "treats" | "protein-produce";
@@ -177,8 +178,15 @@ export default function SwapFinder({ items }: { items: SwapItem[] }) {
               <article
                 className={`swap-card ${item.status}`}
                 id={`swap-${item.id}`}
+                data-share-target
+                tabIndex={-1}
                 key={item.id}
               >
+                <ShareAnchor
+                  targetId={`swap-${item.id}`}
+                  label={item.item}
+                  compact
+                />
                 <header className="swap-card-heading">
                   <div>
                     <p className={`swap-verdict ${item.status}`}>
@@ -217,7 +225,17 @@ export default function SwapFinder({ items }: { items: SwapItem[] }) {
                   </ol>
                 </div>
 
-                <div className="swap-label-check">
+                <div
+                  className="swap-label-check"
+                  id={`swap-${item.id}-label-check`}
+                  data-share-target
+                  tabIndex={-1}
+                >
+                  <ShareAnchor
+                    targetId={`swap-${item.id}-label-check`}
+                    label={`${item.item} label check`}
+                    compact
+                  />
                   <span aria-hidden="true">Aa</span>
                   <p>
                     <strong>Check the label:</strong> {item.labelCheck}

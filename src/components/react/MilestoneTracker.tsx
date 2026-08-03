@@ -5,6 +5,7 @@ import {
   type Milestone,
 } from "@/lib/milestones";
 import { usePreferences } from "./usePreferences";
+import ShareAnchor from "./ShareAnchor";
 
 export default function MilestoneTracker({
   milestones,
@@ -53,7 +54,13 @@ export default function MilestoneTracker({
   };
 
   return (
-    <section aria-labelledby="milestones-title">
+    <section
+      id="milestones"
+      data-share-target
+      tabIndex={-1}
+      aria-labelledby="milestones-title"
+    >
+      <ShareAnchor targetId="milestones" label="important pregnancy dates" />
       <div className="section-heading">
         <div>
           <p className="eyebrow">From positive test to birth</p>
@@ -106,9 +113,17 @@ export default function MilestoneTracker({
             <li key={item.id}>
               <article
                 className="milestone-card"
+                id={`milestone-${item.id}`}
+                data-share-target
+                tabIndex={-1}
                 style={{ opacity: completed ? 0.68 : 1 }}
                 aria-label={`Milestone ${index + 1} of ${visible.length}`}
               >
+                <ShareAnchor
+                  targetId={`milestone-${item.id}`}
+                  label={item.title}
+                  compact
+                />
                 <div className="milestone-card-topline">
                   <span className="milestone-order" aria-hidden="true">
                     {String(index + 1).padStart(2, "0")}

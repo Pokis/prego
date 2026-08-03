@@ -1,6 +1,8 @@
 ---
 import { getCollection } from "astro:content";
 import BaseLayout from "@/layouts/BaseLayout.astro";
+import ShareAnchor from "@/components/react/ShareAnchor";
+import { anchorSlug } from "@/lib/anchors";
 import { withBase } from "@/lib/paths";
 import { milestoneWindowLabel, sortMilestones } from "@/lib/milestones";
 const milestones = await getCollection("milestones");
@@ -47,10 +49,26 @@ const pregnancyMilestones = sortMilestones(
       </div>
     </div>
   </section>
-  <section class="section soft">
+  <section
+    class="section soft"
+    id="support-basics"
+    data-share-target
+    tabindex="-1"
+  >
     <div class="shell">
+      <ShareAnchor targetId="support-basics" label="support basics" />
       <div class="card-grid four">
-        <article class="editorial-card">
+        <article
+          class="editorial-card"
+          id="support-before-appointments"
+          data-share-target
+          tabindex="-1"
+        >
+          <ShareAnchor
+            targetId="support-before-appointments"
+            label="support before appointments"
+            compact
+          />
           <span class="index">Before appointments</span><h3>
             Make room, not decisions
           </h3><p>
@@ -58,20 +76,50 @@ const pregnancyMilestones = sortMilestones(
             conversation remains possible.
           </p>
         </article>
-        <article class="editorial-card">
+        <article
+          class="editorial-card"
+          id="support-during-pregnancy"
+          data-share-target
+          tabindex="-1"
+        >
+          <ShareAnchor
+            targetId="support-during-pregnancy"
+            label="support during pregnancy"
+            compact
+          />
           <span class="index">During pregnancy</span><h3>Own visible work</h3><p
           >
             Meals, cleaning, transport and administration should not wait to be
             assigned.
           </p>
         </article>
-        <article class="editorial-card">
+        <article
+          class="editorial-card"
+          id="support-at-birth"
+          data-share-target
+          tabindex="-1"
+        >
+          <ShareAnchor
+            targetId="support-at-birth"
+            label="support at birth"
+            compact
+          />
           <span class="index">At birth</span><h3>Protect communication</h3><p>
             Reinforce expressed preferences, stay flexible and alert staff to
             concerns.
           </p>
         </article>
-        <article class="editorial-card">
+        <article
+          class="editorial-card"
+          id="support-after-birth"
+          data-share-target
+          tabindex="-1"
+        >
+          <ShareAnchor
+            targetId="support-after-birth"
+            label="support after birth"
+            compact
+          />
           <span class="index">After birth</span><h3>Notice both people</h3><p>
             Parent recovery and baby health both need attention, rest and
             follow-up.
@@ -80,8 +128,9 @@ const pregnancyMilestones = sortMilestones(
       </div>
     </div>
   </section>
-  <section class="section">
+  <section class="section" id="weekly-support" data-share-target tabindex="-1">
     <div class="shell">
+      <ShareAnchor targetId="weekly-support" label="weekly support actions" />
       <div class="section-heading">
         <div>
           <p class="eyebrow">Pregnancy checkpoints</p><h2>
@@ -92,7 +141,17 @@ const pregnancyMilestones = sortMilestones(
       </div><div class="guide-grid">
         {
           partnerCheckpoints.map((entry) => (
-            <article class="guide-card">
+            <article
+              class="guide-card"
+              id={`support-${entry.data.id}`}
+              data-share-target
+              tabindex="-1"
+            >
+              <ShareAnchor
+                targetId={`support-${entry.data.id}`}
+                label={entry.data.title}
+                compact
+              />
               <p class="eyebrow">{entry.data.windowLabel}</p>
               <h3>{entry.data.title}</h3>
               <p>{entry.data.partner[0]}</p>
@@ -105,8 +164,14 @@ const pregnancyMilestones = sortMilestones(
       </div>
     </div>
   </section>
-  <section class="section plum">
+  <section
+    class="section plum"
+    id="shared-checkpoints"
+    data-share-target
+    tabindex="-1"
+  >
     <div class="shell">
+      <ShareAnchor targetId="shared-checkpoints" label="shared checkpoints" />
       <div class="section-heading">
         <div>
           <p class="eyebrow">Shared checkpoints</p><h2>
@@ -116,7 +181,17 @@ const pregnancyMilestones = sortMilestones(
       </div><div class="milestone-board">
         {
           pregnancyMilestones.map((item) => (
-            <article class="milestone-card">
+            <article
+              class="milestone-card"
+              id={`partner-milestone-${anchorSlug(item.id)}`}
+              data-share-target
+              tabindex="-1"
+            >
+              <ShareAnchor
+                targetId={`partner-milestone-${anchorSlug(item.id)}`}
+                label={item.title}
+                compact
+              />
               <>
                 <div class="meta">{milestoneWindowLabel(item)}</div>
                 <h3>{item.title}</h3>

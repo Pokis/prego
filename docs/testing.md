@@ -10,7 +10,7 @@ Vitest covers date arithmetic, journey transitions, storage versions and generat
 
 ## Browser
 
-Playwright covers Chromium, Firefox, WebKit and a mobile profile. Core journeys include home entry paths, device-only date personalization, static search, meaningful topic filters, bookmark retrieval, hidden-milestone restoration, direct essentials, week/month orientation, care tiers, urgent help and 320px overflow.
+Playwright covers Chromium, Firefox, WebKit and a mobile profile. Core journeys include home entry paths, device-only date personalization, static search, meaningful topic filters, bookmark retrieval, hidden-milestone restoration, copyable finding links, direct fragment loading, direct essentials, week/month orientation, care tiers, urgent help and 320px overflow.
 
 ## Accessibility
 

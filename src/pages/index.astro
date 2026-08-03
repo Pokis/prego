@@ -3,6 +3,7 @@ import { getCollection } from "astro:content";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import JourneySetup from "@/components/react/JourneySetup";
 import SiteSearch from "@/components/react/SiteSearch";
+import ShareAnchor from "@/components/react/ShareAnchor";
 import PregnancyMonthMap from "@/components/PregnancyMonthMap.astro";
 import { withBase } from "@/lib/paths";
 
@@ -58,8 +59,17 @@ const schema = {
 
   {
     preconceptionGuide && (
-      <section class="preconception-home-entry">
+      <section
+        class="preconception-home-entry"
+        id="before-pregnancy"
+        data-share-target
+        tabindex="-1"
+      >
         <div class="shell preconception-entry-card">
+          <ShareAnchor
+            targetId="before-pregnancy"
+            label="before-pregnancy guide"
+          />
           <div>
             <p class="eyebrow">Before a positive test</p>
             <h2>{preconceptionGuide.data.title}</h2>
@@ -80,8 +90,17 @@ const schema = {
     )
   }
 
-  <section class="section">
+  <section
+    class="section"
+    id="positive-test-first-steps"
+    data-share-target
+    tabindex="-1"
+  >
     <div class="shell">
+      <ShareAnchor
+        targetId="positive-test-first-steps"
+        label="positive-test first steps"
+      />
       <div class="section-heading">
         <div>
           <p class="eyebrow">A positive test</p><h2>
@@ -96,17 +115,47 @@ const schema = {
         >
       </div>
       <div class="quick-start">
-        <article class="quick-step">
+        <article
+          class="quick-step"
+          id="positive-test-arrange-care"
+          data-share-target
+          tabindex="-1"
+        >
+          <ShareAnchor
+            targetId="positive-test-arrange-care"
+            label="arrange care after a positive test"
+            compact
+          />
           <div class="step-number">1</div><h3>Arrange care</h3><p>
             {positiveTest?.data.doNow[0]}
           </p>
         </article>
-        <article class="quick-step">
+        <article
+          class="quick-step"
+          id="positive-test-review-medicines"
+          data-share-target
+          tabindex="-1"
+        >
+          <ShareAnchor
+            targetId="positive-test-review-medicines"
+            label="review medicines after a positive test"
+            compact
+          />
           <div class="step-number">2</div><h3>Review medicines</h3><p>
             {positiveTest?.data.doNow[1]}
           </p>
         </article>
-        <article class="quick-step">
+        <article
+          class="quick-step"
+          id="positive-test-save-urgent-route"
+          data-share-target
+          tabindex="-1"
+        >
+          <ShareAnchor
+            targetId="positive-test-save-urgent-route"
+            label="save the urgent route"
+            compact
+          />
           <div class="step-number">3</div><h3>Save the urgent route</h3><p>
             {positiveTest?.data.bodyMind[1]}
           </p>
@@ -115,8 +164,14 @@ const schema = {
     </div>
   </section>
 
-  <section class="section soft search-home-section">
+  <section
+    class="section soft search-home-section"
+    id="find-an-answer"
+    data-share-target
+    tabindex="-1"
+  >
     <div class="shell">
+      <ShareAnchor targetId="find-an-answer" label="find an answer" />
       <SiteSearch client:load />
     </div>
   </section>
@@ -129,8 +184,14 @@ const schema = {
 
   {
     positiveTest && (
-      <section class="section do-dont-section">
+      <section
+        class="section do-dont-section"
+        id="pregnancy-basics"
+        data-share-target
+        tabindex="-1"
+      >
         <div class="shell">
+          <ShareAnchor targetId="pregnancy-basics" label="pregnancy basics" />
           <div class="section-heading">
             <div>
               <p class="eyebrow">The pregnancy basics</p>
@@ -142,7 +203,17 @@ const schema = {
             </div>
           </div>
           <div class="do-dont-grid">
-            <article class="do-panel">
+            <article
+              class="do-panel"
+              id="pregnancy-basics-do-now"
+              data-share-target
+              tabindex="-1"
+            >
+              <ShareAnchor
+                targetId="pregnancy-basics-do-now"
+                label="first practical steps"
+                compact
+              />
               <p class="eyebrow">Do now</p>
               <h3>Your first practical steps</h3>
               <ul>
@@ -151,7 +222,17 @@ const schema = {
                 ))}
               </ul>
             </article>
-            <article class="dont-panel">
+            <article
+              class="dont-panel"
+              id="pregnancy-basics-check-first"
+              data-share-target
+              tabindex="-1"
+            >
+              <ShareAnchor
+                targetId="pregnancy-basics-check-first"
+                label="what to pause and check"
+                compact
+              />
               <p class="eyebrow">Do not—or ask first</p>
               <h3>Where a quick check matters</h3>
               <ul>
@@ -166,8 +247,17 @@ const schema = {
     )
   }
 
-  <section class="section">
+  <section
+    class="section"
+    id="pregnancy-essentials"
+    data-share-target
+    tabindex="-1"
+  >
     <div class="shell">
+      <ShareAnchor
+        targetId="pregnancy-essentials"
+        label="pregnancy essentials"
+      />
       <div class="section-heading">
         <div>
           <p class="eyebrow">Everyday pregnancy essentials</p><h2>
@@ -203,8 +293,14 @@ const schema = {
     </div>
   </section>
 
-  <section class="section plum">
+  <section
+    class="section plum"
+    id="support-people"
+    data-share-target
+    tabindex="-1"
+  >
     <div class="shell">
+      <ShareAnchor targetId="support-people" label="support people guide" />
       <div class="section-heading">
         <div>
           <p class="eyebrow">For every support person</p><h2>
@@ -243,8 +339,14 @@ const schema = {
     </div>
   </section>
 
-  <section class="section after-birth-home">
+  <section
+    class="section after-birth-home"
+    id="after-birth"
+    data-share-target
+    tabindex="-1"
+  >
     <div class="shell">
+      <ShareAnchor targetId="after-birth" label="after-birth continuation" />
       <div class="continuation-panel">
         <div>
           <p class="eyebrow">The journey continues</p><h2>
@@ -259,10 +361,20 @@ const schema = {
           >See the after-birth continuation</a
         >
       </div>
-      <p class="quiet-trust">
-        This is general pregnancy guidance, not a diagnosis or personal care
-        plan. Your doctor or midwife should guide decisions that depend on your
-        health, medicines, symptoms or pregnancy.
+      <p
+        class="quiet-trust"
+        id="individual-care-note"
+        data-share-target
+        tabindex="-1"
+      >
+        <ShareAnchor
+          targetId="individual-care-note"
+          label="individual care note"
+          compact
+        />
+        This is general pregnancy guidance, not a diagnosis or personal care plan.
+        Your doctor or midwife should guide decisions that depend on your health,
+        medicines, symptoms or pregnancy.
       </p>
     </div>
   </section>

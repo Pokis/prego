@@ -1,6 +1,8 @@
 ---
 import { getCollection } from "astro:content";
 import BaseLayout from "@/layouts/BaseLayout.astro";
+import ShareAnchor from "@/components/react/ShareAnchor";
+import { anchorSlug } from "@/lib/anchors";
 const urgent = await getCollection("urgent");
 const careTeam = urgent.find((item) => item.id === "contact-care-team")!;
 const maternal = urgent.find((item) => item.id === "maternal-warning-signs")!;
@@ -26,8 +28,17 @@ const infant = urgent.find((item) => item.id === "infant-warning-signs")!;
       </div>
     </div>
   </section>
-  <section class="section care-team-section" id="care-team">
+  <section
+    class="section care-team-section"
+    id="care-team"
+    data-share-target
+    tabindex="-1"
+  >
     <div class="shell">
+      <ShareAnchor
+        targetId="care-team"
+        label="when to contact your care team"
+      />
       <div class="section-heading">
         <div>
           <p class="eyebrow">Prompt advice, not a routine wait</p>
@@ -38,21 +49,42 @@ const infant = urgent.find((item) => item.id === "infant-warning-signs")!;
       <div class="care-team-grid">
         {
           careTeam.data.signs.map((sign) => (
-            <article class="care-card">
+            <article
+              class="care-card"
+              id={`care-team-${anchorSlug(sign.title)}`}
+              data-share-target
+              tabindex="-1"
+            >
+              <ShareAnchor
+                targetId={`care-team-${anchorSlug(sign.title)}`}
+                label={sign.title}
+                compact
+              />
               <h3>{sign.title}</h3>
               <p>{sign.detail}</p>
             </article>
           ))
         }
       </div>
-      <div class="content-section help-card care-team-card">
+      <div
+        class="content-section help-card care-team-card"
+        id="care-team-what-to-do"
+        data-share-target
+        tabindex="-1"
+      >
+        <ShareAnchor
+          targetId="care-team-what-to-do"
+          label="what to do when contacting care"
+          compact
+        />
         <h3>What to do</h3>
         <p><strong>{careTeam.data.action}</strong></p>
       </div>
     </div>
   </section>
-  <section class="section" id="maternal">
+  <section class="section" id="maternal" data-share-target tabindex="-1">
     <div class="shell">
+      <ShareAnchor targetId="maternal" label="pregnancy warning signs" />
       <div class="section-heading">
         <div>
           <p class="eyebrow">Parent warning signs</p><h2>
@@ -62,7 +94,17 @@ const infant = urgent.find((item) => item.id === "infant-warning-signs")!;
       </div><div class="emergency-grid">
         {
           maternal.data.signs.map((sign) => (
-            <article class="warning-card">
+            <article
+              class="warning-card"
+              id={`maternal-${anchorSlug(sign.title)}`}
+              data-share-target
+              tabindex="-1"
+            >
+              <ShareAnchor
+                targetId={`maternal-${anchorSlug(sign.title)}`}
+                label={sign.title}
+                compact
+              />
               <>
                 <h3>{sign.title}</h3>
                 <p>{sign.detail}</p>
@@ -72,14 +114,23 @@ const infant = urgent.find((item) => item.id === "infant-warning-signs")!;
         }
       </div><div
         class="content-section help-card urgent"
+        id="maternal-what-to-do"
+        data-share-target
+        tabindex="-1"
         style="margin-top:1rem"
       >
+        <ShareAnchor
+          targetId="maternal-what-to-do"
+          label="what to do for pregnancy warning signs"
+          compact
+        />
         <h3>What to do</h3><p><strong>{maternal.data.action}</strong></p>
       </div>
     </div>
   </section>
-  <section class="section soft" id="infant">
+  <section class="section soft" id="infant" data-share-target tabindex="-1">
     <div class="shell">
+      <ShareAnchor targetId="infant" label="newborn warning signs" />
       <div class="section-heading">
         <div>
           <p class="eyebrow">Baby warning signs</p><h2>
@@ -89,7 +140,17 @@ const infant = urgent.find((item) => item.id === "infant-warning-signs")!;
       </div><div class="emergency-grid">
         {
           infant.data.signs.map((sign) => (
-            <article class="warning-card">
+            <article
+              class="warning-card"
+              id={`infant-${anchorSlug(sign.title)}`}
+              data-share-target
+              tabindex="-1"
+            >
+              <ShareAnchor
+                targetId={`infant-${anchorSlug(sign.title)}`}
+                label={sign.title}
+                compact
+              />
               <>
                 <h3>{sign.title}</h3>
                 <p>{sign.detail}</p>
@@ -99,8 +160,16 @@ const infant = urgent.find((item) => item.id === "infant-warning-signs")!;
         }
       </div><div
         class="content-section help-card urgent"
+        id="infant-what-to-do"
+        data-share-target
+        tabindex="-1"
         style="margin-top:1rem"
       >
+        <ShareAnchor
+          targetId="infant-what-to-do"
+          label="what to do for newborn warning signs"
+          compact
+        />
         <h3>What to do</h3><p><strong>{infant.data.action}</strong></p>
       </div>
     </div>

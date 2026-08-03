@@ -150,6 +150,7 @@ const evaluationBuild = siteConfig.clinicalStatus === "awaiting-review";
     <main id="main-content">
       <slot />
     </main>
+    <p id="share-link-status" class="visually-hidden" aria-live="polite"></p>
     <footer class="site-footer">
       <div class="shell">
         <div class="footer-grid">
@@ -191,5 +192,116 @@ const evaluationBuild = siteConfig.clinicalStatus === "awaiting-review";
         </div>
       </div>
     </footer>
+    <script>
+      const shareStatus = document.querySelector("#share-link-status");
+
+      const revealAddressTarget = () => {
+        let targetId = "";
+        try {
+          targetId = decodeURIComponent(window.location.hash.slice(1));
+        } catch {
+          return;
+        }
+        const target = targetId ? document.getElementById(targetId) : null;
+        if (!target) return;
+        const root = document.documentElement;
+        const previousScrollBehavior = root.style.scrollBehavior;
+        root.style.scrollBehavior = "auto";
+        target.scrollIntoView({ block: "start" });
+        root.style.scrollBehavior = previousScrollBehavior;
+      };
+
+      const queueAddressTargetReveal = () => {
+        window.requestAnimationFrame(() =>
+          window.requestAnimationFrame(revealAddressTarget),
+        );
+      };
+
+      if (document.readyState === "complete") queueAddressTargetReveal();
+      else
+        window.addEventListener("load", queueAddressTargetReveal, {
+          once: true,
+        });
+      window.addEventListener("pageshow", queueAddressTargetReveal, {
+        once: true,
+      });
+      window.addEventListener("hashchange", queueAddressTargetReveal);
+      if (window.location.hash) window.setTimeout(revealAddressTarget, 160);
+      if (window.location.hash) window.setTimeout(revealAddressTarget, 500);
+      document.fonts.ready.then(queueAddressTargetReveal);
+      document.querySelectorAll("astro-island").forEach((island) =>
+        island.addEventListener("astro:hydrate", queueAddressTargetReveal, {
+          once: true,
+        }),
+      );
+
+      const copyShareAddress = async (address: string) => {
+        if (navigator.clipboard?.writeText) {
+          try {
+            await navigator.clipboard.writeText(address);
+            return true;
+          } catch {
+            // Continue to the local document-copy fallback.
+          }
+        }
+
+        const field = document.createElement("textarea");
+        field.value = address;
+        field.setAttribute("readonly", "");
+        field.style.position = "fixed";
+        field.style.opacity = "0";
+        document.body.append(field);
+        field.select();
+        const copied = document.execCommand("copy");
+        field.remove();
+        return copied;
+      };
+
+      document.addEventListener("click", async (event) => {
+        if (
+          event.defaultPrevented ||
+          event.button !== 0 ||
+          event.metaKey ||
+          event.ctrlKey ||
+          event.shiftKey ||
+          event.altKey ||
+          !(event.target instanceof Element)
+        )
+          return;
+
+        const link = event.target.closest<HTMLAnchorElement>(
+          "a[data-share-anchor]",
+        );
+        if (!link) return;
+
+        const targetId = link.dataset.shareAnchor;
+        const target = targetId ? document.getElementById(targetId) : null;
+        if (!targetId || !target) return;
+
+        event.preventDefault();
+        const address = new URL(window.location.href);
+        address.hash = targetId;
+        const copied = await copyShareAddress(address.href);
+
+        window.location.hash = targetId;
+        revealAddressTarget();
+        target.focus({ preventScroll: true });
+
+        const label = link.dataset.shareLabel ?? "this finding";
+        const copy = link.querySelector<HTMLElement>(".share-anchor-copy");
+        const previousCopy = copy?.textContent ?? "Copy link";
+        link.classList.toggle("is-copied", copied);
+        if (copy) copy.textContent = copied ? "Copied" : "Link selected";
+        if (shareStatus)
+          shareStatus.textContent = copied
+            ? `Link to ${label} copied.`
+            : `Link to ${label} selected in the address bar.`;
+
+        window.setTimeout(() => {
+          link.classList.remove("is-copied");
+          if (copy) copy.textContent = previousCopy;
+        }, 2200);
+      });
+    </script>
   </body>
 </html>

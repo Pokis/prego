@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
+import ShareAnchor from "@/components/react/ShareAnchor";
 ---
 
 <BaseLayout
@@ -18,24 +19,54 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
   </section>
   <section class="section" style="padding-top:0">
     <div class="reading-shell article-stack">
-      <section class="content-section">
+      <section
+        class="content-section"
+        id="what-it-is"
+        data-share-target
+        tabindex="-1"
+      >
+        <ShareAnchor targetId="what-it-is" label="what this guide is" />
         <h2>What it is</h2><p>
           A static, fast and private guide to the nine months of pregnancy,
           designed especially for first-time parents and the people supporting
           them. An after-birth continuation is available when it becomes useful.
         </p>
-      </section><section class="content-section">
+      </section><section
+        class="content-section"
+        id="what-it-is-not"
+        data-share-target
+        tabindex="-1"
+      >
+        <ShareAnchor targetId="what-it-is-not" label="what this guide is not" />
         <h2>What it is not</h2><p>
           It is not a clinic, symptom checker, diagnostic tool, personalized
           treatment plan, forum, shopping guide or advertising platform.
         </p>
-      </section><section class="content-section">
+      </section><section
+        class="content-section"
+        id="why-it-feels-different"
+        data-share-target
+        tabindex="-1"
+      >
+        <ShareAnchor
+          targetId="why-it-feels-different"
+          label="why this guide feels different"
+        />
         <h2>Why it feels different</h2><p>
           The experience prioritizes the current month and week, direct dos and
           don’ts, concrete examples and a clear urgent-help path. It does not
           ask readers to assemble an answer from external articles.
         </p>
-      </section><section class="content-section">
+      </section><section
+        class="content-section"
+        id="how-to-use-it-safely"
+        data-share-target
+        tabindex="-1"
+      >
+        <ShareAnchor
+          targetId="how-to-use-it-safely"
+          label="how to use this guide safely"
+        />
         <h2>How to use it safely</h2><p>
           Use the site as a general pregnancy baseline and a way to prepare
           questions. Your doctor or midwife should guide decisions that depend

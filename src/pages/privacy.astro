@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import PrivacyControls from "@/components/react/PrivacyControls";
+import ShareAnchor from "@/components/react/ShareAnchor";
 ---
 
 <BaseLayout
@@ -19,7 +20,13 @@ import PrivacyControls from "@/components/react/PrivacyControls";
   </section>
   <section class="section" style="padding-top:0">
     <div class="reading-shell article-stack">
-      <section class="content-section summary-card">
+      <section
+        class="content-section summary-card"
+        id="what-never-happens"
+        data-share-target
+        tabindex="-1"
+      >
+        <ShareAnchor targetId="what-never-happens" label="privacy promises" />
         <h2>What never happens</h2><ul>
           <li>No account or email capture.</li><li>
             No advertising profile.
@@ -27,13 +34,28 @@ import PrivacyControls from "@/components/react/PrivacyControls";
             No upload of due dates, birth dates, bookmarks or checklist state.
           </li>
         </ul>
-      </section><section class="content-section">
+      </section><section
+        class="content-section"
+        id="what-this-device-can-save"
+        data-share-target
+        tabindex="-1"
+      >
+        <ShareAnchor
+          targetId="what-this-device-can-save"
+          label="what this device can save"
+        />
         <h2>What this device can save</h2><p>
           Your audience view, estimated due date or last-period estimate, actual
           birth date, bookmarks and milestone state can be stored locally.
           Someone with access to this browser profile may be able to see it.
         </p>
-      </section><section class="content-section">
+      </section><section
+        class="content-section"
+        id="clear-everything"
+        data-share-target
+        tabindex="-1"
+      >
+        <ShareAnchor targetId="clear-everything" label="clear saved data" />
         <h2>Clear everything</h2><p>
           This removes Pregnancy, Clearly's saved journey state from this
           browser. It does not affect browser history or downloaded pages.

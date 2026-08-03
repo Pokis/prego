@@ -26,6 +26,7 @@ The current content includes:
 - 21 date-window milestones for appointments, tests, decisions and preparation.
 - Optional due-date or last-period personalization stored only on the device.
 - A searchable full-text index spanning preconception, weeks, essentials, practical substitutes and warning-sign guidance.
+- Stable copy-link anchors for major sections, individual examples, cautions, milestones and care notes, with visible highlighting when a shared fragment opens.
 - Retrievable bookmarks, restorable hidden milestones, completed milestones, an actual birth-date transition and one-click local-data deletion.
 - 13 after-birth checkpoints through month six as a separate continuation.
 - Static, semantic routes that remain useful without JavaScript.
@@ -223,6 +224,7 @@ The absence of public citation panels is not permission to weaken evidence or ap
 - WCAG 2.2 AA is the target.
 - Interactive targets are at least 44×44 CSS pixels.
 - Timeline, essentials and urgent information are present in static HTML.
+- Shareable findings use ordinary fragment links in static HTML; JavaScript only adds one-click copying, focus and confirmation.
 - JavaScript enhances private personalization, full-text search, meaningful topic filtering, bookmarks and milestone state only.
 - The layout is tested at 320 CSS pixels, zoom/reflow, keyboard input and reduced motion.
 - Color is paired with text labels such as “Generally okay,” “Avoid” and “Check first.”

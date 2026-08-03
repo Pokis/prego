@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import Breadcrumbs from "@/components/Breadcrumbs.astro";
+import ShareAnchor from "@/components/react/ShareAnchor";
 import { withBase } from "@/lib/paths";
 import { getPregnancyMonth, weekFromTimelineId } from "@/config/pregnancy";
 
@@ -133,7 +134,13 @@ const nextLabel = nextEntry
   <section class="section" style="padding-top: 0">
     <div class="shell content-layout">
       <article class="article-stack">
-        <section class="content-section summary-card" id="know-now">
+        <section
+          class="content-section summary-card"
+          id="know-now"
+          data-share-target
+          tabindex="-1"
+        >
+          <ShareAnchor targetId="know-now" label="what to know now" />
           <p class="eyebrow">In 60 seconds</p>
           <h2>
             {
@@ -163,7 +170,13 @@ const nextLabel = nextEntry
             )
           }
         </section>
-        <section class="content-section" id="body">
+        <section
+          class="content-section"
+          id="body"
+          data-share-target
+          tabindex="-1"
+        >
+          <ShareAnchor targetId="body" label="body and mind changes" />
           <p class="eyebrow">What you may notice</p><h2>
             {
               data.phase === "postpartum"
@@ -172,7 +185,13 @@ const nextLabel = nextEntry
             }
           </h2>{data.bodyMind.map((item: string) => <p>{item}</p>)}
         </section>
-        <section class="content-section" id="baby">
+        <section
+          class="content-section"
+          id="baby"
+          data-share-target
+          tabindex="-1"
+        >
+          <ShareAnchor targetId="baby" label="baby development" />
           <p class="eyebrow">What is happening</p><h2>
             {
               data.phase === "postpartum"
@@ -183,7 +202,17 @@ const nextLabel = nextEntry
         </section>
         {
           data.variationNote && (
-            <aside class="variation-note">
+            <aside
+              class="variation-note"
+              id="variation-note"
+              data-share-target
+              tabindex="-1"
+            >
+              <ShareAnchor
+                targetId="variation-note"
+                label="normal variation note"
+                compact
+              />
               <strong>Normal does not mean identical.</strong>
               <p>{data.variationNote}</p>
             </aside>
@@ -191,7 +220,13 @@ const nextLabel = nextEntry
         }
         {
           data.clarifications?.length > 0 && (
-            <section class="content-section example-card" id="examples">
+            <section
+              class="content-section example-card"
+              id="examples"
+              data-share-target
+              tabindex="-1"
+            >
+              <ShareAnchor targetId="examples" label="real-life examples" />
               <p class="eyebrow">Plain-language examples</p>
               <h2>What this means in real life</h2>
               {data.clarifications.map((item: string) => (
@@ -200,12 +235,24 @@ const nextLabel = nextEntry
             </section>
           )
         }
-        <section class="content-section" id="do-now">
+        <section
+          class="content-section"
+          id="do-now"
+          data-share-target
+          tabindex="-1"
+        >
+          <ShareAnchor targetId="do-now" label="what to do now" />
           <p class="eyebrow">A short checklist</p><h2>What to do now</h2><ul>
             {data.doNow.map((item: string) => <li>{item}</li>)}
           </ul>
         </section>
-        <section class="content-section help-card" id="avoid">
+        <section
+          class="content-section help-card"
+          id="avoid"
+          data-share-target
+          tabindex="-1"
+        >
+          <ShareAnchor targetId="avoid" label="what to avoid or ask first" />
           <p class="eyebrow">Pause and check</p><h2>
             What not to do—or what to ask first
           </h2><ul>
@@ -214,14 +261,33 @@ const nextLabel = nextEntry
             >Check food, medicines, exercise and everyday activities →</a
           >
         </section>
-        <section class="content-section" id="appointments">
+        <section
+          class="content-section"
+          id="appointments"
+          data-share-target
+          tabindex="-1"
+        >
+          <ShareAnchor
+            targetId="appointments"
+            label="appointments tests and decisions"
+          />
           <p class="eyebrow">What may be coming up</p><h2>
             Appointments, tests and decisions
           </h2>{data.appointments.map((item: string) => <p>{item}</p>)}{
             milestones.length > 0 && (
               <div class="milestone-board">
                 {milestones.map((item: any) => (
-                  <article class="milestone-card">
+                  <article
+                    class="milestone-card"
+                    id={`milestone-${item.data.id}`}
+                    data-share-target
+                    tabindex="-1"
+                  >
+                    <ShareAnchor
+                      targetId={`milestone-${item.data.id}`}
+                      label={item.data.title}
+                      compact
+                    />
                     <div class="meta">Common planning window</div>
                     <h3>{item.data.title}</h3>
                     <p>{item.data.description}</p>
@@ -231,7 +297,13 @@ const nextLabel = nextEntry
             )
           }
         </section>
-        <section class="content-section" id="partner">
+        <section
+          class="content-section"
+          id="partner"
+          data-share-target
+          tabindex="-1"
+        >
+          <ShareAnchor targetId="partner" label="support person action" />
           <p class="eyebrow">For the support person</p><h2>
             One useful thing a partner can do
           </h2><ul>{data.partner.map((item: string) => <li>{item}</li>)}</ul>
@@ -239,7 +311,10 @@ const nextLabel = nextEntry
         <section
           class="content-section help-card care-team-card"
           id="contact-care"
+          data-share-target
+          tabindex="-1"
         >
+          <ShareAnchor targetId="contact-care" label="when to contact care" />
           <p class="eyebrow">Contact your care team</p>
           <h2>{careTeamHelp.data.title}</h2>
           <p>{careTeamHelp.data.intro}</p>
@@ -247,7 +322,13 @@ const nextLabel = nextEntry
             >See when to contact care</a
           >
         </section>
-        <section class="content-section help-card urgent">
+        <section
+          class="content-section help-card urgent"
+          id="urgent-help"
+          data-share-target
+          tabindex="-1"
+        >
+          <ShareAnchor targetId="urgent-help" label="urgent warning signs" />
           <p class="eyebrow">Urgent or emergency</p>
           <h2>{urgentHelp.data.title}</h2>
           <p>{urgentHelp.data.intro}</p>
@@ -306,9 +387,19 @@ const nextLabel = nextEntry
             </a>
           )
         }
-        <p class="doctor-note">
-          This is general guidance. Your doctor or midwife knows your health,
-          medicines and pregnancy and should guide individual decisions.
+        <p
+          class="doctor-note"
+          id="individual-care-note"
+          data-share-target
+          tabindex="-1"
+        >
+          <ShareAnchor
+            targetId="individual-care-note"
+            label="individual care note"
+            compact
+          />
+          This is general guidance. Your doctor or midwife knows your health, medicines
+          and pregnancy and should guide individual decisions.
         </p>
       </aside>
     </div>
