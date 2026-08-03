@@ -1808,86 +1808,6 @@
     }
   },
   {
-    "id": "sleep-comfort-side-sleeping",
-    "sectionId": "sleep-comfort",
-    "recordType": "sleep",
-    "stage": "pregnancy",
-    "intents": [
-      "do-use",
-      "symptom-support"
-    ],
-    "title": "Side sleeping",
-    "aliases": [
-      "Side sleeping",
-      "Side sleeping in pregnancy"
-    ],
-    "status": "generally-ok",
-    "priority": "baseline",
-    "summary": "Either side is acceptable; use pillows to support hips, abdomen and back.",
-    "details": [
-      "Treat “Side sleeping” as generally okay only when it matches the preparation, amount and health context described here. Use pillows between the knees, under the bump or behind the back to reduce strain."
-    ],
-    "decisionFactors": [
-      "Pregnancy week, sleep position and what wakes or limits you",
-      "Snoring, breathing pauses, restless legs, pain, reflux or severe daytime sleepiness",
-      "The exact pillow, device, medicine, supplement or remedy being considered"
-    ],
-    "careNote": "This is a general pregnancy baseline, not personal clearance. Change course and ask for advice if symptoms, complications or an individual care plan make the situation different.",
-    "careTier": "common",
-    "relatedIds": [],
-    "sourceIds": [
-      "nhs-weeks",
-      "cdc-medicine"
-    ],
-    "review": {
-      "status": "editorial-ready",
-      "reviewedAt": "2026-07-31",
-      "nextReviewAt": "2027-07-31",
-      "reviewer": "Internal editorial record",
-      "volatility": "annual"
-    }
-  },
-  {
-    "id": "sleep-comfort-waking-on-the-back",
-    "sectionId": "sleep-comfort",
-    "recordType": "sleep",
-    "stage": "pregnancy",
-    "intents": [
-      "do-use",
-      "symptom-support"
-    ],
-    "title": "Waking on the back",
-    "aliases": [
-      "Waking on the back",
-      "Waking on the back in pregnancy"
-    ],
-    "status": "generally-ok",
-    "priority": "baseline",
-    "summary": "Roll onto a side and return to sleep; there is no need to panic.",
-    "details": [
-      "Treat “Waking on the back” as generally okay only when it matches the preparation, amount and health context described here. From the third trimester, settle to sleep on your side; if you wake on your back, roll to a side without panic."
-    ],
-    "decisionFactors": [
-      "Pregnancy week, sleep position and what wakes or limits you",
-      "Snoring, breathing pauses, restless legs, pain, reflux or severe daytime sleepiness",
-      "The exact pillow, device, medicine, supplement or remedy being considered"
-    ],
-    "careNote": "This is a general pregnancy baseline, not personal clearance. Change course and ask for advice if symptoms, complications or an individual care plan make the situation different.",
-    "careTier": "common",
-    "relatedIds": [],
-    "sourceIds": [
-      "nhs-weeks",
-      "cdc-medicine"
-    ],
-    "review": {
-      "status": "editorial-ready",
-      "reviewedAt": "2026-07-31",
-      "nextReviewAt": "2027-07-31",
-      "reviewer": "Internal editorial record",
-      "volatility": "annual"
-    }
-  },
-  {
     "id": "sleep-comfort-over-the-counter-sleep-aid",
     "sectionId": "sleep-comfort",
     "recordType": "sleep",
@@ -1918,45 +1838,6 @@
     "sourceIds": [
       "nhs-weeks",
       "cdc-medicine"
-    ],
-    "review": {
-      "status": "editorial-ready",
-      "reviewedAt": "2026-07-31",
-      "nextReviewAt": "2027-07-31",
-      "reviewer": "Internal editorial record",
-      "volatility": "annual"
-    }
-  },
-  {
-    "id": "appointments-warning-signs-a-routine-question",
-    "sectionId": "appointments-warning-signs",
-    "recordType": "test-or-decision",
-    "stage": "pregnancy",
-    "intents": [
-      "test-care"
-    ],
-    "title": "A routine question",
-    "aliases": [
-      "A routine question",
-      "A routine question in pregnancy"
-    ],
-    "status": "generally-ok",
-    "priority": "baseline",
-    "summary": "Add it to the visit list unless symptoms are changing or worrying you now.",
-    "details": [
-      "Treat “A routine question” as generally okay only when it matches the preparation, amount and health context described here. Keep one note with medicines, symptoms, top questions, result dates and the next appointment."
-    ],
-    "decisionFactors": [
-      "Whether this is screening, diagnosis, monitoring, treatment or birth planning",
-      "Pregnancy week, previous results and what the result could change",
-      "Benefits, limits, alternatives, follow-up and the time available to decide"
-    ],
-    "careNote": "This is a general pregnancy baseline, not personal clearance. Change course and ask for advice if symptoms, complications or an individual care plan make the situation different.",
-    "careTier": "common",
-    "relatedIds": [],
-    "sourceIds": [
-      "who-antenatal",
-      "cdc-warning"
     ],
     "review": {
       "status": "editorial-ready",
@@ -2215,48 +2096,6 @@
     }
   },
   {
-    "id": "common-symptoms-a-severe-sudden-or-rapidly-worsening-symptom",
-    "sectionId": "common-symptoms",
-    "recordType": "symptom",
-    "stage": "pregnancy",
-    "intents": [
-      "symptom-support"
-    ],
-    "title": "A severe, sudden or rapidly worsening symptom",
-    "aliases": [
-      "A severe, sudden or rapidly worsening symptom",
-      "A severe, sudden or rapidly worsening symptom in pregnancy"
-    ],
-    "status": "avoid",
-    "priority": "baseline",
-    "summary": "Do not wait on self-care—use the urgent route provided by your maternity service or local emergency care.",
-    "details": [
-      "For “A severe, sudden or rapidly worsening symptom,” use the lower-exposure choice instead of trying to cancel the exposure afterward. Do not take a painkiller, antacid, laxative, anti-nausea product or herbal remedy without checking the exact product."
-    ],
-    "decisionFactors": [
-      "When it began, whether it is worsening, and how it affects eating, sleep or activity",
-      "Severity, pattern, one-sided symptoms and accompanying bleeding, fever or fluid loss",
-      "Pregnancy week, baby movement and relevant conditions or medicines"
-    ],
-    "careNote": "Choose a lower-risk alternative when possible. If the exposure already happened, record the product, amount, timing and symptoms and ask for advice instead of assuming harm.",
-    "careTier": "common",
-    "relatedIds": [],
-    "sourceIds": [
-      "acog-morning-sickness",
-      "acog-back-pain",
-      "acog-digestive",
-      "cdc-warning",
-      "cdc-medicine"
-    ],
-    "review": {
-      "status": "editorial-ready",
-      "reviewedAt": "2026-07-31",
-      "nextReviewAt": "2027-07-31",
-      "reviewer": "Internal editorial record",
-      "volatility": "annual"
-    }
-  },
-  {
     "id": "dental-skin-personal-care-dental-check-up-and-cleaning",
     "sectionId": "dental-skin-personal-care",
     "recordType": "personal-care",
@@ -2402,46 +2241,6 @@
     ],
     "careNote": "Choose a lower-risk alternative when possible. If the exposure already happened, record the product, amount, timing and symptoms and ask for advice instead of assuming harm.",
     "careTier": "common",
-    "relatedIds": [],
-    "sourceIds": [
-      "acog-dental",
-      "acog-skin",
-      "cdc-medicine"
-    ],
-    "review": {
-      "status": "editorial-ready",
-      "reviewedAt": "2026-07-31",
-      "nextReviewAt": "2027-07-31",
-      "reviewer": "Internal editorial record",
-      "volatility": "annual"
-    }
-  },
-  {
-    "id": "dental-skin-personal-care-hair-dye-salon-treatment-or-cosmetic-procedure",
-    "sectionId": "dental-skin-personal-care",
-    "recordType": "personal-care",
-    "stage": "pregnancy",
-    "intents": [
-      "do-use"
-    ],
-    "title": "Hair dye, salon treatment or cosmetic procedure",
-    "aliases": [
-      "Hair dye, salon treatment or cosmetic procedure",
-      "Hair dye, salon treatment or cosmetic procedure in pregnancy"
-    ],
-    "status": "check-first",
-    "priority": "baseline",
-    "summary": "Check the product and procedure, use good ventilation and ask before treatments with strong chemicals, medicines or limited pregnancy evidence.",
-    "details": [
-      "Bring the exact label, ingredients, preparation method or situation for “Hair dye, salon treatment or cosmetic procedure” when asking for advice. Ask a pharmacist, dermatologist or doctor about the exact acne, eczema, psoriasis or skin-lightening product you use."
-    ],
-    "decisionFactors": [
-      "The exact ingredient, procedure, body area, amount and frequency",
-      "Whether treatment is medically needed or can reasonably be postponed",
-      "Skin damage, infection, fumes, heat, radiation and medicines used with the procedure"
-    ],
-    "careNote": "Check the exact item or situation with a doctor, midwife, pharmacist or relevant clinician; the name of a broad category is not enough for a personal decision.",
-    "careTier": "care-team",
     "relatedIds": [],
     "sourceIds": [
       "acog-dental",
@@ -3401,49 +3200,6 @@
     }
   },
   {
-    "id": "loss-uncertainty-support-pregnancy-after-a-previous-loss",
-    "sectionId": "loss-uncertainty-support",
-    "recordType": "loss-support",
-    "stage": "pregnancy",
-    "intents": [
-      "symptom-support",
-      "test-care"
-    ],
-    "title": "Pregnancy after a previous loss",
-    "aliases": [
-      "Pregnancy after a previous loss",
-      "Pregnancy after a previous loss in pregnancy"
-    ],
-    "status": "check-first",
-    "priority": "baseline",
-    "summary": "Ask what monitoring is medically useful and what emotional support would help; reassurance needs can be real even when extra testing is not indicated.",
-    "details": [
-      "Bring the exact label, ingredients, preparation method or situation for “Pregnancy after a previous loss” when asking for advice. Ask for support that includes the pregnant person, partner or family without assuming everyone grieves in the same way."
-    ],
-    "decisionFactors": [
-      "What has been confirmed, what remains uncertain and when follow-up can clarify it",
-      "Bleeding, pain, infection, faintness and other physical recovery or urgent-care needs",
-      "Personal, cultural, spiritual, partner, family and mental-health support preferences"
-    ],
-    "careNote": "Check the exact item or situation with a doctor, midwife, pharmacist or relevant clinician; the name of a broad category is not enough for a personal decision.",
-    "careTier": "care-team",
-    "relatedIds": [],
-    "sourceIds": [
-      "acog-pregnancy-loss-support",
-      "acog-stillbirth",
-      "acog-postpartum",
-      "acog-mental-health",
-      "cdc-warning"
-    ],
-    "review": {
-      "status": "editorial-ready",
-      "reviewedAt": "2026-07-31",
-      "nextReviewAt": "2026-10-29",
-      "reviewer": "Internal editorial record",
-      "volatility": "rapid-review"
-    }
-  },
-  {
     "id": "loss-uncertainty-support-stillbirth-or-later-pregnancy-loss",
     "sectionId": "loss-uncertainty-support",
     "recordType": "loss-support",
@@ -3600,49 +3356,6 @@
     ],
     "careNote": "Check the exact item or situation with a doctor, midwife, pharmacist or relevant clinician; the name of a broad category is not enough for a personal decision.",
     "careTier": "care-team",
-    "relatedIds": [],
-    "sourceIds": [
-      "who-postnatal",
-      "acog-labour-birth",
-      "acog-cesarean",
-      "acog-breastfeeding-challenges",
-      "cdc-safe-sleep",
-      "who-newborn"
-    ],
-    "review": {
-      "status": "editorial-ready",
-      "reviewedAt": "2026-07-31",
-      "nextReviewAt": "2026-10-29",
-      "reviewer": "Internal editorial record",
-      "volatility": "rapid-review"
-    }
-  },
-  {
-    "id": "birth-newborn-preparation-feeding-plan-and-early-support",
-    "sectionId": "birth-newborn-preparation",
-    "recordType": "birth-preparation",
-    "stage": "pregnancy",
-    "intents": [
-      "plan-birth"
-    ],
-    "title": "Feeding plan and early support",
-    "aliases": [
-      "Feeding plan and early support",
-      "Feeding plan and early support in pregnancy"
-    ],
-    "status": "generally-ok",
-    "priority": "baseline",
-    "summary": "State your preference and ask who assesses positioning, milk transfer, bottle feeding, pain or supplementation when the first plan needs help.",
-    "details": [
-      "Treat “Feeding plan and early support” as generally okay only when it matches the preparation, amount and health context described here. Learn the first recovery and newborn checks before labour so unexpected monitoring or support is easier to understand."
-    ],
-    "decisionFactors": [
-      "Pregnancy history, current findings and the capabilities of the planned birth setting",
-      "Consent, communication, pain relief, support, feeding and newborn-care preferences",
-      "How an urgent change, caesarean birth, preterm birth or neonatal admission would be handled"
-    ],
-    "careNote": "This is a general pregnancy baseline, not personal clearance. Change course and ask for advice if symptoms, complications or an individual care plan make the situation different.",
-    "careTier": "common",
     "relatedIds": [],
     "sourceIds": [
       "who-postnatal",
@@ -17676,6 +17389,1197 @@
       "nextReviewAt": "2027-07-31",
       "reviewer": "Internal editorial record",
       "volatility": "annual"
+    }
+  },
+  {
+    "id": "food-dishes-pregnancy-weight-gain-pattern",
+    "sectionId": "food-dishes",
+    "recordType": "food",
+    "stage": "pregnancy",
+    "intents": [
+      "eat-drink"
+    ],
+    "title": "Pregnancy weight gain and changing appetite",
+    "aliases": [
+      "weight gain",
+      "pregnancy weight",
+      "not gaining weight",
+      "gaining weight quickly",
+      "changing appetite"
+    ],
+    "status": "check-first",
+    "priority": "P0",
+    "summary": "Weight change is assessed as a pattern alongside prepregnancy context, nutrition, symptoms and fetal growth—not against one target that fits every pregnancy.",
+    "details": [
+      "Ask your care team what range and monitoring approach applies to you. Bring up rapid change, persistent difficulty eating, swelling, vomiting, food insecurity or anxiety about weighing rather than trying to correct the number with a restrictive plan."
+    ],
+    "decisionFactors": [
+      "Whether every ingredient is pasteurised or cooked through",
+      "How the food was chilled, stored, handled and reheated",
+      "The exact species, product label, recall or contamination warning"
+    ],
+    "careNote": "Check the exact item or situation with a doctor, midwife, pharmacist or relevant clinician; the name of a broad category is not enough for a personal decision.",
+    "careTier": "care-team",
+    "relatedIds": [],
+    "sourceIds": [
+      "acog-weight-gain",
+      "acog-nutrition",
+      "who-antenatal"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2027-07-31",
+      "reviewer": "Internal editorial record",
+      "volatility": "annual"
+    }
+  },
+  {
+    "id": "food-dishes-intentional-weight-loss-restrictive-diet",
+    "sectionId": "food-dishes",
+    "recordType": "food",
+    "stage": "pregnancy",
+    "intents": [
+      "eat-drink"
+    ],
+    "title": "Intentional weight loss, fasting or a restrictive diet",
+    "aliases": [
+      "weight loss",
+      "dieting while pregnant",
+      "fasting pregnancy",
+      "calorie restriction",
+      "underweight pregnancy"
+    ],
+    "status": "check-first",
+    "priority": "P0",
+    "summary": "Do not build a pregnancy plan around rapid weight loss or broad food restriction without individual clinical and nutrition support.",
+    "details": [
+      "The useful review covers why intake is restricted, what nutrients and foods remain available, current symptoms, growth monitoring, an eating-disorder history and any cultural or religious fast. Ask for a workable alternative rather than hiding the restriction."
+    ],
+    "decisionFactors": [
+      "Whether every ingredient is pasteurised or cooked through",
+      "How the food was chilled, stored, handled and reheated",
+      "The exact species, product label, recall or contamination warning"
+    ],
+    "careNote": "Check the exact item or situation with a doctor, midwife, pharmacist or relevant clinician; the name of a broad category is not enough for a personal decision.",
+    "careTier": "care-team",
+    "relatedIds": [],
+    "sourceIds": [
+      "acog-weight-gain",
+      "acog-nutrition",
+      "who-antenatal"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2027-07-31",
+      "reviewer": "Internal editorial record",
+      "volatility": "annual"
+    }
+  },
+  {
+    "id": "health-conditions-accessibility-pregnancy-after-bariatric-surgery",
+    "sectionId": "health-conditions-accessibility",
+    "recordType": "health-condition",
+    "stage": "pregnancy",
+    "intents": [
+      "test-care",
+      "symptom-support"
+    ],
+    "title": "Pregnancy after bariatric or weight-loss surgery",
+    "aliases": [
+      "bariatric surgery pregnancy",
+      "gastric bypass pregnancy",
+      "gastric sleeve pregnancy",
+      "weight loss surgery pregnancy"
+    ],
+    "status": "check-first",
+    "priority": "P0",
+    "summary": "Tell maternity care which bariatric procedure you had because absorption, nutrition, abdominal symptoms and medicine formulations may need a coordinated plan.",
+    "details": [
+      "Bring the operation date, procedure name, supplement list and recent monitoring. Persistent vomiting, severe or unusual abdominal pain, inability to eat or drink, or symptoms of deficiency deserve prompt assessment rather than being assumed to be ordinary pregnancy discomfort."
+    ],
+    "decisionFactors": [
+      "The exact diagnosis, current control, organ function and usual signs of deterioration",
+      "Every medicine, device, specialist and monitoring plan already in use",
+      "Communication, mobility, sensory, examination and support adjustments needed for usable care"
+    ],
+    "careNote": "Check the exact item or situation with a doctor, midwife, pharmacist or relevant clinician; the name of a broad category is not enough for a personal decision.",
+    "careTier": "care-team",
+    "relatedIds": [],
+    "sourceIds": [
+      "acog-obesity-pregnancy",
+      "acog-nutrition"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2026-10-29",
+      "reviewer": "Internal editorial record",
+      "volatility": "rapid-review"
+    }
+  },
+  {
+    "id": "everyday-home-tobacco-vape-secondhand-smoke",
+    "sectionId": "everyday-home",
+    "recordType": "home-exposure",
+    "stage": "pregnancy",
+    "intents": [
+      "do-use",
+      "work-home"
+    ],
+    "title": "Cigarettes, vaping and second-hand smoke",
+    "aliases": [
+      "smoking pregnancy",
+      "vaping pregnancy",
+      "nicotine pregnancy",
+      "second hand smoke",
+      "passive smoke"
+    ],
+    "status": "avoid",
+    "priority": "P0",
+    "summary": "Avoid tobacco, nicotine vaping and second-hand smoke, and ask for nonjudgmental help if reducing exposure or stopping is difficult.",
+    "details": [
+      "Make the home and car smoke-free and ask other people to smoke or vape away from you. Review the exact product and dependence pattern with a clinician before using a medicine or nicotine product to change use; support should be matched to you."
+    ],
+    "decisionFactors": [
+      "The exact product, task, temperature, duration and ventilation",
+      "Whether exposure is through breathing, swallowing, skin contact or injury",
+      "Any label warning, spill, symptoms or repeated occupational-level exposure"
+    ],
+    "careNote": "Choose a lower-risk alternative when possible. If the exposure already happened, record the product, amount, timing and symptoms and ask for advice instead of assuming harm.",
+    "careTier": "common",
+    "relatedIds": [],
+    "sourceIds": [
+      "acog-substances",
+      "who-tobacco-smoke-pregnancy"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2026-10-29",
+      "reviewer": "Internal editorial record",
+      "volatility": "rapid-review"
+    }
+  },
+  {
+    "id": "everyday-home-cannabis-cbd-products",
+    "sectionId": "everyday-home",
+    "recordType": "home-exposure",
+    "stage": "pregnancy",
+    "intents": [
+      "do-use",
+      "work-home"
+    ],
+    "title": "Cannabis, marijuana, THC and CBD products",
+    "aliases": [
+      "cannabis pregnancy",
+      "marijuana pregnancy",
+      "THC pregnancy",
+      "CBD pregnancy",
+      "weed pregnancy"
+    ],
+    "status": "avoid",
+    "priority": "P0",
+    "summary": "Avoid cannabis and CBD products during pregnancy, including smoked, vaped, edible and topical products marketed for nausea, sleep or pain.",
+    "details": [
+      "Tell your clinician what you use, how often and why so the symptom or dependence can be treated without shame. Keep smoke and vape aerosol out of the home, and keep edible products locked away from children."
+    ],
+    "decisionFactors": [
+      "The exact product, task, temperature, duration and ventilation",
+      "Whether exposure is through breathing, swallowing, skin contact or injury",
+      "Any label warning, spill, symptoms or repeated occupational-level exposure"
+    ],
+    "careNote": "Choose a lower-risk alternative when possible. If the exposure already happened, record the product, amount, timing and symptoms and ask for advice instead of assuming harm.",
+    "careTier": "common",
+    "relatedIds": [],
+    "sourceIds": [
+      "acog-cannabis",
+      "acog-substances"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2026-10-29",
+      "reviewer": "Internal editorial record",
+      "volatility": "rapid-review"
+    }
+  },
+  {
+    "id": "everyday-home-wildfire-smoke-air-quality",
+    "sectionId": "everyday-home",
+    "recordType": "home-exposure",
+    "stage": "pregnancy",
+    "intents": [
+      "do-use",
+      "work-home"
+    ],
+    "title": "Wildfire smoke and poor outdoor air quality",
+    "aliases": [
+      "wildfire smoke",
+      "air pollution pregnancy",
+      "poor air quality",
+      "smog pregnancy",
+      "AQI pregnancy"
+    ],
+    "status": "check-first",
+    "priority": "P0",
+    "summary": "Use local air-quality alerts to reduce smoke exposure, keep indoor air cleaner and adapt outdoor work, exercise and travel during a smoke event.",
+    "details": [
+      "Close windows when advised, use effective filtration if available and keep medicines and an evacuation plan ready. Contact care for new or worsening breathing symptoms, especially with asthma; use emergency help for severe breathlessness, chest pain or collapse."
+    ],
+    "decisionFactors": [
+      "The exact product, task, temperature, duration and ventilation",
+      "Whether exposure is through breathing, swallowing, skin contact or injury",
+      "Any label warning, spill, symptoms or repeated occupational-level exposure"
+    ],
+    "careNote": "Check the exact item or situation with a doctor, midwife, pharmacist or relevant clinician; the name of a broad category is not enough for a personal decision.",
+    "careTier": "care-team",
+    "relatedIds": [],
+    "sourceIds": [
+      "cdc-wildfire-pregnancy",
+      "cdc-workplace"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2026-10-29",
+      "reviewer": "Internal editorial record",
+      "volatility": "rapid-review"
+    }
+  },
+  {
+    "id": "medicines-supplements-prescribed-opioid-pain-medicine",
+    "sectionId": "medicines-supplements",
+    "recordType": "medicine",
+    "stage": "pregnancy",
+    "intents": [
+      "do-use",
+      "test-care"
+    ],
+    "title": "A prescribed opioid pain medicine",
+    "aliases": [
+      "opioid prescription",
+      "codeine pregnancy",
+      "oxycodone pregnancy",
+      "morphine pregnancy",
+      "strong painkiller pregnancy"
+    ],
+    "status": "check-first",
+    "priority": "P0",
+    "summary": "Review a prescribed opioid by exact medicine, dose, timing and reason; do not start, stop or replace it from a generic pregnancy list.",
+    "details": [
+      "Ask the prescriber how pain, side effects, other sedating medicines, duration of use and newborn observation affect the plan. If you have been taking it regularly, do not attempt an abrupt change without clinical advice."
+    ],
+    "decisionFactors": [
+      "The exact active ingredient, strength, dose, route and formulation",
+      "Why you use it, how often, and the pregnancy week or exposure date",
+      "Other prescriptions, non-prescription products, supplements and health conditions"
+    ],
+    "careNote": "Check the exact item or situation with a doctor, midwife, pharmacist or relevant clinician; the name of a broad category is not enough for a personal decision.",
+    "careTier": "care-team",
+    "relatedIds": [],
+    "sourceIds": [
+      "acog-substances",
+      "cdc-medicine",
+      "nhs-medicines"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2026-10-29",
+      "reviewer": "Internal editorial record",
+      "volatility": "rapid-review"
+    }
+  },
+  {
+    "id": "medicines-supplements-opioid-dependence-withdrawal-support",
+    "sectionId": "medicines-supplements",
+    "recordType": "medicine",
+    "stage": "pregnancy",
+    "intents": [
+      "do-use",
+      "test-care"
+    ],
+    "title": "Opioid dependence, nonmedical use or withdrawal concern",
+    "aliases": [
+      "opioid addiction pregnancy",
+      "opioid withdrawal pregnancy",
+      "heroin pregnancy",
+      "fentanyl use pregnancy",
+      "opioid use disorder pregnancy"
+    ],
+    "status": "contact-care",
+    "priority": "P0",
+    "summary": "Contact maternity or addiction care promptly for confidential treatment planning; managing opioid withdrawal alone can be unsafe.",
+    "details": [
+      "Tell the team the exact substances, route, frequency, last use and any current treatment. The plan may include medicines and behavioural support, but it must be prescribed and coordinated rather than improvised from online instructions."
+    ],
+    "decisionFactors": [
+      "The exact active ingredient, strength, dose, route and formulation",
+      "Why you use it, how often, and the pregnancy week or exposure date",
+      "Other prescriptions, non-prescription products, supplements and health conditions"
+    ],
+    "careNote": "Contact your doctor or maternity service promptly and describe the timing, severity, associated symptoms and pregnancy week so they can choose the right assessment.",
+    "careTier": "care-team",
+    "relatedIds": [],
+    "sourceIds": [
+      "acog-substances",
+      "cdc-medicine"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2026-10-29",
+      "reviewer": "Internal editorial record",
+      "volatility": "rapid-review"
+    }
+  },
+  {
+    "id": "appointments-warning-signs-home-fetal-doppler",
+    "sectionId": "appointments-warning-signs",
+    "recordType": "test-or-decision",
+    "stage": "pregnancy",
+    "intents": [
+      "test-care"
+    ],
+    "title": "Home fetal Doppler or heartbeat monitor",
+    "aliases": [
+      "home doppler",
+      "fetal doppler",
+      "foetal doppler",
+      "baby heartbeat monitor",
+      "listen to heartbeat at home"
+    ],
+    "status": "check-first",
+    "priority": "P0",
+    "summary": "Do not use a home heartbeat device to decide that symptoms or changed movement are safe to wait with; it cannot perform a clinical assessment.",
+    "details": [
+      "It can be difficult to distinguish maternal and fetal sounds or interpret a number without training and context. Follow the movement and symptom advice from your maternity team and contact them directly when something has changed."
+    ],
+    "decisionFactors": [
+      "Whether this is screening, diagnosis, monitoring, treatment or birth planning",
+      "Pregnancy week, previous results and what the result could change",
+      "Benefits, limits, alternatives, follow-up and the time available to decide"
+    ],
+    "careNote": "Check the exact item or situation with a doctor, midwife, pharmacist or relevant clinician; the name of a broad category is not enough for a personal decision.",
+    "careTier": "care-team",
+    "relatedIds": [],
+    "sourceIds": [
+      "acog-diagnostic-imaging",
+      "nhs-symptoms-help"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2026-10-29",
+      "reviewer": "Internal editorial record",
+      "volatility": "rapid-review"
+    }
+  },
+  {
+    "id": "appointments-warning-signs-keepsake-private-ultrasound",
+    "sectionId": "appointments-warning-signs",
+    "recordType": "test-or-decision",
+    "stage": "pregnancy",
+    "intents": [
+      "test-care"
+    ],
+    "title": "Keepsake, boutique or private ultrasound",
+    "aliases": [
+      "keepsake ultrasound",
+      "private ultrasound",
+      "boutique scan",
+      "3D scan",
+      "4D scan"
+    ],
+    "status": "check-first",
+    "priority": "P1",
+    "summary": "A nonmedical or private scan does not replace the clinical scans, screening, reporting and follow-up arranged by maternity care.",
+    "details": [
+      "Before booking, ask who performs and reports it, what clinical question it can answer, how exposure is limited and how an unexpected or incomplete finding reaches your maternity team. Do not delay care while waiting for a commercial appointment."
+    ],
+    "decisionFactors": [
+      "Whether this is screening, diagnosis, monitoring, treatment or birth planning",
+      "Pregnancy week, previous results and what the result could change",
+      "Benefits, limits, alternatives, follow-up and the time available to decide"
+    ],
+    "careNote": "Check the exact item or situation with a doctor, midwife, pharmacist or relevant clinician; the name of a broad category is not enough for a personal decision.",
+    "careTier": "care-team",
+    "relatedIds": [],
+    "sourceIds": [
+      "acog-diagnostic-imaging",
+      "acog-prenatal-care"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2026-10-29",
+      "reviewer": "Internal editorial record",
+      "volatility": "rapid-review"
+    }
+  },
+  {
+    "id": "appointments-warning-signs-sickle-cell-thalassaemia-screening",
+    "sectionId": "appointments-warning-signs",
+    "recordType": "test-or-decision",
+    "stage": "pregnancy",
+    "intents": [
+      "test-care"
+    ],
+    "title": "Sickle cell and thalassaemia carrier screening",
+    "aliases": [
+      "sickle cell screening",
+      "thalassemia screening",
+      "thalassaemia screening",
+      "haemoglobin carrier test",
+      "hemoglobin carrier test"
+    ],
+    "status": "check-first",
+    "priority": "P1",
+    "summary": "Carrier screening is a blood-test decision that can clarify whether further partner testing, counselling or diagnostic choices should be offered.",
+    "details": [
+      "Ask when the test is offered, what carrier and affected results mean, whether the other biological parent should be tested and what choices follow. Screening estimates inherited chance; it does not diagnose the fetus by itself."
+    ],
+    "decisionFactors": [
+      "Whether this is screening, diagnosis, monitoring, treatment or birth planning",
+      "Pregnancy week, previous results and what the result could change",
+      "Benefits, limits, alternatives, follow-up and the time available to decide"
+    ],
+    "careNote": "Check the exact item or situation with a doctor, midwife, pharmacist or relevant clinician; the name of a broad category is not enough for a personal decision.",
+    "careTier": "care-team",
+    "relatedIds": [],
+    "sourceIds": [
+      "nhs-haemoglobin-screening",
+      "acog-genetic-screening"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2026-10-29",
+      "reviewer": "Internal editorial record",
+      "volatility": "rapid-review"
+    }
+  },
+  {
+    "id": "pregnancy-complications-placental-abruption",
+    "sectionId": "pregnancy-complications",
+    "recordType": "complication",
+    "stage": "pregnancy",
+    "intents": [
+      "test-care",
+      "symptom-support"
+    ],
+    "title": "Possible placental abruption",
+    "aliases": [
+      "placental abruption",
+      "placenta separating early",
+      "concealed abruption",
+      "painful bleeding pregnancy"
+    ],
+    "status": "urgent",
+    "priority": "P0",
+    "summary": "Use urgent maternity or emergency care for sudden persistent abdominal pain, bleeding, frequent contractions, faintness or a seriously unwell feeling that could indicate placental separation.",
+    "details": [
+      "Bleeding may be visible or concealed, so the amount seen does not reliably show severity. Do not drive yourself if faint or severely unwell; tell emergency services the pregnancy week, pain pattern, bleeding and any change in movement."
+    ],
+    "decisionFactors": [
+      "The exact finding, pregnancy week, measurements, symptoms and diagnostic certainty",
+      "Maternal health, fetal growth or wellbeing and how each is changing over time",
+      "Available specialist care, monitoring, treatment, transfer and birth-timing options"
+    ],
+    "careNote": "Use urgent maternity or emergency care now. This guide cannot determine the cause or confirm that it is safe to wait.",
+    "careTier": "urgent",
+    "relatedIds": [],
+    "sourceIds": [
+      "nhs-placenta-complications",
+      "acog-bleeding",
+      "cdc-warning"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2026-10-29",
+      "reviewer": "Internal editorial record",
+      "volatility": "rapid-review"
+    }
+  },
+  {
+    "id": "loss-uncertainty-support-possible-ectopic-pregnancy",
+    "sectionId": "loss-uncertainty-support",
+    "recordType": "loss-support",
+    "stage": "pregnancy",
+    "intents": [
+      "symptom-support",
+      "test-care"
+    ],
+    "title": "Possible ectopic pregnancy",
+    "aliases": [
+      "ectopic pregnancy",
+      "pregnancy outside uterus",
+      "tubal pregnancy",
+      "one sided pain early pregnancy",
+      "shoulder pain pregnancy"
+    ],
+    "status": "urgent",
+    "priority": "P0",
+    "summary": "Sudden severe one-sided abdominal or pelvic pain, shoulder pain, weakness, dizziness or fainting in early pregnancy needs emergency assessment for internal bleeding.",
+    "details": [
+      "Bleeding and milder one-sided pain also need prompt clinical review because symptoms alone cannot locate a pregnancy. Diagnosis uses clinical assessment, ultrasound and pregnancy-hormone trends; risk factors may be absent."
+    ],
+    "decisionFactors": [
+      "What has been confirmed, what remains uncertain and when follow-up can clarify it",
+      "Bleeding, pain, infection, faintness and other physical recovery or urgent-care needs",
+      "Personal, cultural, spiritual, partner, family and mental-health support preferences"
+    ],
+    "careNote": "Use urgent maternity or emergency care now. This guide cannot determine the cause or confirm that it is safe to wait.",
+    "careTier": "urgent",
+    "relatedIds": [],
+    "sourceIds": [
+      "acog-ectopic-pregnancy",
+      "acog-bleeding"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2026-10-29",
+      "reviewer": "Internal editorial record",
+      "volatility": "rapid-review"
+    }
+  },
+  {
+    "id": "loss-uncertainty-support-molar-pregnancy-followup",
+    "sectionId": "loss-uncertainty-support",
+    "recordType": "loss-support",
+    "stage": "pregnancy",
+    "intents": [
+      "symptom-support",
+      "test-care"
+    ],
+    "title": "Molar pregnancy diagnosis and follow-up",
+    "aliases": [
+      "molar pregnancy",
+      "hydatidiform mole",
+      "gestational trophoblastic disease",
+      "molar pregnancy hCG follow up"
+    ],
+    "status": "contact-care",
+    "priority": "P1",
+    "summary": "A suspected or confirmed molar pregnancy needs specialist treatment and hormone follow-up, plus clear physical and emotional support.",
+    "details": [
+      "Ask what type was found, what procedure or treatment is planned, how and where hCG is monitored, which symptoms need urgent care and when future pregnancy planning can be reviewed. This condition happens by chance and is not caused by ordinary actions."
+    ],
+    "decisionFactors": [
+      "What has been confirmed, what remains uncertain and when follow-up can clarify it",
+      "Bleeding, pain, infection, faintness and other physical recovery or urgent-care needs",
+      "Personal, cultural, spiritual, partner, family and mental-health support preferences"
+    ],
+    "careNote": "Contact your doctor or maternity service promptly and describe the timing, severity, associated symptoms and pregnancy week so they can choose the right assessment.",
+    "careTier": "care-team",
+    "relatedIds": [],
+    "sourceIds": [
+      "nhs-molar-pregnancy",
+      "acog-pregnancy-loss-support"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2026-10-29",
+      "reviewer": "Internal editorial record",
+      "volatility": "rapid-review"
+    }
+  },
+  {
+    "id": "birth-newborn-preparation-antenatal-classes",
+    "sectionId": "birth-newborn-preparation",
+    "recordType": "birth-preparation",
+    "stage": "pregnancy",
+    "intents": [
+      "plan-birth"
+    ],
+    "title": "Antenatal, childbirth and newborn-care classes",
+    "aliases": [
+      "antenatal class",
+      "birth class",
+      "childbirth class",
+      "prenatal class",
+      "new parent class"
+    ],
+    "status": "generally-ok",
+    "priority": "P1",
+    "summary": "Use classes to rehearse decisions, practical skills and questions—not as a promise that labour, feeding or recovery will follow one script.",
+    "details": [
+      "Look for coverage of labour changes, consent, pain options, caesarean and assisted birth, feeding support, newborn care, parent recovery and urgent signs. Ask about accessible formats, cost, partner inclusion and how advice connects to your planned birth service."
+    ],
+    "decisionFactors": [
+      "Pregnancy history, current findings and the capabilities of the planned birth setting",
+      "Consent, communication, pain relief, support, feeding and newborn-care preferences",
+      "How an urgent change, caesarean birth, preterm birth or neonatal admission would be handled"
+    ],
+    "careNote": "This is a general pregnancy baseline, not personal clearance. Change course and ask for advice if symptoms, complications or an individual care plan make the situation different.",
+    "careTier": "common",
+    "relatedIds": [],
+    "sourceIds": [
+      "nhs-preparing-birth",
+      "acog-labour-birth",
+      "who-newborn"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2027-07-31",
+      "reviewer": "Internal editorial record",
+      "volatility": "annual"
+    }
+  },
+  {
+    "id": "birth-newborn-preparation-hospital-bag",
+    "sectionId": "birth-newborn-preparation",
+    "recordType": "birth-preparation",
+    "stage": "pregnancy",
+    "intents": [
+      "plan-birth"
+    ],
+    "title": "Hospital or birth-centre bag",
+    "aliases": [
+      "hospital bag",
+      "labour bag",
+      "birth center bag",
+      "birth centre bag",
+      "what to pack for birth"
+    ],
+    "status": "generally-ok",
+    "priority": "P1",
+    "summary": "Pack for identification, medicines, communication, comfort, parent recovery, newborn clothing and the trip home rather than buying a long list of special products.",
+    "details": [
+      "Confirm what the birth service supplies and any restrictions. Keep pregnancy records, chargers, glasses or hearing equipment, regular medicines in original packaging, support-person essentials and a backup transport plan easy to reach."
+    ],
+    "decisionFactors": [
+      "Pregnancy history, current findings and the capabilities of the planned birth setting",
+      "Consent, communication, pain relief, support, feeding and newborn-care preferences",
+      "How an urgent change, caesarean birth, preterm birth or neonatal admission would be handled"
+    ],
+    "careNote": "This is a general pregnancy baseline, not personal clearance. Change course and ask for advice if symptoms, complications or an individual care plan make the situation different.",
+    "careTier": "common",
+    "relatedIds": [],
+    "sourceIds": [
+      "nhs-preparing-birth",
+      "acog-labour-birth"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2027-07-31",
+      "reviewer": "Internal editorial record",
+      "volatility": "annual"
+    }
+  },
+  {
+    "id": "birth-newborn-preparation-birth-ball",
+    "sectionId": "birth-newborn-preparation",
+    "recordType": "birth-preparation",
+    "stage": "pregnancy",
+    "intents": [
+      "plan-birth"
+    ],
+    "title": "Birth ball for movement and comfort",
+    "aliases": [
+      "birth ball",
+      "birthing ball",
+      "exercise ball labour",
+      "pregnancy ball"
+    ],
+    "status": "check-first",
+    "priority": "P1",
+    "summary": "A correctly sized, stable birth ball can support comfortable positions, but safe setup, balance and the birth setting matter.",
+    "details": [
+      "Practise with support before labour, use a non-slip surface and keep feet stable. Ask for help if balance, pain, numbness, dizziness, bleeding, fluid loss or an individual restriction makes independent use unsafe."
+    ],
+    "decisionFactors": [
+      "Pregnancy history, current findings and the capabilities of the planned birth setting",
+      "Consent, communication, pain relief, support, feeding and newborn-care preferences",
+      "How an urgent change, caesarean birth, preterm birth or neonatal admission would be handled"
+    ],
+    "careNote": "Check the exact item or situation with a doctor, midwife, pharmacist or relevant clinician; the name of a broad category is not enough for a personal decision.",
+    "careTier": "care-team",
+    "relatedIds": [],
+    "sourceIds": [
+      "nhs-preparing-birth",
+      "acog-exercise"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2027-07-31",
+      "reviewer": "Internal editorial record",
+      "volatility": "annual"
+    }
+  },
+  {
+    "id": "birth-newborn-preparation-perineal-massage",
+    "sectionId": "birth-newborn-preparation",
+    "recordType": "birth-preparation",
+    "stage": "pregnancy",
+    "intents": [
+      "plan-birth"
+    ],
+    "title": "Antenatal perineal massage",
+    "aliases": [
+      "perineal massage",
+      "perineum massage pregnancy",
+      "massage before birth",
+      "reduce perineal tear"
+    ],
+    "status": "check-first",
+    "priority": "P1",
+    "summary": "Ask when and how perineal massage may fit your birth preparation; it is optional and should not cause sharp pain, bleeding or pressure to continue.",
+    "details": [
+      "Use clean hands, a comfortable position and a simple product acceptable to your care team. Check first with vaginal infection, bleeding, ruptured membranes, placenta or cervical concerns, or advice to avoid vaginal insertion."
+    ],
+    "decisionFactors": [
+      "Pregnancy history, current findings and the capabilities of the planned birth setting",
+      "Consent, communication, pain relief, support, feeding and newborn-care preferences",
+      "How an urgent change, caesarean birth, preterm birth or neonatal admission would be handled"
+    ],
+    "careNote": "Check the exact item or situation with a doctor, midwife, pharmacist or relevant clinician; the name of a broad category is not enough for a personal decision.",
+    "careTier": "care-team",
+    "relatedIds": [],
+    "sourceIds": [
+      "nhs-preparing-birth",
+      "acog-labour-birth"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2027-07-31",
+      "reviewer": "Internal editorial record",
+      "volatility": "annual"
+    }
+  },
+  {
+    "id": "birth-newborn-preparation-water-birth",
+    "sectionId": "birth-newborn-preparation",
+    "recordType": "birth-preparation",
+    "stage": "pregnancy",
+    "intents": [
+      "plan-birth"
+    ],
+    "title": "Labouring in water or planning a water birth",
+    "aliases": [
+      "water birth",
+      "birth pool",
+      "labour in water",
+      "birthing pool"
+    ],
+    "status": "check-first",
+    "priority": "P1",
+    "summary": "Ask the planned birth service how water labour and birth are offered, who may use the pool and which changes would mean leaving it.",
+    "details": [
+      "Discuss water temperature, infection control, monitoring, pain options, entry and exit support, emergencies and transfer. Eligibility can change with symptoms, medicines, monitoring needs or pregnancy findings, so keep an alternative comfort plan."
+    ],
+    "decisionFactors": [
+      "Pregnancy history, current findings and the capabilities of the planned birth setting",
+      "Consent, communication, pain relief, support, feeding and newborn-care preferences",
+      "How an urgent change, caesarean birth, preterm birth or neonatal admission would be handled"
+    ],
+    "careNote": "Check the exact item or situation with a doctor, midwife, pharmacist or relevant clinician; the name of a broad category is not enough for a personal decision.",
+    "careTier": "care-team",
+    "relatedIds": [],
+    "sourceIds": [
+      "nhs-preparing-birth",
+      "acog-labour-birth"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2026-10-29",
+      "reviewer": "Internal editorial record",
+      "volatility": "rapid-review"
+    }
+  },
+  {
+    "id": "birth-newborn-preparation-skin-to-skin-first-hour",
+    "sectionId": "birth-newborn-preparation",
+    "recordType": "birth-preparation",
+    "stage": "pregnancy",
+    "intents": [
+      "plan-birth"
+    ],
+    "title": "Skin-to-skin contact and the first hour",
+    "aliases": [
+      "skin to skin",
+      "golden hour birth",
+      "first hour after birth",
+      "immediate newborn contact"
+    ],
+    "status": "generally-ok",
+    "priority": "P0",
+    "summary": "Ask for early skin-to-skin contact when parent and baby are stable, with staff supporting warmth, breathing, positioning and feeding cues.",
+    "details": [
+      "Include how this could work after caesarean birth and what happens if either person needs urgent care or separation. A support person may sometimes help with contact, but local practice and the baby's condition guide the plan."
+    ],
+    "decisionFactors": [
+      "Pregnancy history, current findings and the capabilities of the planned birth setting",
+      "Consent, communication, pain relief, support, feeding and newborn-care preferences",
+      "How an urgent change, caesarean birth, preterm birth or neonatal admission would be handled"
+    ],
+    "careNote": "This is a general pregnancy baseline, not personal clearance. Change course and ask for advice if symptoms, complications or an individual care plan make the situation different.",
+    "careTier": "common",
+    "relatedIds": [],
+    "sourceIds": [
+      "who-newborn",
+      "who-postnatal",
+      "acog-cesarean"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2027-07-31",
+      "reviewer": "Internal editorial record",
+      "volatility": "annual"
+    }
+  },
+  {
+    "id": "birth-newborn-preparation-rooming-in-separation-plan",
+    "sectionId": "birth-newborn-preparation",
+    "recordType": "birth-preparation",
+    "stage": "pregnancy",
+    "intents": [
+      "plan-birth"
+    ],
+    "title": "Rooming-in and an unexpected separation plan",
+    "aliases": [
+      "rooming in",
+      "baby stays in room",
+      "parent baby separation",
+      "newborn nursery",
+      "separated after birth"
+    ],
+    "status": "check-first",
+    "priority": "P1",
+    "summary": "Plan for parent and baby to stay together when clinically appropriate, and ask how contact, updates, consent and feeding support work if separation is needed.",
+    "details": [
+      "Clarify who may accompany the baby, how often updates are given, how expressed milk or chosen feeding support reaches the baby and how reunion is decided. Parent recovery and safe rest also need active support."
+    ],
+    "decisionFactors": [
+      "Pregnancy history, current findings and the capabilities of the planned birth setting",
+      "Consent, communication, pain relief, support, feeding and newborn-care preferences",
+      "How an urgent change, caesarean birth, preterm birth or neonatal admission would be handled"
+    ],
+    "careNote": "Check the exact item or situation with a doctor, midwife, pharmacist or relevant clinician; the name of a broad category is not enough for a personal decision.",
+    "careTier": "care-team",
+    "relatedIds": [],
+    "sourceIds": [
+      "who-newborn",
+      "who-postnatal"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2027-07-31",
+      "reviewer": "Internal editorial record",
+      "volatility": "annual"
+    }
+  },
+  {
+    "id": "birth-newborn-preparation-car-seat-transport-home",
+    "sectionId": "birth-newborn-preparation",
+    "recordType": "birth-preparation",
+    "stage": "pregnancy",
+    "intents": [
+      "plan-birth"
+    ],
+    "title": "Car seat and transport home after birth",
+    "aliases": [
+      "newborn car seat",
+      "infant car seat",
+      "transport baby home",
+      "car ride after birth"
+    ],
+    "status": "check-first",
+    "priority": "P1",
+    "summary": "Arrange a correctly fitted newborn restraint and a realistic journey-home plan before birth; a car seat is for travel, not routine sleep.",
+    "details": [
+      "Follow the seat and vehicle instructions, practise installation and ask for specialist advice for a very small or medically fragile baby. Plan who drives, how the recovering parent travels and what happens if discharge or transfer changes."
+    ],
+    "decisionFactors": [
+      "Pregnancy history, current findings and the capabilities of the planned birth setting",
+      "Consent, communication, pain relief, support, feeding and newborn-care preferences",
+      "How an urgent change, caesarean birth, preterm birth or neonatal admission would be handled"
+    ],
+    "careNote": "Check the exact item or situation with a doctor, midwife, pharmacist or relevant clinician; the name of a broad category is not enough for a personal decision.",
+    "careTier": "care-team",
+    "relatedIds": [],
+    "sourceIds": [
+      "nhtsa-seat-belts",
+      "cdc-safe-sleep",
+      "nhs-preparing-birth"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2027-07-31",
+      "reviewer": "Internal editorial record",
+      "volatility": "annual"
+    }
+  },
+  {
+    "id": "health-conditions-accessibility-interpreter-communication-plan",
+    "sectionId": "health-conditions-accessibility",
+    "recordType": "health-condition",
+    "stage": "pregnancy",
+    "intents": [
+      "test-care",
+      "symptom-support"
+    ],
+    "title": "Interpreter, plain-language or communication support",
+    "aliases": [
+      "medical interpreter pregnancy",
+      "sign language interpreter maternity",
+      "easy read pregnancy information",
+      "communication support birth",
+      "language access maternity"
+    ],
+    "status": "generally-ok",
+    "priority": "P0",
+    "summary": "Ask the service to record the communication support you need for routine visits, consent, urgent care, labour, birth and newborn information.",
+    "details": [
+      "This may include a qualified language or sign-language interpreter, captions, easy-read or large-print material, extra processing time, a communication board or permission for a chosen supporter. Important decisions should not depend on a child interpreting."
+    ],
+    "decisionFactors": [
+      "The exact diagnosis, current control, organ function and usual signs of deterioration",
+      "Every medicine, device, specialist and monitoring plan already in use",
+      "Communication, mobility, sensory, examination and support adjustments needed for usable care"
+    ],
+    "careNote": "This is a general pregnancy baseline, not personal clearance. Change course and ask for advice if symptoms, complications or an individual care plan make the situation different.",
+    "careTier": "common",
+    "relatedIds": [],
+    "sourceIds": [
+      "who-disability-reproductive-health",
+      "who-antenatal"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2027-07-31",
+      "reviewer": "Internal editorial record",
+      "volatility": "annual"
+    }
+  },
+  {
+    "id": "health-conditions-accessibility-service-animal-supporter",
+    "sectionId": "health-conditions-accessibility",
+    "recordType": "health-condition",
+    "stage": "pregnancy",
+    "intents": [
+      "test-care",
+      "symptom-support"
+    ],
+    "title": "Service animal, personal assistant or essential supporter",
+    "aliases": [
+      "service animal maternity",
+      "assistance dog pregnancy",
+      "personal assistant birth",
+      "caregiver maternity appointment",
+      "essential supporter pregnancy"
+    ],
+    "status": "check-first",
+    "priority": "P1",
+    "summary": "Plan early for the service animal, personal assistant or supporter who makes care accessible, including appointments, admission, procedures and emergencies.",
+    "details": [
+      "Ask what the facility needs to arrange, who handles the animal or equipment if you cannot, and how privacy and consent are protected. Record a backup plan without treating essential access support as an optional visitor."
+    ],
+    "decisionFactors": [
+      "The exact diagnosis, current control, organ function and usual signs of deterioration",
+      "Every medicine, device, specialist and monitoring plan already in use",
+      "Communication, mobility, sensory, examination and support adjustments needed for usable care"
+    ],
+    "careNote": "Check the exact item or situation with a doctor, midwife, pharmacist or relevant clinician; the name of a broad category is not enough for a personal decision.",
+    "careTier": "care-team",
+    "relatedIds": [],
+    "sourceIds": [
+      "who-disability-reproductive-health",
+      "who-antenatal"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2027-07-31",
+      "reviewer": "Internal editorial record",
+      "volatility": "annual"
+    }
+  },
+  {
+    "id": "health-conditions-accessibility-cultural-spiritual-care-preferences",
+    "sectionId": "health-conditions-accessibility",
+    "recordType": "health-condition",
+    "stage": "pregnancy",
+    "intents": [
+      "test-care",
+      "symptom-support"
+    ],
+    "title": "Cultural, religious or spiritual care preferences",
+    "aliases": [
+      "religious birth preferences",
+      "cultural maternity care",
+      "spiritual support birth",
+      "modesty request pregnancy",
+      "faith practices labour"
+    ],
+    "status": "generally-ok",
+    "priority": "P1",
+    "summary": "Put important language, modesty, food, blood-product, ritual, support-person and spiritual-care preferences into the care conversation before an urgent decision is needed.",
+    "details": [
+      "Ask what can be accommodated, what requires advance planning and how alternatives would be discussed if safety or resources change. Your preferences should be documented precisely without staff assuming that every person from a community wants the same thing."
+    ],
+    "decisionFactors": [
+      "The exact diagnosis, current control, organ function and usual signs of deterioration",
+      "Every medicine, device, specialist and monitoring plan already in use",
+      "Communication, mobility, sensory, examination and support adjustments needed for usable care"
+    ],
+    "careNote": "This is a general pregnancy baseline, not personal clearance. Change course and ask for advice if symptoms, complications or an individual care plan make the situation different.",
+    "careTier": "common",
+    "relatedIds": [],
+    "sourceIds": [
+      "who-antenatal",
+      "who-disability-reproductive-health"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2027-07-31",
+      "reviewer": "Internal editorial record",
+      "volatility": "annual"
+    }
+  },
+  {
+    "id": "health-conditions-accessibility-pregnancy-after-assisted-conception",
+    "sectionId": "health-conditions-accessibility",
+    "recordType": "health-condition",
+    "stage": "pregnancy",
+    "intents": [
+      "test-care",
+      "symptom-support"
+    ],
+    "title": "Pregnancy after IVF, donor conception or fertility treatment",
+    "aliases": [
+      "IVF pregnancy",
+      "donor egg pregnancy",
+      "donor sperm pregnancy",
+      "fertility treatment pregnancy",
+      "assisted conception pregnancy"
+    ],
+    "status": "check-first",
+    "priority": "P1",
+    "summary": "Tell maternity care the treatment type, embryo-transfer timing, medicines and clinic plan so the handoff into pregnancy care is explicit.",
+    "details": [
+      "Ask who confirms pregnancy location and number, who manages fertility medicines, when the fertility clinic hands over and whether any additional monitoring is recommended. Do not change prescribed support medicines without the prescribing team."
+    ],
+    "decisionFactors": [
+      "The exact diagnosis, current control, organ function and usual signs of deterioration",
+      "Every medicine, device, specialist and monitoring plan already in use",
+      "Communication, mobility, sensory, examination and support adjustments needed for usable care"
+    ],
+    "careNote": "Check the exact item or situation with a doctor, midwife, pharmacist or relevant clinician; the name of a broad category is not enough for a personal decision.",
+    "careTier": "care-team",
+    "relatedIds": [],
+    "sourceIds": [
+      "acog-prenatal-care",
+      "acog-ectopic-pregnancy",
+      "cdc-medicine"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2026-10-29",
+      "reviewer": "Internal editorial record",
+      "volatility": "rapid-review"
+    }
+  },
+  {
+    "id": "health-conditions-accessibility-sickle-cell-thalassaemia-condition",
+    "sectionId": "health-conditions-accessibility",
+    "recordType": "health-condition",
+    "stage": "pregnancy",
+    "intents": [
+      "test-care",
+      "symptom-support"
+    ],
+    "title": "Sickle cell disease or thalassaemia in pregnancy",
+    "aliases": [
+      "sickle cell disease pregnancy",
+      "thalassemia pregnancy",
+      "thalassaemia pregnancy",
+      "haemoglobinopathy pregnancy",
+      "hemoglobin disorder pregnancy"
+    ],
+    "status": "contact-care",
+    "priority": "P0",
+    "summary": "Arrange coordinated maternity and haematology care promptly for an inherited haemoglobin condition, including medicine, anaemia, pain, infection and birth planning.",
+    "details": [
+      "Carry your usual urgent-care plan and baseline information. New fever, chest pain, breathing difficulty, severe pain, dehydration or feeling acutely unwell needs prompt assessment; do not start or stop condition-specific medicines from a generic page."
+    ],
+    "decisionFactors": [
+      "The exact diagnosis, current control, organ function and usual signs of deterioration",
+      "Every medicine, device, specialist and monitoring plan already in use",
+      "Communication, mobility, sensory, examination and support adjustments needed for usable care"
+    ],
+    "careNote": "Contact your doctor or maternity service promptly and describe the timing, severity, associated symptoms and pregnancy week so they can choose the right assessment.",
+    "careTier": "care-team",
+    "relatedIds": [],
+    "sourceIds": [
+      "nhs-haemoglobin-screening",
+      "nhs-existing-conditions"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2026-10-29",
+      "reviewer": "Internal editorial record",
+      "volatility": "rapid-review"
+    }
+  },
+  {
+    "id": "common-symptoms-rib-side-chest-wall-pain",
+    "sectionId": "common-symptoms",
+    "recordType": "symptom",
+    "stage": "pregnancy",
+    "intents": [
+      "symptom-support"
+    ],
+    "title": "Rib, side or chest-wall pain",
+    "aliases": [
+      "rib pain pregnancy",
+      "pain under ribs",
+      "side pain pregnancy",
+      "chest wall pain",
+      "sore ribs pregnancy"
+    ],
+    "status": "contact-care",
+    "priority": "P1",
+    "summary": "Pain around the ribs can be musculoskeletal, but severe, persistent or upper-right pain needs assessment rather than being attributed to posture or the baby's position.",
+    "details": [
+      "Note whether movement, touch or breathing changes it and whether headache, vision change, swelling, fever, breathlessness, chest pressure, bleeding or feeling very unwell is present. Use emergency care for severe breathing difficulty, collapse or crushing chest pain."
+    ],
+    "decisionFactors": [
+      "When it began, whether it is worsening, and how it affects eating, sleep or activity",
+      "Severity, pattern, one-sided symptoms and accompanying bleeding, fever or fluid loss",
+      "Pregnancy week, baby movement and relevant conditions or medicines"
+    ],
+    "careNote": "Contact your doctor or maternity service promptly and describe the timing, severity, associated symptoms and pregnancy week so they can choose the right assessment.",
+    "careTier": "care-team",
+    "relatedIds": [],
+    "sourceIds": [
+      "nhs-pregnancy-symptoms",
+      "nhs-symptoms-help",
+      "cdc-warning"
+    ],
+    "review": {
+      "status": "editorial-ready",
+      "reviewedAt": "2026-07-31",
+      "nextReviewAt": "2026-10-29",
+      "reviewer": "Internal editorial record",
+      "volatility": "rapid-review"
     }
   }
 ]

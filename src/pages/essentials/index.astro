@@ -2,17 +2,15 @@
 import { getCollection } from "astro:content";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import EssentialTopicDirectory from "@/components/EssentialTopicDirectory.astro";
-import FindingSummary from "@/components/FindingSummary.astro";
+import AnswerDirectory from "@/components/react/AnswerDirectory";
 import RecentFindings from "@/components/react/RecentFindings";
 import SiteSearch from "@/components/react/SiteSearch";
 import SwapFinder from "@/components/react/SwapFinder";
 import ShareAnchor from "@/components/react/ShareAnchor";
 import {
-  essentialTopicHref,
   findingHref,
   findingIntentDefinitions,
   findingPriority,
-  findingStatusLabels,
   formatReviewDate,
 } from "@/lib/findings";
 import { withBase } from "@/lib/paths";
@@ -30,15 +28,18 @@ const findings = (await getCollection("findings"))
       findingPriority[a.priority] - findingPriority[b.priority] ||
       a.title.localeCompare(b.title),
   );
-const featuredFindings = topics
-  .map((topic) =>
-    findings.find(
-      (finding) => finding.sectionId === topic.id && finding.priority === "P0",
-    ),
-  )
-  .filter((finding): finding is NonNullable<typeof finding> =>
-    Boolean(finding),
-  );
+const directoryTopics = topics.map((topic) => ({
+  ...topic,
+  findingCount: findings.filter((finding) => finding.sectionId === topic.id)
+    .length,
+  examples: findings
+    .filter(
+      (finding) =>
+        finding.sectionId === topic.id && finding.priority !== "baseline",
+    )
+    .slice(0, 3)
+    .map((finding) => finding.title),
+}));
 const recentCatalog = findings.map((finding) => ({
   id: finding.id,
   title: finding.title,
@@ -58,7 +59,7 @@ const schema = {
 
 <BaseLayout
   title="Pregnancy essentials: find a direct answer"
-  description="Search 419 source-backed pregnancy findings or browse complete do, don’t and check-first guidance by topic."
+  description={`Search ${findings.length} source-backed pregnancy findings or browse complete do, don’t and check-first guidance by topic.`}
   schema={schema}
 >
   <section class="page-hero essentials-hero essentials-overview-hero">
@@ -66,12 +67,23 @@ const schema = {
       <p class="eyebrow">One handbook · no hidden answers</p>
       <h1>Find the pregnancy<br />answer you need.</h1>
       <p class="lede">
-        Search the whole guide, start with what you are trying to do, or browse
-        one complete topic. Every direct answer has a stable page, care
+        Search the whole guide or explore {findings.length} direct answers across
+        {topics.length} clearly named topics. Every answer has a permanent link, care
         threshold and review date.
       </p>
     </div>
   </section>
+
+  <nav class="essentials-page-nav" aria-label="On this Essentials page">
+    <div class="shell">
+      <span>You are in Pregnancy essentials</span>
+      <a href="#find-an-answer">Search</a>
+      <a href="#start-with-your-question">Browse by need</a>
+      <a href="#pregnancy-topic-directory">See all {topics.length} topics</a>
+      <a href="#answer-library">Filter {findings.length} answers</a>
+      <a href="#smart-swaps">Food and drink swaps</a>
+    </div>
+  </nav>
 
   <section
     class="section essentials-search-section"
@@ -114,10 +126,10 @@ const schema = {
       <div class="section-heading">
         <div>
           <p class="eyebrow">Start with what you are trying to do</p>
-          <h2>Six clearer ways into the handbook</h2>
+          <h2>Choose the kind of answer you need</h2>
           <p>
-            These are navigation shortcuts, not a symptom checker. Each opens a
-            complete pregnancy topic with visible guidance.
+            These shortcuts filter the complete answer library below. They do
+            not assess a symptom or make a personal recommendation.
           </p>
         </div>
       </div>
@@ -127,7 +139,7 @@ const schema = {
             <a href={withBase(intent.href)}>
               <strong>{intent.label}</strong>
               <span>{intent.detail}</span>
-              <small>Browse guidance →</small>
+              <small>Filter all matching answers →</small>
             </a>
           ))
         }
@@ -143,93 +155,42 @@ const schema = {
 
   <section class="section topic-directory-section">
     <div class="shell">
-      <EssentialTopicDirectory topics={topics} />
+      <EssentialTopicDirectory
+        topics={directoryTopics}
+        heading="See the whole handbook before you choose"
+        description={`There are ${topics.length} complete topics and ${findings.length} direct answers. Every topic page keeps its practical baseline and its own smaller answer collection together.`}
+      />
     </div>
   </section>
 
   <section
-    class="section soft essentials-baseline-overview"
-    id="everyday-baseline"
+    class="section soft answer-library-section"
+    id="answer-library"
     data-share-target
     tabindex="-1"
   >
     <div class="shell">
       <ShareAnchor
-        targetId="everyday-baseline"
-        label="pregnancy essentials baseline"
+        targetId="answer-library"
+        label="pregnancy direct-answer library"
       />
       <div class="section-heading">
         <div>
-          <p class="eyebrow">Useful without search</p>
-          <h2>Every topic at a glance</h2>
+          <p class="eyebrow">One filterable collection</p>
+          <h2>Find your way through every direct answer</h2>
           <p>
-            The first do, don’t and check-first action remains visible here.
-            Open a topic for its full baseline and every direct answer.
+            Filter by topic, the job you are trying to do and the next step the
+            answer may require. The focused view removes short baseline records
+            that can look repetitive beside deeper answers; searching still
+            checks the complete collection.
           </p>
         </div>
       </div>
-      <div class="baseline-topic-grid">
-        {
-          topics.map((topic) => (
-            <article>
-              <span class="baseline-topic-number" aria-hidden="true">
-                {String(topic.number).padStart(2, "0")}
-              </span>
-              <p class="eyebrow">{topic.eyebrow}</p>
-              <h3>{topic.title}</h3>
-              <p>{topic.intro}</p>
-              <dl>
-                <div>
-                  <dt>Do</dt>
-                  <dd>{topic.dos[0]}</dd>
-                </div>
-                <div>
-                  <dt>Don’t</dt>
-                  <dd>{topic.donts[0]}</dd>
-                </div>
-                <div>
-                  <dt>Check first</dt>
-                  <dd>{topic.askDoctor[0]}</dd>
-                </div>
-              </dl>
-              <a href={withBase(essentialTopicHref(topic.slug))}>
-                Open {topic.title.toLowerCase()} →
-              </a>
-            </article>
-          ))
-        }
-      </div>
-    </div>
-  </section>
-
-  <section
-    class="section featured-finding-section"
-    id="important-direct-answers"
-    data-share-target
-    tabindex="-1"
-  >
-    <div class="shell">
-      <ShareAnchor
-        targetId="important-direct-answers"
-        label="important pregnancy direct answers"
+      <AnswerDirectory
+        client:load
+        findings={findings}
+        topics={topics.map((topic) => ({ id: topic.id, title: topic.title }))}
       />
-      <div class="section-heading">
-        <div>
-          <p class="eyebrow">Important direct answers</p>
-          <h2>One high-priority answer from every topic</h2>
-          <p>
-            These are broad entry points. Open any answer for its full factors,
-            care threshold, related guidance, save, share and print controls.
-          </p>
-        </div>
-      </div>
-      <div class="featured-finding-grid">
-        {
-          featuredFindings.map((finding) => (
-            <FindingSummary finding={finding} compact idPrefix="featured-" />
-          ))
-        }
-      </div>
     </div>
   </section>
 
@@ -256,49 +217,12 @@ const schema = {
     </div>
   </section>
 
-  <section
-    class="section soft legacy-finding-directory"
-    id="all-direct-answers"
-    data-share-target
-    tabindex="-1"
-  >
-    <div class="shell">
-      <ShareAnchor
-        targetId="all-direct-answers"
-        label="all pregnancy direct answers"
-      />
-      <div class="section-heading">
-        <div>
-          <p class="eyebrow">Stable link directory</p>
-          <h2>All {findings.length} answers, A–Z</h2>
-          <p>
-            Existing shared anchors remain valid. Each item now opens a smaller,
-            permanent finding page with its complete guidance.
-          </p>
-        </div>
-      </div>
-      <ol class="legacy-finding-list">
-        {
-          [...findings]
-            .sort((a, b) => a.title.localeCompare(b.title))
-            .map((finding) => (
-              <li id={finding.id} data-share-target tabindex="-1">
-                <a href={withBase(findingHref(finding.id))}>
-                  <span class={`example-status ${finding.status}`}>
-                    {findingStatusLabels[finding.status]}
-                  </span>
-                  <strong>{finding.title}</strong>
-                  <small>{finding.summary}</small>
-                </a>
-              </li>
-            ))
-        }
-      </ol>
-      <p class="reviewed-date">
-        Topic records updated {
-          formatReviewDate(topics[0]?.review.reviewedAt ?? "2026-08-03")
-        }.
-      </p>
-    </div>
-  </section>
+  <div class="shell essentials-review-note">
+    <p class="reviewed-date">
+      Topic records updated {
+        formatReviewDate(topics[0]?.review.reviewedAt ?? "2026-08-03")
+      }. Every permanent answer remains available through its topic and the
+      filterable library.
+    </p>
+  </div>
 </BaseLayout>

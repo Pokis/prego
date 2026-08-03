@@ -167,10 +167,18 @@ const findingRecordTypes = new Set([
 ]);
 const findingCareTiers = new Set(["common", "care-team", "urgent"]);
 const findingDetailSignatures = new Map();
+const findingTitleSignatures = new Map();
 
 for (const finding of data.findings) {
   if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(finding.id))
     errors.push(`finding ${finding.id} does not have a stable slug id`);
+  const titleSignature = normalizeFindingTerm(finding.title);
+  const priorTitle = findingTitleSignatures.get(titleSignature);
+  if (priorTitle)
+    errors.push(
+      `findings ${priorTitle} and ${finding.id} duplicate the same reader-facing title`,
+    );
+  else findingTitleSignatures.set(titleSignature, finding.id);
   if (!Array.isArray(finding.aliases) || finding.aliases.length < 2)
     errors.push(`finding ${finding.id} needs at least two controlled aliases`);
   else if (

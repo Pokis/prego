@@ -798,5 +798,95 @@
     "retrievedAt": "2026-08-03",
     "cadence": "rapid-review",
     "note": "Bleeding, perineal recovery, bladder and bowel changes, pelvic-floor recovery and reasons to contact postnatal care."
+  },
+  {
+    "id": "acog-weight-gain",
+    "authority": "American College of Obstetricians and Gynecologists",
+    "title": "Weight Gain During Pregnancy",
+    "url": "https://www.acog.org/clinical/clinical-guidance/committee-opinion/articles/2013/01/weight-gain-during-pregnancy",
+    "publishedOrUpdated": "2013-01-01",
+    "retrievedAt": "2026-08-03",
+    "cadence": "annual",
+    "note": "Individual pregnancy weight-gain planning based on prepregnancy context, nutrition, activity and fetal growth rather than one universal target."
+  },
+  {
+    "id": "acog-obesity-pregnancy",
+    "authority": "American College of Obstetricians and Gynecologists",
+    "title": "Obesity and Pregnancy",
+    "url": "https://www.acog.org/womens-health/faqs/obesity-and-pregnancy",
+    "publishedOrUpdated": "Current page; date not stated",
+    "retrievedAt": "2026-08-03",
+    "cadence": "annual",
+    "note": "Non-stigmatising care planning for body size, nutrition, activity, monitoring and pregnancy after bariatric surgery."
+  },
+  {
+    "id": "acog-diagnostic-imaging",
+    "authority": "American College of Obstetricians and Gynecologists",
+    "title": "Guidelines for Diagnostic Imaging During Pregnancy and Lactation",
+    "url": "https://www.acog.org/clinical/clinical-guidance/committee-opinion/articles/2017/10/guidelines-for-diagnostic-imaging-during-pregnancy-and-lactation",
+    "publishedOrUpdated": "2017-10-01",
+    "retrievedAt": "2026-08-03",
+    "cadence": "rapid-review",
+    "note": "Diagnostic ultrasound should answer a clinical question and use appropriate equipment and exposure settings."
+  },
+  {
+    "id": "acog-ectopic-pregnancy",
+    "authority": "American College of Obstetricians and Gynecologists",
+    "title": "Ectopic Pregnancy",
+    "url": "https://www.acog.org/womens-health/faqs/ectopic-pregnancy",
+    "publishedOrUpdated": "2026-04-01",
+    "retrievedAt": "2026-08-03",
+    "cadence": "rapid-review",
+    "note": "Ectopic-pregnancy symptoms, diagnosis, treatment, follow-up and emergency thresholds."
+  },
+  {
+    "id": "nhs-molar-pregnancy",
+    "authority": "National Health Service",
+    "title": "Molar pregnancy",
+    "url": "https://www.nhs.uk/conditions/molar-pregnancy/",
+    "publishedOrUpdated": "2023-07-01",
+    "retrievedAt": "2026-08-03",
+    "cadence": "rapid-review",
+    "note": "Plain-language orientation to molar pregnancy, specialist treatment, hormone follow-up and emotional support."
+  },
+  {
+    "id": "nhs-preparing-birth",
+    "authority": "National Health Service",
+    "title": "Preparing for labour and birth",
+    "url": "https://www.nhs.uk/best-start-in-life/pregnancy/preparing-for-labour-and-birth/",
+    "publishedOrUpdated": "2026-08-03",
+    "retrievedAt": "2026-08-03",
+    "cadence": "annual",
+    "note": "Practical preparation including classes, birth preferences, hospital bags, birth balls, place of birth and newborn essentials."
+  },
+  {
+    "id": "who-tobacco-smoke-pregnancy",
+    "authority": "World Health Organization",
+    "title": "WHO recommendations for the prevention and management of tobacco use and second-hand smoke exposure in pregnancy",
+    "url": "https://www.who.int/publications/i/item/9789241506076",
+    "publishedOrUpdated": "2013-11-15",
+    "retrievedAt": "2026-08-03",
+    "cadence": "annual",
+    "note": "Identification, support and exposure reduction for tobacco and second-hand smoke during pregnancy."
+  },
+  {
+    "id": "cdc-wildfire-pregnancy",
+    "authority": "US Centers for Disease Control and Prevention",
+    "title": "Wildfire Smoke and Pregnancy",
+    "url": "https://www.cdc.gov/wildfires/risk-factors/wildfire-smoke-and-pregnancy.html",
+    "publishedOrUpdated": "2024-04-18",
+    "retrievedAt": "2026-08-03",
+    "cadence": "rapid-review",
+    "note": "Air-quality monitoring, indoor exposure reduction, evacuation planning and respiratory-symptom escalation during wildfire smoke."
+  },
+  {
+    "id": "nhs-haemoglobin-screening",
+    "authority": "National Health Service",
+    "title": "Screening for sickle cell and thalassaemia",
+    "url": "https://www.nhs.uk/pregnancy/your-pregnancy-care/screening-for-sickle-cell-and-thalassaemia/",
+    "publishedOrUpdated": "2026-05-06",
+    "retrievedAt": "2026-08-03",
+    "cadence": "rapid-review",
+    "note": "Carrier screening, inherited blood-condition results, partner testing and supported diagnostic choices."
   }
 ]

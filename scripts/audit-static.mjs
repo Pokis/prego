@@ -240,20 +240,20 @@ if (existsSync(essentialsHtmlPath)) {
     "find-an-answer",
     "start-with-your-question",
     "pregnancy-topic-directory",
-    "important-direct-answers",
-    "all-direct-answers",
+    "answer-library",
     "swap-cola-label-check",
   ])
     if (!essentialsHtml.includes(`data-share-anchor="${id}"`))
       errors.push(`Essentials static HTML is missing copy link for #${id}.`);
 
-  for (const legacyId of [
-    "food-dishes-sushi",
-    "everyday-home-hot-tub-or-sauna",
-    "pregnancy-complications-gestational-diabetes-diagnosis",
+  for (const expected of [
+    'id="answer-directory-query"',
+    "permanent answers",
+    "Key and detailed answers",
+    "See all 18 topics",
   ])
-    if (!essentialsHtml.includes(`id="${legacyId}"`))
-      errors.push(`Essentials static HTML lost legacy anchor #${legacyId}.`);
+    if (!essentialsHtml.includes(expected))
+      errors.push(`Essentials static HTML is missing navigation: ${expected}.`);
 }
 
 const topicHtmlPath = resolve(dist, "essentials", "food-dishes", "index.html");
@@ -262,9 +262,10 @@ if (existsSync(topicHtmlPath)) {
   for (const expected of [
     'id="topic-baseline"',
     'id="direct-answers"',
-    'id="food-dishes-sushi"',
-    "What changes the answer",
-    "Care threshold:",
+    'id="answer-directory-query"',
+    "Everyday examples",
+    "Well-cooked chicken, beef, pork or lamb",
+    "/essentials/finding/food-dishes-smoked-seafood/",
   ])
     if (!topicHtml.includes(expected))
       errors.push(`Pregnancy topic page is missing ${expected}.`);

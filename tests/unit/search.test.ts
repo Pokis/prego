@@ -73,6 +73,16 @@ const expectedQueries = [
     "birth-newborn-preparation-a-one-page-birth-preference-note",
   ],
   ["safe sleep space", "birth-newborn-preparation-newborn-sleep-space"],
+  ["weight gain", "food-dishes-pregnancy-weight-gain-pattern"],
+  ["home doppler", "appointments-warning-signs-home-fetal-doppler"],
+  ["wildfire smoke", "everyday-home-wildfire-smoke-air-quality"],
+  ["molar pregnancy", "loss-uncertainty-support-molar-pregnancy-followup"],
+  ["hospital bag", "birth-newborn-preparation-hospital-bag"],
+  ["skin to skin", "birth-newborn-preparation-skin-to-skin-first-hour"],
+  [
+    "medical interpreter pregnancy",
+    "health-conditions-accessibility-interpreter-communication-plan",
+  ],
 ] as const;
 
 describe("guide search", () => {

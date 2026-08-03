@@ -10,7 +10,7 @@ The public navigation is deliberately small:
 
 - **Getting pregnant** — conception tips, a six-step plan, dos and don’ts, chance-versus-health explanations, fertility myths, common hurdles and when to seek help.
 - **Timeline** — positive test, nine month map, trimester overviews, weeks 3–42 and important care windows.
-- **Pregnancy essentials** — eighteen direct do/don’t/check-first topics, 419 stable finding pages, resilient whole-term search and a separate food-and-drink substitute finder.
+- **Pregnancy essentials** — eighteen direct do/don’t/check-first topics, 440 stable finding pages, a filterable answer library, resilient whole-term search and a separate food-and-drink substitute finder.
 - **For partners** — useful support actions at important pregnancy weeks.
 - **Urgent help** — clearly separated pregnancy, postpartum and young-baby warning signs.
 
@@ -21,7 +21,7 @@ The current content includes:
 - 40 distinct weekly pregnancy chapters with a unique title, action, caution, clarification, appointment prompt and partner action.
 - A fully expanded getting-pregnant guide with a six-step plan, couple-level dos and don’ts, nine chance-versus-health comparisons, eight myth corrections and clear points for seeking help.
 - A nine-month orientation map that also explains why medical care counts pregnancy in weeks.
-- Eighteen pregnancy-essential topics and 419 source-backed finding records. The catalog includes 179 P0, 153 P1 and 87 baseline answers across food and drinks, exercise, medicines, home and work exposures, travel, sexual health, sleep, tests, birth choices, symptoms, personal care, infections, mental health, chronic conditions, accessibility, pregnancy complications, loss and uncertainty, and newborn preparation.
+- Eighteen pregnancy-essential topics and 440 source-backed finding records. The catalog includes 193 P0, 167 P1 and 80 deduplicated baseline answers across food and drinks, exercise, medicines, home and work exposures, travel, sexual health, sleep, tests, birth choices, symptoms, personal care, infections, mental health, chronic conditions, accessibility, pregnancy complications, loss and uncertainty, and newborn preparation.
 - Each finding is a database-like public record with a stable ID, permanent page and direct anchor, record type, task intents, care tier, controlled aliases, concise answer, supporting detail, three decision factors, related records, an explicit care threshold and internal sources. The catalog is intentionally broad but remains general guidance—not a diagnostic or individualized-risk database.
 - Fourteen searchable substitute cards for common drinks and foods, each with one clear verdict, the reason, two or three ranked alternatives and a label check.
 - 21 date-window milestones for appointments, tests, decisions and preparation.
@@ -138,7 +138,7 @@ Each essential contains:
 
 The labels are general guidance, not individualized approval. “Check first” always means checking the exact product, activity, symptom or health context with a doctor, midwife or pharmacist.
 
-Each topic has its own `/essentials/<topic>/` route with the full baseline and every finding visible. Each finding also has a permanent `/essentials/finding/<id>/` route with a matching anchor, related answers, reviewed date and device-only save/share/print controls. Legacy `/essentials/#<id>` links remain valid through the A–Z directory.
+Each topic has its own `/essentials/<topic>/` route with the full do/don’t/check-first baseline, concrete examples and a filterable topic answer collection. The Essentials overview adds a sticky page map, topic counts and examples, task-based shortcuts and filters for topic, intent, next step and depth. Each finding also has a permanent `/essentials/finding/<id>/` route with a matching anchor, related answers, reviewed date and device-only save/share/print controls.
 
 ### Practical substitute
 

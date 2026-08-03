@@ -10,6 +10,8 @@ interface Topic {
   title: string;
   eyebrow: string;
   intro: string;
+  findingCount?: number;
+  examples?: string[];
 }
 
 interface Props {
@@ -57,6 +59,16 @@ const {
           <div>
             <strong>{topic.title}</strong>
             <small>{topic.eyebrow}</small>
+            {typeof topic.findingCount === "number" && (
+              <span class="topic-directory-count">
+                {topic.findingCount} direct answers
+              </span>
+            )}
+            {topic.examples && topic.examples.length > 0 && (
+              <span class="topic-directory-examples">
+                Includes {topic.examples.join(", ")}
+              </span>
+            )}
           </div>
         </a>
       ))

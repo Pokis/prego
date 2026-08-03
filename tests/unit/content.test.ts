@@ -24,16 +24,26 @@ describe("generated content coverage", () => {
 
   it("ships broad finding-level coverage with stable direct anchors", () => {
     const findings = load("findings");
-    expect(findings.length).toBeGreaterThanOrEqual(419);
+    expect(findings.length).toBeGreaterThanOrEqual(440);
     expect(
       findings.filter((finding: any) => finding.priority === "P0").length,
-    ).toBeGreaterThanOrEqual(179);
+    ).toBeGreaterThanOrEqual(193);
     expect(
       findings.filter((finding: any) => finding.priority === "P1").length,
-    ).toBeGreaterThanOrEqual(153);
+    ).toBeGreaterThanOrEqual(167);
     expect(new Set(findings.map((finding: any) => finding.id)).size).toBe(
       findings.length,
     );
+    expect(
+      new Set(
+        findings.map((finding: any) =>
+          finding.title
+            .toLowerCase()
+            .replace(/[^a-z0-9]+/g, " ")
+            .trim(),
+        ),
+      ).size,
+    ).toBe(findings.length);
     expect(
       findings.every(
         (finding: any) =>
@@ -105,10 +115,18 @@ describe("generated content coverage", () => {
     expect(sectionCounts.get("infections-vaccinations")).toBeGreaterThanOrEqual(
       26,
     );
-    expect(sectionCounts.get("health-conditions-accessibility")).toBe(13);
-    expect(sectionCounts.get("pregnancy-complications")).toBe(13);
-    expect(sectionCounts.get("loss-uncertainty-support")).toBe(12);
-    expect(sectionCounts.get("birth-newborn-preparation")).toBe(13);
+    expect(
+      sectionCounts.get("health-conditions-accessibility"),
+    ).toBeGreaterThanOrEqual(19);
+    expect(sectionCounts.get("pregnancy-complications")).toBeGreaterThanOrEqual(
+      14,
+    );
+    expect(
+      sectionCounts.get("loss-uncertainty-support"),
+    ).toBeGreaterThanOrEqual(13);
+    expect(
+      sectionCounts.get("birth-newborn-preparation"),
+    ).toBeGreaterThanOrEqual(20);
   });
 
   it("keeps every postpartum period stage-specific", () => {

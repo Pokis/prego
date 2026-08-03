@@ -447,9 +447,7 @@ test("essentials show direct dos, donts and food examples", async ({
     page.getByText("Well-cooked chicken, beef, pork or lamb", { exact: true }),
   ).toBeVisible();
   await expect(page.locator("main details")).toHaveCount(0);
-  await expect(
-    page.getByText("What changes the answer", { exact: true }).first(),
-  ).toBeVisible();
+  await expect(page.getByLabel("Filter these answers")).toBeVisible();
   await page.goto("/essentials/");
   await expect(
     page
@@ -461,6 +459,85 @@ test("essentials show direct dos, donts and food examples", async ({
       .getByRole("link", { name: /Mental health, relationships and safety/ })
       .first(),
   ).toBeVisible();
+});
+
+test("essentials maps the page and filters the answer library without duplicate rows", async ({
+  page,
+}) => {
+  await page.goto("/essentials/");
+
+  const pageMap = page.getByRole("navigation", {
+    name: "On this Essentials page",
+  });
+  await expect(pageMap).toBeVisible();
+  await expect(
+    pageMap.getByRole("link", { name: "See all 18 topics" }),
+  ).toBeVisible();
+  await expect(
+    page.getByText("440 permanent answers", { exact: true }),
+  ).toBeVisible();
+  await expect(page.getByText(/Includes .*placenta/i).first()).toBeVisible();
+
+  const visibleTitles = await page
+    .locator(".answer-directory-list > li > a > strong")
+    .allTextContents();
+  expect(new Set(visibleTitles).size).toBe(visibleTitles.length);
+
+  const librarySearch = page.getByLabel("Filter these answers");
+  await librarySearch.fill("hospital bag");
+  await expect(
+    page.getByRole("link", { name: /Hospital or birth-centre bag/i }),
+  ).toBeVisible();
+  await expect(page.getByText(/Showing 1 of 1 matching answers/)).toBeVisible();
+
+  await librarySearch.fill("cann");
+  await expect(
+    page.getByText("No direct answer matches all of those filters."),
+  ).toBeVisible();
+  await page.getByRole("button", { name: "Reset answer filters" }).click();
+
+  await page
+    .getByLabel("Topic", { exact: true })
+    .selectOption("birth-newborn-preparation");
+  await expect(
+    page.locator(".answer-directory-list").getByRole("link", {
+      name: /Skin-to-skin contact and the first hour/i,
+    }),
+  ).toBeVisible();
+  await expect(page).toHaveURL(/topic=birth-newborn-preparation/);
+});
+
+test("essentials task shortcuts are shareable and include newly covered gaps", async ({
+  page,
+}) => {
+  await page.goto("/essentials/");
+  await page
+    .getByRole("link", { name: /I am planning birth and newborn care/i })
+    .click();
+  await expect(page).toHaveURL(/intent=plan-birth#answer-library$/);
+  await expect(page.getByLabel("What you need")).toHaveValue("plan-birth");
+  await expect(
+    page.getByRole("link", {
+      name: /Antenatal, childbirth and newborn-care classes/i,
+    }),
+  ).toBeVisible();
+
+  await page.getByLabel("What you need").selectOption("all");
+  await page.getByLabel("Filter these answers").fill("home doppler");
+  await expect(
+    page.getByRole("link", {
+      name: /Home fetal Doppler or heartbeat monitor/i,
+    }),
+  ).toBeVisible();
+  await page
+    .getByRole("link", { name: /Home fetal Doppler or heartbeat monitor/i })
+    .click();
+  await expect(page).toHaveURL(
+    /\/essentials\/finding\/appointments-warning-signs-home-fetal-doppler\/$/,
+  );
+  await expect(
+    page.locator("#appointments-warning-signs-home-fetal-doppler"),
+  ).toContainText("Do not use a home heartbeat device");
 });
 
 test("important findings have copyable deep links", async ({ page }) => {

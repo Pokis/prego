@@ -29,13 +29,13 @@ Generated JSON must not become a second source of truth. Edit the generator, reg
 
 ## Finding coverage and search
 
-Finding IDs are public route and fragment contracts: every record renders at `/essentials/finding/<finding-id>/#<finding-id>`, and the search index points to the permanent page. The overview retains `/essentials/#<finding-id>` legacy anchors so existing shared links continue to work. P0 marks a high-consequence or highly expected answer, P1 marks an important breadth gap, and `baseline` retains a concrete example from the original essentials structure. Priority affects ranking and audit thresholds; it does not imply a diagnosis or an individual risk score.
+Finding IDs are public route and fragment contracts: every record renders at `/essentials/finding/<finding-id>/#<finding-id>`, and the search index and filterable answer library point to the permanent page. P0 marks a high-consequence or highly expected answer, P1 marks an important breadth gap, and `baseline` retains a concrete example from the original essentials structure. Redundant baseline records are removed when a deeper canonical answer replaces them. Priority affects ranking and audit thresholds; it does not imply a diagnosis or an individual risk score.
 
 Every finding exposes the same decision-support shape in the static page: a direct answer, practical clarification, three section-specific factors that can change the answer and a status-specific care threshold. `recordType` makes the generated collection useful to future static views without turning the reader experience into a filter maze. These fields provide structured general guidance; they must never be interpreted as a symptom assessment, contraindication engine or personalized clearance.
 
 Aliases are a controlled vocabulary, not a bag of substrings. Add ordinary spelling, abbreviations and genuinely equivalent phrases. Whole query terms must match whole indexed terms; exact titles and aliases receive the strongest boosts. Medical prose stays in the finding record while `SiteSearch.tsx` handles only loading, offline, failure and result presentation.
 
-`scripts/content-coverage.mjs` is the machine-readable coverage contract for at least 419 findings, all eighteen topic and priority floors, task intents, required families, known zero-result queries, after-birth topics and postpartum periods. Expand it when a new topic family becomes part of the product baseline. Run `npm run report:coverage` for a readable matrix by topic, priority, intent and search shard.
+`scripts/content-coverage.mjs` is the machine-readable coverage contract for at least 440 findings, all eighteen topic and priority floors, task intents, required families, known zero-result queries, after-birth topics and postpartum periods. Expand it when a new topic family becomes part of the product baseline. Run `npm run report:coverage` for a readable matrix by topic, priority, intent and search shard.
 
 ## Postpartum authoring
 

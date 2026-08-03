@@ -3,11 +3,12 @@ import { getCollection } from "astro:content";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import Breadcrumbs from "@/components/Breadcrumbs.astro";
 import EssentialTopicDirectory from "@/components/EssentialTopicDirectory.astro";
-import FindingSummary from "@/components/FindingSummary.astro";
+import AnswerDirectory from "@/components/react/AnswerDirectory";
 import ShareAnchor from "@/components/react/ShareAnchor";
 import {
   essentialTopicHref,
   findingPriority,
+  findingStatusLabels,
   formatReviewDate,
 } from "@/lib/findings";
 import { withBase } from "@/lib/paths";
@@ -31,8 +32,8 @@ const topics = (await getCollection("essentials"))
 const topic = topics.find((item) => item.id === topicId);
 if (!topic) throw new Error(`Unknown Essentials topic ${topicId}`);
 
-const findings = (await getCollection("findings"))
-  .map((item) => item.data)
+const allFindings = (await getCollection("findings")).map((item) => item.data);
+const findings = allFindings
   .filter((finding) => finding.sectionId === topic.id)
   .sort(
     (a, b) =>
@@ -42,6 +43,18 @@ const findings = (await getCollection("findings"))
 const currentIndex = topics.findIndex((item) => item.id === topic.id);
 const previousTopic = topics[currentIndex - 1];
 const nextTopic = topics[currentIndex + 1];
+const directoryTopics = topics.map((item) => ({
+  ...item,
+  findingCount: allFindings.filter((finding) => finding.sectionId === item.id)
+    .length,
+  examples: allFindings
+    .filter(
+      (finding) =>
+        finding.sectionId === item.id && finding.priority !== "baseline",
+    )
+    .slice(0, 2)
+    .map((finding) => finding.title),
+}));
 const schema = {
   "@context": "https://schema.org",
   "@type": "MedicalWebPage",
@@ -86,7 +99,7 @@ const schema = {
   <nav class="topic-page-actions shell" aria-label="Topic navigation">
     <a href={withBase("/essentials/#find-an-answer")}>Search all answers</a>
     <a href="#topic-baseline">Read the baseline</a>
-    <a href="#direct-answers">Browse direct answers</a>
+    <a href="#direct-answers">Filter direct answers</a>
     <a href="#pregnancy-topic-directory">All topics</a>
   </nav>
 
@@ -126,6 +139,29 @@ const schema = {
           <ul>{topic.askDoctor.map((rule) => <li>{rule}</li>)}</ul>
         </article>
       </div>
+      <div class="topic-baseline-examples">
+        <div>
+          <p class="eyebrow">Concrete starting points</p>
+          <h3>Everyday examples</h3>
+          <p>
+            These short examples establish the topic baseline. Use the answer
+            library below for deeper guidance and individual care thresholds.
+          </p>
+        </div>
+        <ul>
+          {
+            topic.examples.map((example) => (
+              <li>
+                <span class={`example-status ${example.status}`}>
+                  {findingStatusLabels[example.status]}
+                </span>
+                <strong>{example.name}</strong>
+                <small>{example.guidance}</small>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
     </div>
   </section>
 
@@ -145,20 +181,24 @@ const schema = {
           <p class="eyebrow">Complete topic collection</p>
           <h2>{findings.length} direct answers</h2>
           <p>
-            Each answer leads with the bottom line, then shows what changes it
-            and when care is needed. Nothing is hidden in an accordion.
+            Filter this topic by what you need and the next step. Each result
+            opens a permanent page with its complete guidance, decision factors
+            and care threshold.
           </p>
         </div>
       </div>
-      <div class="topic-finding-list">
-        {findings.map((finding) => <FindingSummary finding={finding} />)}
-      </div>
+      <AnswerDirectory
+        client:load
+        findings={findings}
+        topics={[{ id: topic.id, title: topic.title }]}
+        initialTopic={topic.id}
+      />
     </div>
   </section>
 
   <section class="section topic-directory-section">
     <div class="shell">
-      <EssentialTopicDirectory topics={topics} activeId={topic.id} />
+      <EssentialTopicDirectory topics={directoryTopics} activeId={topic.id} />
       <nav class="previous-next-topics" aria-label="Previous and next topics">
         {
           previousTopic ? (

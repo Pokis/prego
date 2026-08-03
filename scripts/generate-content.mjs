@@ -861,6 +861,105 @@ const sources = [
     "Bleeding, perineal recovery, bladder and bowel changes, pelvic-floor recovery and reasons to contact postnatal care.",
     "2026-08-03",
   ],
+  [
+    "acog-weight-gain",
+    "American College of Obstetricians and Gynecologists",
+    "Weight Gain During Pregnancy",
+    "https://www.acog.org/clinical/clinical-guidance/committee-opinion/articles/2013/01/weight-gain-during-pregnancy",
+    ["general"],
+    "2013-01-01",
+    "annual",
+    "Individual pregnancy weight-gain planning based on prepregnancy context, nutrition, activity and fetal growth rather than one universal target.",
+    "2026-08-03",
+  ],
+  [
+    "acog-obesity-pregnancy",
+    "American College of Obstetricians and Gynecologists",
+    "Obesity and Pregnancy",
+    "https://www.acog.org/womens-health/faqs/obesity-and-pregnancy",
+    ["general"],
+    "Current page; date not stated",
+    "annual",
+    "Non-stigmatising care planning for body size, nutrition, activity, monitoring and pregnancy after bariatric surgery.",
+    "2026-08-03",
+  ],
+  [
+    "acog-diagnostic-imaging",
+    "American College of Obstetricians and Gynecologists",
+    "Guidelines for Diagnostic Imaging During Pregnancy and Lactation",
+    "https://www.acog.org/clinical/clinical-guidance/committee-opinion/articles/2017/10/guidelines-for-diagnostic-imaging-during-pregnancy-and-lactation",
+    ["general"],
+    "2017-10-01",
+    "rapid-review",
+    "Diagnostic ultrasound should answer a clinical question and use appropriate equipment and exposure settings.",
+    "2026-08-03",
+  ],
+  [
+    "acog-ectopic-pregnancy",
+    "American College of Obstetricians and Gynecologists",
+    "Ectopic Pregnancy",
+    "https://www.acog.org/womens-health/faqs/ectopic-pregnancy",
+    ["general"],
+    "2026-04-01",
+    "rapid-review",
+    "Ectopic-pregnancy symptoms, diagnosis, treatment, follow-up and emergency thresholds.",
+    "2026-08-03",
+  ],
+  [
+    "nhs-molar-pregnancy",
+    "National Health Service",
+    "Molar pregnancy",
+    "https://www.nhs.uk/conditions/molar-pregnancy/",
+    ["global", "uk"],
+    "2023-07-01",
+    "rapid-review",
+    "Plain-language orientation to molar pregnancy, specialist treatment, hormone follow-up and emotional support.",
+    "2026-08-03",
+  ],
+  [
+    "nhs-preparing-birth",
+    "National Health Service",
+    "Preparing for labour and birth",
+    "https://www.nhs.uk/best-start-in-life/pregnancy/preparing-for-labour-and-birth/",
+    ["global", "uk"],
+    "2026-08-03",
+    "annual",
+    "Practical preparation including classes, birth preferences, hospital bags, birth balls, place of birth and newborn essentials.",
+    "2026-08-03",
+  ],
+  [
+    "who-tobacco-smoke-pregnancy",
+    "World Health Organization",
+    "WHO recommendations for the prevention and management of tobacco use and second-hand smoke exposure in pregnancy",
+    "https://www.who.int/publications/i/item/9789241506076",
+    ["global"],
+    "2013-11-15",
+    "annual",
+    "Identification, support and exposure reduction for tobacco and second-hand smoke during pregnancy.",
+    "2026-08-03",
+  ],
+  [
+    "cdc-wildfire-pregnancy",
+    "US Centers for Disease Control and Prevention",
+    "Wildfire Smoke and Pregnancy",
+    "https://www.cdc.gov/wildfires/risk-factors/wildfire-smoke-and-pregnancy.html",
+    ["general"],
+    "2024-04-18",
+    "rapid-review",
+    "Air-quality monitoring, indoor exposure reduction, evacuation planning and respiratory-symptom escalation during wildfire smoke.",
+    "2026-08-03",
+  ],
+  [
+    "nhs-haemoglobin-screening",
+    "National Health Service",
+    "Screening for sickle cell and thalassaemia",
+    "https://www.nhs.uk/pregnancy/your-pregnancy-care/screening-for-sickle-cell-and-thalassaemia/",
+    ["global", "uk"],
+    "2026-05-06",
+    "rapid-review",
+    "Carrier screening, inherited blood-condition results, partner testing and supported diagnostic choices.",
+    "2026-08-03",
+  ],
 ].map(
   ([
     id,
@@ -4586,6 +4685,21 @@ const baselineFindings = essentials.flatMap((section) =>
       section.review.volatility,
     );
   }),
+);
+
+const redundantBaselineFindingIds = new Set([
+  "dental-skin-personal-care-hair-dye-salon-treatment-or-cosmetic-procedure",
+  "sleep-comfort-side-sleeping",
+  "sleep-comfort-waking-on-the-back",
+  "common-symptoms-a-severe-sudden-or-rapidly-worsening-symptom",
+  "appointments-warning-signs-a-routine-question",
+  "loss-uncertainty-support-pregnancy-after-a-previous-loss",
+  "birth-newborn-preparation-feeding-plan-and-early-support",
+  "appointments-warning-signs-breech",
+]);
+
+const deduplicatedBaselineFindings = baselineFindings.filter(
+  (entry) => !redundantBaselineFindingIds.has(entry.id),
 );
 
 const expandedFindings = [
@@ -10568,6 +10682,544 @@ const coordinatedCareAndPreparationFindings = [
   }),
 ];
 
+const navigationAndCoverageFindings = [
+  catalogFinding({
+    id: "food-dishes-pregnancy-weight-gain-pattern",
+    sectionId: "food-dishes",
+    title: "Pregnancy weight gain and changing appetite",
+    aliases: [
+      "weight gain",
+      "pregnancy weight",
+      "not gaining weight",
+      "gaining weight quickly",
+      "changing appetite",
+    ],
+    status: "check-first",
+    priority: "P0",
+    summary:
+      "Weight change is assessed as a pattern alongside prepregnancy context, nutrition, symptoms and fetal growth—not against one target that fits every pregnancy.",
+    detail:
+      "Ask your care team what range and monitoring approach applies to you. Bring up rapid change, persistent difficulty eating, swelling, vomiting, food insecurity or anxiety about weighing rather than trying to correct the number with a restrictive plan.",
+    sourceIds: ["acog-weight-gain", "acog-nutrition", "who-antenatal"],
+  }),
+  catalogFinding({
+    id: "food-dishes-intentional-weight-loss-restrictive-diet",
+    sectionId: "food-dishes",
+    title: "Intentional weight loss, fasting or a restrictive diet",
+    aliases: [
+      "weight loss",
+      "dieting while pregnant",
+      "fasting pregnancy",
+      "calorie restriction",
+      "underweight pregnancy",
+    ],
+    status: "check-first",
+    priority: "P0",
+    summary:
+      "Do not build a pregnancy plan around rapid weight loss or broad food restriction without individual clinical and nutrition support.",
+    detail:
+      "The useful review covers why intake is restricted, what nutrients and foods remain available, current symptoms, growth monitoring, an eating-disorder history and any cultural or religious fast. Ask for a workable alternative rather than hiding the restriction.",
+    sourceIds: ["acog-weight-gain", "acog-nutrition", "who-antenatal"],
+  }),
+  catalogFinding({
+    id: "health-conditions-accessibility-pregnancy-after-bariatric-surgery",
+    sectionId: "health-conditions-accessibility",
+    title: "Pregnancy after bariatric or weight-loss surgery",
+    aliases: [
+      "bariatric surgery pregnancy",
+      "gastric bypass pregnancy",
+      "gastric sleeve pregnancy",
+      "weight loss surgery pregnancy",
+    ],
+    status: "check-first",
+    priority: "P0",
+    summary:
+      "Tell maternity care which bariatric procedure you had because absorption, nutrition, abdominal symptoms and medicine formulations may need a coordinated plan.",
+    detail:
+      "Bring the operation date, procedure name, supplement list and recent monitoring. Persistent vomiting, severe or unusual abdominal pain, inability to eat or drink, or symptoms of deficiency deserve prompt assessment rather than being assumed to be ordinary pregnancy discomfort.",
+    sourceIds: ["acog-obesity-pregnancy", "acog-nutrition"],
+    volatility: "rapid-review",
+  }),
+  catalogFinding({
+    id: "everyday-home-tobacco-vape-secondhand-smoke",
+    sectionId: "everyday-home",
+    title: "Cigarettes, vaping and second-hand smoke",
+    aliases: [
+      "smoking pregnancy",
+      "vaping pregnancy",
+      "nicotine pregnancy",
+      "second hand smoke",
+      "passive smoke",
+    ],
+    status: "avoid",
+    priority: "P0",
+    summary:
+      "Avoid tobacco, nicotine vaping and second-hand smoke, and ask for nonjudgmental help if reducing exposure or stopping is difficult.",
+    detail:
+      "Make the home and car smoke-free and ask other people to smoke or vape away from you. Review the exact product and dependence pattern with a clinician before using a medicine or nicotine product to change use; support should be matched to you.",
+    sourceIds: ["acog-substances", "who-tobacco-smoke-pregnancy"],
+    volatility: "rapid-review",
+  }),
+  catalogFinding({
+    id: "everyday-home-cannabis-cbd-products",
+    sectionId: "everyday-home",
+    title: "Cannabis, marijuana, THC and CBD products",
+    aliases: [
+      "cannabis pregnancy",
+      "marijuana pregnancy",
+      "THC pregnancy",
+      "CBD pregnancy",
+      "weed pregnancy",
+    ],
+    status: "avoid",
+    priority: "P0",
+    summary:
+      "Avoid cannabis and CBD products during pregnancy, including smoked, vaped, edible and topical products marketed for nausea, sleep or pain.",
+    detail:
+      "Tell your clinician what you use, how often and why so the symptom or dependence can be treated without shame. Keep smoke and vape aerosol out of the home, and keep edible products locked away from children.",
+    sourceIds: ["acog-cannabis", "acog-substances"],
+    volatility: "rapid-review",
+  }),
+  catalogFinding({
+    id: "everyday-home-wildfire-smoke-air-quality",
+    sectionId: "everyday-home",
+    title: "Wildfire smoke and poor outdoor air quality",
+    aliases: [
+      "wildfire smoke",
+      "air pollution pregnancy",
+      "poor air quality",
+      "smog pregnancy",
+      "AQI pregnancy",
+    ],
+    status: "check-first",
+    priority: "P0",
+    summary:
+      "Use local air-quality alerts to reduce smoke exposure, keep indoor air cleaner and adapt outdoor work, exercise and travel during a smoke event.",
+    detail:
+      "Close windows when advised, use effective filtration if available and keep medicines and an evacuation plan ready. Contact care for new or worsening breathing symptoms, especially with asthma; use emergency help for severe breathlessness, chest pain or collapse.",
+    sourceIds: ["cdc-wildfire-pregnancy", "cdc-workplace"],
+    volatility: "rapid-review",
+  }),
+  catalogFinding({
+    id: "medicines-supplements-prescribed-opioid-pain-medicine",
+    sectionId: "medicines-supplements",
+    title: "A prescribed opioid pain medicine",
+    aliases: [
+      "opioid prescription",
+      "codeine pregnancy",
+      "oxycodone pregnancy",
+      "morphine pregnancy",
+      "strong painkiller pregnancy",
+    ],
+    status: "check-first",
+    priority: "P0",
+    summary:
+      "Review a prescribed opioid by exact medicine, dose, timing and reason; do not start, stop or replace it from a generic pregnancy list.",
+    detail:
+      "Ask the prescriber how pain, side effects, other sedating medicines, duration of use and newborn observation affect the plan. If you have been taking it regularly, do not attempt an abrupt change without clinical advice.",
+    sourceIds: ["acog-substances", "cdc-medicine", "nhs-medicines"],
+    volatility: "rapid-review",
+  }),
+  catalogFinding({
+    id: "medicines-supplements-opioid-dependence-withdrawal-support",
+    sectionId: "medicines-supplements",
+    title: "Opioid dependence, nonmedical use or withdrawal concern",
+    aliases: [
+      "opioid addiction pregnancy",
+      "opioid withdrawal pregnancy",
+      "heroin pregnancy",
+      "fentanyl use pregnancy",
+      "opioid use disorder pregnancy",
+    ],
+    status: "contact-care",
+    priority: "P0",
+    summary:
+      "Contact maternity or addiction care promptly for confidential treatment planning; managing opioid withdrawal alone can be unsafe.",
+    detail:
+      "Tell the team the exact substances, route, frequency, last use and any current treatment. The plan may include medicines and behavioural support, but it must be prescribed and coordinated rather than improvised from online instructions.",
+    sourceIds: ["acog-substances", "cdc-medicine"],
+    volatility: "rapid-review",
+  }),
+  catalogFinding({
+    id: "appointments-warning-signs-home-fetal-doppler",
+    sectionId: "appointments-warning-signs",
+    title: "Home fetal Doppler or heartbeat monitor",
+    aliases: [
+      "home doppler",
+      "fetal doppler",
+      "foetal doppler",
+      "baby heartbeat monitor",
+      "listen to heartbeat at home",
+    ],
+    status: "check-first",
+    priority: "P0",
+    summary:
+      "Do not use a home heartbeat device to decide that symptoms or changed movement are safe to wait with; it cannot perform a clinical assessment.",
+    detail:
+      "It can be difficult to distinguish maternal and fetal sounds or interpret a number without training and context. Follow the movement and symptom advice from your maternity team and contact them directly when something has changed.",
+    sourceIds: ["acog-diagnostic-imaging", "nhs-symptoms-help"],
+    volatility: "rapid-review",
+  }),
+  catalogFinding({
+    id: "appointments-warning-signs-keepsake-private-ultrasound",
+    sectionId: "appointments-warning-signs",
+    title: "Keepsake, boutique or private ultrasound",
+    aliases: [
+      "keepsake ultrasound",
+      "private ultrasound",
+      "boutique scan",
+      "3D scan",
+      "4D scan",
+    ],
+    status: "check-first",
+    priority: "P1",
+    summary:
+      "A nonmedical or private scan does not replace the clinical scans, screening, reporting and follow-up arranged by maternity care.",
+    detail:
+      "Before booking, ask who performs and reports it, what clinical question it can answer, how exposure is limited and how an unexpected or incomplete finding reaches your maternity team. Do not delay care while waiting for a commercial appointment.",
+    sourceIds: ["acog-diagnostic-imaging", "acog-prenatal-care"],
+    volatility: "rapid-review",
+  }),
+  catalogFinding({
+    id: "appointments-warning-signs-sickle-cell-thalassaemia-screening",
+    sectionId: "appointments-warning-signs",
+    title: "Sickle cell and thalassaemia carrier screening",
+    aliases: [
+      "sickle cell screening",
+      "thalassemia screening",
+      "thalassaemia screening",
+      "haemoglobin carrier test",
+      "hemoglobin carrier test",
+    ],
+    status: "check-first",
+    priority: "P1",
+    summary:
+      "Carrier screening is a blood-test decision that can clarify whether further partner testing, counselling or diagnostic choices should be offered.",
+    detail:
+      "Ask when the test is offered, what carrier and affected results mean, whether the other biological parent should be tested and what choices follow. Screening estimates inherited chance; it does not diagnose the fetus by itself.",
+    sourceIds: ["nhs-haemoglobin-screening", "acog-genetic-screening"],
+    volatility: "rapid-review",
+  }),
+  catalogFinding({
+    id: "pregnancy-complications-placental-abruption",
+    sectionId: "pregnancy-complications",
+    title: "Possible placental abruption",
+    aliases: [
+      "placental abruption",
+      "placenta separating early",
+      "concealed abruption",
+      "painful bleeding pregnancy",
+    ],
+    status: "urgent",
+    priority: "P0",
+    summary:
+      "Use urgent maternity or emergency care for sudden persistent abdominal pain, bleeding, frequent contractions, faintness or a seriously unwell feeling that could indicate placental separation.",
+    detail:
+      "Bleeding may be visible or concealed, so the amount seen does not reliably show severity. Do not drive yourself if faint or severely unwell; tell emergency services the pregnancy week, pain pattern, bleeding and any change in movement.",
+    sourceIds: ["nhs-placenta-complications", "acog-bleeding", "cdc-warning"],
+    volatility: "rapid-review",
+  }),
+  catalogFinding({
+    id: "loss-uncertainty-support-possible-ectopic-pregnancy",
+    sectionId: "loss-uncertainty-support",
+    title: "Possible ectopic pregnancy",
+    aliases: [
+      "ectopic pregnancy",
+      "pregnancy outside uterus",
+      "tubal pregnancy",
+      "one sided pain early pregnancy",
+      "shoulder pain pregnancy",
+    ],
+    status: "urgent",
+    priority: "P0",
+    summary:
+      "Sudden severe one-sided abdominal or pelvic pain, shoulder pain, weakness, dizziness or fainting in early pregnancy needs emergency assessment for internal bleeding.",
+    detail:
+      "Bleeding and milder one-sided pain also need prompt clinical review because symptoms alone cannot locate a pregnancy. Diagnosis uses clinical assessment, ultrasound and pregnancy-hormone trends; risk factors may be absent.",
+    sourceIds: ["acog-ectopic-pregnancy", "acog-bleeding"],
+    volatility: "rapid-review",
+  }),
+  catalogFinding({
+    id: "loss-uncertainty-support-molar-pregnancy-followup",
+    sectionId: "loss-uncertainty-support",
+    title: "Molar pregnancy diagnosis and follow-up",
+    aliases: [
+      "molar pregnancy",
+      "hydatidiform mole",
+      "gestational trophoblastic disease",
+      "molar pregnancy hCG follow up",
+    ],
+    status: "contact-care",
+    priority: "P1",
+    summary:
+      "A suspected or confirmed molar pregnancy needs specialist treatment and hormone follow-up, plus clear physical and emotional support.",
+    detail:
+      "Ask what type was found, what procedure or treatment is planned, how and where hCG is monitored, which symptoms need urgent care and when future pregnancy planning can be reviewed. This condition happens by chance and is not caused by ordinary actions.",
+    sourceIds: ["nhs-molar-pregnancy", "acog-pregnancy-loss-support"],
+    volatility: "rapid-review",
+  }),
+  catalogFinding({
+    id: "birth-newborn-preparation-antenatal-classes",
+    sectionId: "birth-newborn-preparation",
+    title: "Antenatal, childbirth and newborn-care classes",
+    aliases: [
+      "antenatal class",
+      "birth class",
+      "childbirth class",
+      "prenatal class",
+      "new parent class",
+    ],
+    status: "generally-ok",
+    priority: "P1",
+    summary:
+      "Use classes to rehearse decisions, practical skills and questions—not as a promise that labour, feeding or recovery will follow one script.",
+    detail:
+      "Look for coverage of labour changes, consent, pain options, caesarean and assisted birth, feeding support, newborn care, parent recovery and urgent signs. Ask about accessible formats, cost, partner inclusion and how advice connects to your planned birth service.",
+    sourceIds: ["nhs-preparing-birth", "acog-labour-birth", "who-newborn"],
+  }),
+  catalogFinding({
+    id: "birth-newborn-preparation-hospital-bag",
+    sectionId: "birth-newborn-preparation",
+    title: "Hospital or birth-centre bag",
+    aliases: [
+      "hospital bag",
+      "labour bag",
+      "birth center bag",
+      "birth centre bag",
+      "what to pack for birth",
+    ],
+    status: "generally-ok",
+    priority: "P1",
+    summary:
+      "Pack for identification, medicines, communication, comfort, parent recovery, newborn clothing and the trip home rather than buying a long list of special products.",
+    detail:
+      "Confirm what the birth service supplies and any restrictions. Keep pregnancy records, chargers, glasses or hearing equipment, regular medicines in original packaging, support-person essentials and a backup transport plan easy to reach.",
+    sourceIds: ["nhs-preparing-birth", "acog-labour-birth"],
+  }),
+  catalogFinding({
+    id: "birth-newborn-preparation-birth-ball",
+    sectionId: "birth-newborn-preparation",
+    title: "Birth ball for movement and comfort",
+    aliases: [
+      "birth ball",
+      "birthing ball",
+      "exercise ball labour",
+      "pregnancy ball",
+    ],
+    status: "check-first",
+    priority: "P1",
+    summary:
+      "A correctly sized, stable birth ball can support comfortable positions, but safe setup, balance and the birth setting matter.",
+    detail:
+      "Practise with support before labour, use a non-slip surface and keep feet stable. Ask for help if balance, pain, numbness, dizziness, bleeding, fluid loss or an individual restriction makes independent use unsafe.",
+    sourceIds: ["nhs-preparing-birth", "acog-exercise"],
+  }),
+  catalogFinding({
+    id: "birth-newborn-preparation-perineal-massage",
+    sectionId: "birth-newborn-preparation",
+    title: "Antenatal perineal massage",
+    aliases: [
+      "perineal massage",
+      "perineum massage pregnancy",
+      "massage before birth",
+      "reduce perineal tear",
+    ],
+    status: "check-first",
+    priority: "P1",
+    summary:
+      "Ask when and how perineal massage may fit your birth preparation; it is optional and should not cause sharp pain, bleeding or pressure to continue.",
+    detail:
+      "Use clean hands, a comfortable position and a simple product acceptable to your care team. Check first with vaginal infection, bleeding, ruptured membranes, placenta or cervical concerns, or advice to avoid vaginal insertion.",
+    sourceIds: ["nhs-preparing-birth", "acog-labour-birth"],
+  }),
+  catalogFinding({
+    id: "birth-newborn-preparation-water-birth",
+    sectionId: "birth-newborn-preparation",
+    title: "Labouring in water or planning a water birth",
+    aliases: ["water birth", "birth pool", "labour in water", "birthing pool"],
+    status: "check-first",
+    priority: "P1",
+    summary:
+      "Ask the planned birth service how water labour and birth are offered, who may use the pool and which changes would mean leaving it.",
+    detail:
+      "Discuss water temperature, infection control, monitoring, pain options, entry and exit support, emergencies and transfer. Eligibility can change with symptoms, medicines, monitoring needs or pregnancy findings, so keep an alternative comfort plan.",
+    sourceIds: ["nhs-preparing-birth", "acog-labour-birth"],
+    volatility: "rapid-review",
+  }),
+  catalogFinding({
+    id: "birth-newborn-preparation-skin-to-skin-first-hour",
+    sectionId: "birth-newborn-preparation",
+    title: "Skin-to-skin contact and the first hour",
+    aliases: [
+      "skin to skin",
+      "golden hour birth",
+      "first hour after birth",
+      "immediate newborn contact",
+    ],
+    status: "generally-ok",
+    priority: "P0",
+    summary:
+      "Ask for early skin-to-skin contact when parent and baby are stable, with staff supporting warmth, breathing, positioning and feeding cues.",
+    detail:
+      "Include how this could work after caesarean birth and what happens if either person needs urgent care or separation. A support person may sometimes help with contact, but local practice and the baby's condition guide the plan.",
+    sourceIds: ["who-newborn", "who-postnatal", "acog-cesarean"],
+  }),
+  catalogFinding({
+    id: "birth-newborn-preparation-rooming-in-separation-plan",
+    sectionId: "birth-newborn-preparation",
+    title: "Rooming-in and an unexpected separation plan",
+    aliases: [
+      "rooming in",
+      "baby stays in room",
+      "parent baby separation",
+      "newborn nursery",
+      "separated after birth",
+    ],
+    status: "check-first",
+    priority: "P1",
+    summary:
+      "Plan for parent and baby to stay together when clinically appropriate, and ask how contact, updates, consent and feeding support work if separation is needed.",
+    detail:
+      "Clarify who may accompany the baby, how often updates are given, how expressed milk or chosen feeding support reaches the baby and how reunion is decided. Parent recovery and safe rest also need active support.",
+    sourceIds: ["who-newborn", "who-postnatal"],
+  }),
+  catalogFinding({
+    id: "birth-newborn-preparation-car-seat-transport-home",
+    sectionId: "birth-newborn-preparation",
+    title: "Car seat and transport home after birth",
+    aliases: [
+      "newborn car seat",
+      "infant car seat",
+      "transport baby home",
+      "car ride after birth",
+    ],
+    status: "check-first",
+    priority: "P1",
+    summary:
+      "Arrange a correctly fitted newborn restraint and a realistic journey-home plan before birth; a car seat is for travel, not routine sleep.",
+    detail:
+      "Follow the seat and vehicle instructions, practise installation and ask for specialist advice for a very small or medically fragile baby. Plan who drives, how the recovering parent travels and what happens if discharge or transfer changes.",
+    sourceIds: ["nhtsa-seat-belts", "cdc-safe-sleep", "nhs-preparing-birth"],
+  }),
+  catalogFinding({
+    id: "health-conditions-accessibility-interpreter-communication-plan",
+    sectionId: "health-conditions-accessibility",
+    title: "Interpreter, plain-language or communication support",
+    aliases: [
+      "medical interpreter pregnancy",
+      "sign language interpreter maternity",
+      "easy read pregnancy information",
+      "communication support birth",
+      "language access maternity",
+    ],
+    status: "generally-ok",
+    priority: "P0",
+    summary:
+      "Ask the service to record the communication support you need for routine visits, consent, urgent care, labour, birth and newborn information.",
+    detail:
+      "This may include a qualified language or sign-language interpreter, captions, easy-read or large-print material, extra processing time, a communication board or permission for a chosen supporter. Important decisions should not depend on a child interpreting.",
+    sourceIds: ["who-disability-reproductive-health", "who-antenatal"],
+  }),
+  catalogFinding({
+    id: "health-conditions-accessibility-service-animal-supporter",
+    sectionId: "health-conditions-accessibility",
+    title: "Service animal, personal assistant or essential supporter",
+    aliases: [
+      "service animal maternity",
+      "assistance dog pregnancy",
+      "personal assistant birth",
+      "caregiver maternity appointment",
+      "essential supporter pregnancy",
+    ],
+    status: "check-first",
+    priority: "P1",
+    summary:
+      "Plan early for the service animal, personal assistant or supporter who makes care accessible, including appointments, admission, procedures and emergencies.",
+    detail:
+      "Ask what the facility needs to arrange, who handles the animal or equipment if you cannot, and how privacy and consent are protected. Record a backup plan without treating essential access support as an optional visitor.",
+    sourceIds: ["who-disability-reproductive-health", "who-antenatal"],
+  }),
+  catalogFinding({
+    id: "health-conditions-accessibility-cultural-spiritual-care-preferences",
+    sectionId: "health-conditions-accessibility",
+    title: "Cultural, religious or spiritual care preferences",
+    aliases: [
+      "religious birth preferences",
+      "cultural maternity care",
+      "spiritual support birth",
+      "modesty request pregnancy",
+      "faith practices labour",
+    ],
+    status: "generally-ok",
+    priority: "P1",
+    summary:
+      "Put important language, modesty, food, blood-product, ritual, support-person and spiritual-care preferences into the care conversation before an urgent decision is needed.",
+    detail:
+      "Ask what can be accommodated, what requires advance planning and how alternatives would be discussed if safety or resources change. Your preferences should be documented precisely without staff assuming that every person from a community wants the same thing.",
+    sourceIds: ["who-antenatal", "who-disability-reproductive-health"],
+  }),
+  catalogFinding({
+    id: "health-conditions-accessibility-pregnancy-after-assisted-conception",
+    sectionId: "health-conditions-accessibility",
+    title: "Pregnancy after IVF, donor conception or fertility treatment",
+    aliases: [
+      "IVF pregnancy",
+      "donor egg pregnancy",
+      "donor sperm pregnancy",
+      "fertility treatment pregnancy",
+      "assisted conception pregnancy",
+    ],
+    status: "check-first",
+    priority: "P1",
+    summary:
+      "Tell maternity care the treatment type, embryo-transfer timing, medicines and clinic plan so the handoff into pregnancy care is explicit.",
+    detail:
+      "Ask who confirms pregnancy location and number, who manages fertility medicines, when the fertility clinic hands over and whether any additional monitoring is recommended. Do not change prescribed support medicines without the prescribing team.",
+    sourceIds: ["acog-prenatal-care", "acog-ectopic-pregnancy", "cdc-medicine"],
+    volatility: "rapid-review",
+  }),
+  catalogFinding({
+    id: "health-conditions-accessibility-sickle-cell-thalassaemia-condition",
+    sectionId: "health-conditions-accessibility",
+    title: "Sickle cell disease or thalassaemia in pregnancy",
+    aliases: [
+      "sickle cell disease pregnancy",
+      "thalassemia pregnancy",
+      "thalassaemia pregnancy",
+      "haemoglobinopathy pregnancy",
+      "hemoglobin disorder pregnancy",
+    ],
+    status: "contact-care",
+    priority: "P0",
+    summary:
+      "Arrange coordinated maternity and haematology care promptly for an inherited haemoglobin condition, including medicine, anaemia, pain, infection and birth planning.",
+    detail:
+      "Carry your usual urgent-care plan and baseline information. New fever, chest pain, breathing difficulty, severe pain, dehydration or feeling acutely unwell needs prompt assessment; do not start or stop condition-specific medicines from a generic page.",
+    sourceIds: ["nhs-haemoglobin-screening", "nhs-existing-conditions"],
+    volatility: "rapid-review",
+  }),
+  catalogFinding({
+    id: "common-symptoms-rib-side-chest-wall-pain",
+    sectionId: "common-symptoms",
+    title: "Rib, side or chest-wall pain",
+    aliases: [
+      "rib pain pregnancy",
+      "pain under ribs",
+      "side pain pregnancy",
+      "chest wall pain",
+      "sore ribs pregnancy",
+    ],
+    status: "contact-care",
+    priority: "P1",
+    summary:
+      "Pain around the ribs can be musculoskeletal, but severe, persistent or upper-right pain needs assessment rather than being attributed to posture or the baby's position.",
+    detail:
+      "Note whether movement, touch or breathing changes it and whether headache, vision change, swelling, fever, breathlessness, chest pressure, bleeding or feeling very unwell is present. Use emergency care for severe breathing difficulty, collapse or crushing chest pain.",
+    sourceIds: ["nhs-pregnancy-symptoms", "nhs-symptoms-help", "cdc-warning"],
+    volatility: "rapid-review",
+  }),
+];
+
 const findingRelationships = {
   "everyday-home-hot-tub-or-sauna": [
     "exercise-movement-hot-yoga-hot-pilates-and-extreme-heat-workouts",
@@ -10624,13 +11276,14 @@ const findingRelationships = {
 };
 
 const findings = [
-  ...baselineFindings,
+  ...deduplicatedBaselineFindings,
   ...expandedFindings,
   ...depthFindings,
   ...environmentAndDailyLifeFindings,
   ...testingAndSymptomDepthFindings,
   ...skinInfectionAndWellbeingDepthFindings,
   ...coordinatedCareAndPreparationFindings,
+  ...navigationAndCoverageFindings,
 ].map((entry) => ({
   ...entry,
   relatedIds: findingRelationships[entry.id] ?? [],

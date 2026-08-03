@@ -18,10 +18,11 @@ These are navigation choices, not a questionnaire. No answer depends on disclosi
 Pregnancy Essentials has three complementary levels:
 
 - The overview is the canonical search and do/don't/check-first starting point. It provides six task shortcuts, an eighteen-topic directory, one visible baseline from every topic and an A-Z legacy-anchor directory.
-- `/essentials/<topic>/` contains the complete topic baseline and every direct finding without accordions.
+- `/essentials/` starts with search and a sticky page map, then exposes task-based shortcuts, a topic directory with counts and examples, and one shareable answer library filtered by topic, task, next step and depth. The focused default removes short baseline records that can look repetitive; a query always checks the complete collection.
+- `/essentials/<topic>/` contains the complete topic baseline, concrete examples and a filterable direct-finding collection without accordions.
 - `/essentials/finding/<id>/` is the smallest shareable answer. It contains the summary, practical detail, decision factors, care threshold, reviewed date, related answers and device-only save/share/print actions.
 
-The finding ID is stable across its route, fragment, search index, local save key and cross-links. Old `/essentials/#<id>` links remain valid, but new search and sharing use the smaller permanent page.
+The finding ID is stable across its route, fragment, search index, local save key and cross-links. Search, the answer library and sharing use the smaller permanent page rather than a giant overview-page A–Z directory.
 
 ## Search and recovery
 

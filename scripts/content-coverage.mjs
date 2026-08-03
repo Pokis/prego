@@ -1,8 +1,8 @@
 export const minimumFindingCounts = {
-  total: 419,
-  P0: 179,
-  P1: 153,
-  baseline: 87,
+  total: 440,
+  P0: 193,
+  P1: 167,
+  baseline: 80,
 };
 
 export const minimumFindingsBySection = {
@@ -14,7 +14,7 @@ export const minimumFindingsBySection = {
   "work-lifting": 25,
   travel: 19,
   "sex-relationships": 12,
-  "sleep-comfort": 14,
+  "sleep-comfort": 13,
   "appointments-warning-signs": 42,
   "common-symptoms": 42,
   "dental-skin-personal-care": 25,
@@ -165,9 +165,42 @@ export const requiredFindingFamilies = {
   birthAndNewbornPreparation: [
     "birth-newborn-preparation-a-one-page-birth-preference-note",
     "birth-newborn-preparation-possible-caesarean-or-assisted-birth",
-    "birth-newborn-preparation-feeding-plan-and-early-support",
     "birth-newborn-preparation-newborn-sleep-space",
     "birth-newborn-preparation-possible-preterm-birth-or-neonatal-admission",
+    "birth-newborn-preparation-hospital-bag",
+    "birth-newborn-preparation-skin-to-skin-first-hour",
+  ],
+  weightAndNutritionContext: [
+    "food-dishes-pregnancy-weight-gain-pattern",
+    "food-dishes-intentional-weight-loss-restrictive-diet",
+    "health-conditions-accessibility-pregnancy-after-bariatric-surgery",
+  ],
+  substancesAndAirQuality: [
+    "everyday-home-tobacco-vape-secondhand-smoke",
+    "everyday-home-cannabis-cbd-products",
+    "everyday-home-wildfire-smoke-air-quality",
+    "medicines-supplements-opioid-dependence-withdrawal-support",
+  ],
+  consumerMonitoring: [
+    "appointments-warning-signs-home-fetal-doppler",
+    "appointments-warning-signs-keepsake-private-ultrasound",
+  ],
+  earlyPregnancyConditions: [
+    "loss-uncertainty-support-possible-ectopic-pregnancy",
+    "loss-uncertainty-support-molar-pregnancy-followup",
+  ],
+  practicalBirthPreparation: [
+    "birth-newborn-preparation-antenatal-classes",
+    "birth-newborn-preparation-hospital-bag",
+    "birth-newborn-preparation-birth-ball",
+    "birth-newborn-preparation-perineal-massage",
+    "birth-newborn-preparation-water-birth",
+    "birth-newborn-preparation-car-seat-transport-home",
+  ],
+  accessibleCare: [
+    "health-conditions-accessibility-interpreter-communication-plan",
+    "health-conditions-accessibility-service-animal-supporter",
+    "health-conditions-accessibility-cultural-spiritual-care-preferences",
   ],
 };
 
@@ -230,6 +263,16 @@ export const requiredSearchMatches = [
     "birth-newborn-preparation-a-one-page-birth-preference-note",
   ],
   ["safe sleep space", "birth-newborn-preparation-newborn-sleep-space"],
+  ["weight gain", "food-dishes-pregnancy-weight-gain-pattern"],
+  ["home doppler", "appointments-warning-signs-home-fetal-doppler"],
+  ["wildfire smoke", "everyday-home-wildfire-smoke-air-quality"],
+  ["molar pregnancy", "loss-uncertainty-support-molar-pregnancy-followup"],
+  ["hospital bag", "birth-newborn-preparation-hospital-bag"],
+  ["skin to skin", "birth-newborn-preparation-skin-to-skin-first-hour"],
+  [
+    "medical interpreter pregnancy",
+    "health-conditions-accessibility-interpreter-communication-plan",
+  ],
 ];
 
 export const requiredFindingIntents = [

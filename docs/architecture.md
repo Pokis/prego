@@ -22,4 +22,4 @@ Pregnancy, Clearly is an Astro 7 static site. Every route is generated at build 
 
 ## Why generation exists
 
-The getting-pregnant guide, forty weekly pages, eighteen essentials topics, 419 direct finding pages, eight after-birth topic guides, thirteen stage-specific postpartum periods and the practical substitute catalog need canonical, repeatable structure. The generator keeps IDs, task intents, record types, decision factors, care thresholds, related records, source-backed prose, controlled search aliases and direct anchors consistent while emitting inspectable JSON. It is not runtime AI generation and does not fetch content.
+The getting-pregnant guide, forty weekly pages, eighteen essentials topics, 440 direct finding pages, eight after-birth topic guides, thirteen stage-specific postpartum periods and the practical substitute catalog need canonical, repeatable structure. The generator keeps IDs, task intents, record types, decision factors, care thresholds, related records, source-backed prose, controlled search aliases and direct anchors consistent while emitting inspectable JSON. It is not runtime AI generation and does not fetch content.
